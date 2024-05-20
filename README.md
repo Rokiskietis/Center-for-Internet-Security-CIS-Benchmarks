@@ -34,7 +34,7 @@ To use the configurations in this repository, follow these steps:
 
 1. **Clone the repository:**
    \`\`\`sh
-   git clone https://github.com/ApvalusLT/CIS-Benchmarks-for-MDM-s
+   git clone https://github.com/ApvalusLT/Center-for-Internet-Security-CIS-Benchmarks
    \`\`\`
 2. **Navigate to the desired platform directory:**
    \`\`\`sh
@@ -71,7 +71,7 @@ We welcome contributions from the community! If you have improvements, updates, 
    \`\`\`
 5. **Open a pull request**
 
-For detailed guidelines, refer to our [Contributing Guide](https://github.com/ApvalusLT/CIS-Benchmarks-for-MDM-s/blob/main/CONTRIBUTING.MD).
+For detailed guidelines, refer to our [Contributing Guide](https://github.com/ApvalusLT/Center-for-Internet-Security-CIS-Benchmarks/blob/main/CONTRIBUTING.MD).
 
 ## License
 
