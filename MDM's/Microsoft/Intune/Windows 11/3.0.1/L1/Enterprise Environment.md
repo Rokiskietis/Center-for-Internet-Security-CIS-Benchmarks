@@ -917,7 +917,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_ShowSharedAccess
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|Not Mapped Yet|||Level - 1|
+|8|Not Mapped Yet||||Level - 1|
 |7|4.3 Ensure the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
