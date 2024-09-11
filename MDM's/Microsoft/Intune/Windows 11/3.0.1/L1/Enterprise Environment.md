@@ -690,4 +690,45 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SYSTEM\CurrentControlSet\Control\Session Manager:SafeDllSearchMode
 ```
 
-##
+## 3.5.10 - Ensure 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds'
+
+
+>[!NOTE]
+>Windows includes a grace period between when the screen saver is launched and
+when the console is actually locked automatically when screen saver locking is enabled.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users will have to enter their passwords to resume their console sessions as soon as
+the grace period ends after screen saver activation.
+
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled |
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.3 Configure Automatic Session Locking on EnterpriseAssets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)\u0027 is set to \u0027Enabled: 5 or fewer seconds\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_ScreenSaverGracePeriod",
+            "value": "\u003cenabled/\u003e\u003cdata id=\"ScreenSaverGracePeriod\" value=\"5\"/\u003e"
+        },
+```
+
+```
+Audit: Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 5.
+HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Winlogon:ScreenSaverGracePeriod
+```
+
+## 
