@@ -24,10 +24,10 @@ OMA-URI (Device)
 
 
 
-|Controls Version|Control|IG1|IG2|IG3|Level|
-|---|---|---|---|---|---|
-|8|4.8  Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
-|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|Controls Version|Control Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|---|
+|8|4.8|Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.11|Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ## 2.1.2 - Ensure "Treat AirDrop as an unmanaged destination" is set to "Yes"
 
