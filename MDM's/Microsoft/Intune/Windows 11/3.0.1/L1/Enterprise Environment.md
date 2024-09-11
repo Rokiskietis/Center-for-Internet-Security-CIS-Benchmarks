@@ -27,6 +27,22 @@ OMA-URI (Device)
 |8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
+```
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Cortana above lock screen\u0027 is set to \u0027Blocked\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/AboveLock/AllowCortanaAboveLock",
+            "value": 0
+        },
+```
+
+
+```
+Audit:
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\AboveLock:AllowCortanaAboveLock_WinningProvider value should be 0
+
+```
+
 # 3.1.3 - Personalization
 
 ## 3.1.3.1 - Ensure 'Enable screen saver (User)' is set to 'Enabled'
