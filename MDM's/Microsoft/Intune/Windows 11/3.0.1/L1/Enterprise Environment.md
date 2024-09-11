@@ -1490,3 +1490,298 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceMetadata:PreventDeviceMetadataFromNetwork
 ```
+
+# 3.10.13 - Early Launch Antimalware
+
+## 3.10.13.1 - Ensure 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical' 
+
+>[!NOTE]
+>This policy setting allows you to specify which boot-start drivers are initialized based on
+a classification determined by an Early Launch Antimalware boot-start driver. The Early
+Launch Antimalware boot-start driver can return the following classifications for each
+boot-start driver:
+• Good: The driver has been signed and has not been tampered with.
+• Bad: The driver has been identified as malware. It is recommended that you do
+not allow known bad drivers to be initialized.
+• Bad, but required for boot: The driver has been identified as malware, but the
+computer cannot successfully boot without loading this driver.
+• Unknown: This driver has not been attested to by your malware detection
+application and has not been classified by the Early Launch Antimalware bootstart driver.
+If you enable this policy setting you will be able to choose which boot-start drivers to
+initialize the next time the computer is started.
+If your malware detection application does not include an Early Launch Antimalware
+boot-start driver or if your Early Launch Antimalware boot-start driver has been
+disabled, this setting has no effect and all boot-start drivers are initialized.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/System/BootStartDriverInitialization
+```
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Boot-start drivers determined to be Good, Unknown or Bad but Boot Critical are initialized and the initialization of drivers determined to be bad is skipped.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "18.8.14.1 (L1) Ensure \u0027Boot-Start Driver Initialization Policy\u0027 is set to \u0027Enabled: Good, unknown and bad but critical\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/System/BootStartDriverInitialization",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"SelectDriverLoadPolicy\" value=\"3\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 3.
+HKLM\SYSTEM\CurrentControlSet\Policies\EarlyLaunch:DriverLoadPolicy
+```
+#3.10.19 - Group Policy
+
+## 3.10.19.1 - Ensure 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'
+## 3.10.19.2 - Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE
+## 3.10.19.3 - Ensure 'Configure security policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE
+## 3.10.19.4 - Ensure 'Configure security policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'
+
+>[!NOTE]
+>The "Do not apply during periodic background processing" option prevents the system
+from updating affected registry policies in the background while the computer is in use.
+When background updates are disabled, registry policy changes will not take effect until
+the next user logon or system restart.
+This setting affects all policy settings within the Administrative Templates folder and any
+other policies that store values in the registry.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Group Policy settings within the Administrative Templates folder (and other policies that
+store values in the registry) will be reapplied even when the system is in use, which may
+have a slight impact on performance.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/CSE_Registry
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Group policies are not reapplied until the next logon or restart or Group policies are not reapplied if they have not been changed.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.1 Establish and Maintain a Secure Configuration Process|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|5.4 Deploy System Configuration Management Tools||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Configure registry policy processing: Do not apply during periodic background processing\u0027 is set to \u0027Enabled: FALSE\u0027 18.8.21.2 (L1) Ensure \u0027Configure registry policy processing: Process even if the Group Policy objects have not changed\u0027 is set to \u0027Enabled: TRUE\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/CSE_Registry",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"CSE_NOBACKGROUND10\" value=\"false\"/\u003e\n\u003cdata id=\"CSE_NOCHANGES10\" value=\"false\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}:NoBackgroundPolicy
+
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{35378EAC-683F-11D2-A89A-00C04FBBCFA2}:NoGPOListChanges
+
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{827D319E-6EAC-11D2-A4EA-00C04F79F83A}:NoBackgroundPolicy
+
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{827D319E-6EAC-11D2- A4EA-00C04F79F83A}:NoGPOListChanges
+```
+## 3.10.19.5 - Ensure 'Continue experiences on this device' is set to 'Disabled
+
+>[!NOTE]
+>This policy setting determines whether the Windows device is allowed to participate in
+cross-device experiences (continue experiences).
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Windows device will not be discoverable by other devices, and cannot participate in
+cross-device experiences..
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/EnableCDP
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Continue experiences on this device\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/EnableCDP",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:EnableCdp
+```
+
+## 3.10.19.6 - Ensure 'Turn off background refresh of Group Policy' is set to 'Disabled'
+>[!NOTE]
+>This policy setting prevents Group Policy from being updated while the computer is in
+use. This policy setting applies to Group Policy for computers, users and Domain
+Controllers.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/DisableBackgroundPolicy
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Updates can be applied while users are working.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.1 Establish and Maintain a Secure Configuration Process|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|5.4 Deploy System Configuration Management Tools||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Turn off background refresh of Group Policy\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/DisableBackgroundPolicy",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with the key not existing.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:DisableBkGndGroupPolicy
+```
+#3.10.20.1 - Internet Communication settings
+
+##3.10.20.1.2 - Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls whether the computer can download print driver packages
+over HTTP. To set up HTTP printing, printer drivers that are not available in the
+standard operating system installation might need to be downloaded over HTTP.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Print drivers cannot be downloaded over HTTP
+
+```
+OMA-URI (Device)
+./User/Vendor/MSFT/Policy/Config/ADMX_ICM/DisableWebPnPDownload_1
+```
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Users can download print drivers over HTTP.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped||||Level - 1|
+|7|2.7 Utilize Application Whitelisting|||:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Turn off downloading of print drivers over HTTP\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./User/Vendor/MSFT/Policy/Config/ADMX_ICM/DisableWebPnPDownload_1",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers:DisableWebPnPDownload
+```
+## 3.10.20.1.5 (L1) Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'
+>[!NOTE]
+>This policy setting controls whether Windows will download a list of providers for the
+Web publishing and online ordering wizards.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows is prevented from downloading providers; only the service providers cached in
+the local registry are displayed.
+
+```
+OMA-URI (Device)
+./User/Vendor/MSFT/Policy/Config/ADMX_ICM/ShellPreventWPWDownload_1
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (A list of providers is downloaded when the user uses the web publishing or online ordering wizards.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|7.4 Maintain and Enforce Network-Based URL Filters||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Turn off Internet download for Web publishing and online ordering wizards\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./User/Vendor/MSFT/Policy/Config/ADMX_ICM/ShellPreventWPWDownload_1",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoWebServices
+```
+
+# 3.10.23 - Kerberos
