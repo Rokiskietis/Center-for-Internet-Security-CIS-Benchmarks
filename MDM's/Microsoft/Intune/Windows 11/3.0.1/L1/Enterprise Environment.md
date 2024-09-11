@@ -54,7 +54,7 @@ OMA-URI (User)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 Configure Automated Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
@@ -65,7 +65,7 @@ OMA-URI (User)
 from being invoked on the lock screen
 
 >[!TIP]
->Automatic Remedation
+>Automated Remedation
 
 >[!CAUTION]
 If you enable this setting, users will no longer be able to enable or disable lock screen
@@ -83,30 +83,32 @@ OMA-URI (Device)
 |---|---|---|---|---|---|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
-# 2.2 - Biuld-in Apps
 
-## 2.2.1  - Ensure "Block Siri while device is locked" is set to "Yes"
+## 3.1.3.3 (L1) Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'
 	
 >[!NOTE]
->This prevents access to Siri when the device is locked.
+>Disables the lock screen slide show settings in PC Settings and prevents a slide show
+from playing on the lock screen
 
 >[!TIP]
->Manual Remedation
+>Automated Remedation
 
 >[!CAUTION]
-The end user must unlock the device before interacting with Siri.
+If you enable this setting, users will no longer be able to modify slide show settings in
+PC Settings, and no slide show will ever start.
 
 
-Script to Remediation
+OMA-URI (Device)
 ```
-Remediation
-Script
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventLockScreenSlideShow
 ```
+|Value|Description|
+|---|---|
+|Enabled|Enable|
+
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
-
 
 ## 2.2.2 - Ensure "Require Safari fraud warnings" is set to "Yes"
 
@@ -124,7 +126,7 @@ Script
 ```
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|9.4 Configure Automatic Session Locking on Enterprise Assets||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.4 Configure Automated Session Locking on Enterprise Assets||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|7.2 Disable Unnecessary or Unauthorized Browser or Email Client Plugins||:orange_circle:|:large_blue_circle:|Level - 1|
 
 # 2.3 - Cloud and Storage
@@ -333,7 +335,7 @@ Script
 ## 2.4.3 - Ensure "Block Apple Watch auto unlock" is set to "Yes"
 
 >[!NOTE]
->This will restrict users from being able to automatically unlock their Apple Watch when they unlock their iOS/iPadOS device.
+>This will restrict users from being able to Automatedally unlock their Apple Watch when they unlock their iOS/iPadOS device.
 
 >[!TIP]
 >Manual Remedation
@@ -463,7 +465,7 @@ Script
 ```
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 Configure Automated Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
@@ -482,7 +484,7 @@ Script
 ```
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 CConfigure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 CConfigure Automated Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ## 2.6.4 - Ensure "Block Wallet notifications in lock screen" is set to "Yes"
@@ -503,7 +505,7 @@ Script
 ```
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 Configure Automated Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 # 2.7 - Password
@@ -590,13 +592,13 @@ Script
 ```
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 Configure Automated Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ## 2.7.6 - Ensure "Maximum minutes of inactivity until screen locks" is set to "2" or less
 
 >[!NOTE]
->This restriction sets the maximum time of inactivity before the device will be automatically locked.
+>This restriction sets the maximum time of inactivity before the device will be Automatedally locked.
 
 >[!TIP]
 >Manual Remedation
@@ -611,7 +613,7 @@ Script
 ```
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 Configure Automated Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
@@ -635,6 +637,6 @@ Script
 ```
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 Configure Automated Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
