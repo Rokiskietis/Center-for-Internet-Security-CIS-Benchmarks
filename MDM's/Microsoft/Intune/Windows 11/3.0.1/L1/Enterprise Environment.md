@@ -1551,8 +1551,11 @@ HKLM\SYSTEM\CurrentControlSet\Policies\EarlyLaunch:DriverLoadPolicy
 # 3.10.19 - Group Policy
 
 ## 3.10.19.1 - Ensure 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'
-## 3.10.19.2 - Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE
-## 3.10.19.3 - Ensure 'Configure security policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE
+
+## 3.10.19.2 - Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'
+
+## 3.10.19.3 - Ensure 'Configure security policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'
+
 ## 3.10.19.4 - Ensure 'Configure security policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'
 
 >[!NOTE]
