@@ -301,8 +301,6 @@ disabled. We recommend careful testing be performed to determine the impact prio
 configuring this as a widespread control, and where possible, remediate any
 incompatibilities found with the vendor of the incompatible system.
 
-
-
 ```
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1Server
@@ -623,6 +621,11 @@ computer releases its NetBIOS name when it receives a name-release request.
 >[!CAUTION]
 >None
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/MSSLegacy/AllowTheComputerToIgnoreNetBIOSNameReleaseRequestsExceptFromWINSServers
+```
+
 |Value|Description|
 |---|---|
 |Enabled|Enabled |
@@ -664,6 +667,11 @@ system path.
 >[!CAUTION]
 >None
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_SafeDllSearchMode
+```
+
 |Value|Description|
 |---|---|
 |Enabled|Enabled |
@@ -704,6 +712,10 @@ when the console is actually locked automatically when screen saver locking is e
 >Users will have to enter their passwords to resume their console sessions as soon as
 the grace period ends after screen saver activation.
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_ScreenSaverGracePeriod
+```
 
 |Value|Description|
 |---|---|
@@ -745,6 +757,10 @@ a user-defined threshold.
 threshold (or whatever lower value may be set) unless the log is configured to overwrite
 events as needed.
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_WarningLevel
+```
 
 |Value|Description|
 |---|---|
@@ -790,6 +806,10 @@ scenarios in which conventional DNS name resolution is not possible.
 >In the event DNS is unavailable a system will be unable to request it from other systems
 on the same subnet
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_DnsClient/Turn_Off_Multicast
+```
 
 |Value|Description|
 |---|---|
@@ -830,6 +850,10 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient:EnableMulticast
 >[!CAUTION]
 >Users cannot create or configure a Network Bridge
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Connectivity/ProhibitInstallationAndConfigurationOfNetworkBridge
+```
 
 |Value|Description|
 |---|---|
@@ -870,6 +894,10 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_AllowNetBridge_N
 >[!CAUTION]
 >Mobile Hotspot cannot be enabled or configured by Administrators and nonAdministrators alike.
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_NetworkConnections/NC_ShowSharedAccessUI
+```
 
 |Value|Description|
 |---|---|
@@ -909,6 +937,10 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_ShowSharedAccess
 >[!CAUTION]
 >Domain users must elevate when setting a network's location.
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_NetworkConnections/NC_StdDomainUserSetLocation
+```
 
 |Value|Description|
 |---|---|
@@ -946,6 +978,11 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_StdDomainUserSet
 
 >[!CAUTION]
 >Windows only allows access to the specified UNC paths after fulfilling additional security requirements.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Connectivity/HardenedUNCPaths
+```
 
 |Value|Description|
 |---|---|
@@ -991,6 +1028,11 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths:\\*\SYSVO
 (automatically or manually) until Ethernet is disconnected. However, if a cellular data
 connection is available, it will always stay connected for services that require it, but no
 Internet traffic will be routed over cellular if an Ethernet or WLAN connection is present.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_WCM/WCM_MinimizeConnections
+```
 
 |Value|Description|
 |---|---|
@@ -1041,6 +1083,11 @@ to create a manual connection to an additional network in violation of this poli
 the existing Ethernet connection is maintained and the manual connection attempt is
 blocked.
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/WindowsConnectionManager/ProhitConnectionToNonDomainNetworksWhenConnectedToDomainAuthenticatedNetwork
+```
+
 |Value|Description|
 |---|---|
 |Enabled|Enabled|
@@ -1079,6 +1126,11 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy:fBlockNonDomain
 
 >[!CAUTION]
 >The pairing ceremony for connecting to new wireless display devices will always require a PIN.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/WirelessDisplay/RequirePinForPairing
+```
 
 |Value|Description|
 |---|---|
@@ -1126,6 +1178,10 @@ print from their workstation. However, the workstation's Print Spooler service w
 accept client connections or allow users to share printers. Note that all printers that
 were already shared will continue to be shared.
 
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_Printing2/RegisterSpoolerRemoteRpcEndPoint
+```
 
 |Value|Description|
 |---|---|
