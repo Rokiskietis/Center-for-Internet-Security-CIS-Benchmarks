@@ -39,8 +39,18 @@ Script:
 
 
 ```
-Audit:
-HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\AboveLock:AllowCortanaAboveLock_WinningProvider value should be 0
+1. Navigate to the following registry location and note the WinningProvider GUID.
+This value confirms under which User GUID the policy is set.
+
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\AboveLock:AllowCortanaAboveLock_WinningProvider
+
+
+2. Navigate to the following registry location and confirm the value is set to 0.
+
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\AboveLock:AllowCortanaAboveLock
+
+
+
 
 ```
 
