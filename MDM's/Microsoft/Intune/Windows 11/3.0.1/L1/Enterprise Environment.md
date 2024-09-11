@@ -1697,9 +1697,9 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with the key not existing.
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:DisableBkGndGroupPolicy
 ```
-#3.10.20.1 - Internet Communication settings
+# 3.10.20.1 - Internet Communication settings
 
-##3.10.20.1.2 - Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'
+## 3.10.20.1.2 - Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'
 
 >[!NOTE]
 >This policy setting controls whether the computer can download print driver packages
