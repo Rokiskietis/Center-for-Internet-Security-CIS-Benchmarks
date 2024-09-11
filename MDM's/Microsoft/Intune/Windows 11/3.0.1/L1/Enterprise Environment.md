@@ -128,6 +128,16 @@ OMA-URI (Device)
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Prevent enabling lock screen camera\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
 Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization:NoLockScreenCamera
@@ -149,17 +159,35 @@ from playing on the lock screen
 PC Settings, and no slide show will ever start.
 
 
-OMA-URI (Device)
+
 ```
+OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventLockScreenSlideShow
 ```
 |Value|Description|
 |---|---|
 |Enabled|Enable|
+|Disabled|Disabled. (Users can enable a slide show that will run after they lock the machine.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Prevent enabling lock screen slide show\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventLockScreenSlideShow",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization:NoLockScreenSlideshow
+```
+
 
 # 3.4 -  MS Security Guide
 
@@ -177,9 +205,8 @@ systems. Enabling this policy significantly reduces that risk.
 >[!CAUTION]
 >None
 
-
-OMA-URI (Device)
 ```
+OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon
 ```
 |Value|Description|
