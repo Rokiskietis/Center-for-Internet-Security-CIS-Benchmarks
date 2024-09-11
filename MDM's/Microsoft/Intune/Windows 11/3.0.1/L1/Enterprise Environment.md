@@ -69,18 +69,36 @@ passerby will hijack it. Configuring a timed screen saver with password lock wil
 protect against these hijacks.
 
 
-OMA-URI (User)
+
 ```
+OMA-URI (User)
 ./User/Vendor/MSFT/Policy/Config/ADMX_ControlPanelDisplay/CPL_Personalization_EnableScreenSaver
 ```
 |Value|Description|
 |---|---|
 |Enabled|Enable|
+|Disabled|Disable|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|4.3 Configure Automated Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Enable screen saver\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./User/Vendor/MSFT/Policy/Config/ADMX_ControlPanelDisplay/CPL_Personalization_EnableScreenSaver",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_SZ value of 1.
+HKU\[USER SID]\Software\Policies\Microsoft\Windows\Control Panel\Desktop:ScreenSaveActive
+```
 
 
 ## 3.1.3.2 - Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'
@@ -96,8 +114,9 @@ from being invoked on the lock screen
 >If you enable this setting, users will no longer be able to enable or disable lock screen
 camera access in PC Settings, and the camera cannot be invoked on the lock screen.
 
-OMA-URI (Device)
+
 ```
+OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera
 ```
 |Value|Description|
@@ -107,6 +126,15 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+```
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization:NoLockScreenCamera
+```
+```
+
 
 
 ## 3.1.3.3 - Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'
