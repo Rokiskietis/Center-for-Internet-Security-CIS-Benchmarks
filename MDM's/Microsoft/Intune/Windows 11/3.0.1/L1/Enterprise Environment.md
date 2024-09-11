@@ -1784,4 +1784,259 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoWebServices
 ```
 
-# 3.10.23 - Kerberos
+# 3.10.25 - Logon
+
+## 3.10.25.1 - Ensure 'Block user from showing account details on sign-in' is set to 'Enabled' 
+>[!NOTE]
+>This policy prevents the user from showing account details (email address or user
+name) on the sign-in screen.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users cannot choose to show account details on the sign-in screen.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_Logon/BlockUserFromShowingAccountDetailsOnSignin
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Users may choose to show account details on the sign-in screen.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.1 Establish and Maintain a Secure Configuration Process|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|5.1 Establish Secure Configurations|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Block user from showing account details on sign-in\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Logon/BlockUserFromShowingAccountDetailsOnSignin",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:BlockUserFromShowingAccountDetailsOnSignin
+```
+
+## 3.10.25.2 - Ensure 'Do not display network selection UI' is set to 'Enabled' 
+>[!NOTE]
+>This policy setting allows you to control whether anyone can interact with available
+networks UI on the logon screen.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The PC's network connectivity state cannot be changed without signing into Windows.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DontDisplayNetworkSelectionUI
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Any user can disconnect the PC from the network or can connect the PC to other available networks without signing into Windows.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped||||Level - 1|
+|8|Not Yet Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Do not display network selection UI\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DontDisplayNetworkSelectionUI",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:DontDisplayNetworkSelectionUI
+```
+
+## 3.10.25.3 - Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting prevents connected users from being enumerated on domain-joined
+computers.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Logon UI will not enumerate any connected users on domain-joined computers
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_Logon/DontEnumerateConnectedUsers
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Connected users will be enumerated on domain-joined computers.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped||||Level - 1|
+|8|Not Yet Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Do not enumerate connected users on domain-joined computers\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Logon/DontEnumerateConnectedUsers",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:DontEnumerateConnectedUsers
+```
+
+## 3.10.25.4 - Ensure 'Enumerate local users on domain-joined computers' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting allows local users to be enumerated on domain-joined computers.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/WindowsLogon/EnumerateLocalUsersOnDomainJoinedComputers
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (The Logon UI will not enumerate local users on domain-joined computers.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped||||Level - 1|
+|8|Not Yet Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Enumerate local users on domain-joined computers\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/EnumerateLocalUsersOnDomainJoinedComputers",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:EnumerateLocalUsers
+```
+
+## 3.10.25.5 - Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting allows you to prevent app notifications from appearing on the lock
+screen.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>No app notifications are displayed on the lock screen.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DisableLockScreenAppNotifications
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Users can choose which apps display notifications on the lock screen.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Turn off app notifications on the lock screen\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DisableLockScreenAppNotifications",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1. 
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:DisableLockScreenAppNotifications
+
+```
+
+## 3.10.25.6 - Ensure 'Turn off picture password sign-in' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting allows you to control whether a domain user can sign in using a
+picture password.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users will not be able to set up or sign in with a picture password.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/CredentialProviders/BlockPicturePassword
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Users can set up and use a picture password.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Turn off picture password sign-in\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/CredentialProviders/BlockPicturePassword",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:BlockDomainPicturePassword
+```
