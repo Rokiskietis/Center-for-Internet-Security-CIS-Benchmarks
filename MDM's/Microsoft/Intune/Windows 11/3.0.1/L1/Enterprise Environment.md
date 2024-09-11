@@ -39,6 +39,8 @@ Script:
 
 
 ```
+Audit:
+
 1. Navigate to the following registry location and note the WinningProvider GUID.
 This value confirms under which User GUID the policy is set.
 
