@@ -712,7 +712,7 @@ the grace period ends after screen saver activation.
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.3 Configure Automatic Session Locking on EnterpriseAssets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
@@ -731,4 +731,208 @@ Audit: Navigate to the UI Path articulated in the Remediation section and confir
 HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Winlogon:ScreenSaverGracePeriod
 ```
 
-## 
+## 3.5.13 - Ensure 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less'
+
+>[!NOTE]
+>This setting can generate a security audit in the Security event log when the log reaches
+a user-defined threshold.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>An audit event will be generated when the Security log reaches the 90% percent full
+threshold (or whatever lower value may be set) unless the log is configured to overwrite
+events as needed.
+
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled |
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.3 Ensure Adequate Audit Log Storage|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.4 Ensure adequate storage for logs|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning\u0027 is set to \u0027Enabled: 90% or less\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_WarningLevel",
+            "value": "\u003cenabled/\u003e\u003cdata id=\"WarningLevel\" value=\"90\"/\u003e"
+        },
+```
+
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 90.
+HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\Security:WarningLevel
+```
+# 3.6.4 - DNS Client
+
+## 3.6.4.1 - Ensure 'Turn off multicast name resolution' is set to 'Enabled'
+
+>[!NOTE]
+>LLMNR is a secondary name resolution protocol. With LLMNR, queries are sent using
+multicast over a local network link on a single subnet from a client computer to another
+client computer on the same subnet that also has LLMNR enabled. LLMNR does not
+require a DNS server or DNS client configuration, and provides name resolution in
+scenarios in which conventional DNS name resolution is not possible.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>In the event DNS is unavailable a system will be unable to request it from other systems
+on the same subnet
+
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (LLMNR will be enabled on all available network adapters.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+
+```
+Script: 
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Turn off multicast name resolution\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_DnsClient/Turn_Off_Multicast",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient:EnableMulticast
+```
+# 3.6.9 - Network Connections
+
+## 3.6.9.1 - Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'
+
+>[!NOTE]
+>You can use this procedure to control a user's ability to install and configure a Network Bridge
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users cannot create or configure a Network Bridge
+
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Users are able create and modify the configuration of Network Bridges. Membership in the local Administrators group, or equivalent, is the minimum required to complete this procedure.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.2 Establish and Maintain a Secure Configuration Process for Network Infrastructure|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|11.3 Use Automated Tools to Verify Standard Device Configurations and Detect Changes||:orange_circle:|:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Prohibit installation and configuration of Network Bridge on your DNS domain network\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Connectivity/ProhibitInstallationAndConfigurationOfNetworkBridge",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_AllowNetBridge_NLA
+```
+
+## 3.6.9.2 - Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'
+
+>[!NOTE]
+>Although this "legacy" setting traditionally applied to the use of Internet Connection Sharing (ICS) in Windows 2000, Windows XP & Server 2003, this setting now freshly applies to the Mobile Hotspot feature in Windows 10 & Server 2016.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Mobile Hotspot cannot be enabled or configured by Administrators and nonAdministrators alike.
+
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (All users are allowed to turn on Mobile Hotspot.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": Ensure \u0027Prohibit use of Internet Connection Sharing on your DNS domain network\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_NetworkConnections/NC_ShowSharedAccessUI",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_ShowSharedAccessUI
+```
+
+## 3.6.9.3 - Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting determines whether to require domain users to elevate when setting a network's location.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Domain users must elevate when setting a network's location.
+
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Users can set a network's location without elevating.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet|||Level - 1|
+|7|4.3 Ensure the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Require domain users to elevate when setting a network\u0027s location\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_NetworkConnections/NC_StdDomainUserSetLocation",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_StdDomainUserSetLocation
+```
+
