@@ -58,24 +58,30 @@ OMA-URI (User)
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
-## 2.1.3 - Ensure "Allow copy/paste to be affected by managed open-in" is set to "Yes"
+## 3.1.3.2 - Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'
 
 >[!NOTE]
->This enforces copy/paste restrictions based on configured Block viewing corporate documents in unmanaged apps and Block viewing non-corporate documents in corporate apps.
+>Disables the lock screen camera toggle switch in PC Settings and prevents a camera
+from being invoked on the lock screen
 
 >[!TIP]
->Manual Remedation
+>Automatic Remedation
 
+>[!CAUTION]
+If you enable this setting, users will no longer be able to enable or disable lock screen
+camera access in PC Settings, and the camera cannot be invoked on the lock screen.
 
-Script to Remediation
+OMA-URI (User)
 ```
-Remediation
-Script
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera
 ```
+|Value|Description|
+|---|---|
+|Enabled|Enable|
+
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.3 Configure Data Access Control Lists|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
-|7|14.6 Protect Information through Access Control Lists|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 # 2.2 - Biuld-in Apps
 
