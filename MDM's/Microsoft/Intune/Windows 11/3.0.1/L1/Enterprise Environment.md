@@ -22,32 +22,40 @@ OMA-URI (Device)
 |0|Not allowed|
 |1|(Default) Allowed|
 
-
-
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
-## 2.1.2 - Ensure "Treat AirDrop as an unmanaged destination" is set to "Yes"
+# 3.1.3 Personalization
 
+## 3.1.3.1 - Ensure 'Enable screen saver (User)' is set to 'Enabled'
+ 
 
 >[!NOTE]
->This forces AirDrop to be considered an unmanaged drop target.
+>This policy setting enables/disables the use of desktop screen savers.
 
 >[!TIP]
->Manual Remedation
+>Automated Remedation
+
+>[!CAUTION]
+>If a user forgets to lock their computer when they walk away, it is possible that a
+passerby will hijack it. Configuring a timed screen saver with password lock will help to
+protect against these hijacks.
 
 
-Script to Remediation
+OMA-URI (User)
 ```
-Remediation
-Script
+./User/Vendor/MSFT/Policy/Config/ADMX_ControlPanelDisplay/CPL_Personalization_EnableScreenSaver
 ```
+|Value|Description|
+|---|---|
+|Enabled|Enable|
+
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.3 Configure Data Access Control Lists|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
-|7|14.6 Protect Information through Access Control Lists|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|4.3 Configure Automatic Session Locking on Enterprise Assets|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 ## 2.1.3 - Ensure "Allow copy/paste to be affected by managed open-in" is set to "Yes"
