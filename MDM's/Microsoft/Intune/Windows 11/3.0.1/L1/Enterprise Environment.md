@@ -261,3 +261,62 @@ OMA-URI (Device)
 |---|---|---|---|---|---|
 |8|3.11 Encrypt Sensitive Data at Rest||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.4 Encrypt or Hash all Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
+
+# 3.5 - MSS
+
+## 3.5.1 - Ensure 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled' 
+
+>[!NOTE]
+>This setting is separate from the Welcome screen feature in Windows XP and Windows
+Vista; if that feature is disabled, this setting is not disabled. If you configure a computer
+for automatic logon, anyone who can physically gain access to the computer can also
+gain access to everything that is on the computer, including any network or networks to
+which the computer is connected. Also, if you enable automatic logon, the password is
+stored in the registry in plaintext, and the specific registry key that stores this value is
+remotely readable by the Authenticated Users group.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+OMA-URI (Device)
+```
+./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel
+```
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.11 Encrypt Sensitive Data at Rest||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.4 Encrypt or Hash all Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
+
+## 3.5.2 - Ensure 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
+
+>[!NOTE]
+>IP source routing is a mechanism that allows the sender to determine the IP route that a
+datagram should follow through the network.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>All incoming source routed packets will be dropped
+
+OMA-URI (Device)
+```
+./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPv6SourceRoutingProtectionLevel
+```
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|X|Not Mapped Yet|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|X|Not Mapped Yet|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
