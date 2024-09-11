@@ -1300,7 +1300,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKU\[USERSID]\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications:NoToastApplicationNotificationOnLockScreen
 ```
 
-#3.10.4 - Audit Process Creation
+# 3.10.4 - Audit Process Creation
 
 ## 3.10.4.1 - Ensure 'Include command line in process creation events' is set to 'Enabled' 
 
@@ -1346,7 +1346,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit:ProcessCreationIncludeCmdLine_Enabled
 ```
 
-#3.10.5 - Credentials Delegation
+# 3.10.5 - Credentials Delegation
 
 ## 3.10.5.1 - Ensure 'Encryption Oracle Remediation' is set to 'Enabled: Force Updated Clients' 
 
@@ -1548,7 +1548,7 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 3.
 HKLM\SYSTEM\CurrentControlSet\Policies\EarlyLaunch:DriverLoadPolicy
 ```
-#3.10.19 - Group Policy
+# 3.10.19 - Group Policy
 
 ## 3.10.19.1 - Ensure 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'
 ## 3.10.19.2 - Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE
