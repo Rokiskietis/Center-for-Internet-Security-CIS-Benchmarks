@@ -130,9 +130,7 @@ OMA-URI (Device)
 ```
 Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
-```
 HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization:NoLockScreenCamera
-```
 ```
 
 
