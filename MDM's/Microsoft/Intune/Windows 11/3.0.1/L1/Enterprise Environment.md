@@ -272,7 +272,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "18.3.2 (L1) Ensure \u0027Configure SMB v1 client driver\u0027 is set to \u0027Enabled: Disable driver (recommended)\u0027",
+            "displayName": "Ensure \u0027Configure SMB v1 client driver\u0027 is set to \u0027Enabled: Disable driver (recommended)\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1ClientDriver",
             "value": "\u003cenabled/\u003e\u003cdata id=\"Pol_SecGuide_SMB1ClientDriver\" value=\"4\" /\u003e"
         },
@@ -1015,7 +1015,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths:\\*\SYSVO
 
 # 3.6.18 - Windows Connection Manager
 
-## 3.6.18.1 (L1) Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled: 3 = Prevent Wi-Fi when on Ethernet' 
+## 3.6.18.1 - Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled: 3 = Prevent Wi-Fi when on Ethernet' 
 
 >[!NOTE]
 >This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain.
@@ -1385,7 +1385,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "18.8.4.2 (L1) Ensure \u0027Encryption Oracle Remediation\u0027 is set to \u0027Enabled: Force Updated Clients\u0027",
+            "displayName": "Ensure \u0027Encryption Oracle Remediation\u0027 is set to \u0027Enabled: Force Updated Clients\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_CredSsp/AllowEncryptionOracle",
             "value": "\u003cenabled/\u003e\n\u003cdata id=\"AllowEncryptionOracleDrop\" value=\"0\"/\u003e"
         },
@@ -1432,7 +1432,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "18.8.4.1 (L1) Ensure \u0027Remote host allows delegation of non-exportable credentials\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "Ensure \u0027Remote host allows delegation of non-exportable credentials\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/CredentialsDelegation/RemoteHostAllowsDelegationOfNonExportableCredentials",
             "value": "\u003cenabled/\u003e"
         },
@@ -1537,7 +1537,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "18.8.14.1 (L1) Ensure \u0027Boot-Start Driver Initialization Policy\u0027 is set to \u0027Enabled: Good, unknown and bad but critical\u0027",
+            "displayName": "Ensure \u0027Boot-Start Driver Initialization Policy\u0027 is set to \u0027Enabled: Good, unknown and bad but critical\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/System/BootStartDriverInitialization",
             "value": "\u003cenabled/\u003e\n\u003cdata id=\"SelectDriverLoadPolicy\" value=\"3\"/\u003e"
         },
@@ -1590,7 +1590,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Configure registry policy processing: Do not apply during periodic background processing\u0027 is set to \u0027Enabled: FALSE\u0027 18.8.21.2 (L1) Ensure \u0027Configure registry policy processing: Process even if the Group Policy objects have not changed\u0027 is set to \u0027Enabled: TRUE\u0027",
+            "displayName": "Ensure \u0027Configure registry policy processing: Do not apply during periodic background processing\u0027 is set to \u0027Enabled: FALSE\u0027 Ensure \u0027Configure registry policy processing: Process even if the Group Policy objects have not changed\u0027 is set to \u0027Enabled: TRUE\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/CSE_Registry",
             "value": "\u003cenabled/\u003e\n\u003cdata id=\"CSE_NOBACKGROUND10\" value=\"false\"/\u003e\n\u003cdata id=\"CSE_NOCHANGES10\" value=\"false\"/\u003e"
         },
@@ -1741,7 +1741,7 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers:DisableWebPnPDownload
 ```
-## 3.10.20.1.5 (L1) Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'
+## 3.10.20.1.5 - Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'
 >[!NOTE]
 >This policy setting controls whether Windows will download a list of providers for the
 Web publishing and online ordering wizards.
@@ -2118,7 +2118,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "18.8.34.6.1 (L1) Ensure \u0027Allow network connectivity during connected-standby (on battery)\u0027 is set to \u0027Disabled\u0027",
+            "displayName": Ensure \u0027Allow network connectivity during connected-standby (on battery)\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Power/DCConnectivityInStandby_2",
             "value": "\u003cdisabled/\u003e"
         },
