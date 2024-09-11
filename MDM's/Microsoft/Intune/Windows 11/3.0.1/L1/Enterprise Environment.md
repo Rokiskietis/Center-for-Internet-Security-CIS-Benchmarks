@@ -1209,3 +1209,49 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\Software\Policies\Microsoft\WindowsNT\Printers:RegisterSpoolerRemoteRpcEndPoint
 
 ```
+
+## 3.7.2 - Ensure 'Point and Print Restrictions: When installing drivers for a new connection' is set to 'Enabled: Show warning and elevation prompt' 
+
+## 3.7.3 - Ensure 'Point and Print Restrictions: When updating drivers for an existing connection' is set to 'Enabled: Show warning and elevation prompt' 
+>[!NOTE]
+>This policy setting controls whether computers will show a warning and a security
+elevation prompt when users create a new printer connection using Point and Print.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Printers/PointAndPrintRestrictions
+```
+|Value|Description|
+|---|---|
+|Enabled|Enabled. (Windows computers will show a warning and a security elevation prompt when users create a new printer connection using Point and Print.)|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet|||||Level - 1|
+|7|Not Mapped Yet|||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Point and Print Restrictions: When installing drivers for a new connection\u0027 is set to \u0027Enabled: Show warning and elevation prompt\u0027  Ensure \u0027Point and Print Restrictions: When updating drivers for an existing connection\u0027 is set to \u0027Enabled: Show warning and elevation prompt\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Printers/PointAndPrintRestrictions",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"PointAndPrint_TrustedServers_Chk\" value=\"false\"/\u003e\n\u003cdata id=\"PointAndPrint_TrustedServers_Edit\" value=\"\"/\u003e\n\u003cdata id=\"PointAndPrint_TrustedForest_Chk\" value=\"false\"/\u003e\n\u003cdata id=\"PointAndPrint_NoWarningNoElevationOnInstall_Enum\" value=\"0\"/\u003e\n\u003cdata id=\"PointAndPrint_NoWarningNoElevationOnUpdate_Enum\" value=\"0\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set asprescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\Software\Policies\Microsoft\WindowsNT\Printers\PointAndPrint:NoWarningNoElevationOnInstall
+
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\Software\Policies\Microsoft\WindowsNT\Printers\PointAndPrint:UpdatePromptSettings
+```
