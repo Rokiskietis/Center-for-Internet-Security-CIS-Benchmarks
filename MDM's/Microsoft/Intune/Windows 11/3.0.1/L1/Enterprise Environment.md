@@ -1281,8 +1281,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:||Level - 1|
-|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:||Level - 1|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 ```
@@ -1327,8 +1327,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle:||Level - 1|
-|7|16.4 Encrypt or Hash all Authentication Credentials||:orange_circle:|:large_blue_circle:||Level - 1|
+|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.4 Encrypt or Hash all Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -1378,8 +1378,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:||Level - 1|
-|7|3.4 Deploy Automated Operating System Patch Management Tools|:green_circle:|:orange_circle:|:large_blue_circle:||Level - 1|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|3.4 Deploy Automated Operating System Patch Management Tools|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -1425,8 +1425,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|Not Yet Mapped|||||Level - 1|
-|7|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle:||Level - 1|
+|8|Not Yet Mapped||||Level - 1|
+|7|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -1472,8 +1472,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|2.5 Allowlist Authorized Software||:orange_circle:|:large_blue_circle:||Level - 1|
-|7|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:||Level - 1|
+|8|2.5 Allowlist Authorized Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
