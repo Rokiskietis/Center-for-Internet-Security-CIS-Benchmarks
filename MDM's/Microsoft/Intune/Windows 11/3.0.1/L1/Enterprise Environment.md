@@ -140,30 +140,35 @@ OMA-URI (Device)
 |---|---|---|---|---|---|
 |7|4.3 Ensure the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
-# 2.3 - Cloud and Storage
-
-## 2.3.1 - Ensure "Force encrypted backup" is set to "Yes
+## 3.4.2 - Ensure 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver '
 	
 >[!NOTE]
->This requires device backups to be stored in an encrypted state.
+>This setting configures the start type for the Server Message Block version 1 (SMBv1) client driver service (MRxSmb10), which is recommended to be disabled.
 
 
 >[!TIP]
->Manual Remedation
+>Automated Remedation
 
 >[!CAUTION]
-End users must configure a password for the encrypted backup, the complexity of which is not managed.
+Some legacy OSes (e.g. Windows XP, Server 2003 or older), applications and
+appliances may no longer be able to communicate with the system once SMBv1 is
+disabled. We recommend careful testing be performed to determine the impact prior to
+configuring this as a widespread control, and where possible, remediate any
+incompatibilities found with the vendor of the incompatible system.
 
 
-Script to Remediation
+OMA-URI (Device)
 ```
-Remediation
-Script
+./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1ClientDriver
 ```
+|Value|Description|
+|---|---|
+|Enabled|Disable driver|
+|Disabled|Enable Driver|
+
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|9.4 Protect Recovery Data|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
-|7|7.2 - Ensure Protection of Backups|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|4.3 Ensure the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ## 2.3.2 - Ensure "Block managed apps from storing data in iCloud" is set to "Yes"
 	
