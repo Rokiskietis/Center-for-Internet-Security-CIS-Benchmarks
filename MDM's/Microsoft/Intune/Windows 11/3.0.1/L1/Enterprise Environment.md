@@ -1,6 +1,6 @@
 # Corporate/Enterprise Environment Level - 1
 
-# 1.0 Above Lock
+# 1.0 - Above Lock
 
 ## 1.1 Ensure 'Allow Cortana Above Lock' is set to 'Block'
 
@@ -27,7 +27,7 @@ OMA-URI (Device)
 |8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
-# 3.1.3 Personalization
+# 3.1.3 - Personalization
 
 ## 3.1.3.1 - Ensure 'Enable screen saver (User)' is set to 'Enabled'
  
@@ -68,7 +68,7 @@ from being invoked on the lock screen
 >Automated Remedation
 
 >[!CAUTION]
-If you enable this setting, users will no longer be able to enable or disable lock screen
+>If you enable this setting, users will no longer be able to enable or disable lock screen
 camera access in PC Settings, and the camera cannot be invoked on the lock screen.
 
 OMA-URI (Device)
@@ -84,7 +84,7 @@ OMA-URI (Device)
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
-## 3.1.3.3 (L1) Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'
+## 3.1.3.3 - Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'
 	
 >[!NOTE]
 >Disables the lock screen slide show settings in PC Settings and prevents a slide show
@@ -94,7 +94,7 @@ from playing on the lock screen
 >Automated Remedation
 
 >[!CAUTION]
-If you enable this setting, users will no longer be able to modify slide show settings in
+>If you enable this setting, users will no longer be able to modify slide show settings in
 PC Settings, and no slide show will ever start.
 
 
@@ -110,24 +110,38 @@ OMA-URI (Device)
 |---|---|---|---|---|---|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
-## 2.2.2 - Ensure "Require Safari fraud warnings" is set to "Yes"
+# 3.4 -  MS Security Guide
+
+## 3.4.1 - Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled' 
 
 >[!NOTE]
->This enforces the feature to display fraud warnings within the Safari web browser.
+>This setting controls whether local accounts can be used for remote administration via
+network logon (e.g., NET USE, connecting to C$, etc.). Local accounts are at high risk
+for credential theft when the same account and password is configured on multiple
+systems. Enabling this policy significantly reduces that risk.
 
 >[!TIP]
->Manual Remedation
+>Automated Remedation
+
+>[!CAUTION]
+>None
 
 
-Script to Remediation
+OMA-URI (Device)
 ```
-Remediation
-Script
+./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon
 ```
+|Value|Description|
+|---|---|
+|Enabled|Applies UAC token-filtering to local accounts on network logons. Membership
+in powerful group such as Administrators is disabled and powerful privileges are
+removed from the resulting access token|
+|Disabled|Allows local accounts to have full administrative rights when authenticating
+via network logon|
+
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|9.4 Configure Automated Session Locking on Enterprise Assets||:orange_circle:|:large_blue_circle:|Level - 1|
-|7|7.2 Disable Unnecessary or Unauthorized Browser or Email Client Plugins||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|4.3 Ensure the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 # 2.3 - Cloud and Storage
 
