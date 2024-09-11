@@ -13,11 +13,15 @@
 >[!CAUTION]
 >The system will need to be unlocked for the user to interact with Cortana using speech.
 
-Script to Remediation
-```
-Remediation
-Script
-```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/AboveLock/AllowActionCenterNotifications
+
+|Value|Description|
+|0|Not allowed|
+|1|(Default) Allowed|
+
+
+
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|4.8  Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
