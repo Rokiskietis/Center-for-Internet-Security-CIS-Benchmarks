@@ -1315,7 +1315,6 @@ security audit events when a new process has been created.
 >Process command line information will be included in the event logs, which can contain
 sensitive or private information such as passwords or user data.
 
-
 ```
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/ADMX_AuditSettings/IncludeCmdLine
@@ -1345,4 +1344,149 @@ Script:
 Audit: 
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit:ProcessCreationIncludeCmdLine_Enabled
+```
+
+#3.10.5 - Credentials Delegation
+
+## 3.10.5.1 - Ensure 'Encryption Oracle Remediation' is set to 'Enabled: Force Updated Clients' 
+
+>[!NOTE]
+>Some versions of the CredSSP protocol that is used by some applications (such as
+Remote Desktop Connection) are vulnerable to an encryption oracle attack against the
+client. This policy controls compatibility with vulnerable clients and servers and allows
+you to set the level of protection desired for the encryption oracle vulnerability.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Client applications which use CredSSP will not be able to fall back to the insecure
+versions and services using CredSSP will not accept unpatched clients. This setting
+should not be deployed until all remote hosts support the newest version, which is
+achieved by ensuring that all Microsoft security updates at least through May 2018 are
+installed.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_CredSsp/AllowEncryptionOracle
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:||Level - 1|
+|7|3.4 Deploy Automated Operating System Patch Management Tools|:green_circle:|:orange_circle:|:large_blue_circle:||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "18.8.4.2 (L1) Ensure \u0027Encryption Oracle Remediation\u0027 is set to \u0027Enabled: Force Updated Clients\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_CredSsp/AllowEncryptionOracle",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"AllowEncryptionOracleDrop\" value=\"0\"/\u003e"
+        },
+```
+
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters:AllowEncryptionOracle
+```
+
+## 3.10.5.2 - Ensure 'Remote host allows delegation of nonexportable credentials' is set to 'Enabled' 
+
+>[!NOTE]
+>Remote host allows delegation of non-exportable credentials. When using credential
+delegation, devices provide an exportable version of credentials to the remote host. This
+exposes users to the risk of credential theft from attackers on the remote host. The
+Restricted Admin Mode and Windows Defender Remote Credential Guard features are
+two options to help protect against this risk.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The host will support the Restricted Admin Mode and Windows Defender Remote
+Credential Guard features.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/CredentialsDelegation/RemoteHostAllowsDelegationOfNonExportableCredentials
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Restricted Admin Mode and Windows Defender Remote Credential Guard are not supported. Users will always need to pass their credentials to the host.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped|||||Level - 1|
+|7|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle:||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "18.8.4.1 (L1) Ensure \u0027Remote host allows delegation of non-exportable credentials\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/CredentialsDelegation/RemoteHostAllowsDelegationOfNonExportableCredentials",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation:AllowProtectedCreds
+```
+
+# 3.10.9.1 - Device Installation Restrictions
+
+## 3.10.9.2 - Ensure 'Prevent device metadata retrieval from the Internet' is set to 'Enabled' 
+>[!NOTE]
+>This policy setting allows you to prevent Windows from retrieving device metadata from
+the Internet.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Standard users without administrator privileges will not be able to install associated
+third-party utility software for peripheral devices. This may limit the use of advanced
+features of those devices unless/until an administrator installs the associated utility
+software for the device.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/DeviceInstallation/PreventDeviceMetadataFromNetwork
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (The setting in the Device Installation Settings dialog box controls whetherWindows retrieves device metadata from the Internet.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|2.5 Allowlist Authorized Software||:orange_circle:|:large_blue_circle:||Level - 1|
+|7|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Prevent device metadata retrieval from the Internet\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceInstallation/PreventDeviceMetadataFromNetwork",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceMetadata:PreventDeviceMetadataFromNetwork
 ```
