@@ -936,3 +936,220 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_StdDomainUserSetLocation
 ```
 
+## 3.6.11.1 - Ensure 'Hardened UNC Paths' is set to 'Enabled, with "Require Mutual Authentication" and "Require Integrity" set for all NETLOGON and SYSVOL shares' 
+
+>[!NOTE]
+>This policy setting configures secure access to UNC paths
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows only allows access to the specified UNC paths after fulfilling additional security requirements.
+
+|Value|Description|
+|---|---|
+|Will be Updated|Will be Updated|
+|Disabled|Disabled. (Users can set a network's location without elevating.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet||||Level - 1|
+|7|Not Mapped Yet||||Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Hardened UNC Paths\u0027 is set to \u0027Enabled, with \"Require Mutual Authentication\" and \"Require Integrity\" set for all NETLOGON and SYSVOL shares\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Connectivity/HardenedUNCPaths",
+            "value": "\u003cenabled/\u003e\u003cdata id=\"Pol_HardenedPaths\" value=\"\\\\*\\NETLOGONRequireMutualAuthentication=1,RequireIntegrity=1\\\\*\\SYSVOLRequireMutualAuthentication=1,RequireIntegrity=1\"/\u003e"
+        },
+```
+
+```
+Audit: 
+
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry locations with a REG_SZ value of RequireMutualAuthentication=1, RequireIntegrity=1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths:\\*\NETLOGON
+HKLM\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths:\\*\SYSVOL
+```
+
+# 3.6.18 - Windows Connection Manager
+
+## 3.6.18.1 (L1) Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled: 3 = Prevent Wi-Fi when on Ethernet' 
+
+>[!NOTE]
+>This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>While connected to an Ethernet connection, Windows won't allow use of a WLAN
+(automatically or manually) until Ethernet is disconnected. However, if a cellular data
+connection is available, it will always stay connected for services that require it, but no
+Internet traffic will be routed over cellular if an Ethernet or WLAN connection is present.
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled: 1 = Minimize simultaneous connections. (Any new automatic internet connection is blocked when the computer has at least one active internet connection to a preferred type of network. The order of preference (from most preferred to least preferred) is: Ethernet, WLAN, then cellular. Ethernet is always preferred when connected. Users can still manually connect to any network.)|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.1 Establish and Maintain a Secure Configuration Process|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|15.5 Limit Wireless Access on Client Devices|||:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Minimize the number of simultaneous connections to the Internet or a Windows Domain\u0027 is set to \u0027Enabled: 3 = Prevent Wi-Fi when on Ethernet\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_WCM/WCM_MinimizeConnections",
+            "value": "\u003cenabled/\u003e\u003cdata id=\"WCM_MinimizeConnections_Options\" value=\"3\"/\u003e"
+        },
+```
+
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 3.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy:fMinimizeConnections
+```
+
+## 3.6.18.2 - Ensure 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to'Enabled' 
+
+>[!NOTE]
+>This policy setting prevents computers from connecting to both a domain based network and a non-domain based network at the same time
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The computer responds to automatic and manual network connection attempts based
+on the following circumstances:
+Automatic connection attempts - When the computer is already connected to a domain
+based network, all automatic connection attempts to non-domain networks are blocked.
+- When the computer is already connected to a non-domain based network, automatic
+connection attempts to domain based networks are blocked.
+Manual connection attempts - When the computer is already connected to either a nondomain based network or a domain based network over media other than Ethernet, and
+a user attempts to create a manual connection to an additional network in violation of
+this policy setting, the existing network connection is disconnected and the manual
+connection is allowed. - When the computer is already connected to either a nondomain based network or a domain based network over Ethernet, and a user attempts
+to create a manual connection to an additional network in violation of this policy setting,
+the existing Ethernet connection is maintained and the manual connection attempt is
+blocked.
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Connections to both domain and non-domain networks are simultaneously allowed.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|12.4 Deny Communication over Unauthorized Ports|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|Not Mapped Yet|||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Prohibit connection to non-domain networks when connected to domain authenticated network\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsConnectionManager/ProhitConnectionToNonDomainNetworksWhenConnectedToDomainAuthenticatedNetwork",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+``` 
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy:fBlockNonDomain
+```
+# 3.6.19 - Wireless Display
+
+## 3.6.19.1 - Ensure 'Require PIN pairing' is set to 'Enabled'
+
+
+>[!NOTE]
+>This policy setting controls whether or not a PIN is required for pairing to a wireless display device
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The pairing ceremony for connecting to new wireless display devices will always require a PIN.
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (A PIN is not required for pairing to a wireless display device.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet|||||Level - 1|
+|7|Not Mapped Yet|||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "Ensure \u0027Require pin for pairing\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WirelessDisplay/RequirePinForPairing",
+            "value": 1
+        },
+```
+
+```
+Audit: 
+1. Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\ADMX_wlansvc:SetPINEnforced_WinningProvider
+
+2. Navigate to the following registry location and confirm the value is set to <enabled/>.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\ADMX_wlansvc:SetPINEnforced
+
+```
+
+# 3.7 - Printers
+
+## 3.7.1 - Ensure 'Allow Print Spooler to accept client connections' is set to 'Disabled' 
+
+>[!NOTE]
+>This policy setting controls whether the Print Spooler service will accept client connections.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Provided that the Print Spooler service is not disabled, users will continue to be able to
+print from their workstation. However, the workstation's Print Spooler service will not
+accept client connections or allow users to share printers. Note that all printers that
+were already shared will continue to be shared.
+
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled. (The Print Spooler will always accept client connections.)|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.1 Establish and Maintain a Secure Configuration Process|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Allow Print Spooler to accept client connections\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Printing2/RegisterSpoolerRemoteRpcEndPoint",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 2.
+HKLM\Software\Policies\Microsoft\WindowsNT\Printers:RegisterSpoolerRemoteRpcEndPoint
+
+```
