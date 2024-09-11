@@ -133,11 +133,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-|Enabled|Applies UAC token-filtering to local accounts on network logons. Membership
-in powerful group such as Administrators is disabled and powerful privileges are
-removed from the resulting access token|
-|Disabled|Allows local accounts to have full administrative rights when authenticating
-via network logon|
+|Enabled|Applies UAC token-filtering to local accounts on network logons. Membership in powerful group such as Administrators is disabled and powerful privileges are removed from the resulting access token|
+|Disabled|Allows local accounts to have full administrative rights when authenticating via network logon|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
