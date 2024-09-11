@@ -13,14 +13,14 @@
 >[!CAUTION]
 >The system will need to be unlocked for the user to interact with Cortana using speech.
 
-OMA-URI (Device)
 ```
+OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/AboveLock/AllowActionCenterNotifications
 ```
 |Value|Description|
 |---|---|
-|0|Not allowed|
-|1|(Default) Allowed|
+|0| Disabled Not allowed|
+|1|(Default) Enabled. (The user can interact with Cortana using speech while the system is locked.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -28,6 +28,7 @@ OMA-URI (Device)
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
+Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Allow Cortana above lock screen\u0027 is set to \u0027Blocked\u0027",
