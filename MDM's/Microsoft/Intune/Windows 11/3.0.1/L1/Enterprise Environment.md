@@ -71,7 +71,7 @@ from being invoked on the lock screen
 If you enable this setting, users will no longer be able to enable or disable lock screen
 camera access in PC Settings, and the camera cannot be invoked on the lock screen.
 
-OMA-URI (User)
+OMA-URI (Device)
 ```
 ./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera
 ```
