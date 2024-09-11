@@ -17,9 +17,10 @@ OMA-URI (Device)
 ```
 ./Device/Vendor/MSFT/Policy/Config/AboveLock/AllowActionCenterNotifications
 ```
-|Value|Description||
-|0|Not allowed||
-|1|(Default) Allowed||
+|Value|Description|
+|---|---|
+|0|Not allowed|
+|1|(Default) Allowed|
 
 
 
