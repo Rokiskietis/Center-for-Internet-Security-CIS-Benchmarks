@@ -1255,3 +1255,94 @@ HKLM\Software\Policies\Microsoft\WindowsNT\Printers\PointAndPrint:NoWarningNoEle
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
 HKLM\Software\Policies\Microsoft\WindowsNT\Printers\PointAndPrint:UpdatePromptSettings
 ```
+
+# 3.9.1 - Notifications
+
+## 3.9.1.1 - Ensure 'Turn off toast notifications on the lock screen (User)' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting turns off toast notifications on the lock screen
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Applications will not be able to raise toast notifications on the lock screen.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DisableLockScreenAppNotifications
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Toast notifications on the lock screen are enabled and can be turned off by the administrator or user.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:||Level - 1|
+|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:||Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": " Ensure \u0027Turn off app notifications on the lock screen\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DisableLockScreenAppNotifications",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKU\[USERSID]\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotifications:NoToastApplicationNotificationOnLockScreen
+```
+
+#3.10.4 - Audit Process Creation
+
+## 3.10.4.1 - Ensure 'Include command line in process creation events' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting controls whether the process creation command line text is logged in
+security audit events when a new process has been created.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Process command line information will be included in the event logs, which can contain
+sensitive or private information such as passwords or user data.
+
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_AuditSettings/IncludeCmdLine
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled|
+|Disabled|Disabled. (Process command line information will not be included in Audit Process Creation events.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle:||Level - 1|
+|7|16.4 Encrypt or Hash all Authentication Credentials||:orange_circle:|:large_blue_circle:||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Include command line in process creation events\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_AuditSettings/IncludeCmdLine",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit: 
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit:ProcessCreationIncludeCmdLine_Enabled
+```
