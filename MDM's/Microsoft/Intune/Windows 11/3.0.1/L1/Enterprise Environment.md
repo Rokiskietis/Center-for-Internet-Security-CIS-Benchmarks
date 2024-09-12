@@ -2133,4 +2133,47 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9:DCSettingIndex
 ```
 
-## 
+## 3.10.28.5.2 - Ensure 'Allow network connectivity during connected-standby (plugged in)' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting allows you to control the network connectivity state in standby on
+modern standby-capable systems.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Network connectivity in standby (while on battery) is not guaranteed. This connectivity
+restriction currently only applies to WLAN networks only, but is subject to change
+(according to Microsoft).
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_Power/ACConnectivityInStandby_2
+```
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled. (Network connectivity will be maintained in standby while plugged in).|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|Not Yet Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "Ensure \u0027Allow network connectivity during connected-standby (plugged in)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Power/ACConnectivityInStandby_2",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9:ACSettingIndex
+```
