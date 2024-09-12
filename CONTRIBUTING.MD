@@ -26,7 +26,7 @@ We are excited that you are interested in contributing to the MDM Configurations
 
 If you find any bugs or issues, please report them by opening an issue on GitHub. Be sure to include detailed information and steps to reproduce the problem.
 
-1. Go to the [Issues](https://github.com/ApvalusLT/Center-for-Internet-Security-CIS-Benchmarks-/issues) page.
+1. Go to the [Issues](https://github.com/Rokiskietis/Center-for-Internet-Security-CIS-Benchmarks-/issues) page.
 2. Click on "New issue".
 3. Provide a clear and descriptive title.
 4. Include as much detail as possible in the description.
@@ -35,7 +35,7 @@ If you find any bugs or issues, please report them by opening an issue on GitHub
 
 We welcome suggestions for enhancements and improvements. If you have ideas to improve the repository, please follow these steps:
 
-1. Go to the [Issues](https://github.com/ApvalusLT/Center-for-Internet-Security-CIS-Benchmarks/issues) page.
+1. Go to the [Issues](https://github.com/Rokiskietis/Center-for-Internet-Security-CIS-Benchmarks/issues) page.
 2. Click on "New issue".
 3. Select "Feature request".
 4. Provide a clear and descriptive title.
@@ -53,7 +53,7 @@ By participating in this project, you agree to abide by the [Code of Conduct](CO
 
 ### Fork the Repository
 
-1. Navigate to the [repository on GitHub](https://github.com/ApvalusLT/Center-for-Internet-Security-CIS-Benchmarks).
+1. Navigate to the [repository on GitHub](https://github.com/Rokiskietis/Center-for-Internet-Security-CIS-Benchmarks).
 2. Click the "Fork" button in the top right corner.
 
 ### Clone the Repository
@@ -61,7 +61,7 @@ By participating in this project, you agree to abide by the [Code of Conduct](CO
 Clone your forked repository to your local machine:
 
 \`\`\`sh
-git clone https://github.com/ApvalusLT/Center-for-Internet-Security-CIS-Benchmarks
+git clone https://github.com/Rokiskietis/Center-for-Internet-Security-CIS-Benchmarks
 cd mdm-configurations
 \`\`\`
 
