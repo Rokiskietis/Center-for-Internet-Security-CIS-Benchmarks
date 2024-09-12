@@ -2,7 +2,7 @@
 
 # 1.0 - Above Lock
 
-## 1.1 Ensure 'Allow Cortana Above Lock' is set to 'Block'
+## 1.1 'Allow Cortana Above Lock' is set to 'Block'
 
 >[!NOTE]
 >Access to any computer resource should not be allowed when the device is locked
@@ -54,7 +54,7 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\AboveLock:
 
 # 3.1.3 - Personalization
 
-## 3.1.3.1 - Ensure 'Enable screen saver (User)' is set to 'Enabled'
+## 3.1.3.1 - 'Enable screen saver (User)' is set to 'Enabled'
  
 
 >[!NOTE]
@@ -88,7 +88,7 @@ OMA-URI (User)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Enable screen saver\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Enable screen saver\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./User/Vendor/MSFT/Policy/Config/ADMX_ControlPanelDisplay/CPL_Personalization_EnableScreenSaver",
             "value": "\u003cenabled/\u003e"
         },
@@ -101,7 +101,7 @@ HKU\[USER SID]\Software\Policies\Microsoft\Windows\Control Panel\Desktop:ScreenS
 ```
 
 
-## 3.1.3.2 - Ensure 'Prevent enabling lock screen camera' is set to 'Enabled'
+## 3.1.3.2 - 'Prevent enabling lock screen camera' is set to 'Enabled'
 
 >[!NOTE]
 >Disables the lock screen camera toggle switch in PC Settings and prevents a camera
@@ -131,7 +131,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Prevent enabling lock screen camera\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Prevent enabling lock screen camera\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera",
             "value": "\u003cenabled/\u003e"
         },
@@ -145,7 +145,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization:NoLockScreenCamera
 
 
 
-## 3.1.3.3 - Ensure 'Prevent enabling lock screen slide show' is set to 'Enabled'
+## 3.1.3.3 - 'Prevent enabling lock screen slide show' is set to 'Enabled'
 	
 >[!NOTE]
 >Disables the lock screen slide show settings in PC Settings and prevents a slide show
@@ -176,7 +176,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Prevent enabling lock screen slide show\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Prevent enabling lock screen slide show\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventLockScreenSlideShow",
             "value": "\u003cenabled/\u003e"
         },
@@ -191,7 +191,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Personalization:NoLockScreenSlideshow
 
 # 3.4 -  MS Security Guide
 
-## 3.4.1 - Ensure 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled' 
+## 3.4.1 - 'Apply UAC restrictions to local accounts on network logons' is set to 'Enabled' 
 
 >[!NOTE]
 >This setting controls whether local accounts can be used for remote administration via
@@ -216,13 +216,13 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|7|4.3 Ensure the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|4.3 the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Apply UAC restrictions to local accounts on network logons\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Apply UAC restrictions to local accounts on network logons\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon",
             "value": "\u003cenabled/\u003e"
         },
@@ -235,7 +235,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:LocalAccountToken
 
 ```
 
-## 3.4.2 - Ensure 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver '
+## 3.4.2 - 'Configure SMB v1 client driver' is set to 'Enabled: Disable driver '
 	
 >[!NOTE]
 >This setting configures the start type for the Server Message Block version 1 (SMBv1) client driver service (MRxSmb10), which is recommended to be disabled.
@@ -265,14 +265,14 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
-|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running ||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Only Approved Ports, Protocols and Services Are Running ||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|14.3 Disable Workstation to Workstation Communication||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Configure SMB v1 client driver\u0027 is set to \u0027Enabled: Disable driver (recommended)\u0027",
+            "displayName": "\u0027Configure SMB v1 client driver\u0027 is set to \u0027Enabled: Disable driver (recommended)\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1ClientDriver",
             "value": "\u003cenabled/\u003e\u003cdata id=\"Pol_SecGuide_SMB1ClientDriver\" value=\"4\" /\u003e"
         },
@@ -285,7 +285,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\mrxsmb10:Start
 ```
 
 
-## 3.4.3 - Ensure 'Configure SMB v1 server' is set to 'Disabled' 
+## 3.4.3 - 'Configure SMB v1 server' is set to 'Disabled' 
 	
 >[!NOTE]
 >This setting configures the server-side processing of the Server Message Block version 1 (SMBv1) protocol.
@@ -313,14 +313,14 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
-|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running ||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Only Approved Ports, Protocols and Services Are Running ||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|14.3 Disable Workstation to Workstation Communication||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Configure SMB v1 server\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027Configure SMB v1 server\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1Server",
             "value": "\u003cdisabled/\u003e"
         },
@@ -332,7 +332,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters:SMB1
 ```
 
-## 3.4.4 - Ensure 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'
+## 3.4.4 - 'Enable Structured Exception Handling Overwrite Protection (SEHOP)' is set to 'Enabled'
 
 >[!NOTE]
 >Windows includes support for Structured Exception Handling Overwrite Protection (SEHOP). We recommend enabling this feature to improve the security profile of the computer.
@@ -364,7 +364,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Enable Structured Exception Handling Overwrite Protection (SEHOP)\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Enable Structured Exception Handling Overwrite Protection (SEHOP)\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection",
             "value": "\u003cenabled/\u003e"
         },
@@ -376,7 +376,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel:DisableExceptionChainValidation
 ```
 
-## 3.4.5 - Ensure 'WDigest Authentication' is set to 'Disabled'
+## 3.4.5 - 'WDigest Authentication' is set to 'Disabled'
 
 
 >[!NOTE]
@@ -406,7 +406,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027WDigest Authentication\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027WDigest Authentication\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/WDigestAuthentication",
             "value": "\u003cdisabled/\u003e"
         },
@@ -420,7 +420,7 @@ HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest:UseLogonCredenti
 
 # 3.5 - MSS
 
-## 3.5.1 - Ensure 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled' 
+## 3.5.1 - 'MSS: (AutoAdminLogon) Enable Automatic Logon (not recommended)' is set to 'Disabled' 
 
 >[!NOTE]
 >This setting is separate from the Welcome screen feature in Windows XP and Windows
@@ -457,7 +457,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)\u0027 is set to \u0027Enabled: Highest protection, source routing is completely disabled\u0027",
+            "displayName": "\u0027MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)\u0027 is set to \u0027Enabled: Highest protection, source routing is completely disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel",
             "value": "\u003cenabled/\u003e\u003cdata id=\"DisableIPSourceRouting\" value=\"2\" /\u003e"
         },
@@ -469,7 +469,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon:AutoAdminLogon
 ```
 
-## 3.5.2 - Ensure 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
+## 3.5.2 - 'MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
 
 >[!NOTE]
 >IP source routing is a mechanism that allows the sender to determine the IP route that a
@@ -500,7 +500,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)\u0027 is set to \u0027Enabled: Highest protection, source routing is completely disabled\u0027",
+            "displayName": "\u0027MSS: (DisableIPSourceRouting IPv6) IP source routing protection level (protects against packet spoofing)\u0027 is set to \u0027Enabled: Highest protection, source routing is completely disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPv6SourceRoutingProtectionLevel",
             "value": "\u003cenabled/\u003e\u003cdata id=\"DisableIPSourceRoutingIPv6\" value=\"2\" /\u003e"
         },
@@ -513,7 +513,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters:DisableIPSourceRouting
 
 ```
 
-## 3.5.3 - Ensure 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
+## 3.5.3 - 'MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)' is set to 'Enabled: Highest protection, source routing is completely disabled'
 
 >[!NOTE]
 >IP source routing is a mechanism that allows the sender to determine the IP route that a
@@ -546,7 +546,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)\u0027 is set to \u0027Enabled: Highest protection, source routing is completely disabled\u0027",
+            "displayName": "\u0027MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)\u0027 is set to \u0027Enabled: Highest protection, source routing is completely disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel",
             "value": "\u003cenabled/\u003e\u003cdata id=\"DisableIPSourceRouting\" value=\"2\" /\u003e"
         },
@@ -558,7 +558,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters:DisableIPSourceRouting
 ```
 
-## 3.5.5 - Ensure 'MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'
+## 3.5.5 - 'MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes' is set to 'Disabled'
 
 >[!NOTE]
 >Internet Control Message Protocol (ICMP) redirects cause the IPv4 stack to plumb host
@@ -595,7 +595,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027MSS: (EnableICMPRedirect) Allow ICMP redirects to override OSPF generated routes\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSLegacy/AllowICMPRedirectsToOverrideOSPFGeneratedRoutes",
             "value": "\u003cdisabled/\u003e"
         },
@@ -607,7 +607,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters:EnableICMPRedirect
 ```
 
-## 3.5.7 -  Ensure 'MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to 'Enabled' 
+## 3.5.7 -  'MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers' is set to 'Enabled' 
 
 >[!NOTE]
 >NetBIOS over TCP/IP is a network protocol that among other things provides a way to
@@ -640,7 +640,7 @@ OMA-URI (Device)
 ```
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027MSS: (NoNameReleaseOnDemand) Allow the computer to ignore NetBIOS name release requests except from WINS servers\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSLegacy/AllowTheComputerToIgnoreNetBIOSNameReleaseRequestsExceptFromWINSServers",
             "value": "\u003cenabled/\u003e"
         },
@@ -651,7 +651,7 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SYSTEM\CurrentControlSet\Services\NetBT\Parameters:NoNameReleaseOnDemand
 ```
-## 3.5.9 - Ensure 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled' 
+## 3.5.9 - 'MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)' is set to 'Enabled' 
 
 >[!NOTE]
 >The DLL search order can be configured to search for DLLs that are requested by
@@ -686,7 +686,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027MSS: (SafeDllSearchMode) Enable Safe DLL search mode (recommended)\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_SafeDllSearchMode",
             "value": "\u003cenabled/\u003e"
         },
@@ -698,7 +698,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SYSTEM\CurrentControlSet\Control\Session Manager:SafeDllSearchMode
 ```
 
-## 3.5.10 - Ensure 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds'
+## 3.5.10 - 'MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)' is set to 'Enabled: 5 or fewer seconds'
 
 
 >[!NOTE]
@@ -732,7 +732,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)\u0027 is set to \u0027Enabled: 5 or fewer seconds\u0027",
+            "displayName": "\u0027MSS: (ScreenSaverGracePeriod) The time in seconds before the screen saver grace period expires (0 recommended)\u0027 is set to \u0027Enabled: 5 or fewer seconds\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_ScreenSaverGracePeriod",
             "value": "\u003cenabled/\u003e\u003cdata id=\"ScreenSaverGracePeriod\" value=\"5\"/\u003e"
         },
@@ -743,7 +743,7 @@ Audit: Navigate to the UI Path articulated in the Remediation section and confir
 HKLM\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Winlogon:ScreenSaverGracePeriod
 ```
 
-## 3.5.13 - Ensure 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less'
+## 3.5.13 - 'MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning' is set to 'Enabled: 90% or less'
 
 >[!NOTE]
 >This setting can generate a security audit in the Security event log when the log reaches
@@ -769,15 +769,15 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|8.3 Ensure Adequate Audit Log Storage|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|8.3 Adequate Audit Log Storage|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 |7|6.3 Enable Detailed Logging|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
-|7|6.4 Ensure adequate storage for logs|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.4 adequate storage for logs|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning\u0027 is set to \u0027Enabled: 90% or less\u0027",
+            "displayName": "\u0027MSS: (WarningLevel) Percentage threshold for the security event log at which the system will generate a warning\u0027 is set to \u0027Enabled: 90% or less\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_WarningLevel",
             "value": "\u003cenabled/\u003e\u003cdata id=\"WarningLevel\" value=\"90\"/\u003e"
         },
@@ -790,7 +790,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\Eventlog\Security:WarningLevel
 ```
 # 3.6.4 - DNS Client
 
-## 3.6.4.1 - Ensure 'Turn off multicast name resolution' is set to 'Enabled'
+## 3.6.4.1 - 'Turn off multicast name resolution' is set to 'Enabled'
 
 >[!NOTE]
 >LLMNR is a secondary name resolution protocol. With LLMNR, queries are sent using
@@ -819,14 +819,14 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
-|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 ```
 Script: 
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Turn off multicast name resolution\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Turn off multicast name resolution\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_DnsClient/Turn_Off_Multicast",
             "value": "\u003cenabled/\u003e"
         },
@@ -839,7 +839,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient:EnableMulticast
 ```
 # 3.6.9 - Network Connections
 
-## 3.6.9.1 - Ensure 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'
+## 3.6.9.1 - 'Prohibit installation and configuration of Network Bridge on your DNS domain network' is set to 'Enabled'
 
 >[!NOTE]
 >You can use this procedure to control a user's ability to install and configure a Network Bridge
@@ -870,7 +870,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Prohibit installation and configuration of Network Bridge on your DNS domain network\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Prohibit installation and configuration of Network Bridge on your DNS domain network\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/Connectivity/ProhibitInstallationAndConfigurationOfNetworkBridge",
             "value": "\u003cenabled/\u003e"
         },
@@ -882,7 +882,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_AllowNetBridge_NLA
 ```
 
-## 3.6.9.2 - Ensure 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'
+## 3.6.9.2 - 'Prohibit use of Internet Connection Sharing on your DNS domain network' is set to 'Enabled'
 
 >[!NOTE]
 >Although this "legacy" setting traditionally applied to the use of Internet Connection Sharing (ICS) in Windows 2000, Windows XP & Server 2003, this setting now freshly applies to the Mobile Hotspot feature in Windows 10 & Server 2016.
@@ -907,13 +907,13 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
-|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": Ensure \u0027Prohibit use of Internet Connection Sharing on your DNS domain network\u0027 is set to \u0027Enabled\u0027",
+            "displayName": \u0027Prohibit use of Internet Connection Sharing on your DNS domain network\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_NetworkConnections/NC_ShowSharedAccessUI",
             "value": "\u003cenabled/\u003e"
         },
@@ -925,7 +925,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_ShowSharedAccessUI
 ```
 
-## 3.6.9.3 - Ensure 'Require domain users to elevate when setting a network's location' is set to 'Enabled' 
+## 3.6.9.3 - 'Require domain users to elevate when setting a network's location' is set to 'Enabled' 
 
 >[!NOTE]
 >This policy setting determines whether to require domain users to elevate when setting a network's location.
@@ -950,13 +950,13 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|Not Mapped Yet||||Level - 1|
-|7|4.3 Ensure the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|4.3 the Use of Dedicated Administrative Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Require domain users to elevate when setting a network\u0027s location\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Require domain users to elevate when setting a network\u0027s location\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_NetworkConnections/NC_StdDomainUserSetLocation",
             "value": "\u003cdisabled/\u003e"
         },
@@ -968,7 +968,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_StdDomainUserSetLocation
 ```
 
-## 3.6.11.1 - Ensure 'Hardened UNC Paths' is set to 'Enabled, with "Require Mutual Authentication" and "Require Integrity" set for all NETLOGON and SYSVOL shares' 
+## 3.6.11.1 - 'Hardened UNC Paths' is set to 'Enabled, with "Require Mutual Authentication" and "Require Integrity" set for all NETLOGON and SYSVOL shares' 
 
 >[!NOTE]
 >This policy setting configures secure access to UNC paths
@@ -999,7 +999,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Hardened UNC Paths\u0027 is set to \u0027Enabled, with \"Require Mutual Authentication\" and \"Require Integrity\" set for all NETLOGON and SYSVOL shares\u0027",
+            "displayName": "\u0027Hardened UNC Paths\u0027 is set to \u0027Enabled, with \"Require Mutual Authentication\" and \"Require Integrity\" set for all NETLOGON and SYSVOL shares\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/Connectivity/HardenedUNCPaths",
             "value": "\u003cenabled/\u003e\u003cdata id=\"Pol_HardenedPaths\" value=\"\\\\*\\NETLOGONRequireMutualAuthentication=1,RequireIntegrity=1\\\\*\\SYSVOLRequireMutualAuthentication=1,RequireIntegrity=1\"/\u003e"
         },
@@ -1015,7 +1015,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider\HardenedPaths:\\*\SYSVO
 
 # 3.6.18 - Windows Connection Manager
 
-## 3.6.18.1 - Ensure 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled: 3 = Prevent Wi-Fi when on Ethernet' 
+## 3.6.18.1 - 'Minimize the number of simultaneous connections to the Internet or a Windows Domain' is set to 'Enabled: 3 = Prevent Wi-Fi when on Ethernet' 
 
 >[!NOTE]
 >This policy setting prevents computers from establishing multiple simultaneous connections to either the Internet or to a Windows domain.
@@ -1048,7 +1048,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Minimize the number of simultaneous connections to the Internet or a Windows Domain\u0027 is set to \u0027Enabled: 3 = Prevent Wi-Fi when on Ethernet\u0027",
+            "displayName": "\u0027Minimize the number of simultaneous connections to the Internet or a Windows Domain\u0027 is set to \u0027Enabled: 3 = Prevent Wi-Fi when on Ethernet\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_WCM/WCM_MinimizeConnections",
             "value": "\u003cenabled/\u003e\u003cdata id=\"WCM_MinimizeConnections_Options\" value=\"3\"/\u003e"
         },
@@ -1060,7 +1060,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy:fMinimizeConnections
 ```
 
-## 3.6.18.2 - Ensure 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to'Enabled' 
+## 3.6.18.2 - 'Prohibit connection to non-domain networks when connected to domain authenticated network' is set to'Enabled' 
 
 >[!NOTE]
 >This policy setting prevents computers from connecting to both a domain based network and a non-domain based network at the same time
@@ -1102,7 +1102,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Prohibit connection to non-domain networks when connected to domain authenticated network\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Prohibit connection to non-domain networks when connected to domain authenticated network\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsConnectionManager/ProhitConnectionToNonDomainNetworksWhenConnectedToDomainAuthenticatedNetwork",
             "value": "\u003cenabled/\u003e"
         },
@@ -1115,7 +1115,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy:fBlockNonDomain
 ```
 # 3.6.19 - Wireless Display
 
-## 3.6.19.1 - Ensure 'Require PIN pairing' is set to 'Enabled'
+## 3.6.19.1 - 'Require PIN pairing' is set to 'Enabled'
 
 
 >[!NOTE]
@@ -1146,7 +1146,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
-            "displayName": "Ensure \u0027Require pin for pairing\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Require pin for pairing\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/WirelessDisplay/RequirePinForPairing",
             "value": 1
         },
@@ -1164,7 +1164,7 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\ADMX_wlans
 
 # 3.7 - Printers
 
-## 3.7.1 - Ensure 'Allow Print Spooler to accept client connections' is set to 'Disabled' 
+## 3.7.1 - 'Allow Print Spooler to accept client connections' is set to 'Disabled' 
 
 >[!NOTE]
 >This policy setting controls whether the Print Spooler service will accept client connections.
@@ -1197,7 +1197,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Allow Print Spooler to accept client connections\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027Allow Print Spooler to accept client connections\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Printing2/RegisterSpoolerRemoteRpcEndPoint",
             "value": "\u003cdisabled/\u003e"
         },
@@ -1210,9 +1210,9 @@ HKLM\Software\Policies\Microsoft\WindowsNT\Printers:RegisterSpoolerRemoteRpcEndP
 
 ```
 
-## 3.7.2 - Ensure 'Point and Print Restrictions: When installing drivers for a new connection' is set to 'Enabled: Show warning and elevation prompt' 
+## 3.7.2 - 'Point and Print Restrictions: When installing drivers for a new connection' is set to 'Enabled: Show warning and elevation prompt' 
 
-## 3.7.3 - Ensure 'Point and Print Restrictions: When updating drivers for an existing connection' is set to 'Enabled: Show warning and elevation prompt' 
+## 3.7.3 - 'Point and Print Restrictions: When updating drivers for an existing connection' is set to 'Enabled: Show warning and elevation prompt' 
 >[!NOTE]
 >This policy setting controls whether computers will show a warning and a security
 elevation prompt when users create a new printer connection using Point and Print.
@@ -1241,7 +1241,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Point and Print Restrictions: When installing drivers for a new connection\u0027 is set to \u0027Enabled: Show warning and elevation prompt\u0027  Ensure \u0027Point and Print Restrictions: When updating drivers for an existing connection\u0027 is set to \u0027Enabled: Show warning and elevation prompt\u0027",
+            "displayName": "\u0027Point and Print Restrictions: When installing drivers for a new connection\u0027 is set to \u0027Enabled: Show warning and elevation prompt\u0027  \u0027Point and Print Restrictions: When updating drivers for an existing connection\u0027 is set to \u0027Enabled: Show warning and elevation prompt\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/Printers/PointAndPrintRestrictions",
             "value": "\u003cenabled/\u003e\n\u003cdata id=\"PointAndPrint_TrustedServers_Chk\" value=\"false\"/\u003e\n\u003cdata id=\"PointAndPrint_TrustedServers_Edit\" value=\"\"/\u003e\n\u003cdata id=\"PointAndPrint_TrustedForest_Chk\" value=\"false\"/\u003e\n\u003cdata id=\"PointAndPrint_NoWarningNoElevationOnInstall_Enum\" value=\"0\"/\u003e\n\u003cdata id=\"PointAndPrint_NoWarningNoElevationOnUpdate_Enum\" value=\"0\"/\u003e"
         },
@@ -1258,7 +1258,7 @@ HKLM\Software\Policies\Microsoft\WindowsNT\Printers\PointAndPrint:UpdatePromptSe
 
 # 3.9.1 - Notifications
 
-## 3.9.1.1 - Ensure 'Turn off toast notifications on the lock screen (User)' is set to 'Enabled' 
+## 3.9.1.1 - 'Turn off toast notifications on the lock screen (User)' is set to 'Enabled' 
 
 >[!NOTE]
 >This policy setting turns off toast notifications on the lock screen
@@ -1289,7 +1289,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": " Ensure \u0027Turn off app notifications on the lock screen\u0027 is set to \u0027Enabled\u0027",
+            "displayName": " \u0027Turn off app notifications on the lock screen\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DisableLockScreenAppNotifications",
             "value": "\u003cenabled/\u003e"
         },
@@ -1302,7 +1302,7 @@ HKU\[USERSID]\Software\Policies\Microsoft\Windows\CurrentVersion\PushNotificatio
 
 # 3.10.4 - Audit Process Creation
 
-## 3.10.4.1 - Ensure 'Include command line in process creation events' is set to 'Enabled' 
+## 3.10.4.1 - 'Include command line in process creation events' is set to 'Enabled' 
 
 >[!NOTE]
 >This policy setting controls whether the process creation command line text is logged in
@@ -1334,7 +1334,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Include command line in process creation events\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Include command line in process creation events\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_AuditSettings/IncludeCmdLine",
             "value": "\u003cenabled/\u003e"
         },
@@ -1348,7 +1348,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\Audit:ProcessCrea
 
 # 3.10.5 - Credentials Delegation
 
-## 3.10.5.1 - Ensure 'Encryption Oracle Remediation' is set to 'Enabled: Force Updated Clients' 
+## 3.10.5.1 - 'Encryption Oracle Remediation' is set to 'Enabled: Force Updated Clients' 
 
 >[!NOTE]
 >Some versions of the CredSSP protocol that is used by some applications (such as
@@ -1385,7 +1385,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Encryption Oracle Remediation\u0027 is set to \u0027Enabled: Force Updated Clients\u0027",
+            "displayName": "\u0027Encryption Oracle Remediation\u0027 is set to \u0027Enabled: Force Updated Clients\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_CredSsp/AllowEncryptionOracle",
             "value": "\u003cenabled/\u003e\n\u003cdata id=\"AllowEncryptionOracleDrop\" value=\"0\"/\u003e"
         },
@@ -1397,7 +1397,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters:AllowEncryptionOracle
 ```
 
-## 3.10.5.2 - Ensure 'Remote host allows delegation of nonexportable credentials' is set to 'Enabled' 
+## 3.10.5.2 - 'Remote host allows delegation of nonexportable credentials' is set to 'Enabled' 
 
 >[!NOTE]
 >Remote host allows delegation of non-exportable credentials. When using credential
@@ -1432,7 +1432,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Remote host allows delegation of non-exportable credentials\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Remote host allows delegation of non-exportable credentials\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/CredentialsDelegation/RemoteHostAllowsDelegationOfNonExportableCredentials",
             "value": "\u003cenabled/\u003e"
         },
@@ -1446,7 +1446,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\CredentialsDelegation:AllowProtectedCre
 
 # 3.10.9.1 - Device Installation Restrictions
 
-## 3.10.9.2 - Ensure 'Prevent device metadata retrieval from the Internet' is set to 'Enabled' 
+## 3.10.9.2 - 'Prevent device metadata retrieval from the Internet' is set to 'Enabled' 
 >[!NOTE]
 >This policy setting allows you to prevent Windows from retrieving device metadata from
 the Internet.
@@ -1479,7 +1479,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Prevent device metadata retrieval from the Internet\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Prevent device metadata retrieval from the Internet\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceInstallation/PreventDeviceMetadataFromNetwork",
             "value": "\u003cenabled/\u003e"
         },
@@ -1493,7 +1493,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceMetadata:PreventDeviceMetadataFro
 
 # 3.10.13 - Early Launch Antimalware
 
-## 3.10.13.1 - Ensure 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical' 
+## 3.10.13.1 - 'Boot-Start Driver Initialization Policy' is set to 'Enabled: Good, unknown and bad but critical' 
 
 >[!NOTE]
 >This policy setting allows you to specify which boot-start drivers are initialized based on
@@ -1537,7 +1537,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Boot-Start Driver Initialization Policy\u0027 is set to \u0027Enabled: Good, unknown and bad but critical\u0027",
+            "displayName": "\u0027Boot-Start Driver Initialization Policy\u0027 is set to \u0027Enabled: Good, unknown and bad but critical\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/System/BootStartDriverInitialization",
             "value": "\u003cenabled/\u003e\n\u003cdata id=\"SelectDriverLoadPolicy\" value=\"3\"/\u003e"
         },
@@ -1550,13 +1550,13 @@ HKLM\SYSTEM\CurrentControlSet\Policies\EarlyLaunch:DriverLoadPolicy
 ```
 # 3.10.19 - Group Policy
 
-## 3.10.19.1 - Ensure 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'
+## 3.10.19.1 - 'Configure registry policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'
 
-## 3.10.19.2 - Ensure 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'
+## 3.10.19.2 - 'Configure registry policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'
 
-## 3.10.19.3 - Ensure 'Configure security policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'
+## 3.10.19.3 - 'Configure security policy processing: Do not apply during periodic background processing' is set to 'Enabled: FALSE'
 
-## 3.10.19.4 - Ensure 'Configure security policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'
+## 3.10.19.4 - 'Configure security policy processing: Process even if the Group Policy objects have not changed' is set to 'Enabled: TRUE'
 
 >[!NOTE]
 >The "Do not apply during periodic background processing" option prevents the system
@@ -1593,7 +1593,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Configure registry policy processing: Do not apply during periodic background processing\u0027 is set to \u0027Enabled: FALSE\u0027 Ensure \u0027Configure registry policy processing: Process even if the Group Policy objects have not changed\u0027 is set to \u0027Enabled: TRUE\u0027",
+            "displayName": "\u0027Configure registry policy processing: Do not apply during periodic background processing\u0027 is set to \u0027Enabled: FALSE\u0027 \u0027Configure registry policy processing: Process even if the Group Policy objects have not changed\u0027 is set to \u0027Enabled: TRUE\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/CSE_Registry",
             "value": "\u003cenabled/\u003e\n\u003cdata id=\"CSE_NOBACKGROUND10\" value=\"false\"/\u003e\n\u003cdata id=\"CSE_NOCHANGES10\" value=\"false\"/\u003e"
         },
@@ -1613,7 +1613,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{827D319E-6EAC-11D2-A4EA-0
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
 HKLM\SOFTWARE\Policies\Microsoft\Windows\Group Policy\{827D319E-6EAC-11D2- A4EA-00C04F79F83A}:NoGPOListChanges
 ```
-## 3.10.19.5 - Ensure 'Continue experiences on this device' is set to 'Disabled
+## 3.10.19.5 - 'Continue experiences on this device' is set to 'Disabled
 
 >[!NOTE]
 >This policy setting determines whether the Windows device is allowed to participate in
@@ -1639,14 +1639,14 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
-|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Continue experiences on this device\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027Continue experiences on this device\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/EnableCDP",
             "value": "\u003cdisabled/\u003e"
         },
@@ -1658,7 +1658,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\System:EnableCdp
 ```
 
-## 3.10.19.6 - Ensure 'Turn off background refresh of Group Policy' is set to 'Disabled'
+## 3.10.19.6 - 'Turn off background refresh of Group Policy' is set to 'Disabled'
 >[!NOTE]
 >This policy setting prevents Group Policy from being updated while the computer is in
 use. This policy setting applies to Group Policy for computers, users and Domain
@@ -1689,7 +1689,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Turn off background refresh of Group Policy\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027Turn off background refresh of Group Policy\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/DisableBackgroundPolicy",
             "value": "\u003cdisabled/\u003e"
         },
@@ -1702,7 +1702,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:DisableBkGndGroup
 ```
 # 3.10.20.1 - Internet Communication settings
 
-## 3.10.20.1.2 - Ensure 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'
+## 3.10.20.1.2 - 'Turn off downloading of print drivers over HTTP' is set to 'Enabled'
 
 >[!NOTE]
 >This policy setting controls whether the computer can download print driver packages
@@ -1733,7 +1733,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Turn off downloading of print drivers over HTTP\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Turn off downloading of print drivers over HTTP\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./User/Vendor/MSFT/Policy/Config/ADMX_ICM/DisableWebPnPDownload_1",
             "value": "\u003cenabled/\u003e"
         },
@@ -1744,7 +1744,7 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Printers:DisableWebPnPDownload
 ```
-## 3.10.20.1.5 - Ensure 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'
+## 3.10.20.1.5 - 'Turn off Internet download for Web publishing and online ordering wizards' is set to 'Enabled'
 >[!NOTE]
 >This policy setting controls whether Windows will download a list of providers for the
 Web publishing and online ordering wizards.
@@ -1775,7 +1775,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Turn off Internet download for Web publishing and online ordering wizards\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Turn off Internet download for Web publishing and online ordering wizards\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./User/Vendor/MSFT/Policy/Config/ADMX_ICM/ShellPreventWPWDownload_1",
             "value": "\u003cenabled/\u003e"
         },
@@ -1789,7 +1789,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoWebServices
 
 # 3.10.25 - Logon
 
-## 3.10.25.1 - Ensure 'Block user from showing account details on sign-in' is set to 'Enabled' 
+## 3.10.25.1 - 'Block user from showing account details on sign-in' is set to 'Enabled' 
 >[!NOTE]
 >This policy prevents the user from showing account details (email address or user
 name) on the sign-in screen.
@@ -1819,7 +1819,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Block user from showing account details on sign-in\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Block user from showing account details on sign-in\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Logon/BlockUserFromShowingAccountDetailsOnSignin",
             "value": "\u003cenabled/\u003e"
         },
@@ -1831,7 +1831,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\System:BlockUserFromShowingAccountDetailsOnSignin
 ```
 
-## 3.10.25.2 - Ensure 'Do not display network selection UI' is set to 'Enabled' 
+## 3.10.25.2 - 'Do not display network selection UI' is set to 'Enabled' 
 >[!NOTE]
 >This policy setting allows you to control whether anyone can interact with available
 networks UI on the logon screen.
@@ -1861,7 +1861,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Do not display network selection UI\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Do not display network selection UI\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DontDisplayNetworkSelectionUI",
             "value": "\u003cenabled/\u003e"
         },
@@ -1873,7 +1873,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\System:DontDisplayNetworkSelectionUI
 ```
 
-## 3.10.25.3 - Ensure 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'
+## 3.10.25.3 - 'Do not enumerate connected users on domain-joined computers' is set to 'Enabled'
 
 >[!NOTE]
 >This policy setting prevents connected users from being enumerated on domain-joined
@@ -1904,7 +1904,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Do not enumerate connected users on domain-joined computers\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Do not enumerate connected users on domain-joined computers\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Logon/DontEnumerateConnectedUsers",
             "value": "\u003cenabled/\u003e"
         },
@@ -1916,7 +1916,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\System:DontEnumerateConnectedUsers
 ```
 
-## 3.10.25.4 - Ensure 'Enumerate local users on domain-joined computers' is set to 'Disabled'
+## 3.10.25.4 - 'Enumerate local users on domain-joined computers' is set to 'Disabled'
 
 >[!NOTE]
 >This policy setting allows local users to be enumerated on domain-joined computers.
@@ -1946,7 +1946,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Enumerate local users on domain-joined computers\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027Enumerate local users on domain-joined computers\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/EnumerateLocalUsersOnDomainJoinedComputers",
             "value": "\u003cdisabled/\u003e"
         },
@@ -1958,7 +1958,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\System:EnumerateLocalUsers
 ```
 
-## 3.10.25.5 - Ensure 'Turn off app notifications on the lock screen' is set to 'Enabled' 
+## 3.10.25.5 - 'Turn off app notifications on the lock screen' is set to 'Enabled' 
 
 >[!NOTE]
 >This policy setting allows you to prevent app notifications from appearing on the lock
@@ -1989,7 +1989,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Turn off app notifications on the lock screen\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Turn off app notifications on the lock screen\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DisableLockScreenAppNotifications",
             "value": "\u003cenabled/\u003e"
         },
@@ -2002,7 +2002,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\System:DisableLockScreenAppNotification
 
 ```
 
-## 3.10.25.6 - Ensure 'Turn off picture password sign-in' is set to 'Enabled' 
+## 3.10.25.6 - 'Turn off picture password sign-in' is set to 'Enabled' 
 
 >[!NOTE]
 >This policy setting allows you to control whether a domain user can sign in using a
@@ -2032,7 +2032,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Turn off picture password sign-in\u0027 is set to \u0027Enabled\u0027",
+            "displayName": "\u0027Turn off picture password sign-in\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/CredentialProviders/BlockPicturePassword",
             "value": "\u003cenabled/\u003e"
         },
@@ -2044,7 +2044,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\System:BlockDomainPicturePassword
 ```
 
-## 3.10.25.7 - Ensure 'Turn on convenience PIN sign-in' is set to 'Disabled'
+## 3.10.25.7 - 'Turn on convenience PIN sign-in' is set to 'Disabled'
 
 >[!NOTE]
 >This policy setting allows you to control whether a user can sign in using a convenience
@@ -2074,7 +2074,7 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Turn on convenience PIN sign-in\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027Turn on convenience PIN sign-in\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/CredentialProviders/AllowPINLogon",
             "value": "\u003cdisabled/\u003e"
         },
@@ -2088,7 +2088,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\System:AllowDomainPINLogon
 
 # 3.10.28.5 - Sleep Settings
 
-## 3.10.28.5.1 - Ensure 'Allow network connectivity during connected-standby (on battery)' is set to 'Disabled'
+## 3.10.28.5.1 - 'Allow network connectivity during connected-standby (on battery)' is set to 'Disabled'
 
 >[!NOTE]
 >This policy setting allows you to control the network connectivity state in standby on
@@ -2114,14 +2114,14 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 |8|Not Yet Mapped||||Level - 1|
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": Ensure \u0027Allow network connectivity during connected-standby (on battery)\u0027 is set to \u0027Disabled\u0027",
+            "displayName": \u0027Allow network connectivity during connected-standby (on battery)\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Power/DCConnectivityInStandby_2",
             "value": "\u003cdisabled/\u003e"
         },
@@ -2133,7 +2133,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9:DCSettingIndex
 ```
 
-## 3.10.28.5.2 - Ensure 'Allow network connectivity during connected-standby (plugged in)' is set to 'Disabled'
+## 3.10.28.5.2 - 'Allow network connectivity during connected-standby (plugged in)' is set to 'Disabled'
 
 >[!NOTE]
 >This policy setting allows you to control the network connectivity state in standby on
@@ -2159,14 +2159,14 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 |8|Not Yet Mapped||||Level - 1|
 
 ```
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "Ensure \u0027Allow network connectivity during connected-standby (plugged in)\u0027 is set to \u0027Disabled\u0027",
+            "displayName": "\u0027Allow network connectivity during connected-standby (plugged in)\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_Power/ACConnectivityInStandby_2",
             "value": "\u003cenabled/\u003e"
         },
