@@ -76,8 +76,8 @@ OMA-URI (User)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enable|
-| <disabled/> |Disable|
+|"<enabled/>"|Enable|
+|"<disabled/>"|Disable|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -121,8 +121,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enable|
-| <disabled/> |Disable|
+|"<enabled/>"|Enable|
+|"<disabled/>"|Disable|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -167,8 +167,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enable|
-| <disabled/> |Disabled. (Users can enable a slide show that will run after they lock the machine.)|
+|"<enabled/>"|Enable|
+|"<disabled/>"|Disabled. (Users can enable a slide show that will run after they lock the machine.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -212,8 +212,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Applies UAC token-filtering to local accounts on network logons. Membership in powerful group such as Administrators is disabled and powerful privileges are removed from the resulting access token|
-| <disabled/> |Allows local accounts to have full administrative rights when authenticating via network logon|
+|"<enabled/>"|Applies UAC token-filtering to local accounts on network logons. Membership in powerful group such as Administrators is disabled and powerful privileges are removed from the resulting access token|
+|"<disabled/>"|Allows local accounts to have full administrative rights when authenticating via network logon|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -260,9 +260,9 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Disable driver|
-| <disabled/> |Enable Driver|
-| <enabled/><data id="Pol_SecGuide_SMB1ClientDriver" value="4" /> | Custom settings (Recommended)|
+|"<enabled/>"|Disable driver|
+|"<disabled/>"|Enable Driver|
+|"<enabled/><data id="Pol_SecGuide_SMB1ClientDriver" value="4" />"| Custom settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -309,8 +309,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enable Driver|
-| <disabled/> |Disable driver|
+|"<enabled/>"|Enable Driver|
+|"<disabled/>"|Disable driver|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -353,8 +353,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enable Driver|
-| <disabled/> |Disable driver|
+|"<enabled/>"|Enable Driver|
+|"<disabled/>"|Disable driver|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -396,8 +396,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Lsass.exe retains a copy of the user's plaintext password in memory, where it is at risk of theft|
-| <disabled/> |Lsass.exe does not retain a copy of the user's plaintext password in memory|
+|"<enabled/>"|Lsass.exe retains a copy of the user's plaintext password in memory, where it is at risk of theft|
+|"<disabled/>"|Lsass.exe does not retain a copy of the user's plaintext password in memory|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -446,9 +446,9 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled|
-| <enabled/><data id="DisableIPSourceRouting" value="2" /> |Custom Settings (Recommended)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled|
+|"<enabled/><data id="DisableIPSourceRouting" value="2" />"|Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -491,9 +491,9 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled|
-| <enabled/><data id="DisableIPSourceRoutingIPv6" value="2" /> |Custom Settings (Recommended)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled|
+|"<enabled/><data id="DisableIPSourceRoutingIPv6" value="2" />"|Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -538,9 +538,9 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled|
-| <enabled/><data id="DisableIPSourceRouting" value="2" /> |Custom Settings (Recommended) |
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled|
+|"<enabled/><data id="DisableIPSourceRouting" value="2" />"|Custom Settings (Recommended) |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -587,8 +587,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled. (ICMP redirects can override OSPF-generated routes.)|
-| <disabled/> |Disabled|
+|"<enabled/>"|Enabled. (ICMP redirects can override OSPF-generated routes.)|
+|"<disabled/>"|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -633,8 +633,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled |
-| <disabled/> |Disabled|
+|"<enabled/>"|Enabled |
+|"<disabled/>"|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -679,8 +679,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled |
-| <disabled/> |Disabled|
+|"<enabled/>"|Enabled |
+|"<disabled/>"|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -724,9 +724,9 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled |
-| <disabled/> |Disabled|
-| <enabled/><data id="ScreenSaverGracePeriod" value="5"/> |Custom Settings (Recommended)|
+|"<enabled/>"|Enabled |
+|"<disabled/>"|Disabled|
+|"<enabled/><data id="ScreenSaverGracePeriod" value="5"/>"|Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -770,9 +770,9 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled |
-| <disabled> |Disabled|
-| <enabled/><data id="WarningLevel" value="90"/> |Custom Settings (Recommended)|
+|"<enabled/>"|Enabled |
+|"<disabled>"|Disabled|
+|"<enabled/><data id="WarningLevel" value="90"/>"|Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -820,8 +820,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (LLMNR will be enabled on all available network adapters.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (LLMNR will be enabled on all available network adapters.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -864,8 +864,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Users are able create and modify the configuration of Network Bridges. Membership in the local Administrators group, or equivalent, is the minimum required to complete this procedure.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Users are able create and modify the configuration of Network Bridges. Membership in the local Administrators group, or equivalent, is the minimum required to complete this procedure.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -908,8 +908,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (All users are allowed to turn on Mobile Hotspot.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (All users are allowed to turn on Mobile Hotspot.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -951,8 +951,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disable/> |Disabled. (Users can set a network's location without elevating.)|
+|"<enabled/>"|Enabled|
+|"<disable/>"|Disabled. (Users can set a network's location without elevating.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -993,9 +993,9 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Users can set a network's location without elevating.)|
-| <enabled/><data id="Pol_HardenedPaths" value="\\*\NETLOGONRequireMutualAuthentication=1,RequireIntegrity=1\\*\SYSVOLRequireMutualAuthentication=1,RequireIntegrity=1"/> | Custom Settings (Recommended)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Users can set a network's location without elevating.)|
+|"<enabled/><data id="Pol_HardenedPaths" value="\\*\NETLOGONRequireMutualAuthentication=1,RequireIntegrity=1\\*\SYSVOLRequireMutualAuthentication=1,RequireIntegrity=1"/>"| Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1044,9 +1044,9 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled: 1 = Minimize simultaneous connections. (Any new automatic internet connection is blocked when the computer has at least one active internet connection to a preferred type of network. The order of preference (from most preferred to least preferred) is: Ethernet, WLAN, then cellular. Ethernet is always preferred when connected. Users can still manually connect to any network.)|
-| <disabled/> |Disabled|
-| <enabled/><data id="WCM_MinimizeConnections_Options" value="3"/> |Custom Settings (Recommended)|
+|"<enabled/>"|Enabled: 1 = Minimize simultaneous connections. (Any new automatic internet connection is blocked when the computer has at least one active internet connection to a preferred type of network. The order of preference (from most preferred to least preferred) is: Ethernet, WLAN, then cellular. Ethernet is always preferred when connected. Users can still manually connect to any network.)|
+|"<disabled/>"|Disabled|
+|"<enabled/><data id="WCM_MinimizeConnections_Options" value="3"/>"|Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1099,8 +1099,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Connections to both domain and non-domain networks are simultaneously allowed.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Connections to both domain and non-domain networks are simultaneously allowed.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1194,8 +1194,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled. (The Print Spooler will always accept client connections.)|
-| <disabled/> |Disabled|
+|"<enabled/>"|Enabled. (The Print Spooler will always accept client connections.)|
+|"<disabled/>"|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1238,10 +1238,10 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled. (Windows computers will show a warning and a security elevation prompt when users create a new printer connection using Point and Print.)|
-| <disabled/> |Disabled|
-| <enabled/>
-| <data id="PointAndPrint_TrustedServers_Chk" value="false"/> <data id="PointAndPrint_TrustedServers_Edit" value=""/> <data id="PointAndPrint_TrustedForest_Chk" value="false"/> <data id="PointAndPrint_NoWarningNoElevationOnInstall_Enum" value="0"/> <data id="PointAndPrint_NoWarningNoElevationOnUpdate_Enum" value="0"/> | Custom Settings (Recommended)|
+|"<enabled/>"|Enabled. (Windows computers will show a warning and a security elevation prompt when users create a new printer connection using Point and Print.)|
+|"<disabled/>"|Disabled|
+|"<enabled/>
+|"<data id="PointAndPrint_TrustedServers_Chk" value="false"/> <data id="PointAndPrint_TrustedServers_Edit" value=""/> <data id="PointAndPrint_TrustedForest_Chk" value="false"/> <data id="PointAndPrint_NoWarningNoElevationOnInstall_Enum" value="0"/> <data id="PointAndPrint_NoWarningNoElevationOnUpdate_Enum" value="0"/>"| Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1287,8 +1287,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Toast notifications on the lock screen are enabled and can be turned off by the administrator or user.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Toast notifications on the lock screen are enabled and can be turned off by the administrator or user.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1333,8 +1333,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Process command line information will not be included in Audit Process Creation events.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Process command line information will not be included in Audit Process Creation events.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1384,9 +1384,9 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled|
-| <enabled/> <data id="AllowEncryptionOracleDrop" value="0"/> | Custom Settings (Recommended)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled|
+|"<enabled/> <data id="AllowEncryptionOracleDrop" value="0"/>"| Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1432,8 +1432,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Restricted Admin Mode and Windows Defender Remote Credential Guard are not supported. Users will always need to pass their credentials to the host.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Restricted Admin Mode and Windows Defender Remote Credential Guard are not supported. Users will always need to pass their credentials to the host.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1479,8 +1479,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (The setting in the Device Installation Settings dialog box controls whetherWindows retrieves device metadata from the Internet.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (The setting in the Device Installation Settings dialog box controls whetherWindows retrieves device metadata from the Internet.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1537,9 +1537,9 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Boot-start drivers determined to be Good, Unknown or Bad but Boot Critical are initialized and the initialization of drivers determined to be bad is skipped.)|
-| <enabled/> <data id="SelectDriverLoadPolicy" value="3"/> | Custom Settings (Recommended)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Boot-start drivers determined to be Good, Unknown or Bad but Boot Critical are initialized and the initialization of drivers determined to be bad is skipped.)|
+|"<enabled/> <data id="SelectDriverLoadPolicy" value="3"/>"| Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1594,9 +1594,9 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Group policies are not reapplied until the next logon or restart or Group policies are not reapplied if they have not been changed.)|
-| <enabled/> <data id="CSE_NOBACKGROUND10" value="false"/> <data id="CSE_NOCHANGES10" value="false"/> | Custom Settings (Recommended)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Group policies are not reapplied until the next logon or restart or Group policies are not reapplied if they have not been changed.)|
+|"<enabled/> <data id="CSE_NOBACKGROUND10" value="false"/> <data id="CSE_NOCHANGES10" value="false"/>"| Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1647,8 +1647,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1691,8 +1691,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Updates can be applied while users are working.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Updates can be applied while users are working.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1735,8 +1735,8 @@ OMA-URI (Device)
 ```
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled.(Users can download print drivers over HTTP.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled.(Users can download print drivers over HTTP.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1777,8 +1777,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (A list of providers is downloaded when the user uses the web publishing or online ordering wizards.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (A list of providers is downloaded when the user uses the web publishing or online ordering wizards.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1821,8 +1821,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Users may choose to show account details on the sign-in screen.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Users may choose to show account details on the sign-in screen.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1863,8 +1863,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Any user can disconnect the PC from the network or can connect the PC to other available networks without signing into Windows.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Any user can disconnect the PC from the network or can connect the PC to other available networks without signing into Windows.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1906,8 +1906,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Connected users will be enumerated on domain-joined computers.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Connected users will be enumerated on domain-joined computers.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1948,8 +1948,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (The Logon UI will not enumerate local users on domain-joined computers.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (The Logon UI will not enumerate local users on domain-joined computers.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1991,8 +1991,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Users can choose which apps display notifications on the lock screen.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Users can choose which apps display notifications on the lock screen.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2035,8 +2035,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Users can set up and use a picture password.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled. (Users can set up and use a picture password.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2077,8 +2077,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled.(Users can set up and use a picture password.)|
+|"<enabled/>"|Enabled|
+|"<disabled/>"|Disabled.(Users can set up and use a picture password.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2123,8 +2123,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled. (Network connectivity will be maintained in standby while on battery.)|
-| <disabled/> |Disabled|
+|"<enabled/>"|Enabled. (Network connectivity will be maintained in standby while on battery.)|
+|"<disabled/>"|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2168,8 +2168,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled. (Network connectivity will be maintained in standby while plugged in).|
-| <disabled/> |Disabled|
+|"<enabled/>"|Enabled. (Network connectivity will be maintained in standby while plugged in).|
+|"<disabled/>"|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2206,8 +2206,8 @@ from sleep.
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled. (The user is prompted for a password when the system resumes from sleep while on battery.)|
-| <disabled/> |Disabled|
+|"<enabled/>"|Enabled. (The user is prompted for a password when the system resumes from sleep while on battery.)|
+|"<disabled/>"|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
