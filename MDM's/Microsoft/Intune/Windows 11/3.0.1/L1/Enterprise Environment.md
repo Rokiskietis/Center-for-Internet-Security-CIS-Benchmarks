@@ -3105,7 +3105,6 @@ OMA-URI (Device)
 |---|---|
 | < enabled/ > |Enabled|
 | < disabled/ > |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
-| < enabled/ > < data id="Channel_LogMaxSize" value="102400"/ >|Custom Settings (Recommended) |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3163,7 +3162,7 @@ OMA-URI (Device)
 |---|---|
 | < enabled/ > |Enabled|
 | < disabled/ > |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
-| < enabled/ > < data id="Channel_LogMaxSize" value="102400"/ >|Custom Settings (Recommended) |
+| < enabled/ > < data id="Channel_LogMaxSize" value="2097152"/ > |Custom Settings (Recommended) |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3184,4 +3183,259 @@ Script:
 Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 196608 or greater.
 HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security:MaxSize
+```
+# 3.11.15.3 - Setup
+
+## 3.11.15.3.1 - 'Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled' 
+
+>[!NOTE]
+>This policy setting controls Event Log behavior when the log file reaches its maximum
+size.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.3 Ensure Adequate Audit Log Storage|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.4 Ensure adequate storage for logs||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Security: Control Event Log behavior when the log file reaches its maximum size\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_SZ value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup:Retention
+```
+
+## 3.11.15.3.2 - 'Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'
+
+>[!NOTE]
+>This policy setting specifies the maximum size of the log file in kilobytes. The maximum
+log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes
+(4,194,240 kilobytes) in kilobyte increments.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>When event logs fill to capacity, they will stop recording information unless the retention
+method for each is set so that the computer will overwrite the oldest entries with the
+most recent ones. To mitigate the risk of loss of recent data, you can configure the
+retention method so that older events are overwritten as needed.
+The consequence of this configuration is that older events will be removed from the
+logs. Attackers can take advantage of such a configuration, because they can generate
+a large number of extraneous events to overwrite any evidence of their attack. These
+risks can be somewhat reduced if you automate the archival and backup of event log
+data.
+Ideally, all specifically monitored events should be sent to a server that uses Microsoft
+System Center Operations Manager (SCOM) or some other automated monitoring tool.
+Such a configuration is particularly important because an attacker who successfully
+compromises a server could clear the Security log. If all events are sent to a monitoring
+server, then you will be able to gather forensic information about the attacker's activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_LogMaxSize_3
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
+| < enabled/ > <data id="Channel_LogMaxSize" value="102400"/ > |Custom Settings (Recommended) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.3 Ensure Adequate Audit Log Storage|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.4 Ensure adequate storage for logs||:orange_circle:|:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Setup: Specify the maximum log file size (KB)\u0027 is set to \u0027Enabled: 32,768 or greater\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_LogMaxSize_3",
+            "value": "\u003cenabled/\u003e\u003cdata id=\"Channel_LogMaxSize\" value=\"102400\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 32768 or greater.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup:MaxSize
+```
+
+# 3.11.15.4 - System
+
+## 3.11.15.4.1 - 'Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled' 
+
+>[!NOTE]
+>This policy setting controls Event Log behavior when the log file reaches its maximum
+size.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_4
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.3 Ensure Adequate Audit Log Storage|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.4 Ensure adequate storage for logs||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027System: Control Event Log behavior when the log file reaches its maximum size\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_4",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_SZ value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\System:Retention
+```
+
+## 3.11.15.4.2 - 'Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
+
+>[!NOTE]
+>This policy setting specifies the maximum size of the log file in kilobytes. The maximum
+log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes
+(4,194,240 kilobytes) in kilobyte increments.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>When event logs fill to capacity, they will stop recording information unless the retention
+method for each is set so that the computer will overwrite the oldest entries with the
+most recent ones. To mitigate the risk of loss of recent data, you can configure the
+retention method so that older events are overwritten as needed.
+The consequence of this configuration is that older events will be removed from the
+logs. Attackers can take advantage of such a configuration, because they can generate
+a large number of extraneous events to overwrite any evidence of their attack. These
+risks can be somewhat reduced if you automate the archival and backup of event log
+data.
+Ideally, all specifically monitored events should be sent to a server that uses Microsoft
+System Center Operations Manager (SCOM) or some other automated monitoring tool.
+Such a configuration is particularly important because an attacker who successfully
+compromises a server could clear the Security log. If all events are sent to a monitoring
+server, then you will be able to gather forensic information about the attacker's activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeSystemLog
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
+| < enabled/ > < data id="Channel_LogMaxSize" value="204800"/ >| Custom Settings (Recommended) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.3 Ensure Adequate Audit Log Storage|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.4 Ensure adequate storage for logs||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027System: Specify the maximum log file size (KB)\u0027 is set to \u0027Enabled: 32,768 or greater\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeSystemLog",
+            "value": "\u003cenabled/\u003e\u003cdata id=\"Channel_LogMaxSize\" value=\"204800\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 32768 or greater.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\System:MaxSize
+```
+
+#3.11.18 - File Explorer
+
+## 3.11.18.1 -'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass'
+
+>[!NOTE]
+>This policy setting allows you to manage the behavior of Windows Defender
+SmartScreen. Windows Defender SmartScreen helps keep PCs safer by warning users
+before running unrecognized programs downloaded from the Internet. Some information
+is sent to Microsoft about files and programs run on PCs with this feature enabled.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users will be warned and prevented from running unrecognized programs downloaded
+from the Internet.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/SmartScreen/EnableSmartScreenInShell
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Windows Defender SmartScreen behavior is managed by administrators on the PC by using Windows Defender SmartScreen Settings in Action Center.)|
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Configure Windows Defender SmartScreen\u0027 is set to \u0027Enabled: Warn and prevent bypass\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SmartScreen/EnableSmartScreenInShell",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry locations with a REG_DWORD value of 1:
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:EnableSmartScreen
 ```
