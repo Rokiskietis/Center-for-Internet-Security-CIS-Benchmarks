@@ -4211,3 +4211,91 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:DeleteTempDirsOnExi
 # 3.11.37 - RSS Feeds
 
 ## 3.11.37.1 - 'Prevent downloading of enclosures' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting prevents the user from having enclosures (file attachments)
+downloaded from an RSS feed to the user's computer.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users cannot set the Feed Sync Engine to download an enclosure through the Feed
+property page. Developers cannot change the download setting through feed APIs.
+
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/InternetExplorer/DisableEnclosureDownloading
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Users can set the Feed Sync Engine to download an enclosure through the Feed property page. Developers can change the download setting through the Feed APIs.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|9.4 Restrict Unnecessary or Unauthorized Browser and Email Client Extensions|:green_circle:|:orange_circle:|:large_blue_circle|Level - 1|
+|8|7.2 Disable Unnecessary or Unauthorized Browser or Email Client Plugins||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Prevent downloading of enclosures\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/InternetExplorer/DisableEnclosureDownloading",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\InternetExplorer\Feeds:DisableEnclosureDownload
+```
+
+# 3.11.42 - Store
+
+## 3.11.42.1 - 'Turn off the offer to update to the latest version of Windows' is set to 'Enabled'
+
+>[!NOTE]
+>Enables or disables the Microsoft Store offer to update to the latest version of Windows
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Microsoft Store application will not offer updates to the latest version of Windows.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_WindowsStore/DisableOSUpgrade_2
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (The Microsoft Store application will offer updates to the latest version of Windows.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet|||||
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "18.9.75.3 (L1) Ensure \u0027Turn off the offer to update to the latest version of Windows\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_WindowsStore/DisableOSUpgrade_2",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\WindowsStore:DisableOSUpgrade
+```
+
+# 3.11.50 - Windows Logon Options
