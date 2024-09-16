@@ -4294,8 +4294,298 @@ Script:
 ```
 
 ```
+Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\WindowsStore:DisableOSUpgrade
 ```
 
 # 3.11.50 - Windows Logon Options
+
+## 3.11.50.1 - 'Sign-in and lock last interactive user automatically after a restart' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting controls whether a device will automatically sign-in the last interactive
+user after Windows Update restarts the system.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The device does not store the user's credentials for automatic sign-in after a Windows
+Update restart. The users' lock screen apps are not restarted after the system restarts.
+The user is required to present the logon credentials in order to proceed after restart.
+
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/WindowsLogon/AllowAutomaticRestartSignOn
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled. (The device securely saves the user's credentials (including the user name, domain and encrypted password) to configure automatic sign-in after a Windows Update restart. After the Windows Update restart, the user is automatically signed-in and the session is automatically locked with all the lock screen apps configured for that user.)|
+| < disabled/ > |Disabled.|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet|||||
+|8|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Sign-in and lock last interactive user automatically after a restart\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/AllowAutomaticRestartSignOn",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:DisableAutomaticRestartSignOn
+```
+
+#3.11.54 - Windows PowerShell
+
+## 3.11.54.1 - 'Turn on PowerShell Script Block Logging' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting enables logging of all PowerShell script input to the Applications
+and Services Logs\Microsoft\Windows\PowerShell\Operational Event Log channel.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>PowerShell script input will be logged to the Applications and Services
+Logs\Microsoft\Windows\PowerShell\Operational Event Log channel, which can
+contain credentials and sensitive information.
+Warning: There are potential risks of capturing credentials and sensitive information in
+the PowerShell logs, which could be exposed to users who have read-access to those
+logs. Microsoft provides a feature called "Protected Event Logging" to better secure
+event log data.
+
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled. (PowerShell will log script blocks the first time they are used.)|
+| < disabled/ > |Disabled.|
+| < enabled/ > < data id="EnableScriptBlockInvocationLogging" value="true"/ > | Custom Settings (Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle|Level - 1|
+|8|8.8 Enable Command-line Audit Logging||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Turn on PowerShell Script Block Logging\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"EnableScriptBlockInvocationLogging\" value=\"true\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\ScriptBlockLogging:EnableScriptBlockLogging
+```
+
+## 3.11.54.2 - 'Turn on PowerShell Transcription' is set to 'Enabled' 
+
+>[!NOTE]
+>This Policy setting lets you capture the input and output of Windows PowerShell
+commands into text-based transcripts.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>PowerShell transcript input will be logged to the PowerShell_transcript output file,
+which is saved to the My Documents folder of each users´ profile by default.
+Warning: There are potential risks of capturing credentials and sensitive information in
+the PowerShell_transcript output file, which could be exposed to users who have
+read-access to the file.
+Warning #2: PowerShell Transcription is not compatible with the natively installed
+PowerShell v4 on Microsoft Windows 10 Release 1511 and Server 2012 R2 and below.
+If this recommendation is set as prescribed, PowerShell will need to be updated to at
+least v5.1 or newer
+
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_PowerShellExecutionPolicy/EnableTranscripting
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled.|
+| < disabled/ > |Disabled. (Transcription of PowerShell-based applications is disabled by default, although transcription can still be enabled through the Start-Transcript cmdlet.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle|Level - 1|
+|8|8.8 Enable Command-line Audit Logging||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Turn on PowerShell Transcription\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_PowerShellExecutionPolicy/EnableTranscripting",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription:EnableTranscripting
+```
+
+# 3.11.55.1 - WinRM Client
+
+## 3.11.55.1.1 - 'Allow Basic authentication' is set to 'Disabled' 
+
+>[!NOTE]
+>This policy setting allows you to manage whether the Windows Remote Management
+(WinRM) client uses Basic authentication.
+Note: Clients that use Microsoft's Exchange Online service (Office 365) will require an
+exception to this recommendation, to instead have this setting set to Enabled.
+Exchange Online uses Basic authentication over HTTPS, and so the Exchange Online
+authentication traffic will still be safely encrypted.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled.|
+| < disabled/ > |Disabled. (The WinRM client does not use Basic authentication.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+|8|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Allow Basic authentication\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowBasic
+```
+
+## 3.11.55.1.2 - 'Allow unencrypted traffic' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting allows you to manage whether the Windows Remote Management
+(WinRM) client sends and receives unencrypted messages over the network.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowUnencryptedTraffic_Client
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled.|
+| < disabled/ > |Disabled. (The WinRM client sends or receives only encrypted messages over the network.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+|7|14.4 Encrypt All Sensitive Information in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Allow unencrypted traffic\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowUnencryptedTraffic_Client",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowUnencryptedTraffic
+```
+
+## 3.11.55.1.3 - 'Disallow Digest authentication' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting allows you to manage whether the Windows Remote Management
+(WinRM) client will not use Digest authentication.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The WinRM client will not use Digest authentication.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteManagement/DisallowDigestAuthentication
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled.|
+| < disabled/ > |DDisabled. (The WinRM client will use Digest authentication.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+|7|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Disallow Digest authentication\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/DisallowDigestAuthentication",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowDigest
+```
+# 3.11.55.2 - WinRM Service
+
+## 3.11.55.2.1 - 'Allow Basic authentication' is set to 'Disabled'
