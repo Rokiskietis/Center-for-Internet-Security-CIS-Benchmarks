@@ -2752,4 +2752,231 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer:NoAutoplayfornonVolume
 ```
+## 3.11.6.2 - 'Set the default behavior for AutoRun' is set to 'Enabled: Do not execute any autorun commands'
 
+>[!NOTE]
+>This policy setting sets the default behavior for Autorun commands.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>AutoRun commands will be completely disabled.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Autoplay/SetDefaultAutoRunBehavior
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Windows will prompt the user whether autorun command is to be run.)|
+| < enabled/ >< data id="NoAutorun_Dropdown" value="1"/ > |Custom Settings (Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.3 Disable Autorun and Autoplay for Removable Media|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7| 8.5 Configure Devices Not To Auto-run Content|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Set the default behavior for AutoRun\u0027 is set to \u0027Enabled: Do not execute any autorun commands\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Autoplay/SetDefaultAutoRunBehavior",
+            "value": "\u003cenabled/\u003e\u003cdata id=\"NoAutorun_Dropdown\" value=\"1\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoAutorun
+```
+## 3.11.6.3 - 'Turn off Autoplay' is set to 'Enabled: All drives'
+
+>[!NOTE]
+>Autoplay starts to read from a drive as soon as you insert media in the drive, which
+causes the setup file for programs or audio media to start immediately. An attacker
+could use this feature to launch a program to damage the computer or data on the
+computer. Autoplay is disabled by default on some removable drive types, such as
+floppy disk and network drives, but not on CD-ROM drives.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Autoplay will be disabled - users will have to manually launch setup or installation
+programs that are provided on removable media.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Autoplay/TurnOffAutoPlay
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Autoplay is enabled.)|
+| < enabled/ > < data id="Autorun_Box" value="255"/ > |Custom Settings (Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.3 Disable Autorun and Autoplay for Removable Media|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7| 8.5 Configure Devices Not To Auto-run Content|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Turn off Autoplay\u0027 is set to \u0027Enabled: All drives\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Autoplay/TurnOffAutoPlay",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"Autorun_Box\" value=\"255\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 255.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoDriveTypeAutoRun
+```
+
+## 3.11.8 - Credential User Interface
+
+## 3.11.8.1 - 'Do not display the password reveal button' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting allows you to configure the display of the password reveal button in
+password entry user experiences.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The password reveal button will not be displayed after a user types a password in the
+password entry text box.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Autoplay/TurnOffAutoPlay
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (The password reveal button is displayed after a user types a password in the password entry text box. If the user clicks on the button, the typed password is displayed on-screen in plain text.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped|||||
+|8|Not Yet Mapped|||||
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Do not display the password reveal button\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/CredentialsUI/DisablePasswordReveal",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\CredUI:DisablePasswordReveal
+```
+
+## 3.11.8.2 - 'Enumerate administrator accounts on elevation' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting controls whether administrator accounts are displayed when a user
+attempts to elevate a running application.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/CredentialsUI/EnumerateAdministrators
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Users will be required to always type in a username and password to elevate.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped|||||
+|8|Not Yet Mapped|||||
+
+```
+Script:
+       {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Enumerate administrator accounts on elevation\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/CredentialsUI/EnumerateAdministrators",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\CredUI:EnumerateAdministrators
+```
+
+## 3.11.8.3 - 'Prevent the use of security questions for local accounts' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls whether security questions can be used to reset local
+account passwords. The security question feature does not apply to domain accounts,
+only local accounts on the workstation.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Local user accounts will not be able to set up and use security questions to reset their
+passwords.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_CredUI/NoLocalPasswordResetQuestions
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Not Configured. (Local user accounts are able to set up and use security questions to reset their passwords.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped|||||
+|8|Not Yet Mapped|||||
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "18.9.16.3 (L1) Ensure \u0027Prevent the use of security questions for local accounts\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_CredUI/NoLocalPasswordResetQuestions",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\System:NoLocalPasswordResetQuestions
+```
+
+# 3.11.15.1 - Application
