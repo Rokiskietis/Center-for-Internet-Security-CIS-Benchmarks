@@ -2452,12 +2452,11 @@ serious problems and is not recommended.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/RemoteProcedureCall/RestrictUnauthenticatedRPCClients
 ```
-
 |Value|Description|
 |---|---|
 | < enabled/ > |Enabled: Authenticated. (Only authenticated RPC clients are allowed to connect to RPC servers running on the machine. Exemptions are granted to interfaces that have requested them.)|
 | < disabled/ > |Disabled|
-| < enabled/ > <data id="RpcRestrictRemoteClientsList" value="1"/ > |Custom Settings (Recommended)|
+| < enabled/ > <data id="RpcRestrictRemoteClientsList" value="1"/> | Custom Settings (Recommended} |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2477,7 +2476,280 @@ Script:
 Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Rpc:RestrictRemoteClients
-
 ```
 
 # 3.10.42.1 - Time Providers
+
+## 3.10.42.1.1 - 'Enable Windows NTP Client' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting specifies whether the Windows NTP Client is enabled. Enabling the
+Windows NTP Client allows synchronization from a systems computer clock to NTP
+server(s).
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>System time will be synced to the configured NTP server(s)
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_W32Time/W32TIME_POLICY_ENABLE_NTPCLIENT
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (The local computer clock does not synchronize time with NTP servers.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.4 Standardize Time Synchronization||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.1 Utilize Three Synchronized Time Sources||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "displayName": "\u0027Enable Windows NTP Client\u0027 is set to \u0027Enabled\u0027",",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_W32Time/W32TIME_POLICY_ENABLE_NTPCLIENT",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\W32Time\TimeProviders\NtpClient:Enabled
+```
+
+## 3.10.42.1.2 - 'Enable Windows NTP Server' is set to 'Disabled' 
+
+>[!NOTE]
+>This policy setting specifies whether the Windows NTP Server is enabled. Disabling this
+setting prevents the system from acting as a NTP Server (time source) to service NTP
+requests from other systems (NTP Clients).
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (The computer cannot service NTP requests from other computers.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.4 Standardize Time Synchronization||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.1 Utilize Three Synchronized Time Sources||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_W32Time/W32TIME_POLICY_ENABLE_NTPSERVER
+```
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "displayName": "\u0027Enable Windows NTP Server\u0027 is set to \u0027Disabled\u0027",",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_W32Time/W32TIME_POLICY_ENABLE_NTPSERVER",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\W32Time\TimeProviders\NtpServer:Enabled
+```
+
+# 3.11.3 - App runtime
+
+## 3.11.3.1 - 'Allow Microsoft accounts to be optional' is set to 'Enabled
+
+>[!NOTE]
+>This policy setting lets you control whether Microsoft accounts are optional for Windows
+Store apps that require an account to sign in. This policy only affects Windows Store
+apps that support it.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows Store apps that typically require a Microsoft account to sign in will allow users
+to sign in with an enterprise account instead
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Users will need to sign in with a Microsoft account.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.6 Centralize Account Management||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/AppRuntime/AllowMicrosoftAccountsToBeOptional
+```
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Allow Microsoft accounts to be optional\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/AppRuntime/AllowMicrosoftAccountsToBeOptional",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:MSAOptional
+```
+
+# 3.11.5 - Attachment Manager
+
+## 3.11.5.1 - 'Do not preserve zone information in file attachments (User)' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting allows you to manage whether Windows marks file attachments with
+information about their zone of origin (such as restricted, Internet, intranet, local). This
+requires NTFS in order to function correctly, and will fail without notice on FAT32. By
+not preserving the zone information, Windows cannot make proper risk assessments.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (User)
+./User/Vendor/MSFT/Policy/Config/AttachmentManager/DoNotPreserveZoneInformation
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Windows marks file attachments with their zone information.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Yet Mapped|||||
+|8|Not Yet Mapped|||||
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Do not preserve zone information in file attachments\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./User/Vendor/MSFT/Policy/Config/AttachmentManager/DoNotPreserveZoneInformation",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 2.
+HKU\[USERSID]\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments:SaveZoneInformation
+```
+
+## 3.11.5.2 - 'Notify antivirus programs when opening attachments (User)' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting manages the behavior for notifying registered antivirus programs. If
+multiple programs are registered, they will all be notified.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows tells the registered antivirus program(s) to scan the file when a user opens a
+file attachment. If the antivirus program fails, the attachment is blocked from being
+opened.
+
+```
+OMA-URI (User)
+./User/Vendor/MSFT/Policy/Config/AttachmentManager/NotifyAntivirusPrograms
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Windows does not call the registered antivirus program(s) when file attachments are opened.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Notify antivirus programs when opening attachments\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./User/Vendor/MSFT/Policy/Config/AttachmentManager/NotifyAntivirusPrograms",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 3.
+HKU\[USERSID]\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments:ScanWithAntiVirus
+```
+
+# 3.11.6 - AutoPlay Policies
+
+## 3.11.6.1 - 'Disallow Autoplay for non-volume devices' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting disallows AutoPlay for MTP devices like cameras or phones.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>AutoPlay will not be allowed for MTP devices like cameras or phones.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Autoplay/DisallowAutoplayForNonVolumeDevices
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (AutoPlay is enabled for non-volume devices.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.3 Disable Autorun and Autoplay for Removable Media|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7| 8.5 Configure Devices Not To Auto-run Content|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Disallow Autoplay for non-volume devices\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Autoplay/DisallowAutoplayForNonVolumeDevices",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer:NoAutoplayfornonVolume
+```
+
