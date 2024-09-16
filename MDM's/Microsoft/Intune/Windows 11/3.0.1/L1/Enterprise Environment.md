@@ -2457,7 +2457,7 @@ OMA-URI (Device)
 |---|---|
 | < enabled/ > |Enabled: Authenticated. (Only authenticated RPC clients are allowed to connect to RPC servers running on the machine. Exemptions are granted to interfaces that have requested them.)|
 | < disabled/ > |Disabled|
-| < enabled/ > <data id="RpcRestrictRemoteClientsList" value="1"/> |Custom Settings (Recommended)|
+| < enabled/ > <data id="RpcRestrictRemoteClientsList" value="1"/ > |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
