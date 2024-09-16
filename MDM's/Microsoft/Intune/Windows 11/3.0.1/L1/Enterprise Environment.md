@@ -3573,10 +3573,10 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:PreXPSP2ShellProtocolBehavior
 ```
-#3.11.20 - Home Group
+# 3.11.20 - Home Group
 
 
-##3.11.20.1 - 'Prevent the computer from joining a homegroup' is set to 'Enabled'
+## 3.11.20.1 - 'Prevent the computer from joining a homegroup' is set to 'Enabled'
 
 >[!NOTE]
 >By default, users can add their computer to a HomeGroup on a home network
