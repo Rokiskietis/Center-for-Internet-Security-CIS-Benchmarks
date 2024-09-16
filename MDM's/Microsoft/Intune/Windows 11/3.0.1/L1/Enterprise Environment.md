@@ -2418,3 +2418,66 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Rpc:EnableAuthEpResolution
 ```
 
+## 3.10.30.2 - 'Restrict Unauthenticated RPC clients' is set to 'Enabled: Authenticated'
+
+>[!NOTE]
+>This policy setting controls how the RPC server runtime handles unauthenticated RPC
+clients connecting to RPC servers.
+This policy setting impacts all RPC applications. In a domain environment this policy
+setting should be used with caution as it can impact a wide range of functionality
+including group policy processing itself. Reverting a change to this policy setting can
+require manual intervention on each affected machine. This policy setting should
+never be applied to a Domain Controller.
+A client will be considered an authenticated client if it uses a named pipe to
+communicate with the server or if it uses RPC Security. RPC Interfaces that have
+specifically requested to be accessible by unauthenticated clients may be exempt from
+this restriction, depending on the selected value for this policy setting.
+-- "None" allows all RPC clients to connect to RPC Servers running on the machine on
+which the policy setting is applied.
+-- "Authenticated" allows only authenticated RPC Clients (per the definition above) to
+connect to RPC Servers running on the machine on which the policy setting is applied.
+Exemptions are granted to interfaces that have requested them.
+-- "Authenticated without exceptions" allows only authenticated RPC Clients (per the
+definition above) to connect to RPC Servers running on the machine on which the policy
+setting is applied. No exceptions are allowed. This value has the potential to cause
+serious problems and is not recommended.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteProcedureCall/RestrictUnauthenticatedRPCClients
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled: Authenticated. (Only authenticated RPC clients are allowed to connect to RPC servers running on the machine. Exemptions are granted to interfaces that have requested them.)|
+| < disabled/ > |Disabled|
+| < enabled/ > <data id="RpcRestrictRemoteClientsList" value="1"/> |Custom Settings (Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Restrict Unauthenticated RPC clients\u0027 is set to \u0027Enabled: Authenticated\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteProcedureCall/RestrictUnauthenticatedRPCClients",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"RpcRestrictRemoteClientsList\" value=\"1\"/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Rpc:RestrictRemoteClients
+
+```
+
+# 3.10.42.1 - Time Providers
