@@ -2234,3 +2234,92 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51:DCSettingIndex
 ```
+
+## 3.10.28.5.6 - 'Require a password when a computer wakes (plugged in)' is set to 'Enabled'
+
+>[!NOTE]
+>Specifies whether or not the user is prompted for a password when the system resumes
+from sleep.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Power/RequirePasswordWhenComputerWakesOnBattery
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled. (The user is prompted for a password when the system resumes from sleep while plugged in.)|
+| < disabled/ > |Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|Not Yet Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Require a password when a computer wakes (plugged in)\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/RequirePasswordWhenComputerWakesPluggedIn",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51:ACSettingIndex
+```
+
+# 3.10.29 - Remote Assistance
+
+## 3.10.29.1 - 'Configure Offer Remote Assistance' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting allows you to turn on or turn off Offer (Unsolicited) Remote Assistance on this computer.
+Help desk and support personnel will not be able to proactively offer assistance,
+although they can still respond to user assistance requests.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteAssistance/UnsolicitedRemoteAssistance
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled.|
+| < disabled/ > |Disabled. (Users on this computer cannot get help from their corporate technical support staff using Offer (Unsolicited) Remote Assistance.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Configure Offer Remote Assistance\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteAssistance/UnsolicitedRemoteAssistance",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services:fAllowUnsolicited
+```
+
+
