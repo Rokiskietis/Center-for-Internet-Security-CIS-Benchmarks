@@ -3623,3 +3623,53 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\HomeGroup:DisableHomeGroup
 ```
 
 # 3.11.27 - Microsoft Account
+
+## 3.11.27.1 - 'Block all consumer Microsoft account user authentication' is set to 'Enabled' 
+
+>[!NOTE]
+>This setting determines whether applications and services on the device can utilize new
+consumer Microsoft account authentication via the Windows OnlineID and
+WebAccountManager APIs.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>All applications and services on the device will be prevented from new authentications
+using consumer Microsoft accounts via the Windows OnlineID and WebAccountManager
+APIs. Authentications performed directly by the user in web browsers or in apps that
+use OAuth will remain unaffected.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_MSAPolicy/MicrosoftAccount_DisableUserAuth
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Applications and services on the device will be permitted to authenticate using consumer Microsoft accounts via the Windows OnlineID and WebAccountManager APIs.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.6 Centralize Account Management||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.8 Disable Any Unassociated Accounts|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Block all consumer Microsoft account user authentication\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MSAPolicy/MicrosoftAccount_DisableUserAuth",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\MicrosoftAccount:DisableUserAuth
+```
+
+# 3.11.28.3 - MAPS
