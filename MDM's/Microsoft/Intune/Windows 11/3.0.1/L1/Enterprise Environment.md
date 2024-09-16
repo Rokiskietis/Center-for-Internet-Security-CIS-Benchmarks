@@ -3893,8 +3893,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle|Level - 1|
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -3941,7 +3941,7 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|Not Mapped Yet|||||
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -3986,8 +3986,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4047,8 +4047,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4099,8 +4099,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4145,8 +4145,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4189,8 +4189,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.4 Enforce Data Retention|:green_circle:|:orange_circle:|:large_blue_circle|Level - 1|
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+|8|3.4 Enforce Data Retention|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4236,8 +4236,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|9.4 Restrict Unnecessary or Unauthorized Browser and Email Client Extensions|:green_circle:|:orange_circle:|:large_blue_circle|Level - 1|
-|8|7.2 Disable Unnecessary or Unauthorized Browser or Email Client Plugins||:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.4 Restrict Unnecessary or Unauthorized Browser and Email Client Extensions|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|7.2 Disable Unnecessary or Unauthorized Browser or Email Client Plugins||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4281,7 +4281,7 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|Not Mapped Yet|||||
-|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4329,7 +4329,7 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|Not Mapped Yet|||||
-|8|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle|Level - 1|
+|8|16.11 Lock Workstation Sessions After Inactivity|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4381,8 +4381,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle|Level - 1|
-|8|8.8 Enable Command-line Audit Logging||:orange_circle:|:large_blue_circle|Level - 1|
+|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|8.8 Enable Command-line Audit Logging||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4433,8 +4433,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle|Level - 1|
-|8|8.8 Enable Command-line Audit Logging||:orange_circle:|:large_blue_circle|Level - 1|
+|8|8.8 Collect Command-Line Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|8.8 Enable Command-line Audit Logging||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4482,8 +4482,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
-|8|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle|Level - 1|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4525,8 +4525,8 @@ OMA-URI (Device)
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
-|7|14.4 Encrypt All Sensitive Information in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|14.4 Encrypt All Sensitive Information in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -4564,12 +4564,12 @@ OMA-URI (Device)
 |Value|Description|
 |---|---|
 | < enabled/ > |Enabled.|
-| < disabled/ > |DDisabled. (The WinRM client will use Digest authentication.)|
+| < disabled/ > |Disabled. (The WinRM client will use Digest authentication.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
-|7|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle|Level - 1|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
