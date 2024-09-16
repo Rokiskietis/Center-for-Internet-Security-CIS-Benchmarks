@@ -3673,3 +3673,144 @@ HKLM\SOFTWARE\Policies\Microsoft\MicrosoftAccount:DisableUserAuth
 ```
 
 # 3.11.28.3 - MAPS
+
+## 3.11.28.3.1 - 'Configure local setting override for reporting to Microsoft MAPS' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting configures a local override for the configuration to join Microsoft
+Active Protection Service (MAPS), which Microsoft renamed to Windows Defender
+Antivirus Cloud Protection Service and then Microsoft Defender Antivirus Cloud
+Protection Service. This setting can only be set by Group Policy.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/Spynet_LocalSettingOverrideSpynetReporting
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Group Policy will take priority over the local preference setting.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Configure local setting override for reporting to Microsoft MAPS\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/Spynet_LocalSettingOverrideSpynetReporting",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\WindowsDefender\Spynet:LocalSettingOverrideSpynetReporting
+```
+
+# 3.11.28.10 - Reporting
+
+## 3.11.28.11 - 'Turn off Microsoft Defender Antivirus' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting turns off Microsoft Defender Antivirus. If the setting is configured to
+Disabled, Microsoft Defender Antivirus runs and computers are scanned for malware
+and other potentially unwanted software
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/DisableAntiSpywareDefender
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Microsoft Defender Antivirus runs and computers are scanned for malware and other potentially unwanted software.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.1 Utilize Centrally Managed Anti-malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Turn off Microsoft Defender Antivirus\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/DisableAntiSpywareDefender",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender:DisableAntiSpyware
+```
+
+## 3.11.31.1 - 'Prevent users from sharing files within their profile. (User)' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether users can share files within their profile. By
+default, users are allowed to share files within their profile to other users on their
+network after an administrator opts in the computer. An administrator can opt in the
+computer by using the sharing wizard to share a file within their profile.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users cannot share files within their profile using the sharing wizard. Also, the sharing
+wizard cannot create a share at %root%\Users and can only be used to create SMB
+shares on folders.
+
+```
+OMA-URI (User)
+./User/Vendor/MSFT/Policy/Config/ADMX_Sharing/NoInplaceSharing
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Users can share files out of their user profile after an administrator has opted in the computer.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet|||||
+|7|14.6 Protect Information through Access Control Lists|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Prevent users from sharing files within their profile\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./User/Vendor/MSFT/Policy/Config/ADMX_Sharing/NoInplaceSharing",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKU\[USERSID]\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoInplaceSharing
+```
+
+# 3.11.36.3.1 - RemoteFX USB Device Redirection
