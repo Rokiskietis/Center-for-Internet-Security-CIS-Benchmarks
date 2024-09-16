@@ -2206,7 +2206,7 @@ from sleep.
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (The user is prompted for a password when the system resumes from sleep while on battery.)|
+| <enabled/> |Enabled. (The user is prompted for a password when the system resumes from sleep while on battery.)|
 |<disabled/>|Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
