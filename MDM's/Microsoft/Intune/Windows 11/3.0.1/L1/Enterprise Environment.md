@@ -578,7 +578,7 @@ paths.
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel
+./Device/Vendor/MSFT/Policy/Config/MSSLegacy/AllowICMPRedirectsToOverrideOSPFGeneratedRoutes
 ```
 |Value|Description|
 |---|---|
@@ -2176,4 +2176,47 @@ Script:
 Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
 HKLM\SOFTWARE\Policies\Microsoft\Power\PowerSettings\f15576e8-98b7-4186-b944-eafa664402d9:ACSettingIndex
+```
+
+## 3.10.28.5.5 - 'Require a password when a computer wakes (on battery)' is set to 'Enabled'
+
+>[!NOTE]
+>Specifies whether or not the user is prompted for a password when the system resumes
+from sleep.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+|Value|Description|
+|---|---|
+|Enabled|Enabled. (The user is prompted for a password when the system resumes from sleep while on battery.)|
+|Disabled|Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|7|16.11 Lock Workstation Sessions After Inactivity|:green_circle|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|Not Yet Mapped||||Level - 1|
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Power/RequirePasswordWhenComputerWakesOnBattery
+```
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Require a password when a computer wakes (on battery)\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Power/RequirePasswordWhenComputerWakesOnBattery",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Power\PowerSettings\0e796bdb-100d-47d6-a2d5-f7d2daa51f51:DCSettingIndex
 ```
