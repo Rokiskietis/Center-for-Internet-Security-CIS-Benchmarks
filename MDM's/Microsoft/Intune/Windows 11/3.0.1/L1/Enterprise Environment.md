@@ -3829,7 +3829,7 @@ computer.
 will not be able to save passwords.
 
 ```
-OMA-URI (User)
+OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowPasswordSavingg
 ```
 
@@ -3882,7 +3882,7 @@ connected user will serve as a capable substitute to still allow file transfers 
 needed.
 
 ```
-OMA-URI (User)
+OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowDriveRedirection
 ```
 
@@ -3912,3 +3912,302 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services:fDisableCdm
 ```
 
 # 3.11.36.4.9 - Security
+
+##  3.11.36.4.9.1 - 'Always prompt for password upon connection' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting specifies whether Remote Desktop Services always prompts the
+client computer for a password upon connection. You can use this policy setting to
+enforce a password prompt for users who log on to Remote Desktop Services, even if
+they already provided the password in the Remote Desktop Connection client.
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users cannot automatically log on to Remote Desktop Services by supplying their
+passwords in the Remote Desktop Connection client. They will be prompted for a
+password to log on.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/PromptForPasswordUponConnection
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Remote Desktop Services allows users to automatically log on if they enter a password in the Remote Desktop Connection client.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet|||||
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Always prompt for password upon connection\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/PromptForPasswordUponConnection",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:fPromptForPassword
+```
+
+## 3.11.36.4.9.2 - 'Require secure RPC communication' is set to 'Enabled
+
+>[!NOTE]
+>This policy setting allows you to specify whether Remote Desktop Services requires
+secure Remote Procedure Call (RPC) communication with all clients or allows
+unsecured communication.
+You can use this policy setting to strengthen the security of RPC communication with
+clients by allowing only authenticated and encrypted requests.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Remote Desktop Services accepts requests from RPC clients that support secure
+requests, and does not allow unsecured communication with untrusted clients.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/RequireSecureRPCCommunication
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Remote Desktop Services always requests security for all RPC traffic. However, unsecured communication is allowed for RPC clients that do not respond tothe request.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Require secure RPC communication\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/RequireSecureRPCCommunication",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:fPromptForPassword
+```
+
+## 3.11.36.4.9.3 - 'Require use of specific security layer for remote (RDP) connections' is set to 'Enabled: SSL
+
+>[!NOTE]
+>This policy setting specifies whether to require the use of a specific security layer to
+secure communications between clients and RD Session Host servers during Remote
+Desktop Protocol (RDP) connections.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>TLS 1.0 will be required to authenticate to the RD Session Host server. If TLS is not
+supported, the connection fails.
+Note: By default, this setting will use a self-signed certificate for RDP connections. If
+your organization has established the use of a Public Key Infrastructure (PKI) for
+SSL/TLS encryption, then we recommend that you also configure the Server
+authentication certificate template setting to instruct RDP to use a certificate from your
+PKI instead of a self-signed one. Note that the certificate template used for this purpose
+must have “Client Authentication” configured as an Intended Purpose. Note also that a
+valid, non-expired certificate using the specified template must already be installed on
+the workstation for it to work.
+Note #2: Some third party two-factor authentication solutions (e.g. RSA Authentication
+Agent) can be negatively affected by this setting, as the SSL/TLS security layer will
+expect the user's Windows password upon initial connection attempt (before the RDP
+logon screen), and once successfully authenticated, pass the credential along to that
+Windows session on the RDP host (to complete the login). If a two-factor agent is
+present and expecting a different credential at the RDP logon screen, this initial
+connection may result in a failed logon attempt, and also effectively cause a “double
+logon” requirement for each and every new RDP session.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_SECURITY_LAYER_POLICY
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled|
+| < enabled/ > < data id="TS_SECURITY_LAYER" value="2"/ >| Custom Settings (Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Require use of specific security layer for remote (RDP) connections\u0027 is set to \u0027Enabled: SSL\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_SECURITY_LAYER_POLICY",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"TS_SECURITY_LAYER\" value=\"2\"/\u003e"
+        },
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 2.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services:SecurityLayer
+```
+
+## 3.11.36.4.9.4 - 'Require user authentication for remote connections by using Network Level Authentication' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting allows you to specify whether to require user authentication for
+remote connections to the RD Session Host server by using Network Level
+Authentication.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Only client computers that support Network Level Authentication can connect to the RD
+Session Host server.
+Note: Some third party two-factor authentication solutions (e.g. RSA Authentication
+Agent) can be negatively affected by this setting, as Network Level Authentication will
+expect the user's Windows password upon initial connection attempt (before the RDP
+logon screen), and once successfully authenticated, pass the credential along to that
+Windows session on the RDP host (to complete the login). If a two-factor agent is
+present and expecting a different credential at the RDP logon screen, this initial
+connection may result in a failed logon attempt, and also effectively cause a “double
+logon” requirement for each and every new RDP session.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_USER_AUTHENTICATION_POLICY
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Require user authentication for remote connections by using Network Level Authentication\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_USER_AUTHENTICATION_POLICY",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:UserAuthentication
+```
+
+## 3.11.36.4.9.5 -'Set client connection encryption level' is set to 'Enabled: High Level'
+
+>[!NOTE]
+>This policy setting specifies whether to require the use of a specific encryption level to
+secure communications between client computers and RD Session Host servers during
+Remote Desktop Protocol (RDP) connections. This policy only applies when you are
+using native RDP encryption. However, native RDP encryption (as opposed to SSL
+encryption) is not recommended. This policy does not apply to SSL encryption.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/ClientConnectionEncryptionLevel
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled: High Level. (All communications between clients and RD Session Host servers during remote connections using native RDP encryption must be 128-bit strength. Clients that do not support 128-bit encryption will be unable to establish Remote Desktop Server sessions.)|
+| < disabled/ > |Disabled|
+| < enabled/ > < data id="TS_ENCRYPTION_LEVEL" value="3"/ >| Custom Settings (Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Set client connection encryption level\u0027 is set to \u0027Enabled: High Level\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/ClientConnectionEncryptionLevel",
+            "value": "\u003cenabled/\u003e\n\u003cdata id=\"TS_ENCRYPTION_LEVEL\" value=\"3\"/\u003e"
+        },
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 3.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:MinEncryptionLevel
+```
+
+## 3.11.36.4.11 - Temporary folders
+
+## 3.11.36.4.11.1 - 'Do not delete temp folders upon exit' is set to 'Disabled' 
+
+>[!NOTE]
+
+>This policy setting specifies whether Remote Desktop Services retains a user's persession temporary folders at logoff.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_TEMP_DELETE
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Temporary folders are deleted when a user logs off.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.4 Enforce Data Retention|:green_circle:|:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Do not delete temp folders upon exit\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_TEMP_DELETE",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:DeleteTempDirsOnExit
+```
+
+# 3.11.37 - RSS Feeds
+
+## 3.11.37.1 - 'Prevent downloading of enclosures' is set to 'Enabled'
