@@ -2322,4 +2322,99 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services:fAllowUnsolicited
 ```
 
+## 3.10.29.2 - 'Configure Solicited Remote Assistance' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting allows you to turn on or turn off Solicited (Ask for) Remote Assistance
+on this computer.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users on this computer cannot use e-mail or file transfer to ask someone for help. Also,
+users cannot use instant messaging programs to allow connections to this computer
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteAssistance/SolicitedRemoteAssistance
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Users can turn on or turn off Solicited (Ask for) Remote Assistance themselves in System Properties in Control Panel. Users can also configure Remote Assistance settings.|
+| < disabled/ > |Disabled.|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Configure Solicited Remote Assistance\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteAssistance/SolicitedRemoteAssistance",
+            "value": "\u003cdisabled/\u003e"
+        },,
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services:fAllowToGetHelp
+```
+
+# 3.10.30 - Remote Procedure Call
+
+## 3.10.30.1 - 'Enable RPC Endpoint Mapper Client Authentication' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls whether RPC clients authenticate with the Endpoint Mapper
+Service when the call they are making contains authentication information. The
+Endpoint Mapper Service on computers running Windows NT4 (all service packs)
+cannot process authentication information supplied in this manner. This policy setting
+can cause a specific issue with 1-way forest trusts if it is applied to the trusting domain
+DCs (see Microsoft KB3073942), so we do not recommend applying it to Domain
+Controllers
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>RPC clients will authenticate to the Endpoint Mapper Service for calls that contain
+authentication information. Clients making such calls will not be able to communicate
+with the Windows NT4 Server Endpoint Mapper Service.
+
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteProcedureCall/RPCEndpointMapperClientAuthentication
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (RPC clients will not authenticate to the Endpoint Mapper Service, but they will be able to communicate with the Windows NT4 Server Endpoint Mapper Service.).|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Enable RPC Endpoint Mapper Client Authentication\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteProcedureCall/RPCEndpointMapperClientAuthentication",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Rpc:EnableAuthEpResolution
+```
 
