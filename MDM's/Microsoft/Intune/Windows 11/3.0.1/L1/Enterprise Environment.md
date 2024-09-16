@@ -3907,6 +3907,7 @@ Script:
 ```
 
 ```
+Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services:fDisableCdm
 ```
@@ -3954,6 +3955,7 @@ Script:
 ```
 
 ```
+Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:fPromptForPassword
 ```
@@ -4000,6 +4002,7 @@ Script:
 ```
 
 ```
+Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:fPromptForPassword
 ```
@@ -4061,6 +4064,7 @@ Script:
 ```
 
 ```
+Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 2.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services:SecurityLayer
 ```
@@ -4113,6 +4117,7 @@ Script:
 ```
 
 ```
+Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:UserAuthentication
 ```
@@ -4159,6 +4164,7 @@ Script:
 ```
 
 ```
+Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 3.
 HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:MinEncryptionLevel
 ```
@@ -4168,7 +4174,6 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:MinEncryptionLevel
 ## 3.11.36.4.11.1 - 'Do not delete temp folders upon exit' is set to 'Disabled' 
 
 >[!NOTE]
-
 >This policy setting specifies whether Remote Desktop Services retains a user's persession temporary folders at logoff.
 
 >[!TIP]
@@ -4347,7 +4352,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:DisableAutomaticRestartSignOn
 ```
 
-#3.11.54 - Windows PowerShell
+# 3.11.54 - Windows PowerShell
 
 ## 3.11.54.1 - 'Turn on PowerShell Script Block Logging' is set to 'Enabled'
 
