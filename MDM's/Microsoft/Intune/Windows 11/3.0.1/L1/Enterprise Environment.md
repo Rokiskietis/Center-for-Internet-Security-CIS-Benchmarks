@@ -3391,7 +3391,7 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\System:MaxSize
 ```
 
-#3.11.18 - File Explorer
+# 3.11.18 - File Explorer
 
 ## 3.11.18.1 -'Configure Windows Defender SmartScreen' is set to 'Enabled: Warn and prevent bypass'
 
