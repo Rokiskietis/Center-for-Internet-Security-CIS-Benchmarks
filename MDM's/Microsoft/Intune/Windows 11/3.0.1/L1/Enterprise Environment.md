@@ -3814,3 +3814,101 @@ HKU\[USERSID]\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoInpl
 ```
 
 # 3.11.36.3.1 - RemoteFX USB Device Redirection
+
+## 3.11.36.3.2 - 'Do not allow passwords to be saved' is set to 'Enabled' 
+
+>[!NOTE]
+>This policy setting helps prevent Remote Desktop clients from saving passwords on a
+computer.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The password saving checkbox will be disabled for Remote Desktop clients and users
+will not be able to save passwords.
+
+```
+OMA-URI (User)
+./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowPasswordSavingg
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (Users will be able to save passwords using Remote Desktop Connection.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|Not Mapped Yet|||||
+|8|Not Mapped Yet|||||
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Do not allow passwords to be saved\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowPasswordSaving",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:DisablePasswordSaving
+
+```
+
+# 3.11.36.4.3 - Device and Resource Redirection
+
+## 3.11.36.4.3.2 - 'Do not allow drive redirection' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting prevents users from sharing the local drives on their client computers
+to Remote Desktop Servers that they access. Mapped drives appear in the session
+folder tree in Windows Explorer in the following format:
+\\TSClient\<driveletter>$
+If local drives are shared they are left vulnerable to intruders who want to exploit the
+data that is stored on them.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Drive redirection will not be possible. In most situations, traditional network drive
+mapping to file shares (including administrative shares) performed manually by the
+connected user will serve as a capable substitute to still allow file transfers when
+needed.
+
+```
+OMA-URI (User)
+./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowDriveRedirection
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled|
+| < disabled/ > |Disabled. (An RD Session Host maps client drives automatically upon connection.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Do not allow drive redirection\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowDriveRedirection",
+            "value": "\u003cenabled/\u003e"
+        },
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows NT\Terminal Services:fDisableCdm
+```
+
+# 3.11.36.4.9 - Security
