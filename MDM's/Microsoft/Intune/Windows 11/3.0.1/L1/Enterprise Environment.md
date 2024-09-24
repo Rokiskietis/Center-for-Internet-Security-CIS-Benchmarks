@@ -4594,3 +4594,321 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowDigest
 # 3.11.55.2 - WinRM Service
 
 ## 3.11.55.2.1 - 'Allow Basic authentication' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting allows you to manage whether the Windows Remote Management
+(WinRM) service accepts Basic authentication from a remote client.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled.|
+| < disabled/ > |Disabled. (The WinRM service will not accept Basic authentication from a remote client.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.5 Encrypt Transmittal of Username and Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Allow Basic authentication\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service:AllowBasic
+```
+
+## 3.11.55.2.3 - 'Allow unencrypted traffic' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting allows you to manage whether the Windows Remote Management
+(WinRM) service sends and receives unencrypted messages over the network.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowUnencryptedTraffic_Client
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled.|
+| < disabled/ > |Disabled. (The WinRM service sends or receives only encrypted messages over the network.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|14.4 Encrypt All Sensitive Information in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Allow unencrypted traffic\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowUnencryptedTraffic_Client",
+            "value": "\u003cdisabled/\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service:AllowUnencryptedTraffic
+```
+
+## 3.11.55.2.4 - 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting allows you to manage whether the Windows Remote Management
+(WinRM) service will allow RunAs credentials to be stored for any plug-ins.
+Note: If you enable and then disable this policy setting, any values that were previously
+configured for RunAsPassword will need to be reset.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The WinRM service will not allow the RunAsUser or RunAsPassword configuration values
+to be set for any plug-ins. If a plug-in has already set the RunAsUser and RunAsPassword
+configuration values, the RunAsPassword configuration value will be erased from the
+credential store on the computer.
+If this setting is later Disabled again, any values that were previously configured for
+RunAsPassword will need to be reset.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/RemoteManagement/DisallowStoringOfRunAsCredentials
+```
+
+|Value|Description|
+|---|---|
+| < enabled/ > |Enabled.|
+| < disabled/ > |Disabled. (The WinRM service will allow the RunAsUser and RunAsPassword configuration values to be set for plug-ins and the RunAsPassword value will be stored securely.)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||||Level - 1|
+|7|14.3 Disable Workstation to Workstation Communication||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Disallow WinRM from storing RunAs credentials\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/DisallowStoringOfRunAsCredentials",
+            "value": "\u003cenabled/\u003e"
+        },,
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service:DisableRunAs
+```
+
+# 5 Auditing
+
+## 5.1 - 'Account Logon Audit Credential Validation' is set to 'Success and Failure'
+
+>[!NOTE]
+>This subcategory reports the results of validation tests on credentials submitted for a
+user account logon request. These events occur on the computer that is authoritative for
+the credentials. For domain accounts, the Domain Controller is authoritative, whereas
+for local accounts, the local computer is authoritative. In domain environments, most of
+the Account Logon events occur in the Security log of the Domain Controllers that are
+authoritative for the domain accounts. However, these events can occur on other
+computers in the organization when local accounts are used to log on. Events for this
+subcategory include:
+• 4774: An account was mapped for logon.
+• 4775: An account could not be mapped for logon.
+• 4776: The Domain Controller attempted to validate the credentials for an
+account.
+• 4777: The Domain Controller failed to validate the credentials for an account.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogon_AuditCredentialValidation
+```
+
+|Value|Description|
+|---|---|
+| 0 | (Default) Off/None |
+| 1 | Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Disallow WinRM from storing RunAs credentials\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogon_AuditCredentialValidation",
+            "value": 3
+        },,
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Credential Validation"
+```
+
+## 5.2 - 'Account Logon Logoff Audit Account Lockout' is set to include 'Failure' 
+
+>[!NOTE]
+>This subcategory reports when a user's account is locked out as a result of too many
+failed logon attempts. Events for this subcategory include:
+• 4625: An account failed to log on.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditAccountLockout
+```
+
+|Value|Description|
+|---|---|
+| 0 | Off/None |
+| 1 |(Default)  Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.6 Maintain an Inventory of Accounts||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Disallow WinRM from storing RunAs credentials\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditAccountLockout",
+            "value": 2
+        },,
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Account Lockout"
+```
+
+## 5.3 - 'Account Logon Logoff Audit Group Membership' is set to include 'Success' 
+
+>[!NOTE]
+>This policy allows you to audit the group membership information in the user’s logon
+token. Events in this subcategory are generated on the computer on which a logon
+session is created. For an interactive logon, the security audit event is generated on the
+computer that the user logged on to. For a network logon, such as accessing a shared
+folder on the network, the security audit event is generated on the computer hosting the
+resource.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditGroupMembership
+```
+
+|Value|Description|
+|---|---|
+| 0 |(Default)  Off/None |
+| 1 | Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|4.8 Log and Alert on Changes to Administrative Group Membership||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.6 Maintain an Inventory of Accounts||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Disallow WinRM from storing RunAs credentials\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditGroupMembership",
+            "value": 1
+        },,
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Group Membership"
+```
+
