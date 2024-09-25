@@ -2456,7 +2456,7 @@ OMA-URI (Device)
 |---|---|
 | < enabled/ > |Enabled: Authenticated. (Only authenticated RPC clients are allowed to connect to RPC servers running on the machine. Exemptions are granted to interfaces that have requested them.)|
 | < disabled/ > |Disabled|
-| < enabled/ > <data id="RpcRestrictRemoteClientsList" value="1"/> | Custom Settings (Recommended} |
+| < enabled/ > <data id="RpcRestrictRemoteClientsList" value="1"/ > | Custom Settings (Recommended} |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2862,7 +2862,7 @@ password entry text box.
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/Autoplay/TurnOffAutoPlay
+./Device/Vendor/MSFT/Policy/Config/CredentialsUI/DisablePasswordReveal
 ```
 
 |Value|Description|
@@ -3415,8 +3415,8 @@ OMA-URI (Device)
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Windows Defender SmartScreen behavior is managed by administrators on the PC by using Windows Defender SmartScreen Settings in Action Center.)|
+| 1|Enabled|
+| 2 |Disabled. (Windows Defender SmartScreen behavior is managed by administrators on the PC by using Windows Defender SmartScreen Settings in Action Center.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
