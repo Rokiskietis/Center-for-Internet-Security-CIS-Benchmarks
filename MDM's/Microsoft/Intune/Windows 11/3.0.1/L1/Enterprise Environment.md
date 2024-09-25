@@ -1241,7 +1241,7 @@ OMA-URI (Device)
 | < enabled/ > |Enabled. (Windows computers will show a warning and a security elevation prompt when users create a new printer connection using Point and Print.)|
 | < disabled/ > |Disabled|
 | < enabled/>
-| < data id="PointAndPrint_TrustedServers_Chk" value="false"/> <data id="PointAndPrint_TrustedServers_Edit" value=""/> <data id="PointAndPrint_TrustedForest_Chk" value="false"/> <data id="PointAndPrint_NoWarningNoElevationOnInstall_Enum" value="0"/> <data id="PointAndPrint_NoWarningNoElevationOnUpdate_Enum" value="0"/ > | Custom Settings (Recommended)|
+| < data id="PointAndPrint_TrustedServers_Chk" value="false"/> <data id="PointAndPrint_TrustedServers_Edit" value=""/ > < data id="PointAndPrint_TrustedForest_Chk" value="false"/ > < data id="PointAndPrint_NoWarningNoElevationOnInstall_Enum" value="0"/ > < data id="PointAndPrint_NoWarningNoElevationOnUpdate_Enum" value="0"/ > | Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1596,7 +1596,7 @@ OMA-URI (Device)
 |---|---|
 | < enabled/ > |Enabled|
 | < disabled/ > |Disabled. (Group policies are not reapplied until the next logon or restart or Group policies are not reapplied if they have not been changed.)|
-| < enabled/> <data id="CSE_NOBACKGROUND10" value="false"/> <data id="CSE_NOCHANGES10" value="false"/ > | Custom Settings (Recommended)|
+| < enabled/> < data id="CSE_NOBACKGROUND10" value="false"/ > < data id="CSE_NOCHANGES10" value="false"/ > | Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3830,7 +3830,7 @@ will not be able to save passwords.
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowPasswordSavingg
+./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowPasswordSaving
 ```
 
 |Value|Description|
