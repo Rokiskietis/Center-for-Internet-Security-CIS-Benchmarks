@@ -1,5 +1,7 @@
 # Corporate/Enterprise Environment Level - 1
 
+### Unicode to text: https://r12a.github.io/app-conversion/
+
 # 1.0 - Above Lock
 
 ## 1.1 'Allow Cortana Above Lock' is set to 'Block'
@@ -4912,3 +4914,433 @@ To audit the system using auditpol.exe, perform the following and confirm it is 
 auditpol /get /subcategory:"Group Membership"
 ```
 
+## 5.4 - 'Account Logon Logoff Audit Logoff' is set to include 'Success' 
+
+>[!NOTE]
+>This subcategory reports when a user logs off from the system. These events occur on
+the accessed computer. For interactive logons, the generation of these events occurs
+on the computer that is logged on to. If a network logon takes place to access a share,
+these events generate on the computer that hosts the accessed resource. If you
+configure this setting to No auditing, it is difficult or impossible to determine which user
+has accessed or attempted to access organization computers. Events for this
+subcategory include:
+• 4634: An account was logged off.
+• 4647: User initiated logoff.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogoff
+```
+
+|Value|Description|
+|---|---|
+| 0 |(Default)  Off/None |
+| 1 | Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.13 Alert on Account Login Behavior Deviation|||:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Audit Logoff\u0027 is set to include \u0027Success\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogoff",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Logoff"
+```
+
+## 5.5 - 'Account Logon Logoff Audit Logon' is set to 'Success and Failure'
+
+>[!NOTE]
+>This subcategory reports when a user attempts to log on to the system. These events
+occur on the accessed computer. For interactive logons, the generation of these events
+occurs on the computer that is logged on to. If a network logon takes place to access a
+share, these events generate on the computer that hosts the accessed resource. If you
+configure this setting to No auditing, it is difficult or impossible to determine which user
+has accessed or attempted to access organization computers. Events for this
+subcategory include:
+• 4624: An account was successfully logged on.
+• 4625: An account failed to log on.
+• 4648: A logon was attempted using explicit credentials.
+• 4675: SIDs were filtered.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogoff
+```
+
+|Value|Description|
+|---|---|
+| 0 | Off/None |
+| 1 |(Default) Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.13 Alert on Account Login Behavior Deviation|||:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Audit Logon\u0027 is set to \u0027Success and Failure\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogon",
+            "value": 3
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Logon"
+```
+
+## 5.6 - 'Account Management Audit Application Group Management' is set to 'Success and Failure'
+
+>[!NOTE]
+>This policy setting allows you to audit events generated by changes to application
+groups such as the following:
+• Application group is created, changed, or deleted.
+• Member is added or removed from an application group.
+Application groups are utilized by Windows Authorization Manager, which is a flexible
+framework created by Microsoft for integrating role-based access control (RBAC) into
+applications. More information on Windows Authorization Manager is available at MSDN
+- Windows Authorization Manager.
+Note: Although Microsoft "Deprecated" Windows Authorization Manager (AzMan) in
+Windows Server 2012 and 2012 R2, this feature still exists in the OS (unimproved), and
+therefore should still be audited.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditUserAccountManagement
+```
+
+|Value|Description|
+|---|---|
+| 0 | Off/None |
+| 1 |(Default) Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Audit User Account Management\u0027 is set to \u0027Success and Failure\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditUserAccountManagement",
+            "value": 3
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Application Group Management"
+```
+
+## 5.7 - 'Audit Authentication Policy Change' is set to include 'Success'
+
+>[!NOTE]
+>This subcategory reports changes in authentication policy. Events for this subcategory
+include:
+• 4706: A new trust was created to a domain.
+• 4707: A trust to a domain was removed.
+• 4713: Kerberos policy was changed.
+• 4716: Trusted domain information was modified.
+• 4717: System security access was granted to an account.
+• 4718: System security access was removed from an account.
+• 4739: Domain Policy was changed.
+• 4864: A namespace collision was detected.
+• 4865: A trusted forest information entry was added.
+• 4866: A trusted forest information entry was removed.
+• 4867: A trusted forest information entry was modified.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthenticationPolicyChange
+```
+
+|Value|Description|
+|---|---|
+| 0 | Off/None |
+| 1 |(Default) Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|5.5 Implement Automated Configuration Monitoring Systems||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Audit Authentication Policy Change\u0027 is set to include \u0027Success\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthenticationPolicyChange",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Authentication Policy Change"
+```
+
+## 5.8 - 'Audit Authorization Policy Change' is set to include 'Success'
+
+>[!NOTE]
+>This subcategory reports changes in authorization policy. Events for this subcategory
+include:
+• 4703: A user right was adjusted.
+• 4704: A user right was assigned.
+• 4705: A user right was removed.
+• 4670: Permissions on an object were changed.
+• 4911: Resource attributes of the object were changed.
+• 4913: Central Access Policy on the object was changed.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthenticationPolicyChange
+```
+
+|Value|Description|
+|---|---|
+| 0 | Off/None |
+| 1 |(Default) Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|5.5 Implement Automated Configuration Monitoring Systems||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Audit Authorization Policy Change\u0027 is set to include \u0027Success\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthorizationPolicyChange",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Authorization Policy Change"
+```
+
+## 5.9 - 'Audit Changes to Audit Policy' is set to include 'Success'
+
+>[!NOTE]
+>This subcategory reports changes in audit policy including SACL changes. Events for
+this subcategory include:
+• 4715: The audit policy (SACL) on an object was changed.
+• 4719: System audit policy was changed.
+• 4902: The Per-user audit policy table was created.
+• 4904: An attempt was made to register a security event source.
+• 4905: An attempt was made to unregister a security event source.
+• 4906: The CrashOnAuditFail value has changed.
+• 4907: Auditing settings on object were changed.
+• 4908: Special Groups Logon table modified.
+• 4912: Per User Audit Policy was changed.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthenticationPolicyChange
+```
+
+|Value|Description|
+|---|---|
+| 0 | Off/None |
+| 1 |(Default) Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|5.5 Implement Automated Configuration Monitoring Systems||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Audit Audit Policy Change\u0027 is set to include \u0027Success\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditPolicyChange",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"Audit Policy Change"
+```
+
+## 5.10 - 'Audit File Share Access' is set to 'Success and Failure'
+
+>[!NOTE]
+>This policy setting allows you to audit attempts to access a shared folder.
+Note: There are no system access control lists (SACLs) for shared folders. If this policy
+setting is enabled, access to all shared folders on the system is audited.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+If no audit settings are configured, or if audit settings are too lax on the computers in
+your organization, security incidents might not be detected or not enough evidence will
+be available for network forensic analysis after security incidents occur. However, if
+audit settings are too severe, critically important entries in the Security log may be
+obscured by all of the meaningless entries and computer performance and the available
+amount of data storage may be seriously affected. Companies that operate in certain
+regulated industries may have legal obligations to log certain events or activities.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditFileShare
+```
+
+|Value|Description|
+|---|---|
+| 0 |(Default) Off/None |
+| 1 | Success |
+| 2 | Failure |
+| 3	| Success+Failure |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|14.6 Protect Information through Access Control Lists|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Audit File Share\u0027 is set to \u0027Success and Failure\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditFileShare",
+            "value": 3
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed.
+OR
+To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
+auditpol /get /subcategory:"File Share"
+```
+
+## 5.11 - 'Audit Other Logon Logoff Events' is set to 'Success and Failure' 
