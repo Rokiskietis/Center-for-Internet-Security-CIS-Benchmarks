@@ -4811,7 +4811,7 @@ failed logon attempts. Events for this subcategory include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -4869,7 +4869,7 @@ resource.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -4931,7 +4931,7 @@ subcategory include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -4994,7 +4994,7 @@ subcategory include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -5004,7 +5004,7 @@ regulated industries may have legal obligations to log certain events or activit
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogoff
+./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogon
 ```
 
 |Value|Description|
@@ -5057,7 +5057,7 @@ therefore should still be audited.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -5067,7 +5067,7 @@ regulated industries may have legal obligations to log certain events or activit
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditUserAccountManagement
+./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditApplicationGroupManagement
 ```
 
 |Value|Description|
@@ -5086,8 +5086,8 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
-            "displayName": "\u0027Audit User Account Management\u0027 is set to \u0027Success and Failure\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditUserAccountManagement",
+            "displayName": "Ensure \u0027Audit Application Group Management\u0027 is set to \u0027Success and Failure\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditApplicationGroupManagement",
             "value": 3
         },
 ```
@@ -5121,7 +5121,7 @@ include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -5181,7 +5181,7 @@ include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -5244,7 +5244,7 @@ this subcategory include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -5254,7 +5254,7 @@ regulated industries may have legal obligations to log certain events or activit
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthenticationPolicyChange
+./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditPolicyChange
 ```
 
 |Value|Description|
@@ -5299,7 +5299,7 @@ setting is enabled, access to all shared folders on the system is audited.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -5365,7 +5365,7 @@ include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -5439,7 +5439,7 @@ group accounts. Events for this subcategory include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in
+>If no audit settings are configured, or if audit settings are too lax on the computers in
 your organization, security incidents might not be detected or not enough evidence will
 be available for network forensic analysis after security incidents occur. However, if
 audit settings are too severe, critically important entries in the Security log may be
@@ -5500,7 +5500,7 @@ Authority.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -5555,7 +5555,7 @@ level. Events for this subcategory include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -5629,7 +5629,7 @@ groups.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -5681,7 +5681,7 @@ auditpol /get /subcategory:"User Account Management"
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -5739,7 +5739,7 @@ setting.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -5794,7 +5794,7 @@ desired access.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -5858,7 +5858,7 @@ For COM+ objects, the following are audited:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -5917,7 +5917,7 @@ The recommended state for this setting is: Success and Failure
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -5994,7 +5994,7 @@ to items not configured on this computer.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -6004,7 +6004,7 @@ regulated industries may have legal obligations to log certain events or activit
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditRemovableStorage
+./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditMPSSVCRuleLevelPolicyChange
 ```
 
 |Value|Description|
@@ -6060,7 +6060,7 @@ policy objects.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -6132,7 +6132,7 @@ subcategory include:
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -6221,7 +6221,7 @@ IPsec filters. Use the IP Security Monitor snap-in to diagnose the problem..
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -6290,7 +6290,7 @@ application from accepting incoming connections on the network.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -6300,7 +6300,7 @@ regulated industries may have legal obligations to log certain events or activit
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditIPsecDriver
+./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditOtherSystemEvents
 ```
 
 |Value|Description|
@@ -6349,7 +6349,7 @@ have been recorded.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -6416,7 +6416,7 @@ indicate a potential disk device error.
 >Automated Remedation
 
 >[!CAUTION]
-If no audit settings are configured, or if audit settings are too lax on the computers in 
+>If no audit settings are configured, or if audit settings are too lax on the computers in 
 your organization, security incidents might not be detected or not enough evidence will 
 be available for network forensic analysis after security incidents occur. However, if 
 audit settings are too severe, critically important entries in the Security log may be 
@@ -6458,3 +6458,339 @@ OR
 To audit the system using auditpol.exe, perform the following and confirm it is set as prescribed:
 auditpol /get /subcategory:"System Integrity"
 ```
+
+# 21 - Defender
+
+## 21.1 - 'Allow Behavior Monitoring' is set to 'Allowed
+
+>[!NOTE]
+>This policy setting allows you to configure behavior monitoring for Microsoft Defender 
+Antivirus
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/AllowBehaviorMonitoring
+```
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed. Turns off behavior monitoring. |
+| 1 | Allowed. Turns on real-time behavior monitoring. |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.7 Use Behavior-Based Anti-Malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Behavior Monitoring\u0027 is set to \u0027Allowed\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AllowBehaviorMonitoring",
+            "value": 1
+        }
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a  REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowBehaviorMonitoring"
+```
+
+## 21.2 - 'Allow Email Scanning' is set to 'Allowed' 
+
+>[!NOTE]
+>This policy setting allows you to configure e-mail scanning. When e-mail scanning is 
+enabled, the engine will parse the mailbox and mail files, according to their specific 
+format, in order to analyze the mail bodies and attachments. Several e-mail formats are 
+currently supported, for example: pst (Outlook), dbx, mbx, mime (Outlook Express), 
+binhex (Mac).
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>E-mail scanning by Microsoft Defender Antivirus will be enabled.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/AllowEmailScanning
+```
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed. Turns off email scanning. |
+| 1 | Allowed. Turns on email scanning. |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.7 Use Behavior-Based Anti-Malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Email Scanning\u0027 is set to \u0027Allowed\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AllowBehaviorMonitoring",
+            "value": 1
+        }
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a  REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowEmailScanning
+```
+
+## 21.3 - 'Allow Full Scan Removable Drive Scanning' is set to 'Allowed'
+
+>[!NOTE]
+>This policy setting allows you to manage whether or not to scan for malicious software 
+and unwanted software in the contents of removable drives, such as USB flash drives, 
+when running a full scan.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Removable drives will be scanned during any type of scan by Microsoft Defender Antivirus
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/AllowFullScanRemovableDriveScanning
+```
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed. Turns off scanning on removable drives.|
+| 1 | Allowed. Scans removable drives. |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.4 Configure Automatic Anti-Malware Scanning of Removable Media||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.4 Configure Anti-Malware Scanning of Removable Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Full Scan Removable Drive Scanning\u0027 is set to \u0027Allowed\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AllowFullScanRemovableDriveScanning",
+            "value": 1
+        }
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a  REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowFullScanRemovableDriveScanning
+```
+
+## 21.4 - 'Allow Realtime Monitoring' is set to 'Allowed'
+
+>[!NOTE]
+>This policy setting allows you to manage whether or not to scan for malicious software 
+and unwanted software in the contents of removable drives, such as USB flash drives, 
+when running a full scan.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Removable drives will be scanned during any type of scan by Microsoft Defender Antivirus
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/AllowRealtimeMonitoring
+```
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed. Turns off scanning on removable drives.|
+| 1 | Allowed. Scans removable drives. |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Realtime Monitoring\u0027 is set to \u0027Allowed\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AllowRealtimeMonitoring",
+            "value": 1
+        }
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a  REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowRealtimeMonitoring
+```
+
+## 21.5 - 'Allow scanning of all downloaded files and attachments' is set to 'Allowed'
+
+>[!NOTE]
+>This policy setting configures scanning for all downloaded files and attachments
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/AllowIOAVProtection
+```
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed.|
+| 1 | Allowed. |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow scanning of all downloaded files and attachments\u0027 is set to \u0027Allowed\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AllowIOAVProtection",
+            "value": 1
+        }
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a  REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowIOAVProtection
+```
+
+## 21.6 - 'Allow Script Scanning' is set to 'Allowed'
+
+>[!NOTE]
+>This policy setting allows script scanning to be turned on/off. Script scanning intercepts 
+scripts then scans them before they are executed on the system
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>This setting are not applied when tamper protection is enabled.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/AllowScriptScanning
+```
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed.|
+| 1 | Allowed. |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.7 Use Behavior-Based Anti-Malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Script Scanning\u0027 is set to \u0027Allowed\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AllowScriptScanning",
+            "value": 1
+        }
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a  REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowScriptScanning
+```
+
+## 21.7 - 'Attack Surface Reduction rules' are configured 
+
+>[!NOTE]
+>This policy setting sets the Attack Surface Reduction rules
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>When a rule is triggered, a notification will be displayed from the Action Center.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules
+```
+
+|Value|Description|
+|---|---|
+| TBA | TBA |
+| TBA | TBA |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.3 Enable Operating System Anti-Exploitation Features/Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+	Kinda Complex Working on in
+        }
+```
+
+```
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location:
+SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager Type: REG_SZ Value Name: ASRRules
+
+The contents of ASRRules is a single large string containing the GUID of each ASR rule 
+separated with a pipe delimiter like below:
+
+
+56a863a9-875e-4185-98a7-b882c64b5ce5=1|7674ba52-37eb-4a4f-a9a1-
+f0f9a1619a2c=1|D4F940AB-401B-4EFC-AADC-AD5F3C50688A=1|9e6c4e1f-7d60-472fba1a-a39ef669e4b2=1|BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550=1|5BEB7EFE-FD9A4556-801D-275E5FFC04CC=1|D3E037E1-3EB8-44C8-A917-57927947596D=1|3B576869-
+A4EC-4529-8536-B80A7769E899=1|75668C1F-73B5-4CF0-BB93-
+3ECF5CB7CC84=1|26190899-1602-49e8-8b27-eb1d0a1ce869=1|e6db77e5-3df2-4cf1-
+b95a-636979351e5b=1|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4=1|92E97FA1-2EDF4476-BDD6-9DD0B4DDDC7B=1
+
+
+GUID Reference:
+56a863a9-875e-4185-98a7-b882c64b5ce5 - Block abuse of exploited vulnerable signed drivers (Device)
+7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c - Block Adobe Reader from creating child processes
+d4f940ab-401b-4efc-aadc-ad5f3c50688a - Block all Office applications from creating child processes
+9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 - Block credential stealing from the Windows local security authority subsystem
+be9ba2d9-53ea-4cdc-84e5-9b1eeee46550 - Block executable content from email client and webmail
+5beb7efe-fd9a-4556-801d-275e5ffc04cc - Block execution of potentially obfuscated scripts
+d3e037e1-3eb8-44c8-a917-57927947596d - Block JavaScript or VBScript from launching downloaded executable content
+3b576869-a4ec-4529-8536-b80a7769e899 - Block Office applications from creating executable content
+75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84 - Block Office applications from injecting code into other processes
+26190899-1602-49e8-8b27-eb1d0a1ce869 - Block Office communication application from creating child processes
+e6db77e5-3df2-4cf1-b95a-636979351e5b - Block persistence through WMI event subscription
+b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 - Block untrusted and unsigned processes that run from USB
+92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b - Block Win32 API calls from Office macros
+
+
+92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b 0 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 1 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 2
+```
+
+
