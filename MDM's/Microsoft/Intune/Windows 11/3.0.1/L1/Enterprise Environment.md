@@ -6751,7 +6751,7 @@ OMA-URI (Device)
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.3 Enable Operating System Anti-Exploitation Features/Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
 
 ```
 Script:
