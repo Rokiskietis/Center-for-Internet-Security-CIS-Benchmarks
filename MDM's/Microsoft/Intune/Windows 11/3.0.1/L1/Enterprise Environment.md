@@ -6741,10 +6741,13 @@ OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules
 ```
 
-|Value|Description|
+|GUID=StateValue|Description|
 |---|---|
-| TBA | TBA |
-| TBA | TBA |
+| GUID=0 | Disable (Disable the attack surface reduction rule) |
+| GUID=1 | Block (Enable the attack surface reduction rule) |
+| GUID=2 | Audit (Evaluate how the attack surface reduction rule would impact your organization if enabled) |
+| GUID=6 | Warn (Enable the attack surface reduction rule but allow the end-user to bypass the block) |
+|56a863a9-875e-4185-98a7-b882c64b5ce5=1|7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c=1|d4f940ab-401b-4efc-aadc-ad5f3c50688a=1|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2=1|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550=1|5beb7efe-fd9a-4556-801d-275e5ffc04cc=1|d3e037e1-3eb8-44c8-a917-57927947596d=1|3b576869-a4ec-4529-8536-b80a7769e899=1|75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84=1|26190899-1602-49e8-8b27-eb1d0a1ce869=1|e6db77e5-3df2-4cf1-b95a-636979351e5b=1|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4=1|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b=1| Custom Settings |
 
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
@@ -6755,25 +6758,21 @@ OMA-URI (Device)
 ```
 Script:
         {
-	Kinda Complex Working on in
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Attack Surface Reduction rules\u0027 are \u0027configured\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules",
+            "value": "56a863a9-875e-4185-98a7-b882c64b5ce5=1|7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c=1|d4f940ab-401b-4efc-aadc-ad5f3c50688a=1|9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2=1|be9ba2d9-53ea-4cdc-84e5-9b1eeee46550=1|5beb7efe-fd9a-4556-801d-275e5ffc04cc=1|d3e037e1-3eb8-44c8-a917-57927947596d=1|3b576869-a4ec-4529-8536-b80a7769e899=1|75668c1f-73b5-4cf0-bb93-3ecf5cb7cc84=1|26190899-1602-49e8-8b27-eb1d0a1ce869=1|e6db77e5-3df2-4cf1-b95a-636979351e5b=1|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4=1|92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b=1|"
         }
 ```
 
 ```
+Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location:
 SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager Type: REG_SZ Value Name: ASRRules
+```
 
-The contents of ASRRules is a single large string containing the GUID of each ASR rule 
-separated with a pipe delimiter like below:
-
-
-56a863a9-875e-4185-98a7-b882c64b5ce5=1|7674ba52-37eb-4a4f-a9a1-
-f0f9a1619a2c=1|D4F940AB-401B-4EFC-AADC-AD5F3C50688A=1|9e6c4e1f-7d60-472fba1a-a39ef669e4b2=1|BE9BA2D9-53EA-4CDC-84E5-9B1EEEE46550=1|5BEB7EFE-FD9A4556-801D-275E5FFC04CC=1|D3E037E1-3EB8-44C8-A917-57927947596D=1|3B576869-
-A4EC-4529-8536-B80A7769E899=1|75668C1F-73B5-4CF0-BB93-
-3ECF5CB7CC84=1|26190899-1602-49e8-8b27-eb1d0a1ce869=1|e6db77e5-3df2-4cf1-
-b95a-636979351e5b=1|b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4=1|92E97FA1-2EDF4476-BDD6-9DD0B4DDDC7B=1
-
-
+```
+Custom Settings:
 GUID Reference:
 56a863a9-875e-4185-98a7-b882c64b5ce5 - Block abuse of exploited vulnerable signed drivers (Device)
 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c - Block Adobe Reader from creating child processes
@@ -6789,8 +6788,5 @@ e6db77e5-3df2-4cf1-b95a-636979351e5b - Block persistence through WMI event subsc
 b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 - Block untrusted and unsigned processes that run from USB
 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b - Block Win32 API calls from Office macros
 
-
-92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b 0 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 1 xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 2
 ```
-
 
