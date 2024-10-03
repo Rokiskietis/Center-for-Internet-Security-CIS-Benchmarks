@@ -5191,7 +5191,7 @@ regulated industries may have legal obligations to log certain events or activit
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthenticationPolicyChange
+./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthorizationPolicyChange
 ```
 
 |Value|Description|
