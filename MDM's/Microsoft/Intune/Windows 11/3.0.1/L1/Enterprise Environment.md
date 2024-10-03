@@ -6541,7 +6541,7 @@ Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Allow Email Scanning\u0027 is set to \u0027Allowed\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AllowBehaviorMonitoring",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/AllowEmailScanning",
             "value": 1
         }
 ```
