@@ -4652,7 +4652,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service:AllowBasic
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowUnencryptedTraffic_Client
+./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Service
 ```
 
 |Value|Description|
@@ -4670,7 +4670,7 @@ Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
             "displayName": "\u0027Allow unencrypted traffic\u0027 is set to \u0027Disabled\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowUnencryptedTraffic_Client",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Service",
             "value": "\u003cdisabled/\u003e"
         },
 ```
