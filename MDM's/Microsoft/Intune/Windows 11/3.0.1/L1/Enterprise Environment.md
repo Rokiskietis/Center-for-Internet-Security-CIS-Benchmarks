@@ -4461,7 +4461,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\PowerShell\Transcription:EnableTranscri
 
 # 3.11.55.1 - WinRM Client
 
-## 3.11.55.1.1 - 'Allow Basic authentication' is set to 'Disabled' 
+## 3.11.55.1.1 - 'Allow Basic authentication(Service)' is set to 'Disabled' 
 
 >[!NOTE]
 >This policy setting allows you to manage whether the Windows Remote Management
@@ -4479,7 +4479,7 @@ authentication traffic will still be safely encrypted.
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client
+./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Service
 ```
 
 |Value|Description|
@@ -4496,8 +4496,8 @@ OMA-URI (Device)
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "\u0027Allow Basic authentication\u0027 is set to \u0027Disabled\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client",
+            "displayName": "\u0027Allow Basic authentication Service\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Service",
             "value": "\u003cdisabled/\u003e"
         },
 ```
