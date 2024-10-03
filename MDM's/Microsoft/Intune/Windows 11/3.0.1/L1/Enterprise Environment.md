@@ -3053,7 +3053,7 @@ server, then you will be able to gather forensic information about the attacker'
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_1
+./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeApplicationLog
 ```
 
 |Value|Description|
@@ -3100,7 +3100,7 @@ size.
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_1
+./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2
 ```
 
 |Value|Description|
@@ -3118,7 +3118,7 @@ Script:
 		{
 			"@odata.type": "#microsoft.graph.omaSettingString",
             "displayName": "\u0027Application: Control Event Log behavior when the log file reaches its maximum size\u0027 is set to \u0027Disabled\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_1",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2",
             "value": "\u003cdisabled/\u003e"
         },
 ```
@@ -3202,7 +3202,7 @@ size.
 
 ```
 OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2
+./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_3
 ```
 
 |Value|Description|
@@ -3220,7 +3220,7 @@ Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
             "displayName": "\u0027Security: Control Event Log behavior when the log file reaches its maximum size\u0027 is set to \u0027Disabled\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_3",
             "value": "\u003cdisabled/\u003e"
         },
 ```
