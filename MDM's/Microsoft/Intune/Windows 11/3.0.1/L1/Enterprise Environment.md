@@ -75,12 +75,19 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\AboveLock:
 passerby will hijack it. Configuring a timed screen saver with password lock will help to
 protect against these hijacks.
 
-
-
 ```
 OMA-URI (User)
 ./User/Vendor/MSFT/Policy/Config/ADMX_ControlPanelDisplay/CPL_Personalization_EnableScreenSaver
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|❌ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✔ User|✔ Enterprise|✔  Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
 | < enabled/ > |Enable|
