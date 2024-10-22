@@ -76,7 +76,7 @@ passerby will hijack it. Configuring a timed screen saver with password lock wil
 protect against these hijacks.
 
 ```
-OMA-URI (User)
+OMA-URI 
 ./User/Vendor/MSFT/Policy/Config/ADMX_ControlPanelDisplay/CPL_Personalization_EnableScreenSaver
 ```
 
@@ -130,13 +130,21 @@ camera access in PC Settings, and the camera cannot be invoked on the lock scree
 
 
 ```
-OMA-URI (Device)
+OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enable|
-| < disabled/ > |Disable|
+| \<enabled/> |Enable|
+| \<disabled/> |Disable|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -173,16 +181,23 @@ from playing on the lock screen
 >If you enable this setting, users will no longer be able to modify slide show settings in
 PC Settings, and no slide show will ever start.
 
-
-
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventLockScreenSlideShow
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enable|
-| < disabled/ > |Disabled. (Users can enable a slide show that will run after they lock the machine.)|
+| \<enabled/> |Enable|
+| \<disabled/> |Disabled. (Users can enable a slide show that will run after they lock the machine.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -221,13 +236,21 @@ systems. Enabling this policy significantly reduces that risk.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ApplyUACRestrictionsToLocalAccountsOnNetworkLogon
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Applies UAC token-filtering to local accounts on network logons. Membership in powerful group such as Administrators is disabled and powerful privileges are removed from the resulting access token|
-| < disabled/ > |Allows local accounts to have full administrative rights when authenticating via network logon|
+| \<enabled/> |Applies UAC token-filtering to local accounts on network logons. Membership in powerful group such as Administrators is disabled and powerful privileges are removed from the resulting access token|
+| \<disabled/> |Allows local accounts to have full administrative rights when authenticating via network logon|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -269,14 +292,23 @@ incompatibilities found with the vendor of the incompatible system.
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1ClientDriver
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Disable driver|
-| < disabled/ > |Enable Driver|
-| < enabled/><data id="Pol_SecGuide_SMB1ClientDriver" value="4" / > | Custom settings (Recommended)|
+| \<enabled/> |Disable driver|
+| \<disabled/> |Enable Driver|
+| \<enabled/>\<data id="Pol_SecGuide_SMB1ClientDriver" value="4"/> | Custom settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -306,7 +338,6 @@ HKLM\SYSTEM\CurrentControlSet\Services\mrxsmb10:Start
 >[!NOTE]
 >This setting configures the server-side processing of the Server Message Block version 1 (SMBv1) protocol.
 
-
 >[!TIP]
 >Automated Remedation
 
@@ -318,13 +349,21 @@ configuring this as a widespread control, and where possible, remediate any
 incompatibilities found with the vendor of the incompatible system.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/ConfigureSMBV1Server
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enable Driver|
-| < disabled/ > |Disable driver|
+| \<enabled/> |Enable Driver|
+| \<disabled/> |Disable driver|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -365,10 +404,18 @@ applications may not work correctly.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enable Driver|
-| < disabled/ > |Disable driver|
+| \<enabled/> |Enable Driver|
+| \<disabled/> |Disable driver|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -408,10 +455,18 @@ None - this is also the default configuration for Windows 8.1 or newer
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/WDigestAuthentication
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Lsass.exe retains a copy of the user's plaintext password in memory, where it is at risk of theft|
-| < disabled/ > |Lsass.exe does not retain a copy of the user's plaintext password in memory|
+| \<enabled/> |Lsass.exe retains a copy of the user's plaintext password in memory, where it is at risk of theft|
+| \<disabled/> |Lsass.exe does not retain a copy of the user's plaintext password in memory|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -458,11 +513,19 @@ remotely readable by the Authenticated Users group.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled|
-| < enabled/><data id="DisableIPSourceRouting" value="2" / > |Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="DisableIPSourceRouting" value="2"/> |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -503,11 +566,19 @@ datagram should follow through the network.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPv6SourceRoutingProtectionLevel
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled|
-| < enabled/><data id="DisableIPSourceRoutingIPv6" value="2" / > |Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="DisableIPSourceRoutingIPv6" value="2"/> |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -550,11 +621,19 @@ environments to completely disable source routing.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled|
-| < enabled/><data id="DisableIPSourceRouting" value="2" / > |Custom Settings (Recommended) |
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="DisableIPSourceRouting" value="2"/> |Custom Settings (Recommended) |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -599,10 +678,18 @@ paths.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/AllowICMPRedirectsToOverrideOSPFGeneratedRoutes
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (ICMP redirects can override OSPF-generated routes.)|
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled. (ICMP redirects can override OSPF-generated routes.)|
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -644,11 +731,18 @@ computer releases its NetBIOS name when it receives a name-release request.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/AllowTheComputerToIgnoreNetBIOSNameReleaseRequestsExceptFromWINSServers
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled |
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled |
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -690,11 +784,18 @@ system path.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_SafeDllSearchMode
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled |
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled |
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -736,11 +837,19 @@ OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_ScreenSaverGracePeriod
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled |
-| < disabled/ > |Disabled|
-| < enabled/><data id="ScreenSaverGracePeriod" value="5"/ > |Custom Settings (Recommended)|
+| \<enabled/> |Enabled |
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="ScreenSaverGracePeriod" value="5"/> |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -781,12 +890,19 @@ events as needed.
 OMA-URI (Device)
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_WarningLevel
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled |
-| < disabled > |Disabled|
-| < enabled/><data id="WarningLevel" value="90"/ > |Custom Settings (Recommended)|
+| \<enabled/> |Enabled |
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="WarningLevel" value="90"/> |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -828,14 +944,22 @@ scenarios in which conventional DNS name resolution is not possible.
 on the same subnet
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_DnsClient/Turn_Off_Multicast
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (LLMNR will be enabled on all available network adapters.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (LLMNR will be enabled on all available network adapters.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
