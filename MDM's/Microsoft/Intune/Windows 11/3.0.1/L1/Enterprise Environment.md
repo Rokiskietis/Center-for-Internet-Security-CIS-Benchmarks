@@ -16,10 +16,15 @@
 >The system will need to be unlocked for the user to interact with Cortana using speech.
 
 ```
-OMA-URI (Device)
+OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/AboveLock/AllowActionCenterNotifications
 ```
-|Value|Description|
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|Not applicable|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|||
+
+|Value|Description| 
 |---|---|
 |0| Disabled Not allowed|
 |1|(Default) Enabled. (The user can interact with Cortana using speech while the system is locked.)|
