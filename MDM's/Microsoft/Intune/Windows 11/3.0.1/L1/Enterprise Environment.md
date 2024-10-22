@@ -90,8 +90,8 @@ OMA-URI (User)
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enable|
-| < disabled/ > |Disable|
+| \<enabled/> |Enable|
+| \<disabled/> |Disable|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
