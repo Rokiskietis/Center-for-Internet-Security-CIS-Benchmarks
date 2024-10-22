@@ -996,14 +996,21 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\DNSClient:EnableMulticast
 >Users cannot create or configure a Network Bridge
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Connectivity/ProhibitInstallationAndConfigurationOfNetworkBridge
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users are able create and modify the configuration of Network Bridges. Membership in the local Administrators group, or equivalent, is the minimum required to complete this procedure.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users are able create and modify the configuration of Network Bridges. Membership in the local Administrators group, or equivalent, is the minimum required to complete this procedure.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1040,14 +1047,21 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_AllowNetBridge_N
 >Mobile Hotspot cannot be enabled or configured by Administrators and non Administrators alike.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_NetworkConnections/NC_ShowSharedAccessUI
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (All users are allowed to turn on Mobile Hotspot.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (All users are allowed to turn on Mobile Hotspot.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1083,14 +1097,21 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_ShowSharedAccess
 >Domain users must elevate when setting a network's location.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_NetworkConnections/NC_StdDomainUserSetLocation
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disable/ > |Disabled. (Users can set a network's location without elevating.)|
+| \<enabled/> |Enabled|
+| \<disable/> |Disabled. (Users can set a network's location without elevating.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1125,15 +1146,22 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Network Connections:NC_StdDomainUserSet
 >Windows only allows access to the specified UNC paths after fulfilling additional security requirements.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Connectivity/HardenedUNCPaths
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users can set a network's location without elevating.)|
-| < enabled/><data id="Pol_HardenedPaths" value="\\*\NETLOGONRequireMutualAuthentication=1,RequireIntegrity=1\\*\SYSVOLRequireMutualAuthentication=1,RequireIntegrity=1"/ > | Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users can set a network's location without elevating.)|
+| \<enabled/>\<data id="Pol_HardenedPaths" value="\\*\NETLOGONRequireMutualAuthentication=1,RequireIntegrity=1\\*\SYSVOLRequireMutualAuthentication=1,RequireIntegrity=1"/> | Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1176,15 +1204,22 @@ connection is available, it will always stay connected for services that require
 Internet traffic will be routed over cellular if an Ethernet or WLAN connection is present.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_WCM/WCM_MinimizeConnections
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and late|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled: 1 = Minimize simultaneous connections. (Any new automatic internet connection is blocked when the computer has at least one active internet connection to a preferred type of network. The order of preference (from most preferred to least preferred) is: Ethernet, WLAN, then cellular. Ethernet is always preferred when connected. Users can still manually connect to any network.)|
-| < disabled/ > |Disabled|
-| < enabled/><data id="WCM_MinimizeConnections_Options" value="3"/ > |Custom Settings (Recommended)|
+| \<enabled/> |Enabled: 1 = Minimize simultaneous connections. (Any new automatic internet connection is blocked when the computer has at least one active internet connection to a preferred type of network. The order of preference (from most preferred to least preferred) is: Ethernet, WLAN, then cellular. Ethernet is always preferred when connected. Users can still manually connect to any network.)|
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="WCM_MinimizeConnections_Options" value="3"/> |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1231,14 +1266,21 @@ the existing Ethernet connection is maintained and the manual connection attempt
 blocked.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/WindowsConnectionManager/ProhitConnectionToNonDomainNetworksWhenConnectedToDomainAuthenticatedNetwork
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Connections to both domain and non-domain networks are simultaneously allowed.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Connections to both domain and non-domain networks are simultaneously allowed.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1275,9 +1317,17 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WcmSvc\GroupPolicy:fBlockNonDomain
 >The pairing ceremony for connecting to new wireless display devices will always require a PIN.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/WirelessDisplay/RequirePinForPairing
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
@@ -1326,14 +1376,21 @@ accept client connections or allow users to share printers. Note that all printe
 were already shared will continue to be shared.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_Printing2/RegisterSpoolerRemoteRpcEndPoint
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (The Print Spooler will always accept client connections.)|
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled. (The Print Spooler will always accept client connections.)|
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1371,15 +1428,23 @@ elevation prompt when users create a new printer connection using Point and Prin
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Printers/PointAndPrintRestrictions
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (Windows computers will show a warning and a security elevation prompt when users create a new printer connection using Point and Print.)|
-| < disabled/ > |Disabled|
-| < enabled/>
-| < data id="PointAndPrint_TrustedServers_Chk" value="false"/> <data id="PointAndPrint_TrustedServers_Edit" value=""/ > < data id="PointAndPrint_TrustedForest_Chk" value="false"/ > < data id="PointAndPrint_NoWarningNoElevationOnInstall_Enum" value="0"/ > < data id="PointAndPrint_NoWarningNoElevationOnUpdate_Enum" value="0"/ > | Custom Settings (Recommended)|
+| \<enabled/> |Enabled. (Windows computers will show a warning and a security elevation prompt when users create a new printer connection using Point and Print.)|
+| \<disabled/> |Disabled|
+| \<enabled/>
+| \<data id="PointAndPrint_TrustedServers_Chk" value="false"/>\<data id="PointAndPrint_TrustedServers_Edit" value=""/>\<data id="PointAndPrint_TrustedForest_Chk" value="false"/>\<data id="PointAndPrint_NoWarningNoElevationOnInstall_Enum" value="0"/>\<data id="PointAndPrint_NoWarningNoElevationOnUpdate_Enum" value="0"/> | Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1419,14 +1484,21 @@ HKLM\Software\Policies\Microsoft\WindowsNT\Printers\PointAndPrint:UpdatePromptSe
 >Applications will not be able to raise toast notifications on the lock screen.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DisableLockScreenAppNotifications
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Toast notifications on the lock screen are enabled and can be turned off by the administrator or user.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Toast notifications on the lock screen are enabled and can be turned off by the administrator or user.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1465,14 +1537,21 @@ security audit events when a new process has been created.
 sensitive or private information such as passwords or user data.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_AuditSettings/IncludeCmdLine
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Process command line information will not be included in Audit Process Creation events.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Process command line information will not be included in Audit Process Creation events.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1516,15 +1595,22 @@ achieved by ensuring that all Microsoft security updates at least through May 20
 installed.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_CredSsp/AllowEncryptionOracle
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled|
-| < enabled/> <data id="AllowEncryptionOracleDrop" value="0"/ > | Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="AllowEncryptionOracleDrop" value="0"/> | Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1564,14 +1650,21 @@ two options to help protect against this risk.
 Credential Guard features.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/CredentialsDelegation/RemoteHostAllowsDelegationOfNonExportableCredentials
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Restricted Admin Mode and Windows Defender Remote Credential Guard are not supported. Users will always need to pass their credentials to the host.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Restricted Admin Mode and Windows Defender Remote Credential Guard are not supported. Users will always need to pass their credentials to the host.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1611,14 +1704,22 @@ features of those devices unless/until an administrator installs the associated 
 software for the device.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceInstallation/PreventDeviceMetadataFromNetwork
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1809 [10.0.17763] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The setting in the Device Installation Settings dialog box controls whetherWindows retrieves device metadata from the Internet.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The setting in the Device Installation Settings dialog box controls whetherWindows retrieves device metadata from the Internet.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1670,14 +1771,22 @@ disabled, this setting has no effect and all boot-start drivers are initialized.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/System/BootStartDriverInitialization
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Boot-start drivers determined to be Good, Unknown or Bad but Boot Critical are initialized and the initialization of drivers determined to be bad is skipped.)|
-| < enabled/> <data id="SelectDriverLoadPolicy" value="3"/ > | Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Boot-start drivers determined to be Good, Unknown or Bad but Boot Critical are initialized and the initialization of drivers determined to be bad is skipped.)|
+| \<enabled/>\<data id="SelectDriverLoadPolicy" value="3"/> | Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1726,15 +1835,22 @@ store values in the registry) will be reapplied even when the system is in use, 
 have a slight impact on performance.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/CSE_Registry
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Group policies are not reapplied until the next logon or restart or Group policies are not reapplied if they have not been changed.)|
-| < enabled/> < data id="CSE_NOBACKGROUND10" value="false"/ > < data id="CSE_NOCHANGES10" value="false"/ > | Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Group policies are not reapplied until the next logon or restart or Group policies are not reapplied if they have not been changed.)|
+| \<enabled/>\<data id="CSE_NOBACKGROUND10" value="false"/><data id="CSE_NOCHANGES10" value="false"/> | Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1779,14 +1895,21 @@ cross-device experiences (continue experiences).
 cross-device experiences..
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/EnableCDP
 ```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1823,14 +1946,22 @@ Controllers.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_GroupPolicy/DisableBackgroundPolicy
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Updates can be applied while users are working.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Updates can be applied while users are working.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1868,13 +1999,22 @@ standard operating system installation might need to be downloaded over HTTP.
 >Print drivers cannot be downloaded over HTTP
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./User/Vendor/MSFT/Policy/Config/ADMX_ICM/DisableWebPnPDownload_1
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled.(Users can download print drivers over HTTP.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled.(Users can download print drivers over HTTP.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1909,14 +2049,22 @@ Web publishing and online ordering wizards.
 the local registry are displayed.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./User/Vendor/MSFT/Policy/Config/ADMX_ICM/ShellPreventWPWDownload_1
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (A list of providers is downloaded when the user uses the web publishing or online ordering wizards.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (A list of providers is downloaded when the user uses the web publishing or online ordering wizards.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1953,14 +2101,22 @@ name) on the sign-in screen.
 >Users cannot choose to show account details on the sign-in screen.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_Logon/BlockUserFromShowingAccountDetailsOnSignin
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users may choose to show account details on the sign-in screen.)|
+| <enabled/> |Enabled|
+| <disabled/> |Disabled. (Users may choose to show account details on the sign-in screen.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -1995,14 +2151,22 @@ networks UI on the logon screen.
 >The PC's network connectivity state cannot be changed without signing into Windows.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DontDisplayNetworkSelectionUI
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC||
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Any user can disconnect the PC from the network or can connect the PC to other available networks without signing into Windows.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Any user can disconnect the PC from the network or can connect the PC to other available networks without signing into Windows.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2038,14 +2202,22 @@ computers.
 >The Logon UI will not enumerate any connected users on domain-joined computers
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_Logon/DontEnumerateConnectedUsers
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Connected users will be enumerated on domain-joined computers.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Connected users will be enumerated on domain-joined computers.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2080,14 +2252,22 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\System:DontEnumerateConnectedUsers
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/WindowsLogon/EnumerateLocalUsersOnDomainJoinedComputers
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The Logon UI will not enumerate local users on domain-joined computers.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The Logon UI will not enumerate local users on domain-joined computers.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2123,14 +2303,22 @@ screen.
 >No app notifications are displayed on the lock screen.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/WindowsLogon/DisableLockScreenAppNotifications
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users can choose which apps display notifications on the lock screen.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users can choose which apps display notifications on the lock screen.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2167,14 +2355,22 @@ picture password.
 >Users will not be able to set up or sign in with a picture password.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/CredentialProviders/BlockPicturePassword
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users can set up and use a picture password.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users can set up and use a picture password.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2209,14 +2405,22 @@ PIN.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/CredentialProviders/AllowPINLogon
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled.(Users can set up and use a picture password.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled.(Users can set up and use a picture password.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2255,14 +2459,22 @@ restriction currently only applies to WLAN networks only, but is subject to chan
 (according to Microsoft).
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_Power/DCConnectivityInStandby_2
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later |
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (Network connectivity will be maintained in standby while on battery.)|
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled. (Network connectivity will be maintained in standby while on battery.)|
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2300,14 +2512,22 @@ restriction currently only applies to WLAN networks only, but is subject to chan
 (according to Microsoft).
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_Power/ACConnectivityInStandby_2
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later |
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (Network connectivity will be maintained in standby while plugged in).|
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled. (Network connectivity will be maintained in standby while plugged in).|
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2342,20 +2562,27 @@ from sleep.
 >[!CAUTION]
 >None
 
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Power/RequirePasswordWhenComputerWakesOnBattery
+```
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (The user is prompted for a password when the system resumes from sleep while on battery.)|
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled. (The user is prompted for a password when the system resumes from sleep while on battery.)|
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |7|16.11 Lock Workstation Sessions After Inactivity|:green_circle|:orange_circle:|:large_blue_circle:|Level - 1|
 |8|Not Yet Mapped||||Level - 1|
-
-```
-OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/Power/RequirePasswordWhenComputerWakesOnBattery
-```
 
 ```
 Script:
@@ -2385,14 +2612,22 @@ from sleep.
 >[!CAUTION]
 >None
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Power/RequirePasswordWhenComputerWakesOnBattery
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (The user is prompted for a password when the system resumes from sleep while plugged in.)|
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled. (The user is prompted for a password when the system resumes from sleep while plugged in.)|
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2430,14 +2665,22 @@ although they can still respond to user assistance requests.
 >[!CAUTION]
 >None
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteAssistance/UnsolicitedRemoteAssistance
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled.|
-| < disabled/ > |Disabled. (Users on this computer cannot get help from their corporate technical support staff using Offer (Unsolicited) Remote Assistance.)|
+| \<enabled/> |Enabled.|
+| \<disabled/> |Disabled. (Users on this computer cannot get help from their corporate technical support staff using Offer (Unsolicited) Remote Assistance.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2474,14 +2717,22 @@ on this computer.
 users cannot use instant messaging programs to allow connections to this computer
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteAssistance/SolicitedRemoteAssistance
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Users can turn on or turn off Solicited (Ask for) Remote Assistance themselves in System Properties in Control Panel. Users can also configure Remote Assistance settings.|
-| < disabled/ > |Disabled.|
+| \<enabled/> |Users can turn on or turn off Solicited (Ask for) Remote Assistance themselves in System Properties in Control Panel. Users can also configure Remote Assistance settings.|
+| \<disabled/> |Disabled.|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2527,14 +2778,22 @@ with the Windows NT4 Server Endpoint Mapper Service.
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteProcedureCall/RPCEndpointMapperClientAuthentication
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (RPC clients will not authenticate to the Endpoint Mapper Service, but they will be able to communicate with the Windows NT4 Server Endpoint Mapper Service.).|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (RPC clients will not authenticate to the Endpoint Mapper Service, but they will be able to communicate with the Windows NT4 Server Endpoint Mapper Service.).|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2587,14 +2846,23 @@ serious problems and is not recommended.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteProcedureCall/RestrictUnauthenticatedRPCClients
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled: Authenticated. (Only authenticated RPC clients are allowed to connect to RPC servers running on the machine. Exemptions are granted to interfaces that have requested them.)|
-| < disabled/ > |Disabled|
-| < enabled/ > <data id="RpcRestrictRemoteClientsList" value="1"/ > | Custom Settings (Recommended} |
+| \<enabled/> |Enabled: Authenticated. (Only authenticated RPC clients are allowed to connect to RPC servers running on the machine. Exemptions are granted to interfaces that have requested them.)|
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="RpcRestrictRemoteClientsList" value="1"/> | Custom Settings (Recommended} |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2632,14 +2900,22 @@ server(s).
 >System time will be synced to the configured NTP server(s)
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_W32Time/W32TIME_POLICY_ENABLE_NTPCLIENT
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The local computer clock does not synchronize time with NTP servers.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The local computer clock does not synchronize time with NTP servers.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -2675,20 +2951,28 @@ requests from other systems (NTP Clients).
 >[!CAUTION]
 >None
 
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/ADMX_W32Time/W32TIME_POLICY_ENABLE_NTPSERVER
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The computer cannot service NTP requests from other computers.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The computer cannot service NTP requests from other computers.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|8.4 Standardize Time Synchronization||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|6.1 Utilize Three Synchronized Time Sources||:orange_circle:|:large_blue_circle:|Level - 1|
-
-```
-OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/ADMX_W32Time/W32TIME_POLICY_ENABLE_NTPSERVER
-```
 
 ```
 Script:
@@ -2722,20 +3006,28 @@ apps that support it.
 >Windows Store apps that typically require a Microsoft account to sign in will allow users
 to sign in with an enterprise account instead
 
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/AppRuntime/AllowMicrosoftAccountsToBeOptional
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users will need to sign in with a Microsoft account.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users will need to sign in with a Microsoft account.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|5.6 Centralize Account Management||:orange_circle:|:large_blue_circle:|Level - 1|
 |7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1|
-
-```
-OMA-URI (Device)
-./Device/Vendor/MSFT/Policy/Config/AppRuntime/AllowMicrosoftAccountsToBeOptional
-```
 
 ```
 Script:
@@ -2860,7 +3152,7 @@ HKU\[USERSID]\Software\Microsoft\Windows\CurrentVersion\Policies\Attachments:Sca
 >AutoPlay will not be allowed for MTP devices like cameras or phones.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Autoplay/DisallowAutoplayForNonVolumeDevices
 ```
 
@@ -2903,7 +3195,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer:NoAutoplayfornonVolume
 >AutoRun commands will be completely disabled.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Autoplay/SetDefaultAutoRunBehavior
 ```
 
@@ -2951,7 +3243,7 @@ floppy disk and network drives, but not on CD-ROM drives.
 programs that are provided on removable media.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Autoplay/TurnOffAutoPlay
 ```
 
@@ -2999,7 +3291,7 @@ password entry user experiences.
 password entry text box.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/CredentialsUI/DisablePasswordReveal
 ```
 
@@ -3042,7 +3334,7 @@ attempts to elevate a running application.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/CredentialsUI/EnumerateAdministrators
 ```
 
@@ -3087,7 +3379,7 @@ only local accounts on the workstation.
 passwords.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_CredUI/NoLocalPasswordResetQuestions
 ```
 
@@ -3132,7 +3424,7 @@ size
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_1
 ```
 
@@ -3188,7 +3480,7 @@ compromises a server could clear the Security log. If all events are sent to a m
 server, then you will be able to gather forensic information about the attacker's activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeApplicationLog
 ```
 
@@ -3235,7 +3527,7 @@ size.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2
 ```
 
@@ -3292,7 +3584,7 @@ compromises a server could clear the Security log. If all events are sent to a m
 server, then you will be able to gather forensic information about the attacker's activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeSecurityLog
 ```
 
@@ -3337,7 +3629,7 @@ size.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_3
 ```
 
@@ -3394,7 +3686,7 @@ compromises a server could clear the Security log. If all events are sent to a m
 server, then you will be able to gather forensic information about the attacker's activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_LogMaxSize_3
 ```
 
@@ -3441,7 +3733,7 @@ size.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_4
 ```
 
@@ -3498,7 +3790,7 @@ compromises a server could clear the Security log. If all events are sent to a m
 server, then you will be able to gather forensic information about the attacker's activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeSystemLog
 ```
 
@@ -3547,7 +3839,7 @@ is sent to Microsoft about files and programs run on PCs with this feature enabl
 from the Internet.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/SmartScreen/EnableSmartScreenInShell
 ```
 
@@ -3590,7 +3882,7 @@ function without terminating Explorer.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/FileExplorer/TurnOffDataExecutionPreventionForExplorer
 ```
 
@@ -3634,7 +3926,7 @@ termination on corruption is active will prevent this.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/FileExplorer/TurnOffHeapTerminationOnCorruption
 ```
 
@@ -3682,7 +3974,7 @@ to leave this protocol in the protected mode to increase the security of Windows
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_WindowsExplorer/ShellProtocolProtectedModeTitle_2
 ```
 
@@ -3730,7 +4022,7 @@ and other shared devices on their home networks will not be able to leverage the
 of use provided by HomeGroup functionality.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_Sharing/DisableHomeGroup
 ```
 
@@ -3780,7 +4072,7 @@ APIs. Authentications performed directly by the user in web browsers or in apps 
 use OAuth will remain unaffected.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MSAPolicy/MicrosoftAccount_DisableUserAuth
 ```
 
@@ -3827,7 +4119,7 @@ Protection Service. This setting can only be set by Group Policy.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/Spynet_LocalSettingOverrideSpynetReporting
 ```
 
@@ -3873,7 +4165,7 @@ and other potentially unwanted software
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/DisableAntiSpywareDefender
 ```
 
@@ -3967,7 +4259,7 @@ computer.
 will not be able to save passwords.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowPasswordSaving
 ```
 
@@ -4020,7 +4312,7 @@ connected user will serve as a capable substitute to still allow file transfers 
 needed.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowDriveRedirection
 ```
 
@@ -4068,7 +4360,7 @@ passwords in the Remote Desktop Connection client. They will be prompted for a
 password to log on.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/PromptForPasswordUponConnection
 ```
 
@@ -4115,7 +4407,7 @@ clients by allowing only authenticated and encrypted requests.
 requests, and does not allow unsecured communication with untrusted clients.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/RequireSecureRPCCommunication
 ```
 
@@ -4176,7 +4468,7 @@ connection may result in a failed logon attempt, and also effectively cause a �
 logon” requirement for each and every new RDP session.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_SECURITY_LAYER_POLICY
 ```
 
@@ -4230,7 +4522,7 @@ connection may result in a failed logon attempt, and also effectively cause a �
 logon” requirement for each and every new RDP session.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_USER_AUTHENTICATION_POLICY
 ```
 
@@ -4276,7 +4568,7 @@ encryption) is not recommended. This policy does not apply to SSL encryption.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/ClientConnectionEncryptionLevel
 ```
 
@@ -4321,7 +4613,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:MinEncryptionLevel
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_TEMP_DELETE
 ```
 
@@ -4368,7 +4660,7 @@ property page. Developers cannot change the download setting through feed APIs.
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/InternetExplorer/DisableEnclosureDownloading
 ```
 
@@ -4412,7 +4704,7 @@ HKLM\SOFTWARE\Policies\Microsoft\InternetExplorer\Feeds:DisableEnclosureDownload
 >The Microsoft Store application will not offer updates to the latest version of Windows.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_WindowsStore/DisableOSUpgrade_2
 ```
 
@@ -4460,7 +4752,7 @@ The user is required to present the logon credentials in order to proceed after 
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/WindowsLogon/AllowAutomaticRestartSignOn
 ```
 
@@ -4512,7 +4804,7 @@ event log data.
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging
 ```
 
@@ -4565,7 +4857,7 @@ least v5.1 or newer
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_PowerShellExecutionPolicy/EnableTranscripting
 ```
 
@@ -4614,7 +4906,7 @@ authentication traffic will still be safely encrypted.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client
 ```
 
@@ -4657,7 +4949,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowBasic
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Service
 ```
 
@@ -4700,7 +4992,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowUnencryptedTraffic
 >The WinRM client will not use Digest authentication.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/DisallowDigestAuthentication
 ```
 
@@ -4744,7 +5036,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowDigest
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client
 ```
 
@@ -4787,7 +5079,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service:AllowBasic
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowUnencryptedTraffic_Service
 ```
 
@@ -4838,7 +5130,7 @@ If this setting is later Disabled again, any values that were previously configu
 RunAsPassword will need to be reset.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/DisallowStoringOfRunAsCredentials
 ```
 
@@ -4901,7 +5193,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogon_AuditCredentialValidation
 ```
 
@@ -4956,7 +5248,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditAccountLockout
 ```
 
@@ -5014,7 +5306,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditGroupMembership
 ```
 
@@ -5076,7 +5368,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogoff
 ```
 
@@ -5139,7 +5431,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogon
 ```
 
@@ -5202,7 +5494,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditApplicationGroupManagement
 ```
 
@@ -5266,7 +5558,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthenticationPolicyChange
 ```
 
@@ -5326,7 +5618,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthorizationPolicyChange
 ```
 
@@ -5389,7 +5681,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditPolicyChange
 ```
 
@@ -5444,7 +5736,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditFileShare
 ```
 
@@ -5510,7 +5802,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditOtherLogonLogoffEvents
 ```
 
@@ -5584,7 +5876,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditSecurityGroupManagement
 ```
 
@@ -5645,7 +5937,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditSecuritySystemExtension
 ```
 
@@ -5700,7 +5992,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditSpecialLogon
 ```
 
@@ -5774,7 +6066,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditUserAccountManagement
 ```
 
@@ -5826,7 +6118,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/DetailedTracking_AuditPNPActivity
 ```
 
@@ -5884,7 +6176,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/DetailedTracking_AuditProcessCreation
 ```
 
@@ -5939,7 +6231,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditDetailedFileShare
 ```
 
@@ -6003,7 +6295,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditOtherObjectAccessEvents
 ```
 
@@ -6062,7 +6354,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditRemovableStorage
 ```
 
@@ -6139,7 +6431,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditMPSSVCRuleLevelPolicyChange
 ```
 
@@ -6205,7 +6497,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditOtherPolicyChangeEvents
 ```
 
@@ -6277,7 +6569,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PrivilegeUse_AuditSensitivePrivilegeUse
 ```
 
@@ -6366,7 +6658,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditIPsecDriver
 ```
 
@@ -6435,7 +6727,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditOtherSystemEvents
 ```
 
@@ -6494,7 +6786,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditSecurityStateChange
 ```
 
@@ -6561,7 +6853,7 @@ amount of data storage may be seriously affected. Companies that operate in cert
 regulated industries may have legal obligations to log certain events or activities.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditSystemIntegrity
 ```
 
@@ -6610,7 +6902,7 @@ Antivirus
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowBehaviorMonitoring
 ```
 
@@ -6657,7 +6949,7 @@ binhex (Mac).
 >E-mail scanning by Microsoft Defender Antivirus will be enabled.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowEmailScanning
 ```
 
@@ -6702,7 +6994,7 @@ when running a full scan.
 >Removable drives will be scanned during any type of scan by Microsoft Defender Antivirus
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowFullScanRemovableDriveScanning
 ```
 
@@ -6746,7 +7038,7 @@ when running a full scan.
 >Removable drives will be scanned during any type of scan by Microsoft Defender Antivirus
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowRealtimeMonitoring
 ```
 
@@ -6788,7 +7080,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowRealtimeMo
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowIOAVProtection
 ```
 
@@ -6831,7 +7123,7 @@ scripts then scans them before they are executed on the system
 >This setting are not applied when tamper protection is enabled.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowScriptScanning
 ```
 
@@ -6873,7 +7165,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowScriptScan
 >When a rule is triggered, a notification will be displayed from the Action Center.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules
 ```
 
@@ -6908,7 +7200,7 @@ SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager Type: REG_SZ Value N
 ```
 Custom Settings:
 GUID Reference:
-56a863a9-875e-4185-98a7-b882c64b5ce5 - Block abuse of exploited vulnerable signed drivers (Device)
+56a863a9-875e-4185-98a7-b882c64b5ce5 - Block abuse of exploited vulnerable signed drivers 
 7674ba52-37eb-4a4f-a9a1-f0f9a1619a2c - Block Adobe Reader from creating child processes
 d4f940ab-401b-4efc-aadc-ad5f3c50688a - Block all Office applications from creating child processes
 9e6c4e1f-7d60-472f-ba1a-a39ef669e4b2 - Block credential stealing from the Windows local security authority subsystem
@@ -6935,7 +7227,7 @@ b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 - Block untrusted and unsigned processes th
 >Users and applications will not be able to access dangerous domains
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection
 ```
 
@@ -6982,7 +7274,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:EnableNetworkPr
 >Applications that are identified by Microsoft as PUA will be blocked at download and install time.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection
 ```
 
@@ -7040,7 +7332,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:PUAProtection
 >Machines will not be able to download updates from peers on the Internet. If set to Enabled: HTTP only (0), Enabled: Simple (99), or Enabled: Bypass (100), machines will not be able to download updates from other machines on the same LAN.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection
 ```
 
@@ -7090,7 +7382,7 @@ Note 2: Credential Guard and Device Guard are not currently supported when using
 >All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceGuard/EnableVirtualizationBasedSecurity
 ```
 
@@ -7136,7 +7428,7 @@ Note: Credential Guard and Device Guard are not currently supported when using A
 >Warning: All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceGuard/ConfigureSystemGuardLaunch
 ```
 
@@ -7186,7 +7478,7 @@ Choosing the Secure Boot with DMA protection option requires the system to have 
 Warning: All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures
 ```
 
@@ -7232,7 +7524,7 @@ Warning 2: Once this setting is turned on and active, Credential Guard cannot be
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceGuard/LsaCfgFlags
 ```
 
