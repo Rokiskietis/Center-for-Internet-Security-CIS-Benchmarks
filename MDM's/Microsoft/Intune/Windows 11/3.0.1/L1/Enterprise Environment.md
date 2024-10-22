@@ -6787,3 +6787,342 @@ b2b3f03d-6a65-4f7b-a9c7-1c7ef74a9ba4 - Block untrusted and unsigned processes th
 92e97fa1-2edf-4476-bdd6-9dd0b4dddc7b - Block Win32 API calls from Office macros
 ```
 
+## 21.9 - 'Enable Network Protection' is set to 'Enabled (block mode)'
+
+>[!NOTE]
+>This policy setting controls Microsoft Defender Exploit Guard network protection.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users and applications will not be able to access dangerous domains
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection
+```
+
+|Value|Description|
+|---|---|
+| 0 | (Default)	Disabled |
+| 1 | Enabled (block mode) |
+| 2 | Enabled (audit mode) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|9.3 Maintain and Enforce Network-Based URL Filters||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
+|7|7.4 Maintain and Enforce Network-Based URL Filters||:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Prevent users and apps from accessing dangerous websites\u0027 is set to \u0027Enabled: Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:EnableNetworkProtection
+```
+
+## 21.10 - 'PUA Protection' is set to 'PUA Protection on'
+
+>[!NOTE]
+>This policy setting controls detection and action for Potentially Unwanted Applications (PUA), which are sneaky unwanted application bundlers or their bundled applications, that can deliver adware or malware
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Applications that are identified by Microsoft as PUA will be blocked at download and install time.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection
+```
+
+|Value|Description|
+|---|---|
+| 0 | (Default)	PUA Protection off. Windows Defender won't protect against potentially unwanted applications. |
+| 1 | PUA Protection on. Detected items are blocked. They will show in history along with other threats. |
+| 2 | Audit mode. Windows Defender will detect potentially unwanted applications, but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|2.7 Utilize Application Whitelisting|||:large_blue_circle:|Level - 1
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Configure detection for potentially unwanted applications\u0027 is set to \u0027Enabled: Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:PUAProtection
+```
+
+## 22.1 - 'DO Download Mode' is NOT set to 'HTTP blended with Internet Peering'
+
+>[!NOTE]
+>This policy setting specifies the download method that Delivery Optimization can use in downloads of Windows Updates, Apps and App updates. The following methods are supported:
+•
+0 = HTTP only, no peering.
+•
+1 = HTTP blended with peering behind the same NAT.
+•
+2 = HTTP blended with peering across a private group. Peering occurs on devices in the same Active Directory Site (if exist) or the same domain by default. When this option is selected, peering will cross NATs. To create a custom group use Group ID in combination with Mode 2.
+•
+3 = HTTP blended with Internet Peering.
+•
+99 = Simple download mode with no peering. Delivery Optimization downloads using HTTP only and does not attempt to contact the Delivery Optimization cloud services.
+•
+100 = Bypass mode. Do not use Delivery Optimization and use BITS instead.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Machines will not be able to download updates from peers on the Internet. If set to Enabled: HTTP only (0), Enabled: Simple (99), or Enabled: Bypass (100), machines will not be able to download updates from other machines on the same LAN.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection
+```
+
+|Value|Description|
+|---|---|
+| 0 | (Default)	PUA Protection off. Windows Defender won't protect against potentially unwanted applications. |
+| 1 | PUA Protection on. Detected items are blocked. They will show in history along with other threats. |
+| 2 | Audit mode. Windows Defender will detect potentially unwanted applications, but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|7.3 Perform Automated Operating System Patch Management|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|3.4 Deploy Automated Operating System Patch Management Tools|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+
+
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Configure detection for potentially unwanted applications\u0027 is set to \u0027Enabled: Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:PUAProtection
+```
+
+# 23 - Device Guard
+
+## 23.1 - 'Enable Virtualization Based Security' is set to 'Enable virtualization based security'
+
+>[!NOTE]
+>This policy setting specifies whether Virtualization Based Security is enabled. Virtualization Based Security uses the Windows Hypervisor to provide support for security services.
+Note: Virtualization Based Security requires a 64-bit version of Windows with Secure Boot enabled, which in turn requires that Windows was installed with a UEFI BIOS configuration, not a Legacy BIOS configuration. In addition, if running Windows on a virtual machine, the hardware-assisted CPU virtualization feature (Intel VT-x or AMD-V) must be exposed by the host to the guest VM.
+Note 2: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/DeviceGuard/EnableVirtualizationBasedSecurity
+```
+
+|Value|Description|
+|---|---|
+| 0 | (Default)	Disable virtualization based security. |
+| 1 | Enable virtualization based security. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+
+
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Configure detection for potentially unwanted applications\u0027 is set to \u0027Enabled: Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceGuard/EnableVirtualizationBasedSecurity",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard:EnableVirtualizationBasedSecurity
+```
+
+## 23.2 - 'Configure System Guard Launch' is set to 'Unmanaged Enables Secure Launch if supported by hardware'
+
+>[!NOTE]
+>Secure Launch protects the Virtualization Based Security environment from exploited vulnerabilities in device firmware.
+Note: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Warning: All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/DeviceGuard/ConfigureSystemGuardLaunch
+```
+
+|Value|Description|
+|---|---|
+| 0 | (Default)	Unmanaged Configurable by Administrative user. |
+| 1 | Unmanaged Enables Secure Launch if supported by hardware. |
+| 2 | Unmanaged Disables Secure Launch. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+
+
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Configure System Guard Launch\u0027 is set to \u0027Unmanaged Enables Secure Launch if supported by hardware\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceGuard/ConfigureSystemGuardLaunch",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard:ConfigureSystemGuardLaunch
+```
+
+## 23.3 - 'Require Platform Security Features' is set to 'Turns on VBS with Secure Boot' or higher
+
+>[!NOTE]
+>This policy setting specifies whether Virtualization Based Security (VBS) is enabled. VBS uses the Windows Hypervisor to provide support for security services.
+Note: VBS requires a 64-bit version of Windows with Secure Boot enabled, which in turn requires that Windows was installed with a UEFI BIOS configuration, not a Legacy BIOS configuration. In addition, if running Windows on a virtual machine, the hardware-assisted CPU virtualization feature (Intel VT-x or AMD-V) must be exposed by the host to the guest VM.
+Note 2: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Choosing the Secure Boot option provides the system with as much protection as is supported by the computer’s hardware. A system with input/output memory management units (IOMMUs) will have Secure Boot with DMA protection. A system without IOMMUs will simply have Secure Boot enabled without DMA protection.
+Choosing the Secure Boot with DMA protection option requires the system to have IOMMUs in order to enable VBS. Without IOMMU hardware support, VBS will be disabled.
+Warning: All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures
+```
+
+|Value|Description|
+|---|---|
+| 1 | (Default)	Turns on VBS with Secure Boot. |
+| 3 | Turns on VBS with Secure Boot and direct memory access (DMA). DMA requires hardware support. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Require Platform Security Features\u0027 is set to \u0027Turns on VBS with Secure Boot or higher\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1 or 3.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard:RequirePlatformSecurityFeatures
+```
+
+## 23.4 - 'Credential Guard' is set to 'Enabled with UEFI lock' 
+
+>[!NOTE]
+>This setting lets users turn on Credential Guard with virtualization-based security to help protect credentials. The "Enabled with UEFI lock" option ensures that Credential Guard cannot be disabled remotely. In order to disable the feature, you must set the Group Policy to "Disabled" as well as remove the security functionality from each computer, with a physically present user, in order to clear configuration persisted in UEFI.
+Note: Virtualization Based Security requires a 64-bit version of Windows with Secure Boot enabled, which in turn requires that Windows was installed with a UEFI BIOS configuration, not a Legacy BIOS configuration. In addition, if running Windows on a virtual machine, the hardware-assisted CPU virtualization feature (Intel VT-x or AMD-V) must be exposed by the host to the guest VM.
+Note 2: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Warning: All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
+Warning 2: Once this setting is turned on and active, Credential Guard cannot be disabled solely via GPO or any other remote method. After removing the setting from GPO, the features must also be manually disabled locally at the machine using the steps provided at this link:
+
+
+```
+OMA-URI (Device)
+./Device/Vendor/MSFT/Policy/Config/DeviceGuard/LsaCfgFlags
+```
+
+|Value|Description|
+|---|---|
+| 0 | (Default)	(Disabled) Turns off Credential Guard remotely if configured previously without UEFI Lock. |
+| 1 | (Enabled with UEFI lock) Turns on Credential Guard with UEFI lock |
+| 2 | (Enabled without lock) Turns on Credential Guard without UEFI lock.|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Require Platform Security Features\u0027 is set to \u0027Turns on VBS with Secure Boot or higher\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceGuard/LsaCfgFlags",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard:RequirePlatformSecurityFeatures
+```
