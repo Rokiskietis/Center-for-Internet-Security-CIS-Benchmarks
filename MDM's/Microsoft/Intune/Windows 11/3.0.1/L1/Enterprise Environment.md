@@ -401,7 +401,7 @@ After you enable SEHOP, existing versions of Cygwin, Skype, and Armadillo-protec
 applications may not work correctly.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/EnableStructuredExceptionHandlingOverwriteProtection
 ```
 |Scope | Editions| Applicable OS |
@@ -452,7 +452,7 @@ HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\kernel:DisableExceptionCha
 None - this is also the default configuration for Windows 8.1 or newer
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSecurityGuide/WDigestAuthentication
 ```
 |Scope | Editions| Applicable OS |
@@ -510,7 +510,7 @@ remotely readable by the Authenticated Users group.
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel
 ```
 |Scope | Editions| Applicable OS |
@@ -563,7 +563,7 @@ datagram should follow through the network.
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPv6SourceRoutingProtectionLevel
 ```
 |Scope | Editions| Applicable OS |
@@ -618,7 +618,7 @@ environments to completely disable source routing.
 
 
 ```
-OMA-URI (Device)
+OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel
 ```
 |Scope | Editions| Applicable OS |
@@ -675,7 +675,7 @@ paths.
 
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/AllowICMPRedirectsToOverrideOSPFGeneratedRoutes
 ```
 |Scope | Editions| Applicable OS |
@@ -728,7 +728,7 @@ computer releases its NetBIOS name when it receives a name-release request.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/MSSLegacy/AllowTheComputerToIgnoreNetBIOSNameReleaseRequestsExceptFromWINSServers
 ```
 |Scope | Editions| Applicable OS |
@@ -781,7 +781,7 @@ system path.
 >None
 
 ```
-OMA-URI (Device)
+OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_SafeDllSearchMode
 ```
 |Scope | Editions| Applicable OS |
@@ -833,7 +833,7 @@ when the console is actually locked automatically when screen saver locking is e
 the grace period ends after screen saver activation.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_ScreenSaverGracePeriod
 ```
 
@@ -887,7 +887,7 @@ threshold (or whatever lower value may be set) unless the log is configured to o
 events as needed.
 
 ```
-OMA-URI (Device)
+OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_WarningLevel
 ```
 |Scope | Editions| Applicable OS |
