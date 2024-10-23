@@ -8278,3 +8278,212 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
 HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard:RequirePlatformSecurityFeatures
 ```
+
+# 24 - Device lock
+
+## 24.1 - 'Alphanumeric Device Password Required' is set to 'Password, Numeric PIN, or Alphanumeric PIN required' 
+
+>[!NOTE]
+>This policy setting determines the type of PIN or password required. This policy only
+applies if the DeviceLock/DevicePasswordEnabled policy is set to 0. In settings catalog
+this setting is a pre-requisite for "Min Device Password Complex Characters".
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>If an organization is using Windows Hello for Business, the the Device Lock password
+settings can impact PIN polices if those policies are not first defined elsewhere.
+Windows will follow the Windows Hello for Business policies for PINs if this key exists: 
+HKLM\SOFTWARE\Microsoft\Policies\PassportForWork\<Tenant-ID>\Device\Policies.
+Otherwise, it will follow Device Lock policies.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/AlphanumericDevicePasswordRequired
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Password or Alphanumeric PIN required. |
+| 1 | Password or Numeric PIN required. |
+| 2 | (Default) Password, Numeric PIN, or Alphanumeric PIN required.|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Alphanumeric Device Password Required\u0027 is set to \u0027Password, Numeric PIN, or Alphanumeric PIN required\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/AlphanumericDevicePasswordRequired",
+            "value": 2
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceLock:AlphanumericDevicePasswordRequired_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 2.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeviceLock:AlphanumericDevicePasswordRequired
+```
+
+## 24.2 - 'Device Password Expiration' is set to '365 or fewer days, but not 0'
+
+>[!NOTE]
+>This policy setting defines how long a user can use their password before it expires.
+Values for this policy setting range from 0 to 730 days. If you set the value to 0, the
+password will never expire.
+Because attackers can crack passwords, the more frequently you change the password
+the less opportunity an attacker has to use a cracked password. However, the lower this
+value is set, the higher the potential for an increase in calls to help desk support due to
+users having to change their password or forgetting which password is current.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>If the Maximum password age setting is too low, users are required to change their
+passwords very often. Such a configuration can reduce security in the organization,
+because users might write their passwords in an insecure location or lose them. If the
+value for this policy setting is too high, the level of security within an organization is
+reduced because it allows potential attackers more time in which to discover user
+passwords or to use compromised accounts.
+
+>[!CAUTION]
+>Warning: If an organization is using Windows Hello for Business, the the Device
+Lock password settings can impact PIN polices if those policies are not first defined
+elsewhere. Windows will follow the Windows Hello for Business policies for PINs if this
+key exists: HKLM\SOFTWARE\Microsoft\Policies\PassportForWork\<TenantID>\Device\Policies. Otherwise, it will follow Device Lock policies.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordExpiration
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | 0 (Default)(Recommended) |
+| X | Allowed Range: [0-730]  |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Device Password Expiration\u0027 is set to \u0027365 or fewer days, but not 0\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordExpiration",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceLock:DevicePasswordExpiration_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 365 or fewer days, but not 0.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeviceLock:DevicePasswordExpiration
+```
+
+## 24.3 - 'Device Password History' is set to '24 or more password(s)' 
+
+>[!NOTE]
+>This policy setting determines the number of renewed, unique passwords that have to
+be associated with a user account before you can reuse an old password. In an Intune
+managed environment this setting applies to local user accounts and not Entra ID
+accounts. 
+The value includes the user's current password. This value denotes that with a setting of
+1, the user can't reuse their current password when choosing a new password, while a
+setting of 5 means that a user can't set their new password to their current password or
+any of their previous four passwords.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The major impact of this configuration is that users must create a new password every
+time they are required to change their old one. If users are required to change their
+passwords to new unique values, there is an increased risk of users who write their
+passwords somewhere so that they do not forget them. Another risk is that users may
+create passwords that change incrementally (for example, password01, password02,
+and so on) to facilitate memorization but make them easier to guess.
+
+>[!CAUTION]
+>Warning: If an organization is using Windows Hello for Business, the the Device
+Lock password settings can impact PIN polices if those policies are not first defined
+elsewhere. Windows will follow the Windows Hello for Business policies for PINs if this
+key exists: HKLM\SOFTWARE\Microsoft\Policies\PassportForWork\<TenantID>\Device\Policies. Otherwise, it will follow Device Lock policies.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordHistory
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | 0 (Default)(Recommended) |
+| X | Allowed Range: [0-50]  |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Device Password History\u0027 is set to \u002724 or more passwords\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordHistory",
+            "value": 24
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceLock:DevicePasswordHistory_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 2.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeviceLock:DevicePasswordHistory
+
+```
