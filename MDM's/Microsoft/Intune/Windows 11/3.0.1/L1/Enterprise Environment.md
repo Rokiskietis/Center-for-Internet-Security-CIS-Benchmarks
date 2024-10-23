@@ -8057,7 +8057,9 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeliveryOp
 >[!NOTE]
 >This policy setting specifies whether Virtualization Based Security is enabled. Virtualization Based Security uses the Windows Hypervisor to provide support for security services.
 Note: Virtualization Based Security requires a 64-bit version of Windows with Secure Boot enabled, which in turn requires that Windows was installed with a UEFI BIOS configuration, not a Legacy BIOS configuration. In addition, if running Windows on a virtual machine, the hardware-assisted CPU virtualization feature (Intel VT-x or AMD-V) must be exposed by the host to the guest VM.
-Note 2: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
+
+>[!NOTE]
+>Note: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
 
 >[!TIP]
 >Automated Remedation
@@ -8167,7 +8169,10 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard:ConfigureSystemGuardLaunch
 >[!NOTE]
 >This policy setting specifies whether Virtualization Based Security (VBS) is enabled. VBS uses the Windows Hypervisor to provide support for security services.
 Note: VBS requires a 64-bit version of Windows with Secure Boot enabled, which in turn requires that Windows was installed with a UEFI BIOS configuration, not a Legacy BIOS configuration. In addition, if running Windows on a virtual machine, the hardware-assisted CPU virtualization feature (Intel VT-x or AMD-V) must be exposed by the host to the guest VM.
-Note 2: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
+
+>[!NOTE]
+>Note: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
+
 
 >[!TIP]
 >Automated Remedation
@@ -8221,7 +8226,9 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard:RequirePlatformSecurityFeat
 >[!NOTE]
 >This setting lets users turn on Credential Guard with virtualization-based security to help protect credentials. The "Enabled with UEFI lock" option ensures that Credential Guard cannot be disabled remotely. In order to disable the feature, you must set the Group Policy to "Disabled" as well as remove the security functionality from each computer, with a physically present user, in order to clear configuration persisted in UEFI.
 Note: Virtualization Based Security requires a 64-bit version of Windows with Secure Boot enabled, which in turn requires that Windows was installed with a UEFI BIOS configuration, not a Legacy BIOS configuration. In addition, if running Windows on a virtual machine, the hardware-assisted CPU virtualization feature (Intel VT-x or AMD-V) must be exposed by the host to the guest VM.
-Note 2: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
+
+>[!NOTE]
+>Note: Credential Guard and Device Guard are not currently supported when using Azure IaaS VMs.
 
 >[!TIP]
 >Automated Remedation
@@ -8230,7 +8237,7 @@ Note 2: Credential Guard and Device Guard are not currently supported when using
 >Warning: All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
 
 >[!CAUTION]
->Warning 2: Once this setting is turned on and active, Credential Guard cannot be disabled solely via GPO or any other remote method. After removing the setting from GPO, the features must also be manually disabled locally at the machine using the steps provided at this link:
+>Warning: Once this setting is turned on and active, Credential Guard cannot be disabled solely via GPO or any other remote method. After removing the setting from GPO, the features must also be manually disabled locally at the machine using the steps provided at this link:
 
 ```
 OMA-URI 
