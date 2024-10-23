@@ -10193,3 +10193,7 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
 HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation:AllowInsecureGuestAuth
 ```
+
+# 45 - Local Policies Security Options
+
+## 45.1 - 'Accounts: Block Microsoft accounts' is set to 'Users can't add or log on with Microsoft accounts'
