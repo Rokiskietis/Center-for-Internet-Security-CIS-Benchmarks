@@ -3066,10 +3066,18 @@ OMA-URI (User)
 ./User/Vendor/MSFT/Policy/Config/AttachmentManager/DoNotPreserveZoneInformation
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Windows marks file attachments with their zone information.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Windows marks file attachments with their zone information.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3111,10 +3119,18 @@ OMA-URI (User)
 ./User/Vendor/MSFT/Policy/Config/AttachmentManager/NotifyAntivirusPrograms
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Windows does not call the registered antivirus program(s) when file attachments are opened.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Windows does not call the registered antivirus program(s) when file attachments are opened.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3156,10 +3172,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Autoplay/DisallowAutoplayForNonVolumeDevices
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (AutoPlay is enabled for non-volume devices.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (AutoPlay is enabled for non-volume devices.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3198,12 +3222,24 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer:NoAutoplayfornonVolume
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Autoplay/SetDefaultAutoRunBehavior
 ```
+```
+OMA-URI
+./User/Vendor/MSFT/Policy/Config/Autoplay/SetDefaultAutoRunBehavior
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Windows will prompt the user whether autorun command is to be run.)|
-| < enabled/ >< data id="NoAutorun_Dropdown" value="1"/ > |Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Windows will prompt the user whether autorun command is to be run.)|
+| \<enabled/>\<data id="NoAutorun_Dropdown" value="1"/> |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3246,12 +3282,24 @@ programs that are provided on removable media.
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Autoplay/TurnOffAutoPlay
 ```
+```
+OMA-URI
+./User/Vendor/MSFT/Policy/Config/Autoplay/TurnOffAutoPlay
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Autoplay is enabled.)|
-| < enabled/ > < data id="Autorun_Box" value="255"/ > |Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Autoplay is enabled.)|
+| \<enabled/>\<data id="Autorun_Box" value="255"/> |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3294,11 +3342,23 @@ password entry text box.
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/CredentialsUI/DisablePasswordReveal
 ```
+```
+OMA-URI
+./User/Vendor/MSFT/Policy/Config/CredentialsUI/DisablePasswordReveal
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The password reveal button is displayed after a user types a password in the password entry text box. If the user clicks on the button, the typed password is displayed on-screen in plain text.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The password reveal button is displayed after a user types a password in the password entry text box. If the user clicks on the button, the typed password is displayed on-screen in plain text.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3338,10 +3398,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/CredentialsUI/EnumerateAdministrators
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users will be required to always type in a username and password to elevate.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users will be required to always type in a username and password to elevate.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3383,10 +3452,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_CredUI/NoLocalPasswordResetQuestions
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Not Configured. (Local user accounts are able to set up and use security questions to reset their passwords.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Not Configured. (Local user accounts are able to set up and use security questions to reset their passwords.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3428,10 +3505,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_1
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3484,11 +3569,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeApplicationLog
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
-| < enabled/ > < data id="Channel_LogMaxSize" value="102400"/ >|Custom Settings (Recommended) |
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
+| \<enabled/>\<data id="Channel_LogMaxSize" value="102400"/>|Custom Settings (Recommended) |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3531,10 +3624,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3588,11 +3689,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeSecurityLog
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
-| < enabled/ > < data id="Channel_LogMaxSize" value="2097152"/ > |Custom Settings (Recommended) |
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
+| \<enabled/>\<data id="Channel_LogMaxSize" value="2097152"/> |Custom Settings (Recommended) |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3633,10 +3742,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_3
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3690,11 +3807,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_LogMaxSize_3
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
-| < enabled/ > <data id="Channel_LogMaxSize" value="102400"/ > |Custom Settings (Recommended) |
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
+| \<enabled/>\<data id="Channel_LogMaxSize" value="102400"/> |Custom Settings (Recommended) |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3737,10 +3862,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_4
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (When a log file reaches its maximum size, new events overwrite old events.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3794,11 +3927,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeSystemLog
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
-| < enabled/ > < data id="Channel_LogMaxSize" value="204800"/ >| Custom Settings (Recommended) |
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The default log size is 20,480 KB - this value can be changed by the local administrator using the Log Properties dialog.)|
+| \<enabled/>\<data id="Channel_LogMaxSize" value="204800"/>| Custom Settings (Recommended) |
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3843,6 +3984,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/SmartScreen/EnableSmartScreenInShell
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 1|Enabled|
@@ -3886,10 +4035,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/FileExplorer/TurnOffDataExecutionPreventionForExplorer
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Data Execution Prevention will block certain types of malware from exploiting Explorer.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Data Execution Prevention will block certain types of malware from exploiting Explorer.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3930,10 +4087,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/FileExplorer/TurnOffHeapTerminationOnCorruption
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Heap termination on corruption is enabled.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Heap termination on corruption is enabled.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3978,10 +4143,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_WindowsExplorer/ShellProtocolProtectedModeTitle_2
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The protocol is in the protected mode, allowing applications to only open a limited set of folders.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The protocol is in the protected mode, allowing applications to only open a limited set of folders.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4026,10 +4199,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_Sharing/DisableHomeGroup
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (A user can add their computer to a HomeGroup. However, data on a domainjoined computer is not shared with the HomeGroup.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (A user can add their computer to a HomeGroup. However, data on a domainjoined computer is not shared with the HomeGroup.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4076,10 +4257,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MSAPolicy/MicrosoftAccount_DisableUserAuth
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Applications and services on the device will be permitted to authenticate using consumer Microsoft accounts via the Windows OnlineID and WebAccountManager APIs.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Applications and services on the device will be permitted to authenticate using consumer Microsoft accounts via the Windows OnlineID and WebAccountManager APIs.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4123,10 +4312,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/Spynet_LocalSettingOverrideSpynetReporting
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Group Policy will take priority over the local preference setting.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Group Policy will take priority over the local preference setting.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4169,10 +4366,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/DisableAntiSpywareDefender
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Microsoft Defender Antivirus runs and computers are scanned for malware and other potentially unwanted software.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Microsoft Defender Antivirus runs and computers are scanned for malware and other potentially unwanted software.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4213,14 +4418,22 @@ wizard cannot create a share at %root%\Users and can only be used to create SMB
 shares on folders.
 
 ```
-OMA-URI (User)
+OMA-URI
 ./User/Vendor/MSFT/Policy/Config/ADMX_Sharing/NoInplaceSharing
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✖️ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✔ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users can share files out of their user profile after an administrator has opted in the computer.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users can share files out of their user profile after an administrator has opted in the computer.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4263,10 +4476,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowPasswordSaving
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users will be able to save passwords using Remote Desktop Connection.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users will be able to save passwords using Remote Desktop Connection.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4316,10 +4537,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowDriveRedirection
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (An RD Session Host maps client drives automatically upon connection.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (An RD Session Host maps client drives automatically upon connection.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4364,10 +4593,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/PromptForPasswordUponConnection
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Remote Desktop Services allows users to automatically log on if they enter a password in the Remote Desktop Connection client.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Remote Desktop Services allows users to automatically log on if they enter a password in the Remote Desktop Connection client.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4411,10 +4648,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/RequireSecureRPCCommunication
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Remote Desktop Services always requests security for all RPC traffic. However, unsecured communication is allowed for RPC clients that do not respond tothe request.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Remote Desktop Services always requests security for all RPC traffic. However, unsecured communication is allowed for RPC clients that do not respond tothe request.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4472,11 +4717,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_SECURITY_LAYER_POLICY
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled|
-| < enabled/ > < data id="TS_SECURITY_LAYER" value="2"/ >| Custom Settings (Recommended)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="TS_SECURITY_LAYER" value="2"/>| Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4526,10 +4779,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_USER_AUTHENTICATION_POLICY
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4572,11 +4833,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/ClientConnectionEncryptionLevel
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled: High Level. (All communications between clients and RD Session Host servers during remote connections using native RDP encryption must be 128-bit strength. Clients that do not support 128-bit encryption will be unable to establish Remote Desktop Server sessions.)|
-| < disabled/ > |Disabled|
-| < enabled/ > < data id="TS_ENCRYPTION_LEVEL" value="3"/ >| Custom Settings (Recommended)|
+| \<enabled/> |Enabled: High Level. (All communications between clients and RD Session Host servers during remote connections using native RDP encryption must be 128-bit strength. Clients that do not support 128-bit encryption will be unable to establish Remote Desktop Server sessions.)|
+| \<disabled/> |Disabled|
+| \<enabled/>\<data id="TS_ENCRYPTION_LEVEL" value="3"/>| Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4617,10 +4886,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_TEMP_DELETE
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Temporary folders are deleted when a user logs off.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Temporary folders are deleted when a user logs off.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4663,11 +4940,23 @@ property page. Developers cannot change the download setting through feed APIs.
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/InternetExplorer/DisableEnclosureDownloading
 ```
+```
+OMA-URI
+./User/Vendor/MSFT/Policy/Config/InternetExplorer/DisableEnclosureDownloading
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (Users can set the Feed Sync Engine to download an enclosure through the Feed property page. Developers can change the download setting through the Feed APIs.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users can set the Feed Sync Engine to download an enclosure through the Feed property page. Developers can change the download setting through the Feed APIs.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4708,10 +4997,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_WindowsStore/DisableOSUpgrade_2
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled|
-| < disabled/ > |Disabled. (The Microsoft Store application will offer updates to the latest version of Windows.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (The Microsoft Store application will offer updates to the latest version of Windows.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4756,10 +5053,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/WindowsLogon/AllowAutomaticRestartSignOn
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1903 [10.0.18362] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (The device securely saves the user's credentials (including the user name, domain and encrypted password) to configure automatic sign-in after a Windows Update restart. After the Windows Update restart, the user is automatically signed-in and the session is automatically locked with all the lock screen apps configured for that user.)|
-| < disabled/ > |Disabled.|
+| \<enabled/> |Enabled. (The device securely saves the user's credentials (including the user name, domain and encrypted password) to configure automatic sign-in after a Windows Update restart. After the Windows Update restart, the user is automatically signed-in and the session is automatically locked with all the lock screen apps configured for that user.)|
+| \<disabled/> |Disabled.|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4808,11 +5114,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/WindowsPowerShell/TurnOnPowerShellScriptBlockLogging
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled. (PowerShell will log script blocks the first time they are used.)|
-| < disabled/ > |Disabled.|
-| < enabled/ > < data id="EnableScriptBlockInvocationLogging" value="true"/ > | Custom Settings (Recommended)|
+| \<enabled/> |Enabled. (PowerShell will log script blocks the first time they are used.)|
+| \<disabled/> |Disabled.|
+| \<enabled/>\<data id="EnableScriptBlockInvocationLogging" value="true"/> | Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4861,10 +5175,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/ADMX_PowerShellExecutionPolicy/EnableTranscripting
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled.|
-| < disabled/ > |Disabled. (Transcription of PowerShell-based applications is disabled by default, although transcription can still be enabled through the Start-Transcript cmdlet.)|
+| \<enabled/> |Enabled.|
+| \<disabled/> |Disabled. (Transcription of PowerShell-based applications is disabled by default, although transcription can still be enabled through the Start-Transcript cmdlet.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4910,10 +5232,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled.|
-| < disabled/ > |Disabled. (The WinRM client does not use Basic authentication.)|
+| \<enabled/> |Enabled.|
+| \<disabled/> |Disabled. (The WinRM client does not use Basic authentication.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4953,10 +5283,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Service
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled.|
-| < disabled/ > |Disabled. (The WinRM client sends or receives only encrypted messages over the network.)|
+| \<enabled/> |Enabled.|
+| \<disabled/> |Disabled. (The WinRM client sends or receives only encrypted messages over the network.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4996,10 +5335,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/DisallowDigestAuthentication
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled.|
-| < disabled/ > |Disabled. (The WinRM client will use Digest authentication.)|
+| \<enabled/> |Enabled.|
+| \<disabled/> |Disabled. (The WinRM client will use Digest authentication.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -5040,10 +5387,18 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowBasicAuthentication_Client
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled.|
-| < disabled/ > |Disabled. (The WinRM service will not accept Basic authentication from a remote client.)|
+| \<enabled/> |Enabled.|
+| \<disabled/> |Disabled. (The WinRM service will not accept Basic authentication from a remote client.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -5083,10 +5438,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/AllowUnencryptedTraffic_Service
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled.|
-| < disabled/ > |Disabled. (The WinRM service sends or receives only encrypted messages over the network.)|
+| \<enabled/> |Enabled.|
+| \<disabled/> |Disabled. (The WinRM service sends or receives only encrypted messages over the network.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -5134,10 +5498,19 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/RemoteManagement/DisallowStoringOfRunAsCredentials
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
-| < enabled/ > |Enabled.|
-| < disabled/ > |Disabled. (The WinRM service will allow the RunAsUser and RunAsPassword configuration values to be set for plug-ins and the RunAsPassword value will be stored securely.)|
+| \<enabled/> |Enabled.|
+| \<disabled/> |Disabled. (The WinRM service will allow the RunAsUser and RunAsPassword configuration values to be set for plug-ins and the RunAsPassword value will be stored securely.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -5197,6 +5570,15 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogon_AuditCredentialValidation
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
 | 0 | (Default) Off/None |
@@ -5251,6 +5633,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditAccountLockout
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -5309,6 +5699,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditGroupMembership
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -5371,6 +5769,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogoff
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -5435,6 +5841,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditLogon
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Off/None |
@@ -5497,6 +5911,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditApplicationGroupManagement
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -5562,6 +5984,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthenticationPolicyChange
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Off/None |
@@ -5621,6 +6051,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditAuthorizationPolicyChange
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -5685,6 +6123,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditPolicyChange
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Off/None |
@@ -5739,6 +6185,15 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditFileShare
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 
 |Value|Description|
 |---|---|
@@ -5805,6 +6260,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditOtherLogonLogoffEvents
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -5880,6 +6343,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditSecurityGroupManagement
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Off/None |
@@ -5941,6 +6412,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditSecuritySystemExtension
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 |(Default) Off/None |
@@ -5995,6 +6474,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountLogonLogoff_AuditSpecialLogon
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -6070,6 +6557,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/AccountManagement_AuditUserAccountManagement
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Off/None |
@@ -6121,6 +6616,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/DetailedTracking_AuditPNPActivity
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -6180,6 +6683,15 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/DetailedTracking_AuditProcessCreation
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
 | 0 |(Default) Off/None |
@@ -6234,6 +6746,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditDetailedFileShare
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -6299,6 +6819,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditOtherObjectAccessEvents
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 |(Default) Off/None |
@@ -6357,6 +6885,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditRemovableStorage
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -6435,6 +6971,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditMPSSVCRuleLevelPolicyChange
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 |(Default) Off/None |
@@ -6500,6 +7044,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PolicyChange_AuditOtherPolicyChangeEvents
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -6572,6 +7124,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/PrivilegeUse_AuditSensitivePrivilegeUse
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -6662,6 +7222,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditIPsecDriver
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 |(Default) Off/None |
@@ -6731,6 +7299,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditOtherSystemEvents
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Off/None |
@@ -6789,6 +7365,14 @@ regulated industries may have legal obligations to log certain events or activit
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditSecurityStateChange
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -6857,6 +7441,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Audit/System_AuditSystemIntegrity
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
+|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+| |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
+| |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Off/None |
@@ -6906,6 +7498,15 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowBehaviorMonitoring
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
 | 0 | Not allowed. Turns off behavior monitoring. |
@@ -6953,6 +7554,15 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowEmailScanning
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
 | 0 | Not allowed. Turns off email scanning. |
@@ -6998,6 +7608,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowFullScanRemovableDriveScanning
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Not allowed. Turns off scanning on removable drives.|
@@ -7042,6 +7660,15 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowRealtimeMonitoring
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+
 |Value|Description|
 |---|---|
 | 0 | Not allowed. Turns off scanning on removable drives.|
@@ -7083,6 +7710,14 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowRealtimeMo
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowIOAVProtection
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -7127,6 +7762,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Defender/AllowScriptScanning
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | Not allowed.|
@@ -7168,6 +7811,14 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowScriptScan
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Defender/AttackSurfaceReductionRules
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |GUID=StateValue|Description|
 |---|---|
@@ -7231,6 +7882,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Defender/EnableNetworkProtection
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | (Default)	Disabled |
@@ -7278,6 +7937,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 0 | (Default)	PUA Protection off. Windows Defender won't protect against potentially unwanted applications. |
@@ -7308,6 +7975,8 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:PUAProtection
 ```
 
+#22 - Delivery Optimization
+
 ## 22.1 - 'DO Download Mode' is NOT set to 'HTTP blended with Internet Peering'
 
 >[!NOTE]
@@ -7333,14 +8002,25 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:PUAProtection
 
 ```
 OMA-URI 
-./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection
+./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DODownloadMode
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
-| 0 | (Default)	PUA Protection off. Windows Defender won't protect against potentially unwanted applications. |
-| 1 | PUA Protection on. Detected items are blocked. They will show in history along with other threats. |
-| 2 | Audit mode. Windows Defender will detect potentially unwanted applications, but take no action. You can review information about the applications Windows Defender would've taken action against by searching for events created by Windows Defender in the Event Viewer. |
+| 0 | (Default)	HTTP only, no peering. |
+| 1 | HTTP blended with peering behind the same NAT. |
+| 2 | When this option is selected, peering will cross NATs. To create a custom group use Group ID in combination with Mode 2. |
+| 3 | HTTP blended with Internet peering.|
+| 99 | Simple download mode with no peering. Delivery Optimization downloads using HTTP only and doesn't attempt to contact the Delivery Optimization cloud services. Added in Windows 10, version 1607. |
+| 100 | Bypass mode. Windows 10: Don't use Delivery Optimization and use BITS instead. Windows 11: Deprecated, use Simple mode instead.|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -7354,16 +8034,20 @@ OMA-URI
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
-            "displayName": "\u0027Configure detection for potentially unwanted applications\u0027 is set to \u0027Enabled: Block\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection",
-            "value": 1
+            "displayName": "\u0027Download Mode\u0027 is NOT set to \u0027Enabled: Internet\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DODownloadMode",
+            "value": 3
         },
 ```
 
 ```
 Audit:
-Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
-HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:PUAProtection
+Navigate to the following registry location and note the WinningProvider GUID.
+This value confirms under which User GUID the policy is set
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeliveryOptimization:DODownloadMode_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to anything other than 3.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeliveryOptimization:DODownloadMode
 ```
 
 # 23 - Device Guard
@@ -7385,6 +8069,14 @@ Note 2: Credential Guard and Device Guard are not currently supported when using
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceGuard/EnableVirtualizationBasedSecurity
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✖️ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -7431,6 +8123,14 @@ Note: Credential Guard and Device Guard are not currently supported when using A
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceGuard/ConfigureSystemGuardLaunch
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1809 [10.0.17763] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
@@ -7482,6 +8182,14 @@ OMA-URI
 ./Device/Vendor/MSFT/Policy/Config/DeviceGuard/RequirePlatformSecurityFeatures
 ```
 
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✖️ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✖️ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
 |Value|Description|
 |---|---|
 | 1 | (Default)	Turns on VBS with Secure Boot. |
@@ -7527,6 +8235,14 @@ Warning 2: Once this setting is turned on and active, Credential Guard cannot be
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/DeviceGuard/LsaCfgFlags
 ```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✖️ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|✖️ User|✔ Enterprise||
+| |✔ Education||
+| |✖️ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
 |---|---|
