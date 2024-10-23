@@ -2,6 +2,9 @@
 
 ### Unicode to text: https://r12a.github.io/app-conversion/
 
+>[!IMPORTANT]
+>Fix Scripts: omaSettingBoolean if true/false, omaSettingInteger if 0/1/2 , omaSettingString if text
+
 # 1.0 - Above Lock
 
 ## 1.1 'Allow Cortana Above Lock' is set to 'Block'
@@ -9614,4 +9617,579 @@ Script:
 Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_SZ value of %SystemRoot%\System32\logfiles\firewall\privatefw.log.
 HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\StandardProfile\Logging:LogFilePath
+```
+
+## 35.14 - 'Enable Private Network Firewall: Log Max File Size' is set to '16,384 KB or greater'
+
+>[!NOTE]
+>Use this option to specify the size limit of the file in which Windows Firewall will write its
+log information.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The log file size will be limited to the specified size, old events will be overwritten by
+newer ones when the limit is reached.
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableLogDroppedPackets
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1024 | (Default value) |
+| 16384 | Custom Settings (Recommended) |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.2 Collect Audit Logs|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Private Network Firewall: Log Max File Size\u0027 is set to \u002716,384 KB or greater\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/LogMaxFileSize",
+            "value": 16384
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 16384.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\StandardProfile\Logging:LogFileSize
+```
+
+## 35.15 - 'Enable Public Network Firewall' is set to 'True' 
+
+>[!NOTE]
+>Select True (recommended) to have Windows Firewall with Advanced Security use the
+settings for this profile to filter network traffic. If you select False, Windows Firewall with
+Advanced Security will not use any of the firewall rules or connection security rules for
+this profile.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableFirewall
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| false | Disable Firewall. |
+| true  | (default) Enable Firewall.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-User Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall\u0027 is set to \u0027True\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableFirewall",
+            "value": true
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile:EnableFirewall
+```
+
+## 35.16 - 'Enable Public Network Firewall: Allow Local Ipsec Policy Merge' is set to 'False'
+
+>[!NOTE]
+>This setting controls whether local administrators are allowed to create connection
+security rules that apply together with connection security rules configured by Group
+Policy.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Administrators can still create local connection security rules, but the rules will not be
+applied.
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/AllowLocalIpsecPolicyMerge
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| false | AllowLocalIpsecPolicyMerge Off. |
+| true  | (default) AllowLocalIpsecPolicyMerge On|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-User Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|11.2 Document Traffic Configuration Rules||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall: Allow Local Ipsec Policy Merge\u0027 is set to \u0027False\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/AllowLocalIpsecPolicyMerge",
+            "value": false
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile:AllowLocalIPsecPolicyMerge
+```
+
+## 35.17 - 'Enable Public Network Firewall: Allow Local Policy Merge' is set to 'False'
+
+>[!NOTE]
+>This setting controls whether local administrators are allowed to create local firewall
+rules that apply together with firewall rules configured by Group Policy
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Administrators can still create firewall rules, but the rules will not be applied.
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/AllowLocalPolicyMerge
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| false | AllowLocalPolicyMerge Off.. |
+| true  | (default) AllowLocalPolicyMerge On.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-User Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|11.3 Use Automated Tools to Verify Standard Device Configurations and Detect Changes||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall: Allow Local Policy Merge\u0027 is set to \u0027False\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/AllowLocalPolicyMerge",
+            "value": false
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile:AllowLocalPolicyMerge
+```
+
+## 35.18 - 'Enable Public Network Firewall: Default Inbound Action for Public Profile' is set to 'Block
+
+>[!NOTE]
+>This setting determines the behavior for inbound connections that do not match an
+inbound firewall rule.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/DefaultInboundAction
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Allow Inbound By Default. |
+| 1  | (default) Block Inbound By Default.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-User Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|11.2 Document Traffic Configuration Rules||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall: Default Inbound Action for Public Profile\u0027 is set to \u0027Block\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/DefaultInboundAction",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile:DefaultInboundAction
+```
+
+## 35.19 - 'Enable Public Network Firewall: Disable Inbound Notifications' is set to 'True'
+
+>[!NOTE]
+>Select this option to have Windows Firewall with Advanced Security display notifications
+to the user when a program is blocked from receiving inbound connections.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows Firewall will not display a notification when a program is blocked from
+receiving inbound connections.
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/DisableInboundNotifications
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| true | Firewall May Display Notification. |
+| false  | Firewall Must Not Display Notification. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-User Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|11.2 Document Traffic Configuration Rules||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall: Disable Inbound Notifications\u0027 is set to \u0027True\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/DisableInboundNotifications",
+            "value": true
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile:DisableNotifications
+```
+
+## 35.20 - 'Enable Public Network Firewall: Enable Log Dropped Packets' is set to 'Yes: Enable Logging Of Dropped Packets'
+
+>[!NOTE]
+>Use this option to log when Windows Firewall with Advanced Security discards an
+inbound packet for any reason. The log records why and when the packet was dropped.
+Look for entries with the word DROP in the action column of the log.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Information about dropped packets will be recorded in the firewall log file.
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableLogDroppedPackets
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| false | (default) Disable Logging Of Dropped Packets. |
+| true  | Enable Logging Of Dropped Packets. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-User Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall: Disable Inbound Notifications\u0027 is set to \u0027True\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableLogDroppedPackets",
+            "value": true
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile\Logging:LogDroppedPackets
+```
+
+## 35.21 - 'Enable Public Network Firewall: Enable Log Success Connections' is set to 'Enable Logging Of Successful Connections' 
+
+>[!NOTE]
+>Use this option to log when Windows Firewall with Advanced Security allows an
+inbound connection. The log records why and when the connection was formed. Look
+for entries with the word ALLOW in the action column of the log.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Information about successful connections will be recorded in the firewall log file.
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableLogSuccessConnections
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| false | (default) Disable Logging Of Successful Connections. |
+| true  | Enable Logging Of Successful Connections. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-User Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall: Enable Log Success Connections\u0027 is set to \u0027True\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableLogSuccessConnections",
+            "value": true
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile\Logging:LogSuccessfulConnections
+```
+
+## 35.22 - 'Enable Public Network Firewall: Log File Path' is set to '%SystemRoot%\System32\logfiles\firewall\publicfw.log' 
+
+>[!NOTE]
+>Use this option to specify the path and name of the file in which Windows Firewall will
+write its log information.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The log file will be stored in the specified file.
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/LogFilePath
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| %systemroot%\system32\LogFiles\Firewall\pfirewall.log | (default)  |
+| %SystemRoot%\System32\logfiles\firewall\publicfw.log  | Custom Settings (Recommended) |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.2 Collect Audit Logs|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall: Log File Path\u0027 is set to \u0027publicfw.log\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/LogFilePath",
+            "value": %SystemRoot%\System32\logfiles\firewall\publicfw.log
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_SZ value of %SystemRoot%\System32\logfiles\firewall\publicfw.log.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile\Logging:LogFilePath
+```
+
+## 35.23 - 'Enable Public Network Firewall: Log Max File Size' is set to '16,384 KB or greater'
+
+>[!NOTE]
+>Use this option to specify the size limit of the file in which Windows Firewall will write its
+log information.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The log file size will be limited to the specified size, old events will be overwritten by
+newer ones when the limit is reached
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/PublicProfile/LogMaxFileSize
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1024 | (default value)  |
+| 16384 | Custom Settings (Recommended) |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.3 Ensure Adequate Audit Log Storage|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable Public Network Firewall: Log Max File Size\u0027 is set to \u0027 16,384 KB or greater\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/LogMaxFileSize",
+            "value": 16384
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 16384.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\PublicProfile\Logging:LogFileSize
+```
+
+# 42 - Lanman Workstation
+
+## 42.1 - 'Enable insecure guest logons' is set to 'Disabled' 
+
+>[!NOTE]
+>This policy setting determines if the SMB client will allow insecure guest logons to an
+SMB server.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The SMB client will reject insecure guest logons. This was not originally the default
+behavior in older versions of Windows
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LanmanWorkstation/EnableInsecureGuestLogons
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | (default) 	Disabled.  |
+| 1 | Enabled. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable insecure guest logons\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LanmanWorkstation/EnableInsecureGuestLogons",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\LanmanWorkstation:AllowInsecureGuestAuth
 ```
