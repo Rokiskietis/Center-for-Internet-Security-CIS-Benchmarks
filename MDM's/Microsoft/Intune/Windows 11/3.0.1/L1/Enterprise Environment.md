@@ -8683,7 +8683,7 @@ OMA-URI
 | 90 | 90 (Realistic Recommendation) |
 | X | Allowed Range: [0-998]  |
 
-
+ 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
 |8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
