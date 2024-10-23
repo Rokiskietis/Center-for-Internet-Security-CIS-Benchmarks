@@ -7677,8 +7677,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -7727,8 +7727,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -7778,8 +7778,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.7 Use Behavior-Based Anti-Malware Software||:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.7 Use Behavior-Based Anti-Malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -7829,8 +7829,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -7898,10 +7898,10 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|9.3 Maintain and Enforce Network-Based URL Filters||:orange_circle:|:large_blue_circle:|Level - 1
-|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
-|7|7.4 Maintain and Enforce Network-Based URL Filters||:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+|8|9.3 Maintain and Enforce Network-Based URL Filters||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|7.4 Maintain and Enforce Network-Based URL Filters||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 ```
@@ -7953,9 +7953,9 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|2.7 Utilize Application Whitelisting|||:large_blue_circle:|Level - 1
-|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.1 Deploy and Maintain Anti-Malware Software|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|2.7 Utilize Application Whitelisting|||:large_blue_circle:|Level - 1|
+|7|8.1 Utilize Centrally Managed Anti-malware Software||:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 
@@ -8024,8 +8024,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|7.3 Perform Automated Operating System Patch Management|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|3.4 Deploy Automated Operating System Patch Management Tools|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|8|7.3 Perform Automated Operating System Patch Management|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|3.4 Deploy Automated Operating System Patch Management Tools|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 
@@ -8087,8 +8087,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 
@@ -8142,8 +8142,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
 
 
 
@@ -8202,8 +8202,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -8260,8 +8260,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1
-|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -8320,8 +8320,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -8392,8 +8392,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -8465,8 +8465,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -8538,8 +8538,8 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -8617,9 +8617,9 @@ OMA-URI
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|4.4 Use Unique Passwords||:orange_circle:|:large_blue_circle:|Level - 1
-|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|4.4 Use Unique Passwords||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -8656,13 +8656,11 @@ password when the user first logs on, the administrator must select the User mus
 change password at next logon check box, or the user will not be able to change the
 password until the next day.
 
-
 >[!CAUTION]
 >Warning: If an organization is using Windows Hello for Business, the the Device
 Lock password settings can impact PIN polices if those policies are not first defined
 elsewhere. Windows will follow the Windows Hello for Business policies for PINs if this
 key exists: HKLM\SOFTWARE\Microsoft\Policies\PassportForWork\<TenantID>\Device\Policies. Otherwise, it will follow Device Lock policies.
-
 
 ```
 OMA-URI 
@@ -8686,8 +8684,8 @@ OMA-URI
  
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
-|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
-|7|16.10 Ensure All Accounts Have An Expiration Date||:orange_circle:|:large_blue_circle:|Level - 1
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.10 Ensure All Accounts Have An Expiration Date||:orange_circle:|:large_blue_circle:|Level - 1|
 
 ```
 Script:
@@ -8709,3 +8707,326 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeviceLock
 ```
 
 # 30 - Experience
+
+## 30.1 - 'Allow Cortana' is set to 'Block'
+
+>[!NOTE]
+>This policy setting specifies whether Cortana is allowed on the device.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Cortana will be turned off. Users will still be able to use search to find things on the
+device and on the Internet.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Experience/AllowCortana
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed. |
+| 1 |(Default) Allowed.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Cortana\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Experience/AllowCortana",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Experience:AllowCortana_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 0.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\Experience:AllowCortana
+```
+
+## 30.2 - 'Allow Spotlight Collection (User)' is set to '0'
+
+>[!NOTE]
+>This policy setting removes the Spotlight collection setting in Personalization, rendering
+the user unable to select and subsequently download daily images from Microsoft to the
+system desktop.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Spotlight collection feature will not be available as an option in Personalization
+settings, so users will not be able to download daily images from Microsoft.
+
+
+
+```
+OMA-URI 
+./User/Vendor/MSFT/Policy/Config/Experience/AllowSpotlightCollection
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|❌ Device|❌ Pro|✔ Windows 11, version 21H2 [10.0.22000] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |❌ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed. |
+| 1 |(Default) Allowed.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Spotlight Collection User\u0027 is set to \u00270\u0027",
+            "omaUri": "./User/Vendor/MSFT/Policy/Config/Experience/AllowSpotlightCollection",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\[sid]\Experience:AllowSpotlightCollection
+```
+
+## 30.4 - 'Disable Consumer Account State Content' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether cloud consumer account state content is allowed
+in all Windows experiences.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users will not be able to use Microsoft consumer accounts on the system, and
+associated Windows experiences will instead present default fallback content.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Experience/DisableConsumerAccountStateContent
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|❌ Pro|✔ Windows 11, version 21H2 [10.0.22000] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |❌ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Disabled. |
+| 1 | Enabled.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.6 Centralize Account Management||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Disable Consumer Account State Content\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Experience/DisableConsumerAccountStateContent",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\CloudContent:DisableConsumerAccountStateContent
+```
+
+## 30.5 - 'Do not show feedback notifications' is set to 'Feedback notifications are disabled'
+
+>[!NOTE]
+>This policy setting allows an organization to prevent its devices from showing feedback
+questions from Microsoft.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users will no longer see feedback notifications through the Windows Feedback app
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Experience/DoNotShowFeedbackNotifications
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Feedback notifications aren't disabled. The actual state of feedback notifications on the device will then depend on what GP has configured or what the user has configured locally. |
+| 1 | Feedback notifications are disabled.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Do not show feedback notifications\u0027 is set to \u0027Feedback notifications are disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Experience/DoNotShowFeedbackNotifications",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Experience:DoNotShowFeedbackNotifications_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 1.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\Experience:DoNotShowFeedbackNotifications
+```
+
+# 35 - Firewall
+
+## 35.1 - 'Enable Domain Network Firewall' is set to 'True'
+
+>[!NOTE]
+>Select True (recommended) to have Windows Firewall with Advanced Security use the
+settings for this profile to filter network traffic. If you select False, Windows Firewall with
+Advanced Security will not use any of the firewall rules or connection security rules for
+this profile.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Experience/DoNotShowFeedbackNotifications
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| true | Enables Windows Firewall. |
+| false | Disables Windows Firewall.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-User Devices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingBoolean",
+            "displayName": "\u0027Windows Firewall: Domain: Firewall state\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/EnableFirewall",
+            "value": true
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and confirm the value is set to 1.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\DomainProfile:EnableFirewall
+```
+
+## 35.2 - 'Enable Domain Network Firewall: Default Inbound Action for Domain Profile' is set to 'Block
+
+>[!NOTE]
+>This setting determines the behavior for inbound connections that do not match an
+inbound firewall rule
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Vendor/MSFT/Firewall/MdmStore/DomainProfile/DefaultInboundAction
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Allow Inbound By Default. |
+| 1 | Block Inbound By Default.|
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.5 Implement and Manage a Firewall on End-UserDevices|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.4 Apply Host-based Firewalls or Port Filtering|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|11.2 Document Traffic Configuration Rules||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Windows Firewall: Domain: Inbound connections\u0027 is set to \u0027Block\u0027",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/DefaultInboundAction",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and confirm the value is set to 1.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm\DomainProfile:DefaultInboundAction
+```
+
+## 35.3 - 'Enable Domain Network Firewall: Disable Inbound Notifications' is set to 'True'
