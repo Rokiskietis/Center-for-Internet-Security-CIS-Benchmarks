@@ -8228,6 +8228,7 @@ Note 2: Credential Guard and Device Guard are not currently supported when using
 
 >[!CAUTION]
 >Warning: All drivers on the system must be compatible with this feature or the system may crash. Ensure that this policy setting is only deployed to computers which are known to be compatible.
+
 >[!CAUTION]
 >Warning 2: Once this setting is turned on and active, Credential Guard cannot be disabled solely via GPO or any other remote method. After removing the setting from GPO, the features must also be manually disabled locally at the machine using the steps provided at this link:
 
