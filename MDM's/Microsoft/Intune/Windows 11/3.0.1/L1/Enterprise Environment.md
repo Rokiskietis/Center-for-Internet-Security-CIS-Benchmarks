@@ -3401,7 +3401,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3455,7 +3455,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3508,7 +3508,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3572,7 +3572,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3627,7 +3627,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3692,7 +3692,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3745,7 +3745,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3810,7 +3810,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3865,7 +3865,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3930,7 +3930,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3987,7 +3987,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4038,7 +4038,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4090,7 +4090,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4146,7 +4146,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4202,7 +4202,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4260,7 +4260,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4315,7 +4315,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4369,7 +4369,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4424,7 +4424,7 @@ OMA-URI
 
 |Scope | Editions| Applicable OS |
 |---|---|---|
-|✖️ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
 |✔ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
@@ -4479,7 +4479,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4540,7 +4540,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4596,7 +4596,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4651,7 +4651,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4720,7 +4720,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4782,7 +4782,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4836,7 +4836,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -4889,7 +4889,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5000,7 +5000,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
 | |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
 | |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5056,7 +5056,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1903 [10.0.18362] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5235,7 +5235,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5286,7 +5286,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5338,7 +5338,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5390,7 +5390,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5441,7 +5441,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5501,7 +5501,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5573,7 +5573,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5637,7 +5637,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5703,7 +5703,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5773,7 +5773,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5844,7 +5844,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5915,7 +5915,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -5987,7 +5987,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6055,7 +6055,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6126,7 +6126,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6189,7 +6189,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6264,7 +6264,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6346,7 +6346,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6415,7 +6415,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6478,7 +6478,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6560,7 +6560,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6620,7 +6620,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6686,7 +6686,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6750,7 +6750,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6822,7 +6822,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6889,7 +6889,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -6974,7 +6974,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7048,7 +7048,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7128,7 +7128,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7225,7 +7225,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7302,7 +7302,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7369,7 +7369,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7444,7 +7444,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1803 with KB4516045 [10.0.17134.1039] and later|
-|✖️ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 1809 with KB4516077 [10.0.17763.774] and later|
 | |✔ Education|✔ Windows 10, version 1903 with KB4512941 [10.0.18362.329] and later|
 | |✔ Windows SE|✔ Windows 10, version 2004 [10.0.19041] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7501,7 +7501,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7557,7 +7557,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7611,7 +7611,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7663,7 +7663,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7714,7 +7714,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7765,7 +7765,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7815,7 +7815,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7885,7 +7885,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -7940,7 +7940,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -8008,7 +8008,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -8073,9 +8073,9 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
-| |✖️ Windows SE||
+| |❌ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
@@ -8127,7 +8127,7 @@ OMA-URI
 |Scope | Editions| Applicable OS |
 |---|---|---|
 |✔ Device|✔ Pro|✔ Windows 10, version 1809 [10.0.17763] and later|
-|✖️ User|✔ Enterprise||
+|❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -8184,10 +8184,10 @@ OMA-URI
 
 |Scope | Editions| Applicable OS |
 |---|---|---|
-|✔ Device|✖️ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|✔ Device|❌ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
 | |✔ Education||
-| |✖️ Windows SE||
+| |❌ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
@@ -8238,10 +8238,10 @@ OMA-URI
 
 |Scope | Editions| Applicable OS |
 |---|---|---|
-|✔ Device|✖️ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
-|✖️ User|✔ Enterprise||
+|✔ Device|❌ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
 | |✔ Education||
-| |✖️ Windows SE||
+| |❌ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
 
 |Value|Description|
