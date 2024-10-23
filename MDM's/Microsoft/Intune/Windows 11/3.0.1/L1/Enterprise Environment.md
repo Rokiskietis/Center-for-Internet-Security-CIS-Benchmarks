@@ -8485,5 +8485,227 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceLock:DevicePasswordHi
 
 Navigate to the following registry location and confirm the value is set to 2.
 HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeviceLock:DevicePasswordHistory
+```
+
+## 24.4 - 'Min Device Password Complex Characters' is set to 'Digits lowercase letters and uppercase letters are required' 
+
+>[!NOTE]
+>This policy setting determines the number of renewed, unique passwords that have to
+be associated with a user account before you can reuse an old password. In an Intune
+managed environment this setting applies to local user accounts and not Entra ID
+accounts. 
+The value includes the user's current password. This value denotes that with a setting of
+1, the user can't reuse their current password when choosing a new password, while a
+setting of 5 means that a user can't set their new password to their current password or
+any of their previous four passwords.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The major impact of this configuration is that users must create a new password every
+time they are required to change their old one. If users are required to change their
+passwords to new unique values, there is an increased risk of users who write their
+passwords somewhere so that they do not forget them. Another risk is that users may
+create passwords that change incrementally (for example, password01, password02,
+and so on) to facilitate memorization but make them easier to guess.
+
+>[!CAUTION]
+>Warning: If an organization is using Windows Hello for Business, the the Device
+Lock password settings can impact PIN polices if those policies are not first defined
+elsewhere. Windows will follow the Windows Hello for Business policies for PINs if this
+key exists: HKLM\SOFTWARE\Microsoft\Policies\PassportForWork\<TenantID>\Device\Policies. Otherwise, it will follow Device Lock policies.
+
 
 ```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordHistory
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | 0 (Default)(Recommended) |
+| X | Allowed Range: [0-50]  |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Device Password History\u0027 is set to \u002724 or more passwords\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordHistory",
+            "value": 24
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceLock:DevicePasswordHistory_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 2.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeviceLock:DevicePasswordHistory
+```
+
+## 24.5 - 'Min Device Password Length' is set to '14 or more character(s)'
+
+>[!NOTE]
+>This policy setting determines the least number of characters that make up a password
+for a local user account. There are many different theories about how to determine the
+best password length for an organization, but perhaps "passphrase" is a better term
+than "password." In Microsoft Windows 2000 or newer, passphrases can be quite long
+and can include spaces. Therefore, a phrase such as "I want to drink a $5 milkshake" is
+a valid passphrase; it is a considerably stronger password than an 8 or 10 character
+string of random numbers and letters, and yet is easier to remember. Users must be
+educated about the proper selection and maintenance of passwords, especially around
+password length. In enterprise environments, the ideal value for the Minimum password
+length setting is 14 characters, however you should adjust this value to meet your
+organization's business requirements.
+
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Requirements for extremely long passwords can actually decrease the security of an
+organization, because users might leave the information in an insecure location or lose
+it. If very long passwords are required, mistyped passwords could cause account
+lockouts and increase the volume of help desk calls. If your organization has issues with
+forgotten passwords due to password length requirements, consider teaching your
+users about passphrases, which are often easier to remember and, due to the larger
+number of character combinations, much harder to discover.
+
+
+>[!CAUTION]
+>Warning: If an organization is using Windows Hello for Business, the the Device
+Lock password settings can impact PIN polices if those policies are not first defined
+elsewhere. Windows will follow the Windows Hello for Business policies for PINs if this
+key exists: HKLM\SOFTWARE\Microsoft\Policies\PassportForWork\<TenantID>\Device\Policies. Otherwise, it will follow Device Lock policies
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinDevicePasswordLength
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 14 | 14 (Recommended) |
+| X | Allowed Range: [4-16]  |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|4.4 Use Unique Passwords||:orange_circle:|:large_blue_circle:|Level - 1
+|7|16.2 Configure Centralized Point of Authentication||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Min Device Password Length\u0027 is set to \u002714 or more characters\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinDevicePasswordLength",
+            "value": 14
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceLock:MinDevicePasswordLength_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 14 (or higher).
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeviceLock:MinDevicePasswordLength
+```
+
+## 24.6 - 'Minimum Password Age' is set to '1 or more day(s)'
+
+>[!NOTE]
+>This security setting determines the period of time (in days) that a password must be
+used before the user can change it. You can set a value between 1 and 998 days, or
+you can allow changes immediately by setting the number of days to 0.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>If an administrator sets a password for a user but wants that user to change the
+password when the user first logs on, the administrator must select the User must
+change password at next logon check box, or the user will not be able to change the
+password until the next day.
+
+
+>[!CAUTION]
+>Warning: If an organization is using Windows Hello for Business, the the Device
+Lock password settings can impact PIN polices if those policies are not first defined
+elsewhere. Windows will follow the Windows Hello for Business policies for PINs if this
+key exists: HKLM\SOFTWARE\Microsoft\Policies\PassportForWork\<TenantID>\Device\Policies. Otherwise, it will follow Device Lock policies.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinimumPasswordAge
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | 1 (Recommended) |
+| 90 | 90 (Realistic Recommendation) |
+| X | Allowed Range: [0-998]  |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1
+|7|16.10 Ensure All Accounts Have An Expiration Date||:orange_circle:|:large_blue_circle:|Level - 1
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Minimum Password Age\u0027 is set to \u00271 or more day\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinimumPasswordAge",
+            "value": 90
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceLock:MinimumPasswordAge_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 0.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\DeviceLock:MinimumPasswordAge
+```
+
+# 30 - Experience
