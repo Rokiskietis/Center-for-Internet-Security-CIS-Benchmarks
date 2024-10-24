@@ -10723,7 +10723,7 @@ OMA-URI
 |Value|Description|
 |---|---|
 | 0 | No Action. |
-| 1 |Lock Workstation.|
+| 1 | Lock Workstation.|
 | 2 | Force Logoff.|
 | 3 | Disconnect if a Remote Desktop Services session.|
  
