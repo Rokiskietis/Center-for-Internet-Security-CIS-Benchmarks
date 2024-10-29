@@ -8286,6 +8286,76 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard:RequirePlatformSecurityFeat
 
 # 24 - Device lock
 
+## 24.0 - 'Device Password' is set to 'Enabled' 
+
+>[!NOTE]
+>Specifies whether device lock is enabled.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The DevicePasswordEnabled setting must be set to 0 (device password is enabled) for the following policy settings to take effect:
+*AllowSimpleDevicePassword
+*MinDevicePasswordLength
+*AlphanumericDevicePasswordRequired
+*MaxDevicePasswordFailedAttempts
+*MaxInactivityTimeDeviceLock
+*MinDevicePasswordComplexCharacters
+If DevicePasswordEnabled is set to 0 (device password is enabled), then the following policies are set:
+*MinDevicePasswordLength is set to 4
+*MinDevicePasswordComplexCharacters is set to 1
+If DevicePasswordEnabled is set to 1 (device password is disabled), then the following DeviceLock policies are set to 0:
+*MinDevicePasswordLength
+*MinDevicePasswordComplexCharacters
+DevicePasswordEnabled should not be set to Enabled (0) when WMI is used to set the EAS DeviceLock policies given that it is Enabled by default in Policy CSP for backward compatibility with Windows 8.x. If DevicePasswordEnabled is set to Enabled(0) then Policy CSP will return an error stating that DevicePasswordEnabled already exists. Windows 8.x did not support DevicePassword policy. When disabling DevicePasswordEnabled (1), it should be the only policy set from the DeviceLock group of policies listed below:
+*AllowSimpleDevicePassword
+*MinDevicePasswordLength
+*AlphanumericDevicePasswordRequired
+*MinDevicePasswordComplexCharacters
+*DevicePasswordExpiration
+*DevicePasswordHistory
+*MaxDevicePasswordFailedAttempts
+*MaxInactivityTimeDeviceLock
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordEnabled
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | 	Enabled. |
+| 1 | 	Disabled. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|5.2 Use Unique Passwords|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Device Password\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordEnabled",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Manual for Now xXx
+```
+
+
 ## 24.1 - 'Alphanumeric Device Password Required' is set to 'Password, Numeric PIN, or Alphanumeric PIN required' 
 
 >[!NOTE]
@@ -9451,10 +9521,10 @@ OMA-URI
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
-            "displayName": "\u0027Windows Firewall: Private: Inbound connections\u0027 is set to \u0027Block\u0027",
+            "displayName": "\u0027Enable Private Network Firewall: Disable Inbound Notifications\u0027 is set to \u0027True\u0027",
             "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/DisableInboundNotifications",
-            "value": 1
-        },
+            "value": true
+        }
 ```
 
 ```
@@ -9507,7 +9577,7 @@ Script:
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Enable Private Network Firewall: Enable Log Success Connections\u0027 is set to \u0027Enable Logging Of Successful Connections\u0027",
             "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableLogSuccessConnections",
-            "value": 1
+            "value": true
         },
 ```
 
@@ -12263,3 +12333,223 @@ HKLM\SOFTWARE\Policies\Microsoft\WindowsStore:RequirePrivateStoreOnly
 ```
 
 # 58 - Privacy
+
+## 58.2 - 'Allow Input Personalization' is set to 'Block'
+
+>[!NOTE]
+>This policy enables the automatic learning component of input personalization that includes speech, inking, and typing. Automatic learning enables the collection of speech and handwriting patterns, typing history, contacts, and recent calendar information. It is required for the use of Cortana. Some of this collected information may be stored on the user's OneDrive, in the case of inking and typing; some of the information will be uploaded to Microsoft to personalize speech.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Automatic learning of speech, inking, and typing stops and users cannot change its value via PC Settings.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Privacy/AllowInputPersonalization
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed.  |
+| 1 | Choice deferred to user's preference. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.1 Establish and Maintain a Secure Configuration Process|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|8|5.1 Establish Secure Configurations|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Input Personalization\u0027 is set to \u0027Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Privacy/AllowInputPersonalization",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\InputPersonalization:AllowInputPersonalization
+```
+
+## 58.4 - 'Let Apps Activate With Voice Above Lock' is set to 'Enabled: Force Deny'
+
+>[!NOTE]
+>This policy setting specifies whether Windows apps can be activated by voice (apps and Cortana) while the system is locked.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users will not be able to activate apps while the computer is locked.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Privacy/LetAppsActivateWithVoiceAboveLock
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1903 [10.0.18362] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | User in control. Users can decide if Windows apps can be activated by voice while the screen is locked using Settings > Privacy options on the device.  |
+| 1 | Force allow. Windows apps can be activated by voice while the screen is locked, and users can't change it. |
+| 2 | Force deny. Windows apps can't be activated by voice while the screen is locked, and users can't change it.| 
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||:orange_circle:|:large_blue_circle:|Level - 1|
+|8|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Let Apps Activate With Voice Above Lock\u0027 is set to \u0027Enabled: Force Deny\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Privacy/LetAppsActivateWithVoiceAboveLock",
+            "value": 2
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Privacy:LetAppsActivateWithVoiceAboveLock_WinningProvider
+
+
+Navigate to the following registry location and confirm the value is set to 2.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\Privacy:LetAppsActivateWithVoiceAboveLock
+```
+
+## 60 - Search
+
+## 60.2 - 'Allow Indexing Encrypted Stores Or Items' is set to 'Block'
+
+>[!NOTE]
+>This policy setting controls whether encrypted items are allowed to be indexed. When this setting is changed, the index is rebuilt completely. Full volume encryption (such as BitLocker Drive Encryption or a non-Microsoft solution) must be used for the location of the index to maintain security for encrypted files.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Search/AllowIndexingEncryptedStoresOrItems
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1607 [10.0.14393] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed.  |
+| 1 | Allowed. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|14.8 Encrypt Sensitive Information at Rest|||:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Indexing Encrypted Stores Or Items\u0027 is set to \u0027Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Search/AllowIndexingEncryptedStoresOrItems",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Search:AllowIndexingEncryptedStoresOrItems_WinningProvider
+
+
+Navigate to the following registry location and confirm the value is set to 0.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\Search:AllowIndexingEncryptedStoresOrItems
+```
+
+## 60.3 - 'Allow Search To Use Location' is set to 'Block'
+
+>[!NOTE]
+>This policy setting specifies whether search and Cortana can provide location aware search and Cortana results.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Search and Cortana will not have access to location information.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/Search/AllowSearchToUseLocation
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed.  |
+| 1 | Allowed. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Search To Use Location\u0027 is set to \u0027Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/Search/AllowSearchToUseLocation",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\Search:AllowSearchToUseLocation_WinningProvider
+
+
+Navigate to the following registry location and confirm the value is set to 0.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\Search:AllowSearchToUseLocation
+```
+
+# 64.1 - Enhanced Phishing Protection
