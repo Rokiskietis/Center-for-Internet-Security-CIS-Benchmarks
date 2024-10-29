@@ -8522,7 +8522,7 @@ key exists: HKLM\SOFTWARE\Microsoft\Policies\PassportForWork\<TenantID>\Device\P
 
 ```
 OMA-URI 
-./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordHistory
+./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinDevicePasswordComplexCharacters
 ```
 
 |Scope | Editions| Applicable OS |
@@ -8535,8 +8535,10 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| 0 | 0 (Default)(Recommended) |
-| X | Allowed Range: [0-50]  |
+| 1 | Digits only. |
+| 2 | Digits and lowercase letters are required.  |
+| 3 | Digits lowercase letters and uppercase letters are required. Not supported in desktop Microsoft accounts and domain accounts.  |
+| 4 | Digits lowercase letters uppercase letters and special characters are required. Not supported in desktop.  |
 
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
@@ -8548,8 +8550,8 @@ OMA-URI
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
-            "displayName": "\u0027Device Password History\u0027 is set to \u002724 or more passwords\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordHistory",
+            "displayName": "\u0027Min Device Password Complex Characters\u0027 is set to \u0027Digits lowercase letters and uppercase letters are required\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinDevicePasswordComplexCharacters",
             "value": 24
         },
 ```
@@ -9316,7 +9318,7 @@ this profile
 
 ```
 OMA-URI 
-./Vendor/MSFT/Firewall/MdmStore/DomainProfile/LogMaxFileSize
+./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableFirewall
 ```
 
 |Scope | Editions| Applicable OS |
@@ -9329,8 +9331,8 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| 1024 | Default value |
-| 16384 | Custom Settings (Recommended) |
+| false | Disable Firewall. |
+| true | Enable Firewall. |
  
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -9343,7 +9345,7 @@ Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Enable Domain Network Firewall: Log Max File Size\u0027 is set to \u002716,384 KB or greater\u0027",
-            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/LogMaxFileSize",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableFirewall",
             "value": 16384
         },
 ```
@@ -9581,7 +9583,7 @@ write its log information.
 
 ```
 OMA-URI 
-./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableLogDroppedPackets
+./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/LogFilePath
 ```
 
 |Scope | Editions| Applicable OS |
@@ -9608,7 +9610,7 @@ Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Enable Private Network Firewall: Log File Path\u0027 is set to \u0027%SystemRoot%\System32\logfiles\firewall\privatefw.log\u0027",
-            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableLogDroppedPackets",
+            "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/LogFilePath",
             "value": %SystemRoot%\System32\logfiles\firewall\privatefw.log
         },
 ```
@@ -9634,7 +9636,7 @@ newer ones when the limit is reached.
 
 ```
 OMA-URI 
-./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableLogDroppedPackets
+./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/LogMaxFileSize
 ```
 
 |Scope | Editions| Applicable OS |
@@ -10482,7 +10484,7 @@ Script:
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Interactive logon: Do not display last signed-in\u0027 is set to \u0027Enabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotDisplayLastSignedIn",
-            "value": ATEAGuest
+            "value": 1
         },
 ```
 
@@ -10532,7 +10534,7 @@ Script:
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Interactive logon: Do not require CTRL+ALT+DEL\u0027 is set to \u0027Disabled\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotRequireCTRLALTDEL",
-            "value": ATEAGuest
+            "value": 0
         },
 ```
 
@@ -10738,7 +10740,7 @@ Script:
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Interactive logon: Smart card removal behavior\u0027 is set to \u0027 Lock Workstation\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_SmartCardRemovalBehavior",
-            "value": Text
+            "value": 1
         },
 ```
 
@@ -10747,5 +10749,210 @@ Audit:
 Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_SZ value of 1, 2 or 3.
 HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon:ScRemoveOption
 ```
+
+## 45.13 - 'Microsoft network client: Digitally sign communications (always)' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether packet signing is required by the SMB client component.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Microsoft network client will not communicate with a Microsoft network server unless that server agrees to perform SMB packet signing.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsAlways
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1809 [10.0.17763] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Microsoft network client: Digitally sign communications always\u0027 is set to \u0027 Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsAlways",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters:RequireSecuritySignature
+```
+
+## 45.14 - 'Microsoft network client: Digitally sign communications (if server agrees)' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether the SMB client will attempt to negotiate SMB packet signing.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Microsoft network client: Digitally sign communications\u0027 is set to \u0027 Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_DigitallySignCommunicationsIfServerAgrees",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters:EnableSecuritySignature
+```
+
+## 45.15 - 'Microsoft network client: Send unencrypted password to third-party SMB servers' is set to 'Disabled'
+
+>[!NOTE]
+>This policy setting determines whether the SMB redirector will send plaintext passwords during authentication to third-party SMB servers that do not support password encryption.
+It is recommended that you disable this policy setting unless there is a strong business case to enable it. If this policy setting is enabled, unencrypted passwords will be allowed across the network.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.4 Encrypt or Hash all Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Microsoft network client: Send unencrypted password to third-party SMB servers\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkClient_SendUnencryptedPasswordToThirdPartySMBServers",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters:EnablePlainTextPassword
+```
+
+## 45.16 - 'Microsoft network server: Digitally sign communications (always)' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether packet signing is required by the SMB server component. Enable this policy setting in a mixed environment to prevent downstream clients from using the workstation as a network server.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Microsoft network server will not communicate with a Microsoft network client unless that client agrees to perform SMB packet signing.
+
+>[!CAUTION]
+>Implementation of SMB signing may negatively affect performance, because each packet needs to be signed and verified. If these settings are enabled on a server that is performing multiple roles, such as a small business server that is serving as a Domain Controller, file server, print server, and application server performance may be substantially slowed. Additionally, if you configure computers to ignore all unsigned SMB communications, older applications and operating systems will not be able to connect. However, if you completely disable all SMB signing, computers will be vulnerable to session hijacking attacks.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsAlways
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.4 Encrypt or Hash all Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Microsoft network server: Digitally sign communications allways\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsAlways",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters:RequireSecuritySignature
+```
+
+
 
 iki 36
