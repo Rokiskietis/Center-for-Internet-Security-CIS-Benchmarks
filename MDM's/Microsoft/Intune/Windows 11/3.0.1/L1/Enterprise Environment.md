@@ -12553,3 +12553,221 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\Search:All
 ```
 
 # 64.1 - Enhanced Phishing Protection
+
+## 64.1.1 - 'Notify Malicious' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether Enhanced Phishing Protection in Microsoft Defender SmartScreen warns users if they type their work or school password into one of the following malicious scenarios: into a reported phishing site, into a Microsoft login URL with an invalid certificate, or into an application connecting to either a reported phishing site or a Microsoft login URL with an invalid certificate.
+
+>[!NOTE]
+>This setting only applies to Microsoft Accounts (computer or browser login) while using Microsoft Windows 11 and not on-prem domain-joined accounts.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>In some cases, Windows Defender SmartScreen may block legitimate websites, that have been incorrectly flagged by Microsoft.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/WebThreatDefense/NotifyMalicious
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Disabled. Enhanced Phishing Protection in Microsoft Defender SmartScreen won't warn your users if they type their work or school password into one of the malicious scenarios described above.  |
+| 1 | Enabled. Enhanced Phishing Protection in Microsoft Defender SmartScreen warns your users if they type their work or school password into one of the malicious scenarios described above and encourages them to change their password. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Search To Use Location\u0027 is set to \u0027Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WebThreatDefense/NotifyMalicious",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WTDS\Components:NotifyMalicious
+```
+
+## 64.1.2 - 'Notify Password Reuse' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether Enhanced Phishing Protection in Microsoft Defender SmartScreen warns users if they reuse their work or school password.
+
+>[!NOTE]
+>This setting only applies to Microsoft Accounts (computer or browser login) while using Microsoft Windows 11 and not on-prem domain-joined accounts.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Password reuse may be detected as a false positive by Microsoft.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/WebThreatDefense/NotifyPasswordReuse
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Enabled. Enhanced Phishing Protection in Microsoft Defender SmartScreen warns users if they reuse their work or school password and encourages them to change it. |
+| 1 | Disabled. Enhanced Phishing Protection in Microsoft Defender SmartScreen won't warn users if they reuse their work or school password. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Notify Password Reuse\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WebThreatDefense/NotifyPasswordReuse",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WTDS\Components:NotifyPasswordReuse
+```
+
+## 64.1.3 - 'Notify Unsafe App' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether Enhanced Phishing Protection in Microsoft Defender SmartScreen warns users if they type their work or school passwords in Notepad, WordPad, or M365 Office apps like OneNote, Word, Excel, etc.
+
+>[!NOTE]
+>This setting only applies to Microsoft Accounts (computer or browser login) while using Microsoft Windows 11 and not on-prem domain-joined accounts.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Saved passwords may be detected as false positives by Microsoft.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/WebThreatDefense/NotifyUnsafeApp
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Disabled. Enhanced Phishing Protection in Microsoft Defender SmartScreen won't warn users if they store their password in text editor apps. |
+| 1 | Enabled. Enhanced Phishing Protection in Microsoft Defender SmartScreen warns your users if they store their password in text editor apps. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Notify Unsafe App\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WebThreatDefense/NotifyUnsafeApp",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WTDS\Components:NotifyUnsafeApp
+```
+
+## 64.1.4 - 'Service Enabled' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether Enhanced Phishing Protection is in audit mode. This allows notifications to be sent to users regarding unsafe password events. Additionally, Enhanced Phishing Protection captures unsafe password entry events and sends diagnostic data through Microsoft Defender.
+
+>[!NOTE]
+>This setting only applies to Microsoft Accounts (computer or browser login) while using Microsoft Windows 11 and not on-prem domain-joined accounts.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/WebThreatDefense/ServiceEnabled
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 22H2 [10.0.22621] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Disabled. Enhanced Phishing Protection in Microsoft Defender SmartScreen is off and it won't capture events, send telemetry, or notify users. Additionally, your users are unable to turn it on. |
+| 1 | Enabled. Enhanced Phishing Protection in Microsoft Defender SmartScreen is enabled in audit mode and your users are unable to turn it off. |
+| X | Not Configured. Users can decide whether or not they will enable Enhanced Phishing Protection in Microsoft Defender SmartScreen.
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|10.5 Enable Anti-Exploitation Features||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|8.3 Enable Operating System Anti-Exploitation Features/ Deploy Anti-Exploit Technologies||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Service Enabled\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/WebThreatDefense/ServiceEnabled",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\WTDS\Components:ServiceEnabled
+```
+
+# 67 - System
