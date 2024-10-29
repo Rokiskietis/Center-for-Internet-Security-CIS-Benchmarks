@@ -11362,7 +11362,8 @@ HKLM\SYSTEM\CurrentControlSet\Control\Lsa:NoLMHash
 • Authenticate to computers that do not run Windows 2000, Windows Server 2003, or Windows XP
 • Authenticate to computers that are not in the domain
 
-The Network security: LAN Manager authentication level setting determines which challenge/response authentication protocol is used for network logons. This choice affects the level of authentication protocol used by clients, the level of session security negotiated, and the level of authentication accepted by servers.
+>[!NOTE]
+>The Network security: LAN Manager authentication level setting determines which challenge/response authentication protocol is used for network logons. This choice affects the level of authentication protocol used by clients, the level of session security negotiated, and the level of authentication accepted by servers.
 
 >[!TIP]
 >Automated Remedation
@@ -11597,7 +11598,7 @@ OMA-URI
 
 |Scope | Editions| Applicable OS |
 |---|---|---|
-|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|✔ Device|✔ Pro|✔ Windows Insider Preview|
 |❌ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
