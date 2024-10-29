@@ -12237,8 +12237,8 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| 0 | Allow both public and Private store. Users won't be able to view the retail catalog in the Microsoft Store, but they will be able to view apps in the private store. |
-| 1 | Only Private store is enabled. Users can access the retail catalog in the Microsoft Store.|
+| 0 | Allow both public and Private store. Users can access the retail catalog in the Microsoft Store.  |
+| 1 | Only Private store is enabled. Users won't be able to view the retail catalog in the Microsoft Store, but they will be able to view apps in the private store.|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
