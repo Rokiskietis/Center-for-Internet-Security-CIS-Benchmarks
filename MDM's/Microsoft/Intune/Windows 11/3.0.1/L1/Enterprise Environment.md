@@ -2,6 +2,8 @@
 
 ### Unicode to text: https://r12a.github.io/app-conversion/
 
+### CSP - https://learn.microsoft.com/en-us/windows/client-management/mdm/
+
 >[!IMPORTANT]
 >Fix Scripts: omaSettingBoolean if true/false, omaSettingInteger if 0/1/2 , omaSettingString if text
 
