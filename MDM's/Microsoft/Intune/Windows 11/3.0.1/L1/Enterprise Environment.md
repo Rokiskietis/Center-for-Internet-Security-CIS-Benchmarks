@@ -10955,6 +10955,1310 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters:RequireSecuritySignature
 ```
 
+## 45.17 - 'Microsoft network server: Digitally sign communications (if client agrees)' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether the SMB server will negotiate SMB packet signing with clients that request it. If no signing request comes from the client, a connection will be allowed without a signature if the Microsoft network server: Digitally sign communications (always) setting is not enabled.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Microsoft network server will negotiate SMB packet signing as requested by the client. That is, if packet signing has been enabled on the client, packet signing will be negotiated.
+
+>[!CAUTION]
+>Implementation of SMB signing may negatively affect performance, because each packet needs to be signed and verified. If these settings are enabled on a server that is performing multiple roles, such as a small business server that is serving as a Domain Controller, file server, print server, and application server performance may be substantially slowed. Additionally, if you configure computers to ignore all unsigned SMB communications, older applications and operating systems will not be able to connect. However, if you completely disable all SMB signing, computers will be vulnerable to session hijacking attacks.
 
 
-iki 36
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Microsoft network server: Digitally sign communications\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/MicrosoftNetworkServer_DigitallySignCommunicationsIfClientAgrees",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters:EnableSecuritySignature
+```
+
+## 45.18 - 'Network access: Do not allow anonymous enumeration of SAM accounts' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls the ability of anonymous users to enumerate the accounts in the Security Accounts Manager (SAM). If you enable this policy setting, users with anonymous connections will not be able to enumerate domain account user names on the systems in your environment. This policy setting also allows additional restrictions on anonymous connections.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network access: Do not allow anonymous enumeration of SAM accounts\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa:RestrictAnonymousSAM
+```
+
+## 45.19 - 'Network access: Do not allow anonymous enumeration of SAM accounts and shares' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls the ability of anonymous users to enumerate SAM accounts as well as shares. If you enable this policy setting, anonymous users will not be able to enumerate domain account user names and network share names on the systems in your environment.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>It will be impossible to establish trusts with Windows NT 4.0-based domains. Also, client computers that run older versions of the Windows operating system such as Windows NT 3.51 and Windows 95 will experience problems when they try to use resources on the server. Users who access file and print servers anonymously will be unable to list the shared network resources on those servers; the users will have to authenticate before they can view the lists of shared folders and printers. However, even with this policy setting enabled, anonymous users will have access to resources with permissions that explicitly include the built-in group, ANONYMOUS LOGON.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network access: Do not allow anonymous enumeration of SAM accounts and shares\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa:RestrictAnonymous
+```
+## 45.20 - 'Network access: Restrict anonymous access to Named Pipes and Shares' is set to 'Enabled'
+
+>[!NOTE]
+>When enabled, this policy setting restricts anonymous access to only those shares and pipes that are named in the Network access: Named pipes that can be accessed anonymously and Network access: Shares that can be accessed anonymously settings. This policy setting controls null session access to shares on your computers by adding RestrictNullSessAccess with the value 1 in the
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network access: Restrict anonymous access to Named Pipes and Shares\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_RestrictAnonymousAccessToNamedPipesAndShares",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters:RestrictNullSessAccess
+```
+
+## 45.21 - 'Network access: Restrict clients allowed to make remote calls to SAM' is set to 'Administrators: Remote Access: Allow'
+
+>[!NOTE]
+>This policy setting allows you to restrict remote RPC connections to SAM. 
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1709 [10.0.16299] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| O:BAG:BAD:(A;;RC;;;BA) | Custom Settings (Recommended) |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Network access: Restrict clients allowed to make remote calls to SAM\u0027 is set to \u0027Administrators: Remote Access: Allow\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_RestrictClientsAllowedToMakeRemoteCallsToSAM",
+            "value": "O:BAG:BAD:(A;;RC;;;BA)"
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_SZ value of O:BAG:BAD:(A;;RC;;;BA).
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa:restrictremotesam
+O:BAG:BAD:(A;;RC;;;BA)
+```
+
+## 45.22 - 'Network security: Allow Local System to use computer identity for NTLM' is set to 'Allow'
+
+>[!NOTE]
+>This policy setting determines whether Local System services that use Negotiate when reverting to NTLM authentication can use the computer identity.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Services running as Local System that use Negotiate when reverting to NTLM authentication will use the computer identity. This might cause some authentication requests between Windows operating systems to fail and log an error.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemToUseComputerIdentityForNTLM
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1809 [10.0.17763] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | 	Allow. |
+| 0 | 	Block. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network security: Allow Local System to use computer identity for NTLM\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowLocalSystemToUseComputerIdentityForNTLM",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa:UseMachineId
+```
+## 45.23 - 'Network Security: Allow PKU2U authentication requests' is set to 'Block'
+
+>[!NOTE]
+>This setting determines if online identities are able to authenticate to this computer
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowPKU2UAuthenticationRequests
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1809 [10.0.17763] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | 	Allow. |
+| 0 | 	Block. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.1 Establish and Maintain a Secure Configuration Process|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network Security: Allow PKU2U authentication requests\u0027 is set to \u0027Block\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowPKU2UAuthenticationRequests",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa\pku2u:AllowOnlineID
+```
+
+## 45.24 - 'Network security: Do not store LAN Manager hash value on next password change' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting determines whether the LAN Manager (LM) hash value for the new password is stored when the password is changed. The LM hash is relatively weak and prone to attack compared to the cryptographically stronger Microsoft Windows NT hash. Since LM hashes are stored on the local computer in the security database, passwords can then be easily compromised if the database is attacked.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | 	Enable. |
+| 0 | 	Disable. |
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.11 Encrypt Sensitive Data at Rest||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|16.4 Encrypt or Hash all Authentication Credentials||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network security: Do not store LAN Manager hash value on next password change\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_DoNotStoreLANManagerHashValueOnNextPasswordChange",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa:NoLMHash
+```
+
+## 45.25 - 'Network security: LAN Manager authentication level' is set to 'Send LM and NTLMv2 responses only. Refuse LM and NTLM'
+
+>[!NOTE]
+>LAN Manager (LM) was a family of early Microsoft client/server software (predating Windows NT) that allowed users to link personal computers together on a single network. LM network capabilities included transparent file and print sharing, user security features, and network administration tools. In Active Directory domains, the Kerberos protocol is the default authentication protocol. However, if the Kerberos protocol is not negotiated for some reason, Active Directory will use LM, NTLM, or NTLMv2. LAN Manager authentication includes the LM, NTLM, and NTLM version 2 (NTLMv2) variants, and is the protocol that is used to authenticate all Windows clients when they perform the following operations:
+• Join a domain
+• Authenticate between Active Directory forests
+• Authenticate to down-level domains
+• Authenticate to computers that do not run Windows 2000, Windows Server 2003, or Windows XP
+• Authenticate to computers that are not in the domain
+
+The Network security: LAN Manager authentication level setting determines which challenge/response authentication protocol is used for network logons. This choice affects the level of authentication protocol used by clients, the level of session security negotiated, and the level of authentication accepted by servers.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Clients use NTLMv2 authentication only and use NTLMv2 session security if the server supports it; Domain Controllers refuse LM and NTLM (accept only NTLMv2 authentication). Clients that do not support NTLMv2 authentication will not be able to authenticate in the domain and access domain resources by using LM and NTLM.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_LANManagerAuthenticationLevel
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Send LM and NTLM responses. |
+| 1 | Send LM and NTLM-use NTLMv2 session security if negotiated |
+| 2 | Send LM and NTLM responses only. |
+| 3 | Send LM and NTLMv2 responses only. |
+| 4 | Send LM and NTLMv2 responses only. Refuse LM. |
+| 5 | Send LM and NTLMv2 responses only. Refuse LM and NTLM. |
+
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network security: LAN Manager authentication level\u0027 is set to \u0027Send LM and NTLMv2 responses only. Refuse LM and NTLM\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_LANManagerAuthenticationLevel",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 5.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa:LmCompatibilityLevel
+```
+
+## 45.26 - 'Network security: Minimum session security for NTLM SSP based (including secure RPC) clients' is set to 'Require NTLM and 128-bit encryption'
+
+>[!NOTE]
+>This policy setting determines which behaviors are allowed by clients for applications using the NTLM Security Support Provider (SSP). The SSP Interface (SSPI) is used by applications that need authentication services. The setting does not modify how the authentication sequence works but instead require certain behaviors in applications that use the SSPI.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>NTLM connections will fail if NTLMv2 protocol and strong encryption (128-bit) are not both negotiated. Client applications that are enforcing these settings will be unable to communicate with older servers that do not support them.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | None. |
+| 524288 | Require NTLMv2 session security. |
+| 536870912 | Require 128-bit encryption. |
+| 537395200 | Require NTLM and 128-bit encryption.. |
+
+
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|12.5 Configure Monitoring Systems to Record Network Packets||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network security: Minimum session security for NTLM SSP based (including secure RPC) clients\u0027 is set to \u0027Require NTLM and 128-bit encryption\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedClients",
+            "value": 537395200
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 537395200.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0:NTLMMinClientSec
+```
+
+## 45.27 - 'Network security: Minimum session security for NTLM SSP based (including secure RPC) servers' is set to 'Require NTLM and 128-bit encryption'
+
+>[!NOTE]
+>This policy setting determines which behaviors are allowed by servers for applications using the NTLM Security Support Provider (SSP). The SSP Interface (SSPI) is used by applications that need authentication services. The setting does not modify how the authentication sequence works but instead require certain behaviors in applications that use the SSPI.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>NTLM connections will fail if NTLMv2 protocol and strong encryption (128-bit) are not both negotiated. Server applications that are enforcing these settings will be unable to communicate with older servers that do not support them.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | None. |
+| 524288 | Require NTLMv2 session security. |
+| 536870912 | Require 128-bit encryption. |
+| 537395200 | Require NTLM and 128-bit encryption.. |
+
+
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|3.10 Encrypt Sensitive Data in Transit||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|12.5 Configure Monitoring Systems to Record Network Packets||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network security: Minimum session security for NTLM SSP based (including secure RPC) servers\u0027 is set to \u0027Require NTLM and 128-bit encryption\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_MinimumSessionSecurityForNTLMSSPBasedServers",
+            "value": 537395200
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 537395200.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0:NTLMMinServerSec
+```
+
+## 45.28 - 'Network security: Restrict NTLM: Audit Incoming NTLM Traffic' is set to 'Enable auditing for all accounts'
+
+>[!NOTE]
+>This policy setting allows the auditing of incoming NTLM traffic. Events for this setting are recorded in the operational event log (e.g. Applications and Services Log\Microsoft\Windows\NTLM).
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The event log will contain information on incoming NTLM authentication traffic.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_RestrictNTLM_AuditIncomingNTLMTraffic
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Disable. |
+| 1 | Enable auditing for domain accounts. |
+| 2 | Enable auditing for all accounts. |
+
+
+ 
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Network security: Restrict NTLM: Audit Incoming NTLM Traffic\u0027 is set to \u0027Enable auditing for all accounts\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_RestrictNTLM_AuditIncomingNTLMTraffic",
+            "value": 2
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 2.
+HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MSV1_0:AuditReceivingNTLMTraffic
+```
+
+## 45.29 - 'User Account Control: Behavior of the elevation prompt for administrators' is set to 'Prompt for consent on the secure desktop' or higher
+
+>[!NOTE]
+>This policy setting controls the behavior of the elevation prompt for administrators.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>When an operation (including execution of a Windows binary) requires elevation of privilege, the user is prompted on the secure desktop to select either Permit or Deny. If the user selects Permit, the operation continues with the user's highest available privilege.
+
+>[!CAUTION]
+> Warning:
+Windows Autopilot - Policy Conflicts: This policy requires a reboot to apply. As a result, prompts may appear when modifying user account control (UAC) settings during the Out of the Box Experience (OOBE) using the device Enrollment Status Page (ESP). Increased prompts are more likely if the device reboots after policies are applied. To work around this issue, the policies can be targeted to users instead of devices so that they apply later in the process. An exception to this recommendation may be needed if Windows AutoPilot is used.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministratorProtection
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Prompt for credentials on the secure desktop. |
+| 2 | Prompt for consent on the secure desktop |
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|0|0.0 Explicitly Not Mapped||||Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027User Account Control: Behavior of the elevation prompt for administrators\u0027 is set to \u0027Prompt for consent on the secure desktop\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForAdministratorProtection",
+            "value": 2
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1 or 2.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:ConsentPromptBehaviorAdmin
+```
+
+## 45.30 - 'User Account Control: Behavior of the elevation prompt for standard users' is set to 'Automatically deny elevation requests'
+
+>[!NOTE]
+>This policy setting controls the behavior of the elevation prompt for standard users.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>When an operation requires elevation of privilege, a configurable access denied error message is displayed. An enterprise that is running desktops as standard user may choose this setting to reduce help desk calls.
+
+>[!CAUTION]
+>Note: With this setting configured as recommended, the default error message displayed when a user attempts to perform an operation or run a program requiring privilege elevation (without Administrator rights) is "This program will not run. This program is blocked by group policy. For more information, contact your system administrator." Some users who are not used to seeing this message may believe that the operation or program they attempted to run is specifically blocked by group policy, as that is what the message seems to imply. This message may therefore result in user questions as to why that specific operation/program is blocked, when in fact, the problem is that they need to perform the operation or run the program with an Administrative account (or "Run as Administrator" if it is already an Administrator account), and they are not doing that.
+
+>[!CAUTION]
+>Note #2: When using third-party remote support tools, this recommendation could prevent Administrators from entering their administrative credentials. In this case, an exception to this recommendation will be needed.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Automatically deny elevation requests. |
+| 1 | Prompt for credentials on the secure desktop. |
+| 3 |Prompt for credentials. | 
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|0|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027User Account Control: Behavior of the elevation prompt for standard users\u0027 is set to \u0027Automatically deny elevation requests\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_BehaviorOfTheElevationPromptForStandardUsers",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:ConsentPromptBehaviorUser
+```
+
+## 45.31 - 'User Account Control: Detect application installations and prompt for elevation' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls the behavior of application installation detection for the computer.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>When an application installation package is detected that requires elevation of privilege, the user is prompted to enter an administrative user name and password. If the user enters valid credentials, the operation continues with the applicable privilege.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_DetectApplicationInstallationsAndPromptForElevation
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|0|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027User Account Control: Detect application installations and prompt for elevation\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_DetectApplicationInstallationsAndPromptForElevation",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:EnableInstallerDetection
+```
+
+## 45.32 - 'User Account Control: Only elevate UIAccess applications that are installed in secure locations' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls whether applications that request to run with a User Interface Accessibility (UIAccess) integrity level must reside in a secure location in the file system. Secure locations are limited to the following:
+•…\Program Files\, including subfolders
+•…\Windows\System32\
+•…\Program Files (x86)\, including subfolders (for 64-bit versions of Windows)
+
+>[!NOTE]
+> Windows enforces a public key infrastructure (PKI) signature check on any interactive application that requests to run with a UIAccess integrity level regardless of the state of this security setting.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Disabled: Application runs with UIAccess integrity even if it doesn't reside in a secure location. |
+| 1 | Enabled: Application runs with UIAccess integrity only if it resides in secure location. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|0|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027User Account Control: Only elevate UIAccess applications that are installed in secure locations\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_OnlyElevateUIAccessApplicationsThatAreInstalledInSecureLocations",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:EnableSecureUIAPaths
+```
+
+## 45.33 - 'User Account Control: Use Admin Approval Mode' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls the behavior of Admin Approval Mode for the built-in Administrator account.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The built-in Administrator account uses Admin Approval Mode. Users that log on using the local Administrator account will be prompted for consent whenever a program requests an elevation in privilege, just like any other user would.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_UseAdminApprovalMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|0|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027User Account Control: Use Admin Approval Mode\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_UseAdminApprovalMode",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:FilterAdministratorToken
+```
+
+## 45.34 - 'User Account Control: Switch to the secure desktop when prompting for elevation' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls whether the elevation request prompt is displayed on the interactive user's desktop or the secure desktop.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|0|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027User Account Control: Switch to the secure desktop when prompting for elevation\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_SwitchToTheSecureDesktopWhenPromptingForElevation",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:PromptOnSecureDesktop
+```
+
+## 45.35 - 'User Account Control: Run all administrators in Admin Approval Mode' is set to 'Enabled
+
+>[!NOTE]
+>This policy setting controls the behavior of all User Account Control (UAC) policy settings for the computer. If you change this policy setting, you must restart your computer.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None. Users and administrators will need to learn to work with UAC prompts and adjust their work habits to use least privilege operations.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|0|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027User Account Control: Run all administrators in Admin Approval Mode\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_RunAllAdministratorsInAdminApprovalMode",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:PromptOnSecureDesktopHKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:EnableLUA
+```
+
+## 45.36 - 'User Account Control: Virtualize file and registry write failures to per-user locations' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls whether application write failures are redirected to defined registry and file system locations. This policy setting mitigates applications that run as administrator and write run-time application data to:
+•%ProgramFiles%
+•%windir%
+•%windir%\System32
+•HKLM\SOFTWARE
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None. 
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enable. |
+| 0 | Disable. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|0|0.0 Explicitly Not Mapped||||Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027User Account Control: Virtualize file and registry write failures to per-user locations\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:EnableVirtualization
+```
+# 48 - Microsoft App Store
+
+## 48.1 - 'Allow apps from the Microsoft app store to auto update' is set to 'Allowed'
+
+>[!NOTE]
+>This setting enables or disables the automatic download and installation of Microsoft Store app updates.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None. 
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/AllowAppStoreAutoUpdate
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed. |
+| 1 | Allowed. |
+| 2 | Not configured. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|7.3 Perform Automated Operating System Patch Management|:green_circle:|:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow apps from the Microsoft app store to auto update\u0027 is set to \u0027Allowed\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/AllowAppStoreAutoUpdate",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\ApplicationManagement:AllowAppStoreAutoUpdate_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 1.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\ApplicationManagement:AllowAppStoreAutoUpdate
+```
+
+## 48.2 - 'Allow Game DVR' is set to 'Block'
+
+>[!NOTE]
+>This setting enables or disables the Windows Game Recording and Broadcasting features.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows Game Recording will not be allowed.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/AllowGameDVR
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Not allowed. |
+| 1 | Allowed. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow apps from the Microsoft app store to auto update\u0027 is set to \u0027Allowed\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/AllowGameDVR",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the following registry location and note the WinningProvider GUID. This value confirms under which User GUID the policy is set.
+HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\ApplicationManagement:AllowGameDVR_WinningProvider
+
+Navigate to the following registry location and confirm the value is set to 0.
+HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\ApplicationManagement:AllowGameDVR
+```
+
+## 48.4 - 'MSI Allow user control over installs' is set to 'Disabled'
+
+>[!NOTE]
+>This setting controls whether users are permitted to change installation options that typically are available only to system administrators. The security features of Windows Installer normally prevent users from changing installation options that are typically reserved for system administrators, such as specifying the directory to which files are installed. If Windows Installer detects that an installation package has permitted the user to change a protected option, it stops the installation and displays a message. These security features operate only when the installation program is running in a privileged security context in which it has access to directories denied to the user.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/MSIAllowUserControlOverInstall
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Disabled. The security features of Windows Installer prevent users from changing installation options typically reserved for system administrators, such as specifying the directory to which files are installed. |
+| 1 | Enabled. Some of the security features of Windows Installer are bypassed. It permits installations to complete that otherwise would be halted due to a security violation. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||||Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027MSI Allow user control over installs\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/MSIAllowUserControlOverInstall",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer:EnableUserControl
+```
+
+## 48.5 - 'MSI Always install with elevated privileges' is set to 'Disabled'
+
+>[!NOTE]
+>This setting controls whether or not Windows Installer should use system permissions when it installs any program on the system
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+>[!CAUTION]
+>Skilled users can take advantage of the permissions this policy setting grants to change their privileges and gain permanent access to restricted files and folders. Note that the User Configuration version of this policy setting isn't guaranteed to be secure.
+
+```
+OMA-URI 
+./User/Vendor/MSFT/Policy/Config/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges
+```
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Disabled. The system applies the current user's permissions when it installs programs that a system administrator doesn't distribute or offer. |
+| 1 | Enabled. Privileges are extended to all programs. These privileges are usually reserved for programs that have been assigned to the user (offered on the desktop), assigned to the computer (installed automatically), or made available in Add or Remove Programs in Control Panel. This profile setting lets users install programs that require access to directories that the user might not have permission to view or change, including directories on highly restricted computers.|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||||Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027MSI Always install with elevated privileges\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/MSIAlwaysInstallWithElevatedPrivileges",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer:AlwaysInstallElevated
+```
+
+## 48.7 - 'Require Private Store Only' is set to 'Only Private store is enabled'
+
+>[!NOTE]
+>This policy setting denies access to the retail catalog in the Microsoft Store, but displays the private store.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users will not be able to view the retail catalog in the Microsoft Store, but they will be able to view apps in the private store.
+
+
+```
+OMA-URI 
+./User/Vendor/MSFT/Policy/Config/ApplicationManagement/RequirePrivateStoreOnly
+```
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/RequirePrivateStoreOnly
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|❌ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |❌ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Allow both public and Private store. Users won't be able to view the retail catalog in the Microsoft Store, but they will be able to view apps in the private store. |
+| 1 | Only Private store is enabled. Users can access the retail catalog in the Microsoft Store.|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|2.5 Allowlist Authorized Software||:orange_circle:|:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Require Private Store Only\u0027 is set to \u0027Only Private store is enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/RequirePrivateStoreOnly",
+            "value": 0
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\WindowsStore:RequirePrivateStoreOnly
+```
+
+# 58 - Privacy
