@@ -238,7 +238,7 @@ systems. Enabling this policy significantly reduces that risk.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -511,7 +511,7 @@ remotely readable by the Authenticated Users group.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 
 ```
@@ -730,7 +730,7 @@ computer releases its NetBIOS name when it receives a name-release request.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -783,7 +783,7 @@ system path.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI
@@ -1430,7 +1430,7 @@ elevation prompt when users create a new printer connection using Point and Prin
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -1773,7 +1773,7 @@ disabled, this setting has no effect and all boot-start drivers are initialized.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -1948,7 +1948,7 @@ Controllers.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -2254,7 +2254,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\System:DontEnumerateConnectedUsers
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -2407,7 +2407,7 @@ PIN.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -2565,7 +2565,7 @@ from sleep.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -2615,7 +2615,7 @@ from sleep.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 ```
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/Power/RequirePasswordWhenComputerWakesOnBattery
@@ -2668,7 +2668,7 @@ although they can still respond to user assistance requests.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 ```
 OMA-URI 
 ./Device/Vendor/MSFT/Policy/Config/RemoteAssistance/UnsolicitedRemoteAssistance
@@ -2848,7 +2848,7 @@ serious problems and is not recommended.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -2954,7 +2954,7 @@ requests from other systems (NTP Clients).
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -3064,7 +3064,7 @@ not preserving the zone information, Windows cannot make proper risk assessments
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI (User)
@@ -3396,7 +3396,7 @@ attempts to elevate a running application.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -3503,7 +3503,7 @@ size
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -3622,7 +3622,7 @@ size.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -3740,7 +3740,7 @@ size.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -3860,7 +3860,7 @@ size.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -4033,7 +4033,7 @@ function without terminating Explorer.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -4085,7 +4085,7 @@ termination on corruption is active will prevent this.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -4141,7 +4141,7 @@ to leave this protocol in the protected mode to increase the security of Windows
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -4310,7 +4310,7 @@ Protection Service. This setting can only be set by Group Policy.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -4364,7 +4364,7 @@ and other potentially unwanted software
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -4831,7 +4831,7 @@ encryption) is not recommended. This policy does not apply to SSL encryption.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -4884,7 +4884,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:MinEncryptionLevel
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -5230,7 +5230,7 @@ authentication traffic will still be safely encrypted.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -5281,7 +5281,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowBasic
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -5385,7 +5385,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client:AllowDigest
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -5436,7 +5436,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WinRM\Service:AllowBasic
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -7496,7 +7496,7 @@ Antivirus
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -7709,7 +7709,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\Policy Manager:AllowRealtimeMo
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -9013,7 +9013,7 @@ this profile.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -9064,7 +9064,7 @@ inbound firewall rule
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -9386,7 +9386,7 @@ this profile
 >Automated Remedation
 
 >[!CAUTION]
->None.
+No Impact.
 
 ```
 OMA-URI 
@@ -9438,7 +9438,7 @@ inbound firewall rule.
 >Automated Remedation
 
 >[!CAUTION]
->None.
+No Impact.
 
 ```
 OMA-URI 
@@ -9758,7 +9758,7 @@ this profile.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -9913,7 +9913,7 @@ inbound firewall rule.
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -10378,7 +10378,7 @@ XXX
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -10880,7 +10880,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\LanmanWorkstation\Parameters:RequireSecur
 >Automated Remedation
 
 >[!CAUTION]
->None.
+No Impact.
 
 ```
 OMA-URI 
@@ -10930,7 +10930,7 @@ It is recommended that you disable this policy setting unless there is a strong 
 >Automated Remedation
 
 >[!CAUTION]
->None.
+No Impact.
 
 ```
 OMA-URI 
@@ -11087,7 +11087,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters:EnableSecuritySig
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 
 ```
@@ -11185,7 +11185,7 @@ HKLM\SYSTEM\CurrentControlSet\Control\Lsa:RestrictAnonymous
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -11234,7 +11234,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\LanManServer\Parameters:RestrictNullSessA
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -11331,7 +11331,7 @@ HKLM\SYSTEM\CurrentControlSet\Control\Lsa:UseMachineId
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -11381,7 +11381,7 @@ HKLM\SYSTEM\CurrentControlSet\Control\Lsa\pku2u:AllowOnlineID
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -11822,7 +11822,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:EnableInstallerDe
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -11920,7 +11920,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:FilterAdministrat
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -11969,7 +11969,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:PromptOnSecureDes
 >Automated Remedation
 
 >[!CAUTION]
->None. Users and administrators will need to learn to work with UAC prompts and adjust their work habits to use least privilege operations.
+No Impact. Users and administrators will need to learn to work with UAC prompts and adjust their work habits to use least privilege operations.
 
 ```
 OMA-URI 
@@ -12022,7 +12022,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:PromptOnSecureDes
 >Automated Remedation
 
 >[!CAUTION]
->None. 
+No Impact. 
 
 ```
 OMA-URI 
@@ -12072,7 +12072,7 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System:EnableVirtualizat
 >Automated Remedation
 
 >[!CAUTION]
->None. 
+No Impact. 
 
 ```
 OMA-URI 
@@ -12179,7 +12179,7 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\Applicatio
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
@@ -12229,7 +12229,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer:EnableUserControl
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 >[!CAUTION]
 >Skilled users can take advantage of the permissions this policy setting grants to change their privileges and gain permanent access to restricted files and folders. Note that the User Configuration version of this policy setting isn't guaranteed to be secure.
@@ -12451,7 +12451,7 @@ HKLM\SOFTWARE\Microsoft\PolicyManager\Providers\{GUID}\Default\Device\Privacy:Le
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 
 ```
@@ -12728,7 +12728,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WTDS\Components:NotifyUnsafeApp
 >Automated Remedation
 
 >[!CAUTION]
->None
+No Impact
 
 ```
 OMA-URI 
