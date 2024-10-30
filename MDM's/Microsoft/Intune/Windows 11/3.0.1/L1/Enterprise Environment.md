@@ -12771,3 +12771,1281 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\WTDS\Components:ServiceEnabled
 ```
 
 # 67 - System
+
+## 67.1 - 'Allow Telemetry' is set to 'Basic'
+
+>[!NOTE]
+>This policy setting determines the amount of diagnostic and usage data reported to Microsoft
+
+>[!NOTE]
+>The Configure diagnostic data opt-in settings user interface group policy can be used to prevent end users from changing their data collection settings.
+
+>[!NOTE]
+>Enhanced diagnostic data setting is not available on Windows 11 and Windows Server 2022 and has been replaced with policies that can control the amount of optional diagnostic data that is sent.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Note that setting values of 0 or 1 will degrade certain experiences on the device.
+
+```
+OMA-URI
+./User/Vendor/MSFT/Policy/Config/System/AllowTelemetry
+```
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/System/AllowTelemetry
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|✔ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 0 | Security. Information that's required to help keep Windows more secure, including data about the Connected User Experience and Telemetry component settings, the Malicious Software Removal Tool, and Windows Defender.|
+| 0 | Note: This value is only applicable to Windows 10 Enterprise, Windows 10 Education, Windows 10 Mobile Enterprise, Windows 10 IoT Core (IoT Core), and Windows Server 2016. Using this setting on other devices is equivalent to setting the value of 1.
+| 1 | Basic. Basic device info, including: quality-related data, app compatibility, app usage data, and data from the Security level. |
+| 3 | Full. All data necessary to identify and help to fix problems, plus data from the Security, Basic, and Enhanced levels.|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Allow Telemetry\u0027 is set to \u0027Basic\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/System/AllowTelemetry",
+            "value": 3
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 0 or 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection:AllowTelemetry_PolicyManager
+```
+
+## 67.4 - 'Enable OneSettings Auditing' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls whether Windows records attempts to connect with the OneSettings service to the Event Log.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows will record attempts to connect with the OneSettings service to the Applications and Services Logs\Microsoft\Windows\Privacy-Auditing\Operational Event Log channel.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/System/EnableOneSettingsAuditing
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1507 [10.0.10240] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enabled. Windows will record attempts to connect with the OneSettings service to the Microsoft\Windows\Privacy-Auditing\Operational EventLog channel.|
+| 0 | Disabled. Windows won't record attempts to connect with the OneSettings service to the EventLog. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|8.5 Collect Detailed Audit Logs||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|6.3 Enable Detailed Logging||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Enable OneSettings Auditing\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/System/EnableOneSettingsAuditing",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection:EnableOneSettingsAuditing
+```
+
+## 67.5 - 'Limit Diagnostic Log Collection' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting controls whether additional diagnostic logs are collected when more information is needed to troubleshoot a problem on the device.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Diagnostic logs and information such as crash dumps will not be collected for transmission to Microsoft.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/System/LimitDiagnosticLogCollection
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 21H2 [10.0.22000] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enabled. diagnostic logs won't be collected.|
+| 0 | Disabled. We(Microsoft) may occasionally collect diagnostic logs if the device has been configured to send optional diagnostic data. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Limit Diagnostic Log Collection\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/System/LimitDiagnosticLogCollection",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection:LimitDiagnosticLogCollection
+```
+
+## 67.6 - 'Limit Dump Collection' is set to 'Enabled'
+
+>[!NOTE]
+>This policy setting limits the type of memory dumps that can be collected when more information is needed to troubleshoot a problem.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows Error Reporting is limited to sending kernel mini and user mode triage memory dumps, reducing the risk of sending sensitive information to Microsoft.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/System/LimitDumpCollection
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 21H2 [10.0.22000] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 1 | Enabled. Windows Error Reporting is limited to sending kernel mini dumps and user mode triage dumps.|
+| 0 | Disabled. We(Microsoft) may occasionally collect full or heap dumps if the user has opted to send optional diagnostic data. |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|0.0 Explicitly Not Mapped||:orange_circle:|:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Limit Dump Collection\u0027 is set to \u0027Enabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/System/LimitDumpCollection",
+            "value": 1
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 1.
+HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection:LimitDumpCollection
+```
+
+# 69 - System Services
+
+## 69.3 - 'Computer Browser (Browser)' is set to 'Disabled' or 'Not Installed' 
+
+>[!NOTE]
+>Maintains an updated list of computers on the network and supplies this list to computers designated as browsers.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The list of computers and their shares on the network will not be updated or maintained.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureComputerBrowserServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Computer Browser (Browser)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureComputerBrowserServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\Browser:Start
+```
+
+## 69.6 - 'IIS Admin Service (IISADMIN)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+>Enables the server to administer the IIS metabase. The IIS metabase stores configuration for the SMTP and FTP services.
+
+>[!NOTE]
+>This service is not installed by default. It is supplied with Windows, but is installed by enabling an optional Windows feature (Internet Information Services).
+
+>[!NOTE]
+>An organization may choose to selectively grant exceptions to web developers to allow IIS (or another web server) on their workstation, in order for them to locally test & develop web pages. However, the organization should track those machines and ensure the security controls and mitigations are kept up to date, to reduce risk of compromise.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>IIS will not function, including Web, SMTP or FTP services.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureIISAdminServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027IIS Admin Service (IISADMIN)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureIISAdminServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\IISADMIN:Start
+```
+
+## 69.7 - 'Infrared monitor service (irmon)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+> Detects other Infrared devices that are in range and launches the file transfer application.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Infrared file transfers will be prevented from working.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureInfraredMonitorServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Infrared monitor service (irmon)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureInfraredMonitorServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\irmon:Start
+```
+
+## 69.8 - 'Internet Connection Sharing (ICS) (SharedAccess)' is set to 'Disabled'
+
+>[!NOTE]
+>Provides network access translation, addressing, name resolution and/or intrusion prevention services for a home or small office network.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Internet Connection Sharing (ICS) will not be available. Wireless connections using Miracast will also be prevented.
+
+>[!CAUTION]
+>This service is a prerequisite for the Microsoft Defender Application Guard feature in Windows 10, so an exception should be made to this recommendation if intending to use Microsoft Defender Application Guard.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureInternetConnectionSharingServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Internet Connection Sharing (ICS) (SharedAccess)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureInternetConnectionSharingServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4.
+HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess:Start
+```
+
+## 69.10 - 'LxssManager (LxssManager)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+>The LXSS Manager service supports running native ELF binaries. The service provides the infrastructure necessary for ELF binaries to run on Windows.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Linux Subsystem will not be available, and native ELF binaries will no longer run.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureLxssManagerServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027LxssManager (LxssManager)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureLxssManagerServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\LxssManager:Start
+```
+
+## 69.11 - 'Microsoft FTP Service (FTPSVC)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+>Enables the server to be a File Transfer Protocol (FTP) server.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The computer will not function as an FTP server.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureMicrosoftFTPServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Microsoft FTP Service (FTPSVC)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureMicrosoftFTPServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\FTPSVC:Start
+```
+
+## 69.13 - 'OpenSSH SSH Server (sshd)' is set to 'Disabled' or 'Not Installed'
+
+>[!IMPORTANT]
+>Remediation of this service is currently not possible through Settings Catalog or a custom profile OMA-URI.
+
+>[!NOTE]
+>SSH protocol based service to provide secure encrypted communications between two untrusted hosts over an insecure network.
+
+>[!TIP]
+>Manual Remediation
+
+>[!CAUTION]
+>The workstation will not be permitted to be a SSH host server.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureMicrosoftFTPServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027  \u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "xXx",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist
+HKLM\SYSTEM\CurrentControlSet\Services\sshd:Start
+```
+
+## 69.24 - 'Remote Procedure Call (RPC) Locator (RpcLocator)' is set to 'Disabled'
+
+>[!NOTE]
+>In Windows 2003 and older versions of Windows, the Remote Procedure Call (RPC) Locator service manages the RPC name service database. In Windows Vista or newer versions of Windows, this service does not provide any functionality and is present for application compatibility.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>No impact, unless an old, legacy application requires it.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureRemoteProcedureCallLocatorServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Remote Procedure Call (RPC) Locator (RpcLocator)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureRemoteProcedureCallLocatorServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4.
+HKLM\SYSTEM\CurrentControlSet\Services\RpcLocator:Start
+```
+
+## 69.26 - 'Routing and Remote Access (RemoteAccess)' is set to 'Disabled'
+
+>[!NOTE]
+>Offers routing services to businesses in local area and wide area network environments.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The computer will not be able to be configured as a Windows router between different connections.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureRoutingAndRemoteAccessServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Routing and Remote Access (RemoteAccess)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureRoutingAndRemoteAccessServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4.
+HKLM\SYSTEM\CurrentControlSet\Services\RemoteAccess:Start
+```
+
+## 69.28 - 'Simple TCP/IP Services (simptcp)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+>Supports the following TCP/IP services: Character Generator, Daytime, Discard, Echo, and Quote of the Day.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Simple TCP/IP services (Character Generator, Daytime, Discard, Echo and Quote of the Day) will not be available.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureSimpleTCPIPServicesStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Simple TCP/IP Services (simptcp)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureSimpleTCPIPServicesStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\simptcp:Start
+```
+
+## 69.30 - 'Special Administration Console Helper (sacsvr)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+>This service allows administrators to remotely access a command prompt using Emergency Management Services.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Users will not have access to a remote command prompt using Emergency Management Services.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureSpecialAdministrationConsoleHelperServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Special Administration Console Helper (sacsvr)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureSpecialAdministrationConsoleHelperServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\sacsvr:Start
+```
+
+## 69.31 - 'SSDP Discovery (SSDPSRV)' is set to 'Disabled'
+
+>[!NOTE]
+>Discovers networked devices and services that use the SSDP discovery protocol, such as UPnP devices. Also announces SSDP devices and services running on the local computer.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>SSDP-based devices will not be discovered.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureSSDPDiscoveryServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027SSDP Discovery (SSDPSRV)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureSSDPDiscoveryServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\SSDPSRV:Start
+```
+
+## 69.32 - 'UPnP Device Host (upnphost)' is set to 'Disabled'
+
+>[!NOTE]
+>Allows UPnP devices to be hosted on this computer.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Any hosted UPnP devices will stop functioning and no additional hosted devices can be added.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureUPnPDeviceHostServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027UPnP Device Host (upnphost)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureUPnPDeviceHostServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\upnphost:Start
+```
+
+## 69.33 - 'Web Management Service (WMSvc)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+>The Web Management Service enables remote and delegated management capabilities for administrators to manage for the Web server, sites and applications present on the machine.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Remote web-based management of IIS will not be available.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureWebManagementServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027Web Management Service (WMSvc)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureWebManagementServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\WMSvc:Start
+```
+
+## 69.36 - 'Windows Media Player Network Sharing Service (WMPNetworkSvc)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+>Shares Windows Media Player libraries to other networked players and media devices using Universal Plug and Play.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Windows Media Player libraries will not be shared over the network to other devices and systems.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureWindowsMediaPlayerNetworkSharingServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027 Windows Media Player Network Sharing Service (WMPNetworkSvc)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureWindowsMediaPlayerNetworkSharingServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\WMPNetworkSvc:Start
+```
+
+## 69.37 - 'Windows Mobile Hotspot Service (icssvc)' is set to 'Disabled'
+
+>[!NOTE]
+>Provides the ability to share a cellular data connection with another device..
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>The Windows Mobile Hotspot feature will not be available.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureWindowsMobileHotspotServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027 Windows Mobile Hotspot Service (icssvc)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureWindowsMobileHotspotServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\icssvc:Start
+```
+
+## 69.41 - 'World Wide Web Publishing Service (W3SVC)' is set to 'Disabled' or 'Not Installed'
+
+>[!NOTE]
+>Provides Web connectivity and administration through the Internet Information Services Manager.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>IIS Web Services will not function.
+
+```
+OMA-URI (Check if not fails)
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureWorldWideWebPublishingServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 11, version 24H2 [10.0.26100] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027 World Wide Web Publishing Service (W3SVC)\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureWorldWideWebPublishingServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\W3SVC:Start
+```
+
+## 69.42 - 'Xbox Accessory Management Service (XboxGipSvc)' is set to 'Disabled'
+
+>[!NOTE]
+>This service manages connected Xbox Accessories.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Connected Xbox accessories may not function.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureXboxAccessoryManagementServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027 Xbox Accessory Management Service (XboxGipSvc) \u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureXboxAccessoryManagementServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\XboxGipSvc:Start
+```
+
+## 69.43 - 'Xbox Live Auth Manager (XblAuthManager)' is set to 'Disabled'
+
+>[!NOTE]
+>Provides authentication and authorization services for interacting with Xbox Live.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Connections to Xbox Live may fail and applications that interact with that service may also fail.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027 Xbox Live Auth Manager (XblAuthManager) \u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureXboxLiveAuthManagerServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\XblAuthManager:Start
+```
+
+## 69.44 - 'Xbox Live Game Save (XblGameSave)' is set to 'Disabled'
+
+>[!NOTE]
+>This service syncs save data for Xbox Live save enabled games.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Game save data will not upload to or download from Xbox Live.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureXboxLiveGameSaveServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027 Xbox Live Game Save (XblGameSave) \u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureXboxLiveGameSaveServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\XblGameSave:Start
+```
+
+## 69.45 - 'Xbox Live Networking Service (XboxNetApiSvc)' is set to 'Disabled'
+
+>[!NOTE]
+>This service supports the Windows.Networking.XboxLive application programming interface.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Connections to Xbox Live may fail and applications that interact with that service may also fail.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| 2 | Automatic(2)|
+| 3 | Manual(3) |
+| 4 | Disabled(4) |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|4.8 Uninstall or Disable Unnecessary Services on Enterprise Assets and Software||:orange_circle:|:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "displayName": "\u0027 Xbox Live Networking Service (XboxNetApiSvc) \u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/SystemServices/ConfigureXboxLiveNetworkingServiceStartupMode",
+            "value": 4
+        },
+```
+
+```
+Audit:
+Navigate to the UI Path articulated in the Remediation section and confirm it is set as prescribed. This group policy setting is backed by the following registry location with a REG_DWORD value of 4 or that the key does not exist.
+HKLM\SYSTEM\CurrentControlSet\Services\XboxNetApiSvc:Start
+```
+
+#74 - User Rights
+
