@@ -14047,5 +14047,5 @@ Navigate to the UI Path articulated in the Remediation section and confirm it is
 HKLM\SYSTEM\CurrentControlSet\Services\XboxNetApiSvc:Start
 ```
 
-#74 - User Rights
+# 74 - User Rights
 
