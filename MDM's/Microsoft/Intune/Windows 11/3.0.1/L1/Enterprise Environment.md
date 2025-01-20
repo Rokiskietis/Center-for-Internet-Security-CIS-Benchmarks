@@ -14254,3 +14254,4 @@ Audit:
 Navigate to the Local Security Policy and confirm it is set as prescribed.
 Security Settings\Local Policies\User Rights Assignment\Allow log on locally
 ```
+

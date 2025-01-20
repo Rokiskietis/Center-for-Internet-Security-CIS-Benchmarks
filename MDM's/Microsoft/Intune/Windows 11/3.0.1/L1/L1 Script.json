@@ -1,0 +1,19 @@
+{
+    "@odata.type": "#microsoft.graph.windows10CustomConfiguration",
+    "roleScopeTagIds": [
+        "0"
+    ],
+    "supportsScopeTags": true,
+    "deviceManagementApplicabilityRuleOsEdition": null,
+    "deviceManagementApplicabilityRuleOsVersion": null,
+    "deviceManagementApplicabilityRuleDeviceMode": null,
+    "displayName": "Windows 10/11 - Intune Security - Level 1",
+    "omaSettings": [
+       {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Allow Local Log On \u0027 is set to \u0027 Administrators, Users\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/AllowLocalLogOn",
+            "value": "AdministratorsUsers"
+        }
+    ]
+}
