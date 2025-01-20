@@ -14180,7 +14180,7 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| \(<![CDATA[]]>) | No One (Recommended)|
+| \(\<\!\[CDATA[]]>) | No One (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
