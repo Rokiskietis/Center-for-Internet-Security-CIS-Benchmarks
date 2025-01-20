@@ -14075,7 +14075,7 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| \(<![CDATA[]]>) | No One (Blank)|
+| \(\<\!\[CDATA[]]>) | No One (Blank)|
 
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
