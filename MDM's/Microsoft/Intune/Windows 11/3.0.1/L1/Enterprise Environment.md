@@ -14049,3 +14049,208 @@ HKLM\SYSTEM\CurrentControlSet\Services\XboxNetApiSvc:Start
 
 # 74 - User Rights
 
+## 74.1 - 'Access Credential Manager As Trusted Caller' is set to 'No One'
+
+>[!NOTE]
+>This security setting is used by Credential Manager during Backup and Restore. No accounts should have this user right, as it is only assigned to Winlogon. Users' saved credentials might be compromised if this user right is assigned to other entities.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/AccessCredentialManagerAsTrustedCaller
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| (<![CDATA[]]>) | No One (Blank)|
+
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+|7|4.8 Log and Alert on Changes to Administrative Group Membership||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Access Credential Manager As Trusted Caller \u0027 is set to \u0027No One\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/AccessCredentialManagerAsTrustedCaller",
+            "value": "\u003c![CDATA[]]\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Access Credential Manager as a trusted caller
+```
+
+## 74.2 - 'Access From Network' is set to 'Administrators, Remote Desktop Users'
+
+>[!NOTE]
+>This policy setting allows other users on the network to connect to the computer and is required by various network protocols that include Server Message Block (SMB)-based protocols, NetBIOS, Common Internet File System (CIFS), and Component Object Model Plus (COM+).
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Note: If your organization is using Microsoft Defender for Identity (formerly Azure Advanced Threat Protection (Azure ATP)), the (organization-named) Defender for Identity Directory Service Account (DSA), will also need to be granted the same Access from network User Right Assignment.
+
+>[!CAUTION]
+>If you remove the Access this computer from the network user right on Domain Controllers for all users, no one will be able to log on to the domain or use network resources. If you remove this user right on Member Servers, users will not be able to connect to those servers through the network. Successful negotiation of IPsec connections requires that the initiating machine has this right, therefore if using IPsec, it is recommended that it be assigned to the Authenticated Users group. If you have installed optional components such as ASP.NET or Internet Information Services (IIS), you may need to assign this user right to additional accounts that are required by those components. It is important to verify that authorized users are assigned this user right for the computers they need to access the network.
+
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/AccessFromNetwork
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| Administrators, Backup Operators, Everyone, Users | Default Settings|
+| Administrators, Remote Desktop Users | Recommended Settings |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+|7|9.2 Ensure Only Approved Ports, Protocols and Services Are Running||:orange_circle:|:large_blue_circle:|Level - 1|
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Access From Network \u0027 is set to \u0027Administrators,Remote Desktop Users\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/AccessFromNetwork",
+            "value": "AdministratorsRemote Desktop Users"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Access this computer from the network
+```
+
+## 74.3 - 'Act As Part Of The Operating System' is set to 'No One'
+
+>[!NOTE]
+>This policy setting allows a process to assume the identity of any user and thus gain access to the resources that the user is authorized to access.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Note: This user right is considered a "sensitive privilege" for the purposes of auditing. Assigning user right can be a security risk. Only assign user right to trusted users.
+
+>[!CAUTION]
+>There should be little or no impact because the Act as part of the operating system user right is rarely needed by any accounts other than the Local System account, which implicitly has this right.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/ActAsPartOfTheOperatingSystem
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| (<![CDATA[]]>) | No One (Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Act As Part Of The Operating System \u0027 is set to \u0027 No One\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/ActAsPartOfTheOperatingSystem",
+            "value": "\u003c![CDATA[]]\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Act as part of the operating system
+```
+
+## 74.4 - 'Allow Local Log On' is set to 'Administrators, Users'
+
+>[!NOTE]
+>This policy setting determines which users can interactively log on to computers in your environment. Logons that are initiated by pressing the CTRL+ALT+DEL key sequence on the client computer keyboard require this user right. Users who attempt to log on through Terminal Services / Remote Desktop Services or IIS also require this user right.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Note: The Guest account is also assigned this user right by default. Although this account is disabled by default, it's recommended that you configure this setting through Group Policy. However, this user right should generally be restricted to the Administrators and Users groups. Assign this user right to the Backup Operators group if your organization requires that they have this capability.
+
+>[!CAUTION]
+>If you remove these default groups, you could limit the abilities of users who are assigned to specific administrative roles in your environment. You should confirm that delegated activities will not be adversely affected by any changes that you make to the Allow log on locally user right.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/AllowLocalLogOn
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| Administrators, Users | (Recommended)|
+| Administrators, Users, Guest, Everyone| Default Behavior |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Allow Local Log On \u0027 is set to \u0027 Administrators, Users\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/AllowLocalLogOn",
+            "value": "AdministratorsUsers"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Allow log on locally
+```
