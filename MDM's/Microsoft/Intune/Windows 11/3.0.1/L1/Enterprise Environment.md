@@ -14254,3 +14254,249 @@ Navigate to the Local Security Policy and confirm it is set as prescribed.
 Security Settings\Local Policies\User Rights Assignment\Allow log on locally
 ```
 
+## 74.5 - 'Backup Files And Directories' is set to 'Administrators'
+
+>[!NOTE]
+>This policy setting allows users to circumvent file and directory permissions to back up the system. This user right is enabled only when an application (such as NTBACKUP) attempts to access a file or directory through the NTFS file system backup application programming interface (API). Otherwise, the assigned file and directory permissions apply.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>Changes in the membership of the groups that have the Back up files and directories user right could limit the abilities of users who are assigned to specific administrative roles in your environment. You should confirm that authorized backup administrators are still able to perform backup operations.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/BackupFilesAndDirectories
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| Administrators | (Recommended)|
+| Administrators, Backup Operators.| Default Behavior |
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Backup Files And Directories \u0027 is set to \u0027 Administrators\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/BackupFilesAndDirectories",
+            "value": "Administrators"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Back up files and directories
+```
+
+## 74.6 - 'Change System Time' is set to 'Administrators, LOCAL SERVICE'
+
+>[!NOTE]
+>This policy setting determines which users and groups can change the time and date on the internal clock of the computers in your environment. Users who are assigned this user right can affect the appearance of event logs. When a computer's time setting is changed, logged events reflect the new time, not the actual time that the events occurred.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>There should be no impact, because time synchronization for most organizations should be fully automated for all computers that belong to the domain. Computers that do not belong to the domain should be configured to synchronize with an external source.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/ChangeSystemTime
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| Administrators,LOCAL SERVICE| (Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Change System Time\u0027 is set to \u0027 Administrators,LOCAL SERVICE\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/ChangeSystemTime",
+            "value": "AdministratorsLOCAL SERVICE"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Change the system time
+```
+
+## 74.7 - 'Create Global Objects' is set to 'Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE'
+
+>[!NOTE]
+>This policy setting determines whether users can create global objects that are available to all sessions. Users can still create objects that are specific to their own session if they do not have this user right.
+Users who can create global objects could affect processes that run under other users' sessions. This capability could lead to a variety of problems, such as application failure or data corruption.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/CreateGlobalObjects
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE |(Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Create Global Objects \u0027 is set to \u0027 Administrators, LOCAL SERVICE, NETWORK SERVICE, SERVICE\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/CreateGlobalObjects",
+            "value": "AdministratorsLOCAL SERVICENETWORK SERVICESERVICE"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Create global objects
+```
+
+## 74.8 - 'Create Page File' is set to 'Administrators'
+
+>[!NOTE]
+>This policy setting allows users to change the size of the pagefile. By making the pagefile extremely large or extremely small, an attacker could easily affect the performance of a compromised computer.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/CreatePageFile
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| Administrators |(Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Create Page File \u0027 is set to \u0027 Administrators\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/CreatePageFile",
+            "value": "Administrators"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Create a pagefile
+```
+
+## 74.9 - 'Create Permanent Shared Objects' is set to 'No One'
+
+>[!NOTE]
+>This user right is useful to kernel-mode components that extend the object namespace. However, components that run in kernel mode have this user right inherently. Therefore, it is typically not necessary to specifically assign this user right.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/CreatePermanentSharedObjects
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| \(\<\!\[\CDATA[]]>) |(Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Create Permanent Shared Objects \u0027 is set to \u0027 No One \u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/CreatePermanentSharedObjects",
+            "value": "\u003c![CDATA[]]\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Create Permanent Shared Objects
+```
