@@ -216,11 +216,11 @@ function Show-IntuneMenu {
 
         switch ($choice) {
             "1" { Connect-ToIntune }  
-            "2" { Apply-OMASettings -level "IG1" }
-            "3" { Apply-OMASettings -level "IG2" }
-            "4" { Apply-OMASettings -level "IG3" }
-            "5" { Apply-OMASettings -level "Level1" }
-            "6" { Apply-OMASettings -level "Level2" }
+            "2" { Apply-OMASettings -level "IG 1" }
+            "3" { Apply-OMASettings -level "IG 2" }
+            "4" { Apply-OMASettings -level "IG 3" }
+            "5" { Apply-OMASettings -level "Level 1" }
+            "6" { Apply-OMASettings -level "Level 2" }
             "7" { Add-CSV }
             "8" { return }  
             default { Write-Host "❌ Invalid option. Please enter a number between 1 and 8." -ForegroundColor Red }
