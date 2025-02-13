@@ -516,21 +516,20 @@ No Impact
 
 ```
 OMA-URI 
-./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel
+./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_AutoAdminLogon
 ```
 |Scope | Editions| Applicable OS |
 |---|---|---|
-|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
-|❌ User|✔ Enterprise||
-| |✔ Education||
-| |✔ Windows SE||
+|✔ Device|✔ Pro|✔ Windows 10, version 2004 with KB5005101 [10.0.19041.1202] and later|
+|❌ User|✔ Enterprise|✔ Windows 10, version 20H2 with KB5005101 [10.0.19042.1202] and later|
+| |✔ Education|✔ Windows 10, version 21H1 with KB5005101 [10.0.19043.1202] and later|
+| |✔ Windows SE|✔ Windows 11, version 21H2 [10.0.22000] and later|
 | |✔ IoT Enterprise / IoT Enterprise LTSC||
 
 |Value|Description|
 |---|---|
 | \<enabled/> |Enabled|
 | \<disabled/> |Disabled|
-| \<enabled/>\<data id="DisableIPSourceRouting" value="2"/> |Custom Settings (Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -542,9 +541,9 @@ OMA-URI
 Script:
         {
             "@odata.type": "#microsoft.graph.omaSettingString",
-            "displayName": "\u0027MSS: (DisableIPSourceRouting) IP source routing protection level (protects against packet spoofing)\u0027 is set to \u0027Enabled: Highest protection, source routing is completely disabled\u0027",
-            "omaUri": "./Device/Vendor/MSFT/Policy/Config/MSSLegacy/IPSourceRoutingProtectionLevel",
-            "value": "\u003cenabled/\u003e\u003cdata id=\"DisableIPSourceRouting\" value=\"2\" /\u003e"
+            "displayName": "\u0027MSS: Enable Automatic Logon\u0027 is set to \u0027Disabled\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/ADMX_MSS-legacy/Pol_MSS_AutoAdminLogon",
+            "value": ""\u003cdisabled/\u003e""
         },
 ```
 
