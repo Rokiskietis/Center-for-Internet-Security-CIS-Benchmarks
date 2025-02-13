@@ -14478,7 +14478,7 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| \(\<\!\[\CDATA[]]>) |(Recommended)|
+| \(\<\!\[CDATA[]]>) |(Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
