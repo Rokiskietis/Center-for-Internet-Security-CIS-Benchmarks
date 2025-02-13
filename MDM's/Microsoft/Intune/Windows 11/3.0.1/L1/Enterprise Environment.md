@@ -1,5 +1,7 @@
 # Corporate/Enterprise Environment Level - 1
 
+>[!IMPORTANT]
+>Today: 777A
 ### Unicode to text: https://r12a.github.io/app-conversion/
 
 ### CSP - https://learn.microsoft.com/en-us/windows/client-management/mdm/
@@ -14478,7 +14480,7 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| \(\<\!\[CDATA[]]>) |(Recommended)|
+| \(\<\!\[CDATA[]]>) |No One(Recommended)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -14499,4 +14501,101 @@ Script:
 Audit:
 Navigate to the Local Security Policy and confirm it is set as prescribed.
 Security Settings\Local Policies\User Rights Assignment\Create Permanent Shared Objects
+```
+
+## 74.10 - Configure 'Create Symbolic Links' is set to "Administrators"
+
+>[!NOTE]
+>This policy setting determines which users can create symbolic links. In Windows Vista, existing NTFS file system objects, such as files and folders, can be accessed by referring to a new kind of file system object called a symbolic link. A symbolic link is a pointer (much like a shortcut or .lnk file) to another file system object, which can be a file, folder, shortcut or another symbolic link. The difference between a shortcut and a symbolic link is that a shortcut only works from within the Windows shell. To other programs and applications, shortcuts are just another file, whereas with symbolic links, the concept of a shortcut is implemented as a feature of the NTFS file system.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>In most cases there will be no impact because this is the default configuration. However, on Windows Workstations with the Hyper-V feature installed, this user right should also be granted to the special group NT VIRTUAL MACHINE\Virtual Machines - otherwise you will not be able to create new virtual machines.
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/CreateSymbolicLinks
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| Administrators |(Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027Create symbolic links\u0027 is set to \u0027Administrators\u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/CreateSymbolicLinks",
+            "value": "Administrators"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Create Symbolic Links
+```
+
+## 74.11 - 'Create Token' is set to 'No One' 
+
+>[!NOTE]
+>This policy setting allows a process to create an access token, which may provide elevated rights to access sensitive data.
+
+>[!TIP]
+>Automated Remedation
+
+>[!CAUTION]
+>None
+
+```
+OMA-URI 
+./Device/Vendor/MSFT/Policy/Config/UserRights/CreateToken
+```
+
+|Scope | Editions| Applicable OS |
+|---|---|---|
+|✔ Device|✔ Pro|✔ Windows 10, version 1803 [10.0.17134] and later|
+|❌ User|✔ Enterprise||
+| |✔ Education||
+| |✔ Windows SE||
+| |✔ IoT Enterprise / IoT Enterprise LTSC|
+
+|Value|Description|
+|---|---|
+| \(\<\!\[CDATA[]]>) | No One(Recommended)|
+
+|Controls Version|Control|IG1|IG2|IG3|Level|
+|---|---|---|---|---|---|
+|8|6.8 Define and Maintain Role-Based Access Control|||:large_blue_circle:|Level - 1|
+
+```
+Script:
+        {
+            "@odata.type": "#microsoft.graph.omaSettingString",
+            "displayName": "\u0027 Create Token \u0027 is set to \u0027 No One \u0027",
+            "omaUri": "./Device/Vendor/MSFT/Policy/Config/UserRights/CreateToken",
+            "value": "\u003c![CDATA[]]\u003e"
+        },
+```
+
+```
+Audit:
+Navigate to the Local Security Policy and confirm it is set as prescribed.
+Security Settings\Local Policies\User Rights Assignment\Create a token object
 ```
