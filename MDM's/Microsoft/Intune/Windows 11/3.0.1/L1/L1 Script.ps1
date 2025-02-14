@@ -125,14 +125,32 @@ function Apply-OMASettings {
     }
 }
 
+Add-Type -AssemblyName System.Windows.Forms
+
+# Function to launch file explorer and select a file
+function Get-FilePath {
+    $dialog = New-Object System.Windows.Forms.OpenFileDialog
+    $dialog.InitialDirectory = [System.Environment]::GetFolderPath('MyDocuments')  # Set default folder, you can customize this
+    $dialog.Filter = "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*"  # Filter to allow CSV files, you can adjust as needed
+    $dialog.RestoreDirectory = $true
+    
+    if ($dialog.ShowDialog() -eq 'OK') {
+        return $dialog.FileName
+    } else {
+        Write-Host "No file selected."
+        return $null
+    }
+}
+
 # Function to Add a CSV Configuration
 function Add-CSV {
     Write-Host "📂 Select CSV file for upload..." -ForegroundColor Cyan
-    $csvFilePath = Read-Host "Enter full path to CSV file"
-    if (-Not (Test-Path $csvFilePath)) {
-        Write-Host "❌ Error: CSV file not found at $csvFilePath" -ForegroundColor Red
+    $csvFilePath = Get-FilePath  # Use the file picker function here
+    if (-Not $csvFilePath) {
+        Write-Host "❌ Error: CSV file not found or user canceled." -ForegroundColor Red
         return
     }
+    
     Write-Host "📋 Enter the policy name to update or create:" -ForegroundColor Cyan
     $policyName = Read-Host "Policy Name"
     $profileId = Get-IntuneProfileId -profileName $policyName
