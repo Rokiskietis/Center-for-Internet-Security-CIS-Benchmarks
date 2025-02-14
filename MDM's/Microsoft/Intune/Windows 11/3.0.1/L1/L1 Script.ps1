@@ -71,6 +71,7 @@ function Apply-OMASettings {
         Write-Host "❌ No settings found for $level." -ForegroundColor Red
         return
     }
+    
     $formattedOmaSettings = @()
     $existingOmaSettings = @()
     if ($keepExisting -and $profileId) {
@@ -78,14 +79,38 @@ function Apply-OMASettings {
         $existingOmaSettings = $existingSettings.omaSettings
         $formattedOmaSettings += $existingOmaSettings
     }
+    
     foreach ($setting in $omaSettings) {
         $omaUri = $setting.omaUri
         $existingEntry = $existingOmaSettings | Where-Object { $_.omaUri -eq $omaUri }
         if (-not $existingEntry) {
-            $formattedOmaSettings += @{ "@odata.type" = "#microsoft.graph.omaSettingString"; "displayName" = $omaUri; "omaUri" = $omaUri; "value" = $setting.value }
+            # Adjust value type based on dataType
+            $value = $setting.value
+            if ($setting.dataType -eq "Integer") {
+                $value = [int]$value
+                $omaType = "#microsoft.graph.omaSettingInteger"
+            } elseif ($setting.dataType -eq "Boolean") {
+                $value = [bool]$value
+                $omaType = "#microsoft.graph.omaSettingBoolean"
+            } else {
+                $omaType = "#microsoft.graph.omaSettingString"
+            }
+
+            # Add setting to formatted list
+            $formattedOmaSettings += @{
+                "@odata.type" = $omaType
+                "displayName" = $setting.desc
+                "omaUri" = $omaUri
+                "value" = $value
+            }
         }
     }
-    $profileBody = @{ "@odata.type" = "#microsoft.graph.windows10CustomConfiguration"; "displayName" = $profileName; "omaSettings" = $formattedOmaSettings }
+    
+    $profileBody = @{
+        "@odata.type" = "#microsoft.graph.windows10CustomConfiguration"
+        "displayName" = $profileName
+        "omaSettings" = $formattedOmaSettings
+    }
     $jsonBody = $profileBody | ConvertTo-Json -Depth 10 -Compress
     try {
         if ($profileId) {
@@ -145,12 +170,39 @@ function Add-CSV {
     foreach ($row in $csvData) {
         $omaUri = $row.omaUri
         $existingEntry = $existingOmaSettings | Where-Object { $_.omaUri -eq $omaUri }
+        
+        # Handle value type based on CSV data
+        $value = $row.value
+        $omaType = "#microsoft.graph.omaSettingString"  # Default type
+
+        if ($value -match '^\d+$') {  # If the value is an integer
+            $value = [int]$value
+            $omaType = "#microsoft.graph.omaSettingInteger"
+        } elseif ($value -match '^(true|false)$') {  # If the value is a boolean
+            $value = [bool]$value
+            $omaType = "#microsoft.graph.omaSettingBoolean"
+        }
+
+        # Use the displayName from the CSV as the setting's displayName
+        $displayName = $row.displayName
+        $description = $row.description
+        
         if (-not $existingEntry) {
-            $formattedOmaSettings += @{ "@odata.type" = "#microsoft.graph.omaSettingString"; "displayName" = $omaUri; "omaUri" = $omaUri; "value" = $row.value }
+            $formattedOmaSettings += @{
+                "@odata.type" = $omaType
+                "displayName" = $displayName  # Use the displayName from the CSV
+                "omaUri" = $omaUri
+                "value" = $value
+                "description" = $description  # Explicitly set the description field
+            }
         }
     }
     
-    $profileBody = @{ "@odata.type" = "#microsoft.graph.windows10CustomConfiguration"; "displayName" = $policyName; "omaSettings" = $formattedOmaSettings }
+    $profileBody = @{
+        "@odata.type" = "#microsoft.graph.windows10CustomConfiguration"
+        "displayName" = $policyName
+        "omaSettings" = $formattedOmaSettings
+    }
     $jsonBody = $profileBody | ConvertTo-Json -Depth 10 -Compress
     try {
         if ($profileId) {
