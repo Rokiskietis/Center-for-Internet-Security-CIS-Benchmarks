@@ -2121,8 +2121,8 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| <enabled/> |Enabled|
-| <disabled/> |Disabled. (Users may choose to show account details on the sign-in screen.)|
+| \<enabled/> |Enabled|
+| \<disabled/> |Disabled. (Users may choose to show account details on the sign-in screen.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -3074,8 +3074,8 @@ OMA-URI (User)
 
 |Scope | Editions| Applicable OS |
 |---|---|---|
-|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|❌ User|✔ Enterprise||
+|❌ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✔ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
@@ -3127,8 +3127,8 @@ OMA-URI (User)
 
 |Scope | Editions| Applicable OS |
 |---|---|---|
-|✔ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
-|❌ User|✔ Enterprise||
+|❌ Device|✔ Pro|✔ Windows 10, version 1703 [10.0.15063] and later|
+|✔ User|✔ Enterprise||
 | |✔ Education||
 | |✔ Windows SE||
 | |✔ IoT Enterprise / IoT Enterprise LTSC|
