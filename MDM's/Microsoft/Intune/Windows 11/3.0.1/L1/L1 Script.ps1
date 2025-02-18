@@ -188,6 +188,50 @@ $IGLevels = @{
         @{ "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Experience/DisableWindowsConsumerFeatures"; "value" = "1"; "dataType" = "Integer"; "desc" = "Disables consumer features" }
     )
 }
+# Predefined OMA-URIs for Edge Levels
+$MSEDGE = @{
+    "Edge IG 1" = @(
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
+            "value" = "<enabled/>"; 
+            "dataType" = "String"; 
+            "desc" = "Prevent enabling lock screen camera" 
+         }
+    )
+     "Edge IG 2" = @(
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
+            "value" = "<enabled/>"; 
+            "dataType" = "String"; 
+            "desc" = "Prevent enabling lock screen camera" 
+         }
+    )
+     "Edge IG 3" = @(
+            @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
+            "value" = "<enabled/>"; 
+            "dataType" = "String"; 
+            "desc" = "Prevent enabling lock screen camera" 
+        }
+    )
+        "Edge Level 1" = @(
+            @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
+            "value" = "<enabled/>"; 
+            "dataType" = "String"; 
+            "desc" = "Prevent enabling lock screen camera" 
+        }
+    )
+        "Edge Level 2" = @(
+            @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
+            "value" = "<enabled/>"; 
+            "dataType" = "String"; 
+            "desc" = "Prevent enabling lock screen camera" 
+     } 
+    )
+}
+
 
 # Function to authenticate with Microsoft Graph
 function Connect-ToIntune {
