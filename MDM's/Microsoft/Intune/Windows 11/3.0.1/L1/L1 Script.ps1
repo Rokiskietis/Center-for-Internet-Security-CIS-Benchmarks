@@ -188,9 +188,9 @@ $IGLevels = @{
         @{ "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Experience/DisableWindowsConsumerFeatures"; "value" = "1"; "dataType" = "Integer"; "desc" = "Disables consumer features" }
     )
 }
-# Predefined OMA-URIs for Edge Levels
-$MSEDGE = @{
-    "Edge IG 1" = @(
+# Predefined OMA-URIs for MSOFFICE Levels
+$MSOFFICE = @{
+    "MSOFFICE IG 1" = @(
         @{ 
             "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
             "value" = "<enabled/>"; 
@@ -198,7 +198,7 @@ $MSEDGE = @{
             "desc" = "Prevent enabling lock screen camera" 
          }
     )
-     "Edge IG 2" = @(
+     "MSOFFICE IG 2" = @(
         @{ 
             "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
             "value" = "<enabled/>"; 
@@ -206,7 +206,7 @@ $MSEDGE = @{
             "desc" = "Prevent enabling lock screen camera" 
          }
     )
-     "Edge IG 3" = @(
+     "MSOFFICE IG 3" = @(
             @{ 
             "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
             "value" = "<enabled/>"; 
@@ -214,7 +214,7 @@ $MSEDGE = @{
             "desc" = "Prevent enabling lock screen camera" 
         }
     )
-        "Edge Level 1" = @(
+        "MSOFFICE Level 1" = @(
             @{ 
             "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
             "value" = "<enabled/>"; 
@@ -222,7 +222,7 @@ $MSEDGE = @{
             "desc" = "Prevent enabling lock screen camera" 
         }
     )
-        "Edge Level 2" = @(
+        "MSOFFICE Level 2" = @(
             @{ 
             "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/PreventEnablingLockScreenCamera"; 
             "value" = "<enabled/>"; 
