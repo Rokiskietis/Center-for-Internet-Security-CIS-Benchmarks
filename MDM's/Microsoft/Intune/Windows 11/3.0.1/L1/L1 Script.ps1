@@ -169,15 +169,417 @@ $IGLevels = @{
             "desc" = "Disallow Autoplay for non-volume devices"
          }
         @{ 
-            "omaUri" = "./User/Vendor/MSFT/Policy/Config/Autoplay/DisallowAutoplayForNonVolumeDevices"; 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Autoplay/SetDefaultAutoRunBehavior"; 
+            "value" = '<enabled/><data id="NoAutorun_Dropdown" value="1"/>'; 
+            "dataType" = "String"; 
+            "desc" = "Default behavior for AutoRun: Do not execute any autorun commands"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Autoplay/TurnOffAutoPlay"; 
+            "value" = '<enabled/><data id="Autorun_Box" value="255"/>'; 
+            "dataType" = "String"; 
+            "desc" = "Turn off Autoplay on All drives"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/CredentialsUI/DisablePasswordReveal"; 
             "value" = '<enabled/>'; 
             "dataType" = "String"; 
-            "desc" = "Disallow Autoplay for non-volume devices"
+            "desc" = "Do not display the password reveal button"
          }
-    )
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/CredentialsUI/EnumerateAdministrators"; 
+            "value" = '<disabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Enumerate administrator accounts on elevation"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_CredUI/NoLocalPasswordResetQuestions"; 
+            "value" = '<enabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Prevent the use of security questions for local accounts"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_1"; 
+            "value" = '<enabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Control Event Log behavior when the log file reaches its maximum size"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeApplicationLog"; 
+            "value" = '<enabled/><data id="Channel_LogMaxSize" value="102400"/>'; 
+            "dataType" = "String"; 
+            "desc" = "Specify the maximum log file size (KB) Enabled: 32,768 or greater"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_2"; 
+            "value" = '<disabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Control Event Log behavior when the log file reaches its maximum size"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeSecurityLog"; 
+            "value" = '<enabled/><data id="Channel_LogMaxSize" value="2097152"/>'; 
+            "dataType" = "String"; 
+            "desc" = "Specify the maximum log file size (KB) Enabled: 196,608 or greater"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_3"; 
+            "value" = '<disabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Control Event Log behavior when the log file reaches its maximum size"
+         }   
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_LogMaxSize_3"; 
+            "value" = '<enabled/><data id="Channel_LogMaxSize" value="102400"/>'; 
+            "dataType" = "String"; 
+            "desc" = "Specify the maximum log file size (KB) Enabled: 32,768 or greater"
+         }  
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_EventLog/Channel_Log_AutoBackup_4"; 
+            "value" = '<disabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Control Event Log behavior when the log file reaches its maximum size"
+         }  
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/EventLogService/SpecifyMaximumFileSizeSystemLog"; 
+            "value" = '<enabled/><data id="Channel_LogMaxSize" value="204800"/>'; 
+            "dataType" = "String"; 
+            "desc" = "Specify the maximum log file size (KB) Enabled: 32,768 or greater"
+         }      
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_MSAPolicy/MicrosoftAccount_DisableUserAuth"; 
+            "value" = '<enabled/><data id="Channel_LogMaxSize" value="204800"/>'; 
+            "dataType" = "String"; 
+            "desc" = "Block all consumer Microsoft account user authentication"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/DisableAntiSpywareDefender"; 
+            "value" = '<disabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Turn off Microsoft Defender Antivirus: Disabled"
+         } 
+         @{ 
+            "omaUri" = "./User/Vendor/MSFT/Policy/Config/ADMX_Sharing/NoInplaceSharing"; 
+            "value" = '<enabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Prevent users from sharing files within their profile"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/RemoteDesktopServices/DoNotAllowPasswordSaving"; 
+            "value" = '<enabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Do not allow passwords to be saved"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_SESSIONS_Idle_Limit_2"; 
+            "value" = '<enabled/><data id="TS_SESSIONS_IdleLimitText" value="900000"/>'; 
+            "dataType" = "String"; 
+            "desc" = "RDP: Time limit for active but idle Remote Desktop Services sessions Enabled 15 minutes"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_SESSIONS_Disconnected_Timeout_2"; 
+            "value" = '<enabled/><data id="TS_SESSIONS_EndDisconnected" value="60000"/>'; 
+            "dataType" = "String"; 
+            "desc" = "RDP: Set time limit for disconnected sessions Enabled 1 minute"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_TerminalServer/TS_TEMP_DELETE"; 
+            "value" = '<disabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Do not delete temp folders upon exit"
+         }                   
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/WindowsLogon/AllowAutomaticRestartSignOn"; 
+            "value" = '<disabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Sign-in and lock last interactive user automatically after a restart"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditFileShare"; 
+            "value" = '3'; 
+            "dataType" = "Integer"; 
+            "desc" = "Audit File Share Access: Success and Failure "
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Audit/ObjectAccess_AuditDetailedFileShare"; 
+            "value" = '2'; 
+            "dataType" = "Integer"; 
+            "desc" = "Object Access Audit Detailed File Share: Failure"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Defender/AllowEmailScanning"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Allow Email Scanning"
+         }      
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Defender/AllowFullScanRemovableDriveScanning"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Allow Full Scan Removable Drive Scanning"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Defender/AllowRealtimeMonitoring"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Allow Realtime Monitoring: Allowed"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Defender/AllowIOAVProtection"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Allow scanning of all downloaded files and attachments: Allowed"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ADMX_MicrosoftDefenderAntivirus/MpEngine_EnableFileHashComputation"; 
+            "value" = '<enabled/>'; 
+            "dataType" = "String"; 
+            "desc" = "Enable File Hash Computation: Enable"
+         } 
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Defender/PUAProtection"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "PUA Protection on"
+         }   
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeliveryOptimization/DODownloadMode"; 
+            "value" = '3'; 
+            "dataType" = "Integer"; 
+            "desc" = "PUA Protection on HTTP blended with Internet Peering"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/AlphanumericDevicePasswordRequired"; 
+            "value" = '2'; 
+            "dataType" = "Integer"; 
+            "desc" = "Alphanumeric Device Password Required: Password, Numeric PIN, or Alphanumeric PIN required "
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordExpiration"; 
+            "value" = '0'; 
+            "dataType" = "Integer"; 
+            "desc" = "Device Password Expiration: 365 or fewer days, but not 0"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/DevicePasswordHistory"; 
+            "value" = '24'; 
+            "dataType" = "Integer"; 
+            "desc" = "Device Password History: 24 or more password(s)"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinDevicePasswordComplexCharacters"; 
+            "value" = '3'; 
+            "dataType" = "Integer"; 
+            "desc" = "Device Password History: 24 or more password(s): Digits lowercase letters and uppercase letters are required"
+         }
+         @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinDevicePasswordLength"; 
+            "value" = '14'; 
+            "dataType" = "Integer"; 
+            "desc" = "Min Device Password Length: 14 or more character(s)"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinimumPasswordAge"; 
+            "value" = '90'; 
+            "dataType" = "Integer"; 
+            "desc" = "Minimum Password Age: 1 or more day(s)"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Experience/DoNotShowFeedbackNotifications"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Domain Network Firewall: True"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/DefaultInboundAction"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Enable Domain Network Firewall: Default Inbound Action for Domain Profile: Block"
+        }     
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/DisableInboundNotifications"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Domain Network Firewall: Disable Inbound Notifications: True"
+        }    
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/EnableLogDroppedPackets"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Domain Network Firewall: Enable Log Dropped Packets Yes: Enable Logging Of Dropped Packets "
+        }    
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/EnableLogSuccessConnections"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Domain Network Firewall: Enable Log Success Connections Enable Logging Of Successful Connections"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/LogFilePath"; 
+            "value" = '%SystemRoot%\System32\logfiles\firewall\domainfw.log'; 
+            "dataType" = "String"; 
+            "desc" = "Enable Domain Network Firewall: Log File Path %SystemRoot%\System32\logfiles\firewall\domainfw.log"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/LogMaxFileSize"; 
+            "value" = '16384'; 
+            "dataType" = "Integer"; 
+            "desc" = "Enable Domain Network Firewall: Log Max File Size: 16,384 KB or greater "
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableFirewall"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Private Network Firewal: True"
+        } 
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/DefaultInboundAction"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Enable Private Network Firewall: Default Inbound Action for Private Profile: Block"
+        } 
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/DisableInboundNotifications"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Private Network Firewall: Disable Inbound Notifications: True"
+        } 
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableLogSuccessConnections"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Private Network Firewall: Enable Log Success Connections: Enable Logging Of Successful Connections "
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableLogDroppedPackets"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Private Network Firewall: Enable Log Dropped Packets: Yes: Enable Logging Of Dropped Packets"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/LogFilePath"; 
+            "value" = '%SystemRoot%\System32\logfiles\firewall\privatefw.log'; 
+            "dataType" = "String"; 
+            "desc" = "Enable Private Network Firewall: Log File Path: %SystemRoot%\System32\logfiles\firewall\privatefw.log "
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/LogMaxFileSize"; 
+            "value" = '16384'; 
+            "dataType" = "Integer"; 
+            "desc" = "Enable Private Network Firewall: Log Max File Size: 16,384 KB or greater"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableFirewall"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Public Network Firewall"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/AllowLocalIpsecPolicyMerge"; 
+            "value" = 'false'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Public Network Firewall: Allow Local Ipsec Policy Merge: False"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/AllowLocalPolicyMerge"; 
+            "value" = 'false'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Public Network Firewall: Allow Local Policy Merge: False"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/DefaultInboundAction"; 
+            "value" = '16384'; 
+            "dataType" = "Integer"; 
+            "desc" = "Enable Public Network Firewall: Default Inbound Action for Public Profile: Block"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/DisableInboundNotifications"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Public Network Firewall: Disable Inbound Notifications: True"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableLogDroppedPackets"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Public Network Firewall: Enable Log Dropped Packets Yes: Enable Logging Of Dropped Packets "
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/EnableLogSuccessConnections"; 
+            "value" = 'true'; 
+            "dataType" = "Boolean"; 
+            "desc" = "Enable Public Network Firewall: Enable Log Success Connections: Enable Logging Of Successful Connections"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/LogFilePath"; 
+            "value" = '%SystemRoot%\System32\logfiles\firewall\publicfw.log'; 
+            "dataType" = "String"; 
+            "desc" = "Enable Public Network Firewall: Log File Path: %SystemRoot%\System32\logfiles\firewall\publicfw.log"
+        }
+        @{ 
+            "omaUri" = "./Vendor/MSFT/Firewall/MdmStore/PublicProfile/LogMaxFileSize"; 
+            "value" = '16384'; 
+            "dataType" = "Integer"; 
+            "desc" = "Enable Public Network Firewall: Log Max File Size: 16,384 KB or greater"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_EnableGuestAccountStatus"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Accounts: Enable Guest account status: Disabled"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_LimitLocalAccountUseOfBlankPasswordsToConsoleLogonOnly"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Accounts: Limit local account use of blank passwords to console logon only: Enabled"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount"; 
+            "value" = 'ATEA'; 
+            "dataType" = "String"; 
+            "desc" = "Accounts: Rename administrator account to ATEA"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_RenameGuestAccount"; 
+            "value" = 'ATEAGUEST'; 
+            "dataType" = "String"; 
+            "desc" = "Accounts: Rename guest account to ATEAGUEST"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_DoNotDisplayLastSignedIn"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Interactive logon: Do not display last signed-in"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_MachineInactivityLimit"; 
+            "value" = '900'; 
+            "dataType" = "Integer"; 
+            "desc" = "Interactive logon: Machine inactivity limit: 900 or fewer second(s), but not 0"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_MessageTextForUsersAttemptingToLogOn"; 
+            "value" = 'Jūsų norimas tekstas (1)'; 
+            "dataType" = "String"; 
+            "desc" = "Interactive logon: Message text for users attempting to log on"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_MessageTitleForUsersAttemptingToLogOn"; 
+            "value" = 'Jūsų norimas tekstas (2)'; 
+            "dataType" = "String"; 
+            "desc" = "Interactive logon: Message title for users attempting to log on"
+        }
+         )
     "IG 2" = @(
         @{ "omaUri" = "./Device/Vendor/MSFT/Policy/Config/UserRights/ChangeSystemTime"; "value" = "AdministratorsLOCAL SERVICE"; "dataType" = "String"; "desc" = "Sets change system time" }
-    )
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/SmartScreen/EnableSmartScreenInShell"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Configure Windows Defender SmartScreen Enabled: Warn and prevent bypass"
+         }     
+        )
     "IG 3" = @(
         @{ "omaUri" = "./Device/Vendor/MSFT/Policy/Config/AboveLock/AllowActionCenterNotifications"; "value" = "0"; "dataType" = "Integer"; "desc" = "Disables action center notifications" }
     )
@@ -232,13 +634,25 @@ $MSOFFICE = @{
     )
 }
 
-
 # Function to authenticate with Microsoft Graph
 function Connect-ToIntune {
     Write-Host "🔄 Logging into Microsoft Intune..." -ForegroundColor Cyan
     try {
-        Connect-MgGraph -Scopes "DeviceManagementConfiguration.ReadWrite.All"
-        Write-Host "✅ Successfully authenticated with Intune." -ForegroundColor Green
+        # Connect to Microsoft Graph with required scope and suppress welcome message
+        Connect-MgGraph -Scopes "DeviceManagementConfiguration.ReadWrite.All" -NoWelcome
+
+        # Retrieve the authenticated user context
+        $context = Get-MgContext
+
+        if ($context.Account) {
+            Write-Host "✅ Successfully authenticated with Intune as: $($context.Account)" -ForegroundColor Green
+            # Store authenticated user in a global variable for menu display
+            $global:IntuneUser = $context.Account
+        } else {
+            Write-Host "✅ Successfully authenticated with Intune, but unable to retrieve account details." -ForegroundColor Yellow
+            $global:IntuneUser = "Unknown"
+        }
+
     } catch {
         Write-Host "❌ Error: Failed to authenticate with Intune." -ForegroundColor Red
     }
@@ -257,54 +671,154 @@ function Get-IntuneProfileId {
     return $null
 }
 
-# Function to apply policy settings
+# Function to apply Settings from IGLevels only
 function Apply-OMASettings {
-    param ([string]$level)
-    
+    param (
+        [string]$level,
+        [switch]$DebugMode  # Enable debugging messages
+    )
+
+    Write-Host "`n🔄 Starting OMA-URI policy application for level: $level..." -ForegroundColor Cyan
+    Start-Sleep -Seconds 5  # Delay for readability
+
     $omaSettings = $IGLevels[$level]
+    
     if ($null -eq $omaSettings) {
         Write-Host "❌ No settings found for $level." -ForegroundColor Red
         return
     }
-    
+
+    # Categorize settings
     $deviceSettings = @()
     $userSettings = @()
-    
+    $vendorSettings = @()
+    $unrecognizedSettings = @()
+    $duplicates = @()
+
+    # Retrieve existing settings for this level
+    $profileName = "CIS Benchmark - $level (Device)"
+    $existingSettings = @()
+    $profileId = Get-IntuneProfileId -profileName $profileName
+
+    if ($profileId) {
+        Write-Host "`n🔄 Retrieving existing settings for profile '$profileName'..." -ForegroundColor Cyan
+        Start-Sleep -Seconds 5
+        $existingSettings = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations/$profileId"
+        $existingOmaSettings = $existingSettings.omaSettings | ForEach-Object { $_.omaUri }
+    } else {
+        $existingOmaSettings = @()
+    }
+
     foreach ($setting in $omaSettings) {
-        if ($setting.omaUri -match "\.\/Device\/.*") {
+        if ($existingOmaSettings -contains $setting.omaUri) {
+            # If the setting is a duplicate, track it
+            $duplicates += $setting
+        }
+        elseif ($setting.omaUri -match "\.\/Device\/.*") {
             $deviceSettings += $setting
-        } elseif ($setting.omaUri -match "\.\/User\/.*") {
+        }
+        elseif ($setting.omaUri -match "\.\/User\/.*") {
             $userSettings += $setting
-        } else {
-            $deviceSettings += $setting  # Default to Device if it's not explicitly for Users
+        }
+        elseif ($setting.omaUri -match "\.\/Vendor\/.*") {
+            # Ensure ./Vendor/ settings go under Device Profile
+            $vendorSettings += $setting
+        }
+        else {
+            # If the setting doesn't belong to ./Device, ./User, or ./Vendor, categorize under ./Device
+            $setting.omaUri = "./Device/" + $setting.omaUri
+            $deviceSettings += $setting
         }
     }
-    
+
+# Notify about duplicates with a more readable format
+    if ($duplicates.Count -gt 0) {
+        Write-Host "`n⚠️ Skipped duplicate settings that already exist in the policy:" -ForegroundColor Yellow
+
+        # Define user Documents path
+        $userDocuments = [System.Environment]::GetFolderPath("MyDocuments")
+        $folderPath = "$userDocuments\AteaDeployment"
+
+        # Create folder if it doesn't exist
+        if (!(Test-Path -Path $folderPath)) {
+            New-Item -ItemType Directory -Path $folderPath | Out-Null
+        }
+
+        # Format the filename with date-time (DD-MM-HH)
+        $timestamp = (Get-Date -Format "dd-MM-HH")
+        $filePath = "$folderPath\Duplicates-$timestamp.csv"
+
+        # Save to CSV silently
+        $duplicates | Select-Object @{Name="Display Name"; Expression={$_.desc}}, @{Name="OMA-URI"; Expression={$_.omaUri}} | Export-Csv -Path $filePath -NoTypeInformation
+
+        Write-Host "`n✅ CSV file saved at: $filePath" -ForegroundColor Green
+
+        # Display GUI table
+        $duplicates | Select-Object @{Name="Display Name"; Expression={$_.desc}}, @{Name="OMA-URI"; Expression={$_.omaUri}} | Out-GridView -Title "Skipped Duplicate Settings"
+    }
+
+    # Apply policies with more detailed debugging
     $policiesCreated = 0
-    
+
     if ($deviceSettings.Count -gt 0) {
-        Apply-IntunePolicy -level $level -settings $deviceSettings -profileType "Device"
+        Write-Host "`n📌 Applying Device settings ($($deviceSettings.Count) items) for $level..." -ForegroundColor Cyan
+        Start-Sleep -Seconds 5
+        Apply-IntunePolicy -level $level -settings $deviceSettings -profileType "Device" -DebugMode:$DebugMode
         $policiesCreated++
     }
-    
+
+    if ($vendorSettings.Count -gt 0) {
+        Write-Host "`n📌 Applying Vendor settings ($($vendorSettings.Count) items) under Device profile for $level..." -ForegroundColor Cyan
+        Start-Sleep -Seconds 5
+        Apply-IntunePolicy -level $level -settings $vendorSettings -profileType "Device" -DebugMode:$DebugMode
+        $policiesCreated++
+    }
+
     if ($userSettings.Count -gt 0) {
-        Apply-IntunePolicy -level $level -settings $userSettings -profileType "Users"
+        Write-Host "`n📌 Applying User settings ($($userSettings.Count) items) for $level..." -ForegroundColor Cyan
+        Start-Sleep -Seconds 5
+        Apply-IntunePolicy -level $level -settings $userSettings -profileType "Users" -DebugMode:$DebugMode
         $policiesCreated++
     }
-    
-    if ($policiesCreated -eq 2) {
-        Write-Host "⚠️ Both Device and User policies created for $level." -ForegroundColor Yellow
+
+    # Summary output
+    if ($policiesCreated -gt 0) {
+        Write-Host "`n✅ Successfully created $policiesCreated policy(ies) for $level." -ForegroundColor Green
+    } else {
+        Write-Host "`n⚠️ No policies were created for $level." -ForegroundColor Yellow
     }
+    
+    # Log the result to a file
+    $logEntry = "$(Get-Date) - Level: $level - Created: $policiesCreated policies - Duplicates Skipped: $($duplicates.Count) - Vendor Settings Applied: $($vendorSettings.Count)"
+    Add-Content -Path ".\OMASettings_Log.txt" -Value $logEntry
+
+    Start-Sleep -Seconds 5  # Final pause before returning to the menu
 }
 
-# Function to create/update Intune policies
+# Function to create/update Intune policies with debugging
 function Apply-IntunePolicy {
-    param ([string]$level, [array]$settings, [string]$profileType)
-    
+    param (
+        [string]$level,
+        [array]$settings,
+        [string]$profileType,
+        [switch]$DebugMode
+    )
+
     $profileName = "CIS Benchmark - $level ($profileType)"
-    Write-Host "📋 Checking if profile '$profileName' exists..." -ForegroundColor Cyan
+    Write-Host "`n📋 Checking if profile '$profileName' exists..." -ForegroundColor Cyan
+    Start-Sleep -Seconds 5
+
     $profileId = Get-IntuneProfileId -profileName $profileName
     
+    if ($DebugMode) {
+        if ($profileId) {
+            Write-Host "🔍 Debug Info: Profile '$profileName' found with ID: $profileId" -ForegroundColor Cyan
+        } else {
+            Write-Host "🔍 Debug Info: Profile '$profileName' does not exist. A new one will be created." -ForegroundColor Cyan
+        }
+        Start-Sleep -Seconds 5
+    }
+
     $keepExisting = $true
     if ($profileId) {
         do {
@@ -318,16 +832,18 @@ function Apply-IntunePolicy {
             }
         } until ($response -eq "Yes" -or $response -eq "No")
     }
-    
+
     $formattedOmaSettings = @()
     $existingOmaSettings = @()
-    
+
     if ($keepExisting -and $profileId) {
+        Write-Host "`n🔄 Retrieving existing settings for profile '$profileName'..." -ForegroundColor Cyan
+        Start-Sleep -Seconds 5
         $existingSettings = Invoke-MgGraphRequest -Method GET -Uri "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations/$profileId"
         $existingOmaSettings = $existingSettings.omaSettings
         $formattedOmaSettings += $existingOmaSettings
     }
-    
+
     foreach ($setting in $settings) {
         $omaUri = $setting.omaUri
         $existingEntry = $existingOmaSettings | Where-Object { $_.omaUri -eq $omaUri }
@@ -338,25 +854,33 @@ function Apply-IntunePolicy {
                 "Boolean" { "#microsoft.graph.omaSettingBoolean"; $value = [bool]$value }
                 Default { "#microsoft.graph.omaSettingString" }
             }
-            
+
             $formattedOmaSettings += @{ "@odata.type" = $omaType; "displayName" = $setting.desc; "omaUri" = $omaUri; "value" = $value }
         }
     }
-    
+
+    Start-Sleep -Seconds 5
+
     $profileBody = @{ "@odata.type" = "#microsoft.graph.windows10CustomConfiguration"; "displayName" = $profileName; "omaSettings" = $formattedOmaSettings }
     $jsonBody = $profileBody | ConvertTo-Json -Depth 10 -Compress
     
     try {
         if ($profileId) {
-            Invoke-MgGraphRequest -Method PATCH -Uri "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations/$profileId" -Body $jsonBody -ContentType "application/json"
+            Write-Host "`n🔄 Updating existing profile: $profileName..." -ForegroundColor Cyan
+            Start-Sleep -Seconds 5
+            Invoke-MgGraphRequest -Method PATCH -Uri "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations/$profileId" -Body $jsonBody -ContentType "application/json" | Out-Null
             Write-Host "✅ Profile updated successfully: $profileName" -ForegroundColor Green
         } else {
-            Invoke-MgGraphRequest -Method POST -Uri "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations" -Body $jsonBody -ContentType "application/json"
+            Write-Host "`n🔄 Creating new profile: $profileName..." -ForegroundColor Cyan
+            Start-Sleep -Seconds 5
+            Invoke-MgGraphRequest -Method POST -Uri "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations" -Body $jsonBody -ContentType "application/json" | Out-Null
             Write-Host "✅ New profile created successfully: $profileName" -ForegroundColor Green
         }
     } catch {
         Write-Host "❌ Error updating or creating profile: $_" -ForegroundColor Red
     }
+
+    Start-Sleep -Seconds 5
 }
 
 Add-Type -AssemblyName System.Windows.Forms
@@ -515,25 +1039,41 @@ function Process-Policy {
     }
 }
 
-
-
-
 # Submenu for Intune Windows 10/11 Configuration Policies
 function Show-IntuneMenu {
     while ($true) {
-        Write-Host "🔧 Intune Windows 10/11 Configuration Policies" -ForegroundColor Cyan
-        Write-Host "1. Login to Microsoft Intune"
+        Clear-Host  # Clears the screen for a cleaner UI
+
+        # Explicitly reset text color to default (White)
+        Write-Host "" -ForegroundColor White  
+
+        if ($global:IntuneUser) {
+            Write-Host "✅ Logged into Microsoft Intune as: $global:IntuneUser" -ForegroundColor Green
+        } else {
+            Write-Host "❌ Not logged into Microsoft Intune." -ForegroundColor Red
+        }
+
+        Write-Host "`n🔧 Intune Windows 10/11 Configuration Policies" -ForegroundColor Cyan
+        if ($global:IntuneUser) {
+            Write-Host "1. 🔄 Re-login to Microsoft Intune"
+        } else {
+            Write-Host "1. 🔑 Login to Microsoft Intune"
+        }
         Write-Host "2. Apply IG 1 Policy"
         Write-Host "3. Apply IG 2 Policy"
         Write-Host "4. Apply IG 3 Policy"
         Write-Host "5. Apply Level 1 Policy"
         Write-Host "6. Apply Level 2 Policy"
-        Write-Host "7. Upload from File"
-        Write-Host "8. Back to Main Menu"
+        Write-Host "7. 📂 Upload from File"
+        Write-Host "8. 🔙 Back to Main Menu"
         
         $choice = Read-Host "Select an option"
+
         switch ($choice) {
-            "1" { Connect-ToIntune }
+            "1" { 
+                Connect-ToIntune 
+                Start-Sleep -Seconds 5  # Short delay to ensure readability
+            }
             "2" { Apply-OMASettings -level "IG 1" }
             "3" { Apply-OMASettings -level "IG 2" }
             "4" { Apply-OMASettings -level "IG 3" }
@@ -541,7 +1081,10 @@ function Show-IntuneMenu {
             "6" { Apply-OMASettings -level "Level 2" }
             "7" { Add-CSV }
             "8" { return }
-            default { Write-Host "❌ Invalid option." -ForegroundColor Red }
+            default { 
+                Write-Host "❌ Invalid option, please try again." -ForegroundColor Red 
+                Start-Sleep -Seconds 5  # Short delay for readability
+            }
         }
     }
 }

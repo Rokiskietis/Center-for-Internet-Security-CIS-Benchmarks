@@ -3334,15 +3334,13 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoDriveTypeAuto
 ## 3.11.8.1 - 'Do not display the password reveal button' is set to 'Enabled' 
 
 >[!NOTE]
->This policy setting allows you to configure the display of the password reveal button in
-password entry user experiences.
+>This policy setting allows you to configure the display of the password reveal button in password entry user experiences.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->The password reveal button will not be displayed after a user types a password in the
-password entry text box.
+>The password reveal button will not be displayed after a user types a password in the password entry text box.
 
 ```
 OMA-URI 
@@ -3390,14 +3388,13 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\CredUI:DisablePasswordReveal
 ## 3.11.8.2 - 'Enumerate administrator accounts on elevation' is set to 'Disabled'
 
 >[!NOTE]
->This policy setting controls whether administrator accounts are displayed when a user
-attempts to elevate a running application.
+>This policy setting controls whether administrator accounts are displayed when a user attempts to elevate a running application.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -3442,16 +3439,13 @@ HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\CredUI:EnumerateAdminist
 ## 3.11.8.3 - 'Prevent the use of security questions for local accounts' is set to 'Enabled'
 
 >[!NOTE]
->This policy setting controls whether security questions can be used to reset local
-account passwords. The security question feature does not apply to domain accounts,
-only local accounts on the workstation.
+>This policy setting controls whether security questions can be used to reset local account passwords. The security question feature does not apply to domain accounts, only local accounts on the workstation.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->Local user accounts will not be able to set up and use security questions to reset their
-passwords.
+>Local user accounts will not be able to set up and use security questions to reset their passwords.
 
 ```
 OMA-URI 
@@ -3497,14 +3491,13 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\System:NoLocalPasswordResetQuestions
 ## 3.11.15.1.1 - 'Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled'
 
 >[!NOTE]
->This policy setting controls Event Log behavior when the log file reaches its maximum
-size
+>This policy setting controls Event Log behavior when the log file reaches its maximum size
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -3547,9 +3540,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Application:Retention
 ## 3.11.15.1.2 - 'Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater
 
 >[!NOTE]
->This policy setting specifies the maximum size of the log file in kilobytes. The maximum
-log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes
-(4,194,240 kilobytes) in kilobyte increments.
+>This policy setting specifies the maximum size of the log file in kilobytes. The maximum log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes (4,194,240 kilobytes) in kilobyte increments.
 
 >[!TIP]
 >Automated Remedation
@@ -3623,7 +3614,7 @@ size.
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -3667,9 +3658,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security:Retention
 ## 3.11.15.2.2 - 'Specify the maximum log file size (KB)' is set to 'Enabled: 196,608 or greater'
 
 >[!NOTE]
->This policy setting specifies the maximum size of the log file in kilobytes. The maximum
-log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes
-(4,194,240 kilobytes) in kilobyte increments.
+>This policy setting specifies the maximum size of the log file in kilobytes. The maximum log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes (4,194,240 kilobytes) in kilobyte increments.
 
 >[!TIP]
 >Automated Remedation
@@ -3734,14 +3723,13 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Security:MaxSize
 ## 3.11.15.3.1 - 'Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled' 
 
 >[!NOTE]
->This policy setting controls Event Log behavior when the log file reaches its maximum
-size.
+>This policy setting controls Event Log behavior when the log file reaches its maximum size.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -3785,9 +3773,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup:Retention
 ## 3.11.15.3.2 - 'Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater'
 
 >[!NOTE]
->This policy setting specifies the maximum size of the log file in kilobytes. The maximum
-log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes
-(4,194,240 kilobytes) in kilobyte increments.
+>This policy setting specifies the maximum size of the log file in kilobytes. The maximum log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes (4,194,240 kilobytes) in kilobyte increments.
 
 >[!TIP]
 >Automated Remedation
@@ -3854,14 +3840,13 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\Setup:MaxSize
 ## 3.11.15.4.1 - 'Control Event Log behavior when the log file reaches its maximum size' is set to 'Disabled' 
 
 >[!NOTE]
->This policy setting controls Event Log behavior when the log file reaches its maximum
-size.
+>This policy setting controls Event Log behavior when the log file reaches its maximum size.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -3905,9 +3890,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\EventLog\System:Retention
 ## 3.11.15.4.2 - 'Specify the maximum log file size (KB)' is set to 'Enabled: 32,768 or greater' 
 
 >[!NOTE]
->This policy setting specifies the maximum size of the log file in kilobytes. The maximum
-log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes
-(4,194,240 kilobytes) in kilobyte increments.
+>This policy setting specifies the maximum size of the log file in kilobytes. The maximum log file size can be configured between 1 megabyte (1,024 kilobytes) and 4 terabytes (4,194,240 kilobytes) in kilobyte increments.
 
 >[!TIP]
 >Automated Remedation
@@ -3982,8 +3965,7 @@ is sent to Microsoft about files and programs run on PCs with this feature enabl
 >Automated Remedation
 
 >[!CAUTION]
->Users will be warned and prevented from running unrecognized programs downloaded
-from the Internet.
+>Users will be warned and prevented from running unrecognized programs downloaded from the Internet.
 
 ```
 OMA-URI 
@@ -4000,8 +3982,8 @@ OMA-URI
 
 |Value|Description|
 |---|---|
-| 1|Enabled|
-| 2 |Disabled. (Windows Defender SmartScreen behavior is managed by administrators on the PC by using Windows Defender SmartScreen Settings in Action Center.)|
+| 1 | Enabled|
+| 2 | Disabled. (Windows Defender SmartScreen behavior is managed by administrators on the PC by using Windows Defender SmartScreen Settings in Action Center.)|
 
 |Controls Version|Control|IG1|IG2|IG3|Level|
 |---|---|---|---|---|---|
@@ -4027,14 +4009,13 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\System:EnableSmartScreen
 ## 3.11.18.2 - 'Turn off Data Execution Prevention for Explorer' is set to 'Disabled'
 
 >[!NOTE]
->Disabling Data Execution Prevention can allow certain legacy plug-in applications to
-function without terminating Explorer.
+>Disabling Data Execution Prevention can allow certain legacy plug-in applications to function without terminating Explorer.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -4078,15 +4059,13 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer:NoDataExecutionPrevention
 ## 3.11.18.3 - 'Turn off heap termination on corruption' is set to 'Disabled'
 
 >[!NOTE]
->Without heap termination on corruption, legacy plug-in applications may continue to
-function when a File Explorer session has become corrupt. Ensuring that heap
-termination on corruption is active will prevent this.
+>Without heap termination on corruption, legacy plug-in applications may continue to function when a File Explorer session has become corrupt. Ensuring that heap termination on corruption is active will prevent this.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -4142,7 +4121,7 @@ to leave this protocol in the protected mode to increase the security of Windows
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -4244,9 +4223,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows\HomeGroup:DisableHomeGroup
 ## 3.11.27.1 - 'Block all consumer Microsoft account user authentication' is set to 'Enabled' 
 
 >[!NOTE]
->This setting determines whether applications and services on the device can utilize new
-consumer Microsoft account authentication via the Windows OnlineID and
-WebAccountManager APIs.
+>This setting determines whether applications and services on the device can utilize new consumer Microsoft account authentication via the Windows OnlineID and WebAccountManager APIs.
 
 
 >[!TIP]
@@ -4357,15 +4334,13 @@ HKLM\SOFTWARE\Policies\Microsoft\WindowsDefender\Spynet:LocalSettingOverrideSpyn
 ## 3.11.28.11 - 'Turn off Microsoft Defender Antivirus' is set to 'Disabled'
 
 >[!NOTE]
->This policy setting turns off Microsoft Defender Antivirus. If the setting is configured to
-Disabled, Microsoft Defender Antivirus runs and computers are scanned for malware
-and other potentially unwanted software
+>This policy setting turns off Microsoft Defender Antivirus. If the setting is configured to Disabled, Microsoft Defender Antivirus runs and computers are scanned for malware and other potentially unwanted software
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -4419,9 +4394,7 @@ computer by using the sharing wizard to share a file within their profile.
 >Automated Remedation
 
 >[!CAUTION]
->Users cannot share files within their profile using the sharing wizard. Also, the sharing
-wizard cannot create a share at %root%\Users and can only be used to create SMB
-shares on folders.
+>Users cannot share files within their profile using the sharing wizard. Also, the sharing wizard cannot create a share at %root%\Users and can only be used to create SMB shares on folders.
 
 ```
 OMA-URI
@@ -4467,15 +4440,13 @@ HKU\[USERSID]\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer:NoInpl
 ## 3.11.36.3.2 - 'Do not allow passwords to be saved' is set to 'Enabled' 
 
 >[!NOTE]
->This policy setting helps prevent Remote Desktop clients from saving passwords on a
-computer.
+>This policy setting helps prevent Remote Desktop clients from saving passwords on a computer.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->The password saving checkbox will be disabled for Remote Desktop clients and users
-will not be able to save passwords.
+>The password saving checkbox will be disabled for Remote Desktop clients and users will not be able to save passwords.
 
 ```
 OMA-URI 
@@ -4832,7 +4803,7 @@ encryption) is not recommended. This policy does not apply to SSL encryption.
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -4885,7 +4856,7 @@ HKLM\SOFTWARE\Policies\Microsoft\Windows NT\TerminalServices:MinEncryptionLevel
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -5042,8 +5013,7 @@ HKLM\SOFTWARE\Policies\Microsoft\WindowsStore:DisableOSUpgrade
 ## 3.11.50.1 - 'Sign-in and lock last interactive user automatically after a restart' is set to 'Disabled'
 
 >[!NOTE]
->This policy setting controls whether a device will automatically sign-in the last interactive
-user after Windows Update restarts the system.
+>This policy setting controls whether a device will automatically sign-in the last interactive user after Windows Update restarts the system.
 
 >[!TIP]
 >Automated Remedation
@@ -8625,7 +8595,7 @@ Script:
             "@odata.type": "#microsoft.graph.omaSettingInteger",
             "displayName": "\u0027Min Device Password Complex Characters\u0027 is set to \u0027Digits lowercase letters and uppercase letters are required\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/DeviceLock/MinDevicePasswordComplexCharacters",
-            "value": 24
+            "value": 3
         },
 ```
 
@@ -9014,7 +8984,7 @@ this profile.
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -9058,14 +9028,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.2 - 'Enable Domain Network Firewall: Default Inbound Action for Domain Profile' is set to 'Block
 
 >[!NOTE]
->This setting determines the behavior for inbound connections that do not match an
-inbound firewall rule
+>This setting determines the behavior for inbound connections that do not match an inbound firewall rule
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -9110,16 +9079,14 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.3 - 'Enable Domain Network Firewall: Disable Inbound Notifications' is set to 'True'
 
 >[!NOTE]
->Select this option to have Windows Firewall with Advanced Security display notifications
-to the user when a program is blocked from receiving inbound connections.
+>Select this option to have Windows Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.
 
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->Windows Firewall will not display a notification when a program is blocked from
-receiving inbound connections
+>Windows Firewall will not display a notification when a program is blocked from receiving inbound connections
 
 ```
 OMA-URI 
@@ -9218,9 +9185,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.5 - 'Enable Domain Network Firewall: Enable Log Success Connections' is set to 'Enable Logging Of Successful Connections'
 
 >[!NOTE]
->Use this option to log when Windows Firewall with Advanced Security allows an
-inbound connection. The log records why and when the connection was formed. Look
-for entries with the word ALLOW in the action column of the log.
+>Use this option to log when Windows Firewall with Advanced Security allows an inbound connection. The log records why and when the connection was formed. Look for entries with the word ALLOW in the action column of the log.
 
 >[!TIP]
 >Automated Remedation
@@ -9272,8 +9237,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.6 - 'Enable Domain Network Firewall: Log File Path' is set to '%SystemRoot%\System32\logfiles\firewall\domainfw.log'
 
 >[!NOTE]
->Use this option to specify the path and name of the file in which Windows Firewall will
-write its log information.
+>Use this option to specify the path and name of the file in which Windows Firewall will write its log information.
 
 >[!TIP]
 >Automated Remedation
@@ -9309,7 +9273,7 @@ OMA-URI
 ```
 Script:
         {
-            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "@odata.type": "#microsoft.graph.omaSettingString",
             "displayName": "\u0027Enable Domain Network Firewall: Log File Path\u0027 is set to \u0027%SystemRoot%\System32\logfiles\firewall\domainfw.log\u0027",
             "omaUri": "./Vendor/MSFT/Firewall/MdmStore/DomainProfile/LogFilePath",
             "value": %SystemRoot%\System32\logfiles\firewall\domainfw.log
@@ -9324,15 +9288,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.7 - 'Enable Domain Network Firewall: Log Max File Size' is set to '16,384 KB or greater'
 
 >[!NOTE]
->Use this option to specify the size limit of the file in which Windows Firewall will write its
-log information
+>Use this option to specify the size limit of the file in which Windows Firewall will write its log information
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->The log file size will be limited to the specified size, old events will be overwritten by
-newer ones when the limit is reached.
+>The log file size will be limited to the specified size, old events will be overwritten by newer ones when the limit is reached.
 
 ```
 OMA-URI 
@@ -9387,7 +9349,7 @@ this profile
 >Automated Remedation
 
 >[!CAUTION]
-No Impact.
+>No Impact.
 
 ```
 OMA-URI 
@@ -9416,10 +9378,10 @@ OMA-URI
 ```
 Script:
         {
-            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "@odata.type": "#microsoft.graph.omaSettingBoolean",
             "displayName": "\u0027Enable Domain Network Firewall: Log Max File Size\u0027 is set to \u002716,384 KB or greater\u0027",
             "omaUri": "./Vendor/MSFT/Firewall/MdmStore/PrivateProfile/EnableFirewall",
-            "value": 16384
+            "value": true
         },
 ```
 
@@ -9432,14 +9394,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.9 - 'Enable Private Network Firewall: Default Inbound Action for Private Profile' is set to 'Block'
 
 >[!NOTE]
->This setting determines the behavior for inbound connections that do not match an
-inbound firewall rule.
+>This setting determines the behavior for inbound connections that do not match an inbound firewall rule.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact.
+>No Impact.
 
 ```
 OMA-URI 
@@ -9484,15 +9445,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.10 - 'Enable Private Network Firewall: Disable Inbound Notifications' is set to 'True'
 
 >[!NOTE]
->Select this option to have Windows Firewall with Advanced Security display notifications
-to the user when a program is blocked from receiving inbound connections.
+>Select this option to have Windows Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->Windows Firewall will not display a notification when a program is blocked from
-receiving inbound connections.
+>Windows Firewall will not display a notification when a program is blocked from receiving inbound connections.
 
 ```
 OMA-URI 
@@ -9697,15 +9656,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.14 - 'Enable Private Network Firewall: Log Max File Size' is set to '16,384 KB or greater'
 
 >[!NOTE]
->Use this option to specify the size limit of the file in which Windows Firewall will write its
-log information.
+>Use this option to specify the size limit of the file in which Windows Firewall will write its log information.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->The log file size will be limited to the specified size, old events will be overwritten by
-newer ones when the limit is reached.
+>The log file size will be limited to the specified size, old events will be overwritten by newer ones when the limit is reached.
 
 ```
 OMA-URI 
@@ -9759,7 +9716,7 @@ this profile.
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -9803,16 +9760,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.16 - 'Enable Public Network Firewall: Allow Local Ipsec Policy Merge' is set to 'False'
 
 >[!NOTE]
->This setting controls whether local administrators are allowed to create connection
-security rules that apply together with connection security rules configured by Group
-Policy.
+>This setting controls whether local administrators are allowed to create connectionsecurity rules that apply together with connection security rules configured by Group Policy.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->Administrators can still create local connection security rules, but the rules will not be
-applied.
+>Administrators can still create local connection security rules, but the rules will not be applied.
 
 ```
 OMA-URI 
@@ -9856,8 +9810,7 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.17 - 'Enable Public Network Firewall: Allow Local Policy Merge' is set to 'False'
 
 >[!NOTE]
->This setting controls whether local administrators are allowed to create local firewall
-rules that apply together with firewall rules configured by Group Policy
+>This setting controls whether local administrators are allowed to create local firewall rules that apply together with firewall rules configured by Group Policy
 
 >[!TIP]
 >Automated Remedation
@@ -9907,14 +9860,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.18 - 'Enable Public Network Firewall: Default Inbound Action for Public Profile' is set to 'Block
 
 >[!NOTE]
->This setting determines the behavior for inbound connections that do not match an
-inbound firewall rule.
+>This setting determines the behavior for inbound connections that do not match an inbound firewall rule.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -9958,15 +9910,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.19 - 'Enable Public Network Firewall: Disable Inbound Notifications' is set to 'True'
 
 >[!NOTE]
->Select this option to have Windows Firewall with Advanced Security display notifications
-to the user when a program is blocked from receiving inbound connections.
+>Select this option to have Windows Firewall with Advanced Security display notifications to the user when a program is blocked from receiving inbound connections.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->Windows Firewall will not display a notification when a program is blocked from
-receiving inbound connections.
+>Windows Firewall will not display a notification when a program is blocked from receiving inbound connections.
 
 ```
 OMA-URI 
@@ -10167,15 +10117,13 @@ HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Md
 ## 35.23 - 'Enable Public Network Firewall: Log Max File Size' is set to '16,384 KB or greater'
 
 >[!NOTE]
->Use this option to specify the size limit of the file in which Windows Firewall will write its
-log information.
+>Use this option to specify the size limit of the file in which Windows Firewall will write its log information.
 
 >[!TIP]
 >Automated Remedation
 
 >[!CAUTION]
->The log file size will be limited to the specified size, old events will be overwritten by
-newer ones when the limit is reached
+>The log file size will be limited to the specified size, old events will be overwritten by newer ones when the limit is reached
 
 ```
 OMA-URI 
@@ -10379,7 +10327,7 @@ XXX
 >Automated Remedation
 
 >[!CAUTION]
-No Impact
+>No Impact
 
 ```
 OMA-URI 
@@ -10455,7 +10403,7 @@ OMA-URI
 ```
 Script:
         {
-            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "@odata.type": "#microsoft.graph.omaSettingString",
             "displayName": "\u0027Accounts: Rename administrator account\u0027 is set to \u0027to ATEA\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/Accounts_RenameAdministratorAccount",
             "value": ATEA
@@ -10704,7 +10652,7 @@ OMA-URI
 ```
 Script:
         {
-            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "@odata.type": "#microsoft.graph.omaSettingString",
             "displayName": "\u0027Interactive logon: Message text for users attempting to log on\u0027 is set to \u0027 Custom Text\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_MessageTextForUsersAttemptingToLogOn",
             "value": Text
@@ -10754,7 +10702,7 @@ OMA-URI
 ```
 Script:
         {
-            "@odata.type": "#microsoft.graph.omaSettingInteger",
+            "@odata.type": "#microsoft.graph.omaSettingString",
             "displayName": "\u0027Interactive logon: Message title for users attempting to log on\u0027 is set to \u0027 Custom Text\u0027",
             "omaUri": "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_MessageTitleForUsersAttemptingToLogOn",
             "value": Text
