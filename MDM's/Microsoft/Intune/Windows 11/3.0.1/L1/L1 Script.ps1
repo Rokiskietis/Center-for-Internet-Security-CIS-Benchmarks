@@ -638,7 +638,16 @@ $MSOFFICE = @{
 function Connect-ToIntune {
     Write-Host "🔄 Logging into Microsoft Intune..." -ForegroundColor Cyan
     try {
-        # Connect to Microsoft Graph with required scope and suppress welcome message
+        # Force fresh login by clearing existing token cache
+        Disconnect-MgGraph -ErrorAction SilentlyContinue
+
+        # Optional: Remove stored tokens (forcing interactive login)
+        $tokenCachePath = "$env:USERPROFILE\.graph\TokenCache.dat"
+        if (Test-Path $tokenCachePath) {
+            Remove-Item $tokenCachePath -Force -ErrorAction SilentlyContinue
+        }
+
+        # Connect interactively (will prompt for account selection and MFA)
         Connect-MgGraph -Scopes "DeviceManagementConfiguration.ReadWrite.All" -NoWelcome
 
         # Retrieve the authenticated user context
@@ -646,15 +655,15 @@ function Connect-ToIntune {
 
         if ($context.Account) {
             Write-Host "✅ Successfully authenticated with Intune as: $($context.Account)" -ForegroundColor Green
-            # Store authenticated user in a global variable for menu display
             $global:IntuneUser = $context.Account
         } else {
-            Write-Host "✅ Successfully authenticated with Intune, but unable to retrieve account details." -ForegroundColor Yellow
+            Write-Host "✅ Authenticated with Intune, but unable to retrieve account details." -ForegroundColor Yellow
             $global:IntuneUser = "Unknown"
         }
 
     } catch {
         Write-Host "❌ Error: Failed to authenticate with Intune." -ForegroundColor Red
+        Write-Host $_.Exception.Message -ForegroundColor DarkRed
     }
 }
 
