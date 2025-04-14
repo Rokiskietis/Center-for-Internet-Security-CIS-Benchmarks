@@ -570,6 +570,54 @@ $IGLevels = @{
             "dataType" = "String"; 
             "desc" = "Interactive logon: Message title for users attempting to log on"
         }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/InteractiveLogon_SmartCardRemovalBehavior"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Interactive logon: Smart card removal behavior is set to Lock Workstation or higher"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSAMAccounts"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Network access: Do not allow anonymous enumeration of SAM accounts is set to Enabled"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkAccess_DoNotAllowAnonymousEnumerationOfSamAccountsAndShares"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Network access: Do not allow anonymous enumeration of SAM accounts and shares is set to Enabled"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/LocalPoliciesSecurityOptions/NetworkSecurity_AllowPKU2UAuthenticationRequests"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Network Security: Allow PKU2U authentication requests is set to Block"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/ApplicationManagement/AllowAppStoreAutoUpdate"; 
+            "value" = '1'; 
+            "dataType" = "Integer"; 
+            "desc" = "Allow apps from the Microsoft app store to auto update is set to Allowed"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Privacy/AllowInputPersonalization"; 
+            "value" = '0'; 
+            "dataType" = "Integer"; 
+            "desc" = "Allow Input Personalization is set to Block"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Privacy/AllowInputPersonalization"; 
+            "value" = '0'; 
+            "dataType" = "Integer"; 
+            "desc" = "Allow Input Personalization is set to Block"
+        }
+        @{ 
+            "omaUri" = "./Device/Vendor/MSFT/Policy/Config/Privacy/AllowInputPersonalization"; 
+            "value" = '0'; 
+            "dataType" = "Integer"; 
+            "desc" = "Allow Input Personalization is set to Block"
+        }		
          )
     "IG 2" = @(
         @{ "omaUri" = "./Device/Vendor/MSFT/Policy/Config/UserRights/ChangeSystemTime"; "value" = "AdministratorsLOCAL SERVICE"; "dataType" = "String"; "desc" = "Sets change system time" }
